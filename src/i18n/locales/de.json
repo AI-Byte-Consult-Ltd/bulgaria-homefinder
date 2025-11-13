@@ -1,0 +1,50 @@
+{
+  "common": {
+    "search": "Suchen",
+    "filter": "Filter",
+    "results": "Ergebnisse",
+    "price": "Preis",
+    "location": "Standort",
+    "propertyType": "Immobilientyp",
+    "bedrooms": "Schlafzimmer",
+    "bathrooms": "Badezimmer",
+    "area": "Fläche",
+    "viewDetails": "Details anzeigen",
+    "contactAgent": "Makler kontaktieren",
+    "favorite": "Zu Favoriten hinzufügen",
+    "share": "Teilen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "buy": "Kaufen",
+    "rent": "Mieten",
+    "sell": "Verkaufen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Finden Sie Ihre Traumimmobilie in Bulgarien",
+    "subtitle": "Entdecken Sie Tausende von Häusern, Wohnungen, Villen und Grundstücken zum Verkauf oder zur Miete",
+    "searchPlaceholder": "Standort, Stadt oder Adresse eingeben..."
+  },
+  "propertyTypes": {
+    "all": "Alle Typen",
+    "house": "Haus",
+    "apartment": "Wohnung",
+    "villa": "Villa",
+    "land": "Grundstück",
+    "commercial": "Gewerbe"
+  },
+  "transaction": {
+    "forSale": "Zu verkaufen",
+    "forRent": "Zu vermieten"
+  },
+  "home": {
+    "featured": "Empfohlene Immobilien",
+    "newest": "Neueste Angebote",
+    "popularRegions": "Beliebte Regionen"
+  }
+}

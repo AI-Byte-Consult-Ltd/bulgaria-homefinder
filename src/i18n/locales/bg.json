@@ -1,0 +1,50 @@
+{
+  "common": {
+    "search": "Търсене",
+    "filter": "Филтър",
+    "results": "Резултати",
+    "price": "Цена",
+    "location": "Локация",
+    "propertyType": "Тип имот",
+    "bedrooms": "Спални",
+    "bathrooms": "Бани",
+    "area": "Площ",
+    "viewDetails": "Виж детайли",
+    "contactAgent": "Свържи се с агент",
+    "favorite": "Добави в любими",
+    "share": "Сподели"
+  },
+  "nav": {
+    "home": "Начало",
+    "buy": "Купуване",
+    "rent": "Наемане",
+    "sell": "Продажба",
+    "about": "За нас",
+    "contact": "Контакти",
+    "signIn": "Вход",
+    "signUp": "Регистрация",
+    "dashboard": "Табло"
+  },
+  "hero": {
+    "title": "Намерете мечтания си имот в България",
+    "subtitle": "Открийте хиляди къщи, апартаменти, вили и земя за продажба или наем",
+    "searchPlaceholder": "Въведете локация, град или адрес..."
+  },
+  "propertyTypes": {
+    "all": "Всички типове",
+    "house": "Къща",
+    "apartment": "Апартамент",
+    "villa": "Вила",
+    "land": "Земя",
+    "commercial": "Търговски"
+  },
+  "transaction": {
+    "forSale": "Продажба",
+    "forRent": "Под наем"
+  },
+  "home": {
+    "featured": "Препоръчани имоти",
+    "newest": "Нови обяви",
+    "popularRegions": "Популярни региони"
+  }
+}

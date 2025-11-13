@@ -1,0 +1,50 @@
+{
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "results": "Results",
+    "price": "Price",
+    "location": "Location",
+    "propertyType": "Property Type",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "area": "Area",
+    "viewDetails": "View Details",
+    "contactAgent": "Contact Agent",
+    "favorite": "Add to Favorites",
+    "share": "Share"
+  },
+  "nav": {
+    "home": "Home",
+    "buy": "Buy",
+    "rent": "Rent",
+    "sell": "Sell",
+    "about": "About Us",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Find Your Dream Property in Bulgaria",
+    "subtitle": "Discover thousands of houses, apartments, villas, and land for sale or rent",
+    "searchPlaceholder": "Enter location, city, or address..."
+  },
+  "propertyTypes": {
+    "all": "All Types",
+    "house": "House",
+    "apartment": "Apartment",
+    "villa": "Villa",
+    "land": "Land",
+    "commercial": "Commercial"
+  },
+  "transaction": {
+    "forSale": "For Sale",
+    "forRent": "For Rent"
+  },
+  "home": {
+    "featured": "Featured Properties",
+    "newest": "Newest Listings",
+    "popularRegions": "Popular Regions"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "common": {
+    "search": "Cerca",
+    "filter": "Filtro",
+    "results": "Risultati",
+    "price": "Prezzo",
+    "location": "Posizione",
+    "propertyType": "Tipo di proprietà",
+    "bedrooms": "Camere da letto",
+    "bathrooms": "Bagni",
+    "area": "Area",
+    "viewDetails": "Vedi dettagli",
+    "contactAgent": "Contatta agente",
+    "favorite": "Aggiungi ai preferiti",
+    "share": "Condividi"
+  },
+  "nav": {
+    "home": "Home",
+    "buy": "Comprare",
+    "rent": "Affittare",
+    "sell": "Vendere",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "signIn": "Accedi",
+    "signUp": "Registrati",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Trova la proprietà dei tuoi sogni in Bulgaria",
+    "subtitle": "Scopri migliaia di case, appartamenti, ville e terreni in vendita o in affitto",
+    "searchPlaceholder": "Inserisci posizione, città o indirizzo..."
+  },
+  "propertyTypes": {
+    "all": "Tutti i tipi",
+    "house": "Casa",
+    "apartment": "Appartamento",
+    "villa": "Villa",
+    "land": "Terreno",
+    "commercial": "Commerciale"
+  },
+  "transaction": {
+    "forSale": "In vendita",
+    "forRent": "In affitto"
+  },
+  "home": {
+    "featured": "Proprietà in evidenza",
+    "newest": "Ultimi annunci",
+    "popularRegions": "Regioni popolari"
+  }
+}
