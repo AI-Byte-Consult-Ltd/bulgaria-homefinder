@@ -44,7 +44,49 @@
   },
   "home": {
     "featured": "Proprietà in evidenza",
-    "newest": "Ultimi annunci",
+    "newest": "Nuovi annunci",
     "popularRegions": "Regioni popolari"
+  },
+  "sell": {
+    "title": "Inserisci la tua proprietà",
+    "subtitle": "Raggiungi migliaia di acquirenti e affittuari in tutta la Bulgaria",
+    "whyUs": "Perché sceglierci?",
+    "benefit1Title": "Ampia portata",
+    "benefit1Text": "Il tuo annuncio sarà visto da migliaia di potenziali acquirenti",
+    "benefit2Title": "Gestione facile",
+    "benefit2Text": "Gestisci i tuoi annunci dalla tua dashboard personale",
+    "benefit3Title": "Opzioni premium",
+    "benefit3Text": "Promuovi il tuo annuncio per ottenere maggiore visibilità",
+    "getStarted": "Inizia oggi",
+    "signUpToList": "Registrati ora per pubblicare la tua proprietà"
+  },
+  "about": {
+    "title": "Chi siamo",
+    "subtitle": "Il tuo partner di fiducia nel mercato immobiliare bulgaro",
+    "ourStory": "La nostra storia",
+    "storyText": "BulgariaEstate è il principale marketplace immobiliare in Bulgaria, che collega acquirenti, venditori e affittuari dal 2020. Siamo specializzati nell'aiutare le persone a trovare la casa dei loro sogni lungo la costa del Mar Nero, a Sofia, Plovdiv e in tutta la Bulgaria.",
+    "ourMission": "La nostra missione",
+    "missionText": "Rendere la ricerca e le transazioni immobiliari il più semplici e trasparenti possibile, fornendo un servizio eccezionale a tutti i nostri utenti.",
+    "whyChooseUs": "Perché sceglierci",
+    "reason1": "Il più grande database immobiliare in Bulgaria",
+    "reason2": "Piattaforma multilingue (5 lingue)",
+    "reason3": "Annunci e agenti verificati",
+    "reason4": "Ricerca avanzata e funzioni mappa"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo qui per aiutarti a trovare la proprietà perfetta",
+    "getInTouch": "Mettiti in contatto",
+    "name": "Il tuo nome",
+    "email": "Indirizzo email",
+    "phone": "Numero di telefono",
+    "message": "Il tuo messaggio",
+    "send": "Invia messaggio",
+    "officeLocation": "Sede dell'ufficio",
+    "address": "Vitosha Blvd. 123, Sofia 1000, Bulgaria",
+    "callUs": "Chiamaci",
+    "emailUs": "Email",
+    "hours": "Orari di apertura",
+    "hoursText": "Lunedì - Venerdì: 9:00 - 18:00"
   }
 }

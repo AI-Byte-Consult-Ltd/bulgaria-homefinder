@@ -46,5 +46,47 @@
     "featured": "Empfohlene Immobilien",
     "newest": "Neueste Angebote",
     "popularRegions": "Beliebte Regionen"
+  },
+  "sell": {
+    "title": "Inserieren Sie Ihre Immobilie",
+    "subtitle": "Erreichen Sie Tausende von Käufern und Mietern in ganz Bulgarien",
+    "whyUs": "Warum bei uns inserieren?",
+    "benefit1Title": "Große Reichweite",
+    "benefit1Text": "Ihre Anzeige wird von Tausenden potenziellen Käufern gesehen",
+    "benefit2Title": "Einfache Verwaltung",
+    "benefit2Text": "Verwalten Sie Ihre Anzeigen über Ihr persönliches Dashboard",
+    "benefit3Title": "Premium-Optionen",
+    "benefit3Text": "Bewerben Sie Ihre Anzeige für mehr Sichtbarkeit",
+    "getStarted": "Jetzt starten",
+    "signUpToList": "Melden Sie sich jetzt an, um Ihre Immobilie zu inserieren"
+  },
+  "about": {
+    "title": "Über BulgariaEstate",
+    "subtitle": "Ihr vertrauenswürdiger Partner für bulgarische Immobilien",
+    "ourStory": "Unsere Geschichte",
+    "storyText": "BulgariaEstate ist der führende Immobilienmarktplatz in Bulgarien und verbindet seit 2020 Käufer, Verkäufer und Mieter. Wir helfen Menschen, ihr Traumhaus an der Schwarzmeerküste, in Sofia, Plovdiv und in ganz Bulgarien zu finden.",
+    "ourMission": "Unsere Mission",
+    "missionText": "Die Immobiliensuche und -transaktionen so einfach und transparent wie möglich zu gestalten und allen unseren Nutzern außergewöhnlichen Service zu bieten.",
+    "whyChooseUs": "Warum uns wählen",
+    "reason1": "Größte Immobiliendatenbank in Bulgarien",
+    "reason2": "Mehrsprachige Plattform (5 Sprachen)",
+    "reason3": "Verifizierte Angebote und Makler",
+    "reason4": "Erweiterte Such- und Kartenfunktionen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir helfen Ihnen, Ihre perfekte Immobilie zu finden",
+    "getInTouch": "Kontakt aufnehmen",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "message": "Ihre Nachricht",
+    "send": "Nachricht senden",
+    "officeLocation": "Büroadresse",
+    "address": "Vitosha Blvd. 123, Sofia 1000, Bulgarien",
+    "callUs": "Rufen Sie uns an",
+    "emailUs": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "hoursText": "Montag - Freitag: 9:00 - 18:00 Uhr"
   }
 }
