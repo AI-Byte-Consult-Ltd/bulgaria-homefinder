@@ -14,8 +14,8 @@ export const Header = () => {
 
   const navItems = [
     { label: t('nav.home'), href: '/' },
-    { label: t('nav.buy'), href: '/properties?type=sale' },
-    { label: t('nav.rent'), href: '/properties?type=rent' },
+    { label: t('nav.buy'), href: '/buy' },
+    { label: t('nav.rent'), href: '/rent' },
     { label: t('nav.sell'), href: '/sell' },
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.contact'), href: '/contact' },
