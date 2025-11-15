@@ -46,5 +46,47 @@
     "featured": "Featured Properties",
     "newest": "Newest Listings",
     "popularRegions": "Popular Regions"
+  },
+  "sell": {
+    "title": "List Your Property",
+    "subtitle": "Reach thousands of buyers and renters across Bulgaria",
+    "whyUs": "Why List With Us?",
+    "benefit1Title": "Wide Reach",
+    "benefit1Text": "Your listing will be seen by thousands of potential buyers",
+    "benefit2Title": "Easy Management",
+    "benefit2Text": "Manage your listings from your personal dashboard",
+    "benefit3Title": "Featured Options",
+    "benefit3Text": "Promote your listing to get more visibility",
+    "getStarted": "Get Started Today",
+    "signUpToList": "Sign up now to list your property"
+  },
+  "about": {
+    "title": "About BulgariaEstate",
+    "subtitle": "Your trusted partner in Bulgarian real estate",
+    "ourStory": "Our Story",
+    "storyText": "BulgariaEstate is the leading property marketplace in Bulgaria, connecting buyers, sellers, and renters since 2020. We specialize in helping people find their dream homes along the Black Sea coast, in Sofia, Plovdiv, and throughout Bulgaria.",
+    "ourMission": "Our Mission",
+    "missionText": "To make property search and transactions as simple and transparent as possible, while providing exceptional service to all our users.",
+    "whyChooseUs": "Why Choose Us",
+    "reason1": "Largest property database in Bulgaria",
+    "reason2": "Multilingual platform (5 languages)",
+    "reason3": "Verified listings and agents",
+    "reason4": "Advanced search and map features"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you find your perfect property",
+    "getInTouch": "Get In Touch",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "send": "Send Message",
+    "officeLocation": "Office Location",
+    "address": "123 Vitosha Blvd, Sofia 1000, Bulgaria",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "hours": "Business Hours",
+    "hoursText": "Monday - Friday: 9:00 AM - 6:00 PM"
   }
 }
