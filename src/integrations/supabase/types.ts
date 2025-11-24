@@ -14,16 +14,236 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      payments: {
+        Row: {
+          amount: number
+          created_at: string | null
+          currency: string | null
+          id: string
+          payment_method: string
+          payment_status: string | null
+          priority_duration_days: number
+          property_id: string
+          transaction_id: string | null
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string | null
+          currency?: string | null
+          id?: string
+          payment_method: string
+          payment_status?: string | null
+          priority_duration_days: number
+          property_id: string
+          transaction_id?: string | null
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string | null
+          currency?: string | null
+          id?: string
+          payment_method?: string
+          payment_status?: string | null
+          priority_duration_days?: number
+          property_id?: string
+          transaction_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "payments_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string | null
+          email: string
+          full_name: string | null
+          id: string
+          phone: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string | null
+          email: string
+          full_name?: string | null
+          id: string
+          phone?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string | null
+          email?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      project_updates: {
+        Row: {
+          client_user_id: string
+          created_at: string | null
+          created_by: string | null
+          id: string
+          images: string[] | null
+          project_description: string | null
+          project_image_url: string | null
+          project_title: string
+          status: string
+          update_description: string | null
+          update_title: string
+          update_type: string
+        }
+        Insert: {
+          client_user_id: string
+          created_at?: string | null
+          created_by?: string | null
+          id?: string
+          images?: string[] | null
+          project_description?: string | null
+          project_image_url?: string | null
+          project_title: string
+          status: string
+          update_description?: string | null
+          update_title: string
+          update_type: string
+        }
+        Update: {
+          client_user_id?: string
+          created_at?: string | null
+          created_by?: string | null
+          id?: string
+          images?: string[] | null
+          project_description?: string | null
+          project_image_url?: string | null
+          project_title?: string
+          status?: string
+          update_description?: string | null
+          update_title?: string
+          update_type?: string
+        }
+        Relationships: []
+      }
+      properties: {
+        Row: {
+          amenities: string[] | null
+          bathrooms: number | null
+          bedrooms: number | null
+          city: string | null
+          created_at: string | null
+          description: string | null
+          id: string
+          images: string[] | null
+          is_priority: boolean | null
+          location: string
+          price: number
+          priority_expires_at: string | null
+          property_type: string
+          region: string | null
+          size_sqm: number | null
+          status: string | null
+          title: string
+          transaction_type: string
+          updated_at: string | null
+          user_id: string
+          views: number | null
+          year_built: number | null
+        }
+        Insert: {
+          amenities?: string[] | null
+          bathrooms?: number | null
+          bedrooms?: number | null
+          city?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          images?: string[] | null
+          is_priority?: boolean | null
+          location: string
+          price: number
+          priority_expires_at?: string | null
+          property_type: string
+          region?: string | null
+          size_sqm?: number | null
+          status?: string | null
+          title: string
+          transaction_type: string
+          updated_at?: string | null
+          user_id: string
+          views?: number | null
+          year_built?: number | null
+        }
+        Update: {
+          amenities?: string[] | null
+          bathrooms?: number | null
+          bedrooms?: number | null
+          city?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          images?: string[] | null
+          is_priority?: boolean | null
+          location?: string
+          price?: number
+          priority_expires_at?: string | null
+          property_type?: string
+          region?: string | null
+          size_sqm?: number | null
+          status?: string | null
+          title?: string
+          transaction_type?: string
+          updated_at?: string | null
+          user_id?: string
+          views?: number | null
+          year_built?: number | null
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +370,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+    },
   },
 } as const
