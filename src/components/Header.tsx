@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from './LanguageSelector';
 import { Home, Menu } from 'lucide-react';
@@ -11,6 +12,7 @@ import {
 
 export const Header = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
 
   const navItems = [
     { label: t('nav.home'), href: '/' },
@@ -46,12 +48,20 @@ export const Header = () => {
 
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-            {t('nav.signIn')}
-          </Button>
-          <Button size="sm" className="hidden md:inline-flex">
-            {t('nav.signUp')}
-          </Button>
+          {user ? (
+            <Button asChild size="sm" className="hidden md:inline-flex">
+              <Link to="/dashboard">{t('nav.dashboard')}</Link>
+            </Button>
+          ) : (
+            <>
+              <Button asChild variant="ghost" size="sm" className="hidden md:inline-flex">
+                <Link to="/auth">{t('nav.signIn')}</Link>
+              </Button>
+              <Button asChild size="sm" className="hidden md:inline-flex">
+                <Link to="/auth">{t('nav.signUp')}</Link>
+              </Button>
+            </>
+          )}
 
           {/* Mobile Menu */}
           <Sheet>
@@ -72,12 +82,20 @@ export const Header = () => {
                   </Link>
                 ))}
                 <div className="pt-4 border-t flex flex-col gap-2">
-                  <Button variant="ghost" size="sm">
-                    {t('nav.signIn')}
-                  </Button>
-                  <Button size="sm">
-                    {t('nav.signUp')}
-                  </Button>
+                  {user ? (
+                    <Button asChild size="sm">
+                      <Link to="/dashboard">{t('nav.dashboard')}</Link>
+                    </Button>
+                  ) : (
+                    <>
+                      <Button asChild variant="ghost" size="sm">
+                        <Link to="/auth">{t('nav.signIn')}</Link>
+                      </Button>
+                      <Button asChild size="sm">
+                        <Link to="/auth">{t('nav.signUp')}</Link>
+                      </Button>
+                    </>
+                  )}
                 </div>
               </nav>
             </SheetContent>
