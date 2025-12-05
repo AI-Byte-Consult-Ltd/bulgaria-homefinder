@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SearchBar } from '@/components/SearchBar';
 import { PropertyCard } from '@/components/PropertyCard';
+import { RestorationShowcase } from '@/components/RestorationShowcase';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -71,6 +72,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Restoration Showcase */}
+      <RestorationShowcase />
 
       {/* Popular Regions */}
       <section className="py-16 container">
