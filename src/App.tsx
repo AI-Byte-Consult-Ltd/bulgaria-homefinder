@@ -10,6 +10,8 @@ import PropertyDetails from "./pages/PropertyDetails";
 import Buy from "./pages/Buy";
 import Rent from "./pages/Rent";
 import Sell from "./pages/Sell";
+import Services from "./pages/Services";
+import RestorationProject from "./pages/RestorationProject";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/buy" element={<Buy />} />
             <Route path="/rent" element={<Rent />} />
             <Route path="/sell" element={<Sell />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/restoration/:id" element={<RestorationProject />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />

@@ -19,6 +19,7 @@ export const Header = () => {
     { label: t('nav.buy'), href: '/buy' },
     { label: t('nav.rent'), href: '/rent' },
     { label: t('nav.sell'), href: '/sell' },
+    { label: t('nav.services'), href: '/services' },
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.contact'), href: '/contact' },
   ];
