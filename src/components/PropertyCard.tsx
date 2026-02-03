@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Heart, MapPin, Bed, Bath, Maximize } from 'lucide-react';
+import { Heart, MapPin, Bed, Bath, Maximize, Building } from 'lucide-react';
 
 interface PropertyCardProps {
   id: string;
@@ -17,6 +17,8 @@ interface PropertyCardProps {
   type: string;
   transactionType: 'sale' | 'rent';
   featured?: boolean;
+  availableUnits?: number;
+  status?: string;
 }
 
 export const PropertyCard = ({
@@ -31,8 +33,27 @@ export const PropertyCard = ({
   type,
   transactionType,
   featured,
+  availableUnits,
+  status,
 }: PropertyCardProps) => {
   const { t } = useTranslation();
+
+  const getStatusBadge = () => {
+    if (status === 'sold-out') {
+      return <Badge className="absolute top-3 right-3 bg-destructive text-destructive-foreground">Sold Out</Badge>;
+    }
+    if (status === 'coming-soon') {
+      return <Badge className="absolute top-3 right-3 bg-secondary text-secondary-foreground">Coming Soon</Badge>;
+    }
+    return null;
+  };
+
+  const formatPrice = () => {
+    if (price === 0 || status === 'coming-soon') {
+      return 'TBA';
+    }
+    return `€${price.toLocaleString()}`;
+  };
 
   return (
     <Card className="group overflow-hidden hover:shadow-[var(--card-shadow-hover)] transition-all duration-300">
@@ -47,23 +68,34 @@ export const PropertyCard = ({
             Featured
           </Badge>
         )}
-        <Button
-          size="icon"
-          variant="secondary"
-          className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          <Heart className="h-4 w-4" />
-        </Button>
-        <Badge className="absolute bottom-3 left-3 bg-primary">
-          {transactionType === 'sale' ? t('transaction.forSale') : t('transaction.forRent')}
-        </Badge>
+        {getStatusBadge()}
+        {!status && (
+          <Button
+            size="icon"
+            variant="secondary"
+            className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <Heart className="h-4 w-4" />
+          </Button>
+        )}
+        <div className="absolute bottom-3 left-3 flex gap-2">
+          <Badge className="bg-primary">
+            {transactionType === 'sale' ? t('transaction.forSale') : t('transaction.forRent')}
+          </Badge>
+          {availableUnits !== undefined && availableUnits > 0 && (
+            <Badge variant="secondary" className="bg-background/90">
+              <Building className="h-3 w-3 mr-1" />
+              {availableUnits} units
+            </Badge>
+          )}
+        </div>
       </div>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-semibold text-lg line-clamp-1">{title}</h3>
+          <h3 className="font-semibold text-lg line-clamp-2">{title}</h3>
           <p className="font-bold text-primary whitespace-nowrap">
-            €{price.toLocaleString()}
-            {transactionType === 'rent' && <span className="text-sm font-normal">/mo</span>}
+            {formatPrice()}
+            {transactionType === 'rent' && price > 0 && <span className="text-sm font-normal">/mo</span>}
           </p>
         </div>
         
@@ -72,20 +104,28 @@ export const PropertyCard = ({
           <span className="line-clamp-1">{location}</span>
         </div>
 
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-1">
-            <Bed className="h-4 w-4" />
-            <span>{bedrooms}</span>
+        {(bedrooms > 0 || bathrooms > 0 || area > 0) && (
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            {bedrooms > 0 && (
+              <div className="flex items-center gap-1">
+                <Bed className="h-4 w-4" />
+                <span>{bedrooms}</span>
+              </div>
+            )}
+            {bathrooms > 0 && (
+              <div className="flex items-center gap-1">
+                <Bath className="h-4 w-4" />
+                <span>{bathrooms}</span>
+              </div>
+            )}
+            {area > 0 && (
+              <div className="flex items-center gap-1">
+                <Maximize className="h-4 w-4" />
+                <span>{area} m²</span>
+              </div>
+            )}
           </div>
-          <div className="flex items-center gap-1">
-            <Bath className="h-4 w-4" />
-            <span>{bathrooms}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Maximize className="h-4 w-4" />
-            <span>{area} m²</span>
-          </div>
-        </div>
+        )}
 
         <Link to={`/property/${id}`}>
           <Button variant="outline" className="w-full">
