@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Home, Mail, Youtube, Twitter, Phone } from 'lucide-react';
+import { Home, Mail, Youtube, Twitter, Phone, MessageCircle, Send } from 'lucide-react';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -15,25 +15,47 @@ export const Footer = () => {
               BulgariaEstate
             </span>
           </Link>
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm text-muted-foreground mb-2">
             Your trusted partner in Bulgarian real estate
           </p>
-          <div className="flex gap-3">
+          <p className="text-sm font-medium text-foreground mb-4">
+            by AI Byte Consult Ltd.
+          </p>
+          <p className="text-sm text-primary font-medium mb-4">
+            made in EU 🇪🇺 for the World 🗺️
+          </p>
+          <div className="flex gap-3 flex-wrap">
             <a 
-              href="mailto:info@bulgariaestate.com" 
+              href="mailto:info@aibyteconsult.com" 
               className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               aria-label="Email"
             >
               <Mail className="h-4 w-4 text-primary" />
             </a>
             <a 
-              href="https://wa.me/359123456789" 
+              href="https://wa.me/491628184658" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               aria-label="WhatsApp"
             >
+              <MessageCircle className="h-4 w-4 text-primary" />
+            </a>
+            <a 
+              href="tel:+359988899109" 
+              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="Phone"
+            >
               <Phone className="h-4 w-4 text-primary" />
+            </a>
+            <a 
+              href="https://t.me/navajjoo" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="Telegram"
+            >
+              <Send className="h-4 w-4 text-primary" />
             </a>
             <a 
               href="https://youtube.com/@bulgariaestate" 
@@ -86,10 +108,28 @@ export const Footer = () => {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-4">Legal</h3>
+          <h3 className="font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
-            <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+            <li>
+              <a href="mailto:info@aibyteconsult.com" className="hover:text-primary transition-colors flex items-center gap-2">
+                <Mail className="h-4 w-4" /> info@aibyteconsult.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+359988899109" className="hover:text-primary transition-colors flex items-center gap-2">
+                <Phone className="h-4 w-4" /> +359 988 899 109
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/491628184658" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/navajjoo" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                <Send className="h-4 w-4" /> Telegram
+              </a>
+            </li>
           </ul>
         </div>
       </div>
