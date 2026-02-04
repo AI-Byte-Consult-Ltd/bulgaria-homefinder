@@ -15,7 +15,7 @@ const team = [
   {
     name: "Aleksandr Tochilov",
     role: "Co-Founder & Product Director",
-    bio: "Focuses on automation systems, client solutions, and creative ecosystem design. Passionate about turning complex tech into simple solutions.",
+    bio: "Co-founder of AI Byte Consult | SaaS & MTS Engineer, Digital Project Manager, Graphic designer and more… | Charged with 60+ countries.",
     image: aleksImg,
     linkedin: "https://www.linkedin.com/in/alekstoch",
   },
