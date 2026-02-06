@@ -189,9 +189,11 @@ const PropertyDetails = () => {
 
                 <Separator />
 
-                <Button className="w-full" size="lg">
-                  {t('common.contactAgent')}
-                </Button>
+                <a href="https://wa.me/491628184658" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full" size="lg">
+                    {t('common.contactAgent')}
+                  </Button>
+                </a>
                 
                 <Button variant="outline" className="w-full gap-2">
                   <Calendar className="h-4 w-4" />
