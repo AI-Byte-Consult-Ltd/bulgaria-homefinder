@@ -1,4 +1,22 @@
 export const mockProperties = [
+  // FEATURED PROPERTY - Zornitsa House
+  {
+    id: 'zornitsa-house-75239',
+    title: 'Two-Storey House with Large Plot - Zornitsa',
+    titleBg: 'Двуетажна къща с голям парцел - с. Зорница',
+    price: 35000,
+    location: 'Zornitsa, Sredets, Burgas Region',
+    image: 'https://www.listproperty4free.com/uploaded_files/6/c/e/c/6cec5672ff1ccdc22f5c331063b8ff32.jpeg',
+    bedrooms: 4,
+    bathrooms: 2,
+    area: 112,
+    type: 'house',
+    transactionType: 'sale' as const,
+    featured: true,
+    availableUnits: 1,
+    status: 'for-sale',
+    description: 'Two-storey detached house with 1,910 sq.m. land plot in the quiet village of Zornitsa, Burgas region. 50 km from the sea. Connected to electricity and water, with a well nearby. Mineral springs 150m away. Ideal for renovation into a private home, guest house, or Airbnb. Year built: 1969. Construction: stone (ground floor) and brick (upper floor).',
+  },
   // FEATURED PROPERTIES - From Skarabey
   {
     id: 'skarabey-madika',
