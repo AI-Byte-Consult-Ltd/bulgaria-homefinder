@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { CheckCircle, Building2, Users, Award, TrendingUp, Calendar, MapPin, Linkedin } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import Team from '@/components/Team';
+import { CheckCircle, Building2, Users, Award, TrendingUp, Calendar, MapPin } from 'lucide-react';
 
 const About = () => {
   const { t } = useTranslation();
@@ -12,23 +12,6 @@ const About = () => {
     { icon: Building2, value: '500+', label: 'Properties Sold' },
     { icon: Users, value: '1000+', label: 'Happy Clients' },
     { icon: MapPin, value: '15+', label: 'Regions Covered' },
-  ];
-
-  const founders = [
-    {
-      name: 'Alexander Lunin',
-      role: 'Co-Founder & AI Architect',
-      description: 'Leads AI architecture and Web3 integrations across the NICS AI Ecosystem. Over 15 years of experience in cutting-edge technology and real estate innovation.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-      linkedin: 'https://linkedin.com/in/alexander-lunin',
-    },
-    {
-      name: 'Aleksandr Tochilov',
-      role: 'Co-Founder & Product Director',
-      description: 'Focuses on automation systems, client solutions, and creative ecosystem design. Passionate about turning complex real estate processes into simple solutions.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-      linkedin: 'https://linkedin.com/in/aleksandr-tochilov',
-    },
   ];
 
   return (
@@ -110,41 +93,7 @@ const About = () => {
         </section>
 
         {/* Meet the Founders */}
-        <section className="py-20 bg-muted/30">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet the Founders</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                The visionaries behind AI Byte Consult Ltd.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {founders.map((founder, idx) => (
-                <Card key={idx} className="overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="relative">
-                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="block">
-                      <img
-                        src={founder.image}
-                        alt={founder.name}
-                        className="w-full h-72 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full hover:bg-primary hover:text-white transition-colors">
-                        <Linkedin className="h-5 w-5" />
-                      </div>
-                    </a>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
-                    <p className="text-primary font-medium mb-3">{founder.role}</p>
-                    <p className="text-muted-foreground">{founder.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Team />
 
         {/* Our Mission */}
         <section className="py-20 bg-background">
