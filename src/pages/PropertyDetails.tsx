@@ -179,10 +179,10 @@ const PropertyDetails = () => {
                 
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="font-semibold text-primary">JD</span>
+                    <span className="font-semibold text-primary">AL</span>
                   </div>
                   <div>
-                    <p className="font-semibold">John Dimitrov</p>
+                    <p className="font-semibold">Alexander Lunin</p>
                     <p className="text-sm text-muted-foreground">Licensed Agent</p>
                   </div>
                 </div>
