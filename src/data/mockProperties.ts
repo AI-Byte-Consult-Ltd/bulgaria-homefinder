@@ -1,4 +1,22 @@
 export const mockProperties = [
+  // FEATURED PROPERTY - Mellia Park 10, Ravda
+  {
+    id: 'mellia-park-10-ravda-77544',
+    title: 'Panoramic Sea-View Residence | Mellia Park 10, Ravda',
+    titleBg: 'Панорамна резиденция с морска гледка | Мелия Парк 10, Равда',
+    price: 155000,
+    location: 'Ravda, Burgas Region',
+    image: 'https://www.listproperty4free.com/uploaded_files/f/3/7/5/f375d46e96bc35c7d0155a870a656140.jpeg',
+    bedrooms: 2,
+    bathrooms: 1,
+    area: 91,
+    type: 'apartment',
+    transactionType: 'sale' as const,
+    featured: true,
+    availableUnits: 1,
+    status: 'for-sale',
+    description: 'Exclusive listing by AI Byte Consult. Panoramic near-360° sea view from Nessebar along the coastline. Located steps from Ravda central beach in Mellia Park 10 complex. Features living room with kitchen, 2 bedrooms, bathroom, and large panoramic terrace. Complex amenities: pool, children\'s playground, 24h security, landscaped gardens. Built 2016, top floor. Annual maintenance only 7 EUR/sq.m. Ideal for year-round living, holiday home, or rental investment.',
+  },
   // FEATURED PROPERTY - Zornitsa House
   {
     id: 'zornitsa-house-75239',
