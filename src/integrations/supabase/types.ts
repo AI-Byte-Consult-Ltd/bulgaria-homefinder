@@ -14,6 +14,86 @@ export type Database = {
   }
   public: {
     Tables: {
+      chat_conversations: {
+        Row: {
+          additional_info: Json | null
+          bedrooms: number | null
+          created_at: string
+          id: string
+          property_action: string | null
+          property_type: string | null
+          service_type: string | null
+          session_id: string
+          status: string | null
+          updated_at: string
+          user_email: string | null
+          user_name: string | null
+          user_phone: string | null
+        }
+        Insert: {
+          additional_info?: Json | null
+          bedrooms?: number | null
+          created_at?: string
+          id?: string
+          property_action?: string | null
+          property_type?: string | null
+          service_type?: string | null
+          session_id: string
+          status?: string | null
+          updated_at?: string
+          user_email?: string | null
+          user_name?: string | null
+          user_phone?: string | null
+        }
+        Update: {
+          additional_info?: Json | null
+          bedrooms?: number | null
+          created_at?: string
+          id?: string
+          property_action?: string | null
+          property_type?: string | null
+          service_type?: string | null
+          session_id?: string
+          status?: string | null
+          updated_at?: string
+          user_email?: string | null
+          user_name?: string | null
+          user_phone?: string | null
+        }
+        Relationships: []
+      }
+      chat_messages: {
+        Row: {
+          content: string
+          conversation_id: string
+          created_at: string
+          id: string
+          role: string
+        }
+        Insert: {
+          content: string
+          conversation_id: string
+          created_at?: string
+          id?: string
+          role: string
+        }
+        Update: {
+          content?: string
+          conversation_id?: string
+          created_at?: string
+          id?: string
+          role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chat_messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "chat_conversations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       payments: {
         Row: {
           amount: number
