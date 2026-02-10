@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- GitHub Pages SPA fix (custom domain): restore path from ?p=... (set by 404.html) -->
+    <script>
+      (function () {
+        var url = new URL(window.location.href);
+        var p = url.searchParams.get("p");
+        if (p) {
+          url.searchParams.delete("p");
+          window.history.replaceState(null, "", p);
+        }
+      })();
+    </script>
+
     <!-- Primary SEO -->
     <title>BulgariaEstate by AI Byte Consult — Property & Business Services in Bulgaria</title>
     <meta
       name="description"
       content="Buy, sell, and rent property in Bulgaria — apartments, houses, villas, land, and commercial real estate. Also: legal services, company & trade representative office registration, certified translations, legalization & document support. Multilingual service."
     />
-    <meta name="keywords" content="Bulgaria real estate, property in Bulgaria, apartments Bulgaria, houses Bulgaria, commercial real estate Bulgaria, rent Bulgaria, buy property Bulgaria, sell property Bulgaria, legal services Bulgaria, company registration Bulgaria, trade representative office Bulgaria, document legalization Bulgaria, certified translation Bulgaria, relocation Bulgaria, Nessebar real estate" />
+    <meta
+      name="keywords"
+      content="Bulgaria real estate, property in Bulgaria, apartments Bulgaria, houses Bulgaria, commercial real estate Bulgaria, rent Bulgaria, buy property Bulgaria, sell property Bulgaria, legal services Bulgaria, company registration Bulgaria, trade representative office Bulgaria, document legalization Bulgaria, certified translation Bulgaria, relocation Bulgaria, Nessebar real estate"
+    />
     <meta name="author" content="BulgariaEstate by AI Byte Consult" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
@@ -120,13 +135,15 @@
         href="https://unsplash.com/@kopcap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
         rel="noopener noreferrer"
         target="_blank"
-      >Neven Myst</a>
+        >Neven Myst</a
+      >
       on
       <a
         href="https://unsplash.com/photos/houses-near-body-of-water-during-daytime-EFVuZbNYbG8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
         rel="noopener noreferrer"
         target="_blank"
-      >Unsplash</a>
+        >Unsplash</a
+      >
     </footer>
 
     <script type="module" src="/src/main.tsx"></script>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Redirecting…</title>
+    <script>
+      // SPA redirect for GitHub Pages on custom domain
+      var l = window.location;
+      var target = "/?p=" + encodeURIComponent(l.pathname + l.search + l.hash);
+      l.replace(target);
+    </script>
+  </head>
+  <body></body>
+</html>
