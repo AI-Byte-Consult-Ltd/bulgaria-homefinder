@@ -94,7 +94,7 @@ const Contact = () => {
                         {t('contact.callUs')}
                       </h3>
                       <p className="text-muted-foreground">
-                        +359 2 123 4567
+                        +359 9888 99109
                       </p>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                         {t('contact.emailUs')}
                       </h3>
                       <p className="text-muted-foreground">
-                        info@bulgariaestate.com
+                        estate@aibyteconsult.com
                       </p>
                     </div>
                   </div>
