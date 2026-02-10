@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SearchBar } from '@/components/SearchBar';
@@ -10,7 +11,7 @@ import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const featuredProperties = mockProperties.filter((p) => p.featured);
   const newestProperties = mockProperties.slice(0, 3);
@@ -145,28 +146,40 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: 'Bulgarian Property Market Shows Strong Growth in 2024',
-                excerpt:
-                  'The real estate market in Bulgaria continues to attract international investors...',
+                title: i18n.language === 'ru'
+                  ? 'Покупка недвижимости в Болгарии в 2026 году: 7 ошибок, которые стоят покупателям десятки тысяч евро'
+                  : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
+                excerpt: i18n.language === 'ru'
+                  ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
+                  : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
                 image:
                   'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
-                date: 'Jan 15, 2024',
+                date: 'Feb 5, 2026',
+                link: '/article/buying-mistakes-2026',
               },
               {
-                title: 'Top 5 Coastal Areas for Investment',
-                excerpt:
-                  'Discover the most promising locations along the Black Sea coast...',
+                title: i18n.language === 'ru'
+                  ? 'Болгарский рынок недвижимости демонстрирует уверенный рост в 2026 году'
+                  : 'Bulgarian Property Market Shows Strong Growth in 2026',
+                excerpt: i18n.language === 'ru'
+                  ? 'Рынок недвижимости Болгарии продолжает привлекать международных инвесторов...'
+                  : 'The real estate market in Bulgaria continues to attract international investors...',
+                image:
+                  'https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80',
+                date: 'Jan 15, 2026',
+                link: null,
+              },
+              {
+                title: i18n.language === 'ru'
+                  ? 'Топ-5 прибрежных районов для инвестиций'
+                  : 'Top 5 Coastal Areas for Investment',
+                excerpt: i18n.language === 'ru'
+                  ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+                  : 'Discover the most promising locations along the Black Sea coast...',
                 image:
                   'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
-                date: 'Jan 10, 2024',
-              },
-              {
-                title: 'New Tax Benefits for Property Buyers',
-                excerpt:
-                  'The Bulgarian government announces new incentives for real estate purchases...',
-                image:
-                  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
-                date: 'Jan 5, 2024',
+                date: 'Jan 10, 2026',
+                link: null,
               },
             ].map((article, idx) => (
               <div
@@ -188,9 +201,15 @@ const Home = () => {
                   <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                     {article.excerpt}
                   </p>
-                  <button className="text-primary text-sm font-semibold hover:underline">
-                    Read More →
-                  </button>
+                  {article.link ? (
+                    <Link to={article.link} className="text-primary text-sm font-semibold hover:underline">
+                      {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
+                    </Link>
+                  ) : (
+                    <button className="text-primary text-sm font-semibold hover:underline">
+                      {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

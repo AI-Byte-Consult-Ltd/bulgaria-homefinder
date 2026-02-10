@@ -12,6 +12,7 @@ import Rent from "./pages/Rent";
 import Sell from "./pages/Sell";
 import Services from "./pages/Services";
 import RestorationProject from "./pages/RestorationProject";
+import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/sell" element={<Sell />} />
             <Route path="/services" element={<Services />} />
             <Route path="/restoration/:id" element={<RestorationProject />} />
+            <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
