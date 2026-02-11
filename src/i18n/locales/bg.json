@@ -12,7 +12,10 @@
     "viewDetails": "Виж детайли",
     "contactAgent": "Свържи се с агент",
     "favorite": "Добави в любими",
-    "share": "Сподели"
+    "share": "Сподели",
+    "applyFilters": "Приложи филтрите",
+    "noResults": "Няма резултати",
+    "transaction": "Сделка"
   },
   "nav": {
     "home": "Начало",
@@ -181,3 +184,4 @@
     "milestone": "Етап"
   }
 }
+

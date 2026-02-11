@@ -12,7 +12,10 @@
     "viewDetails": "View Details",
     "contactAgent": "Contact Agent",
     "favorite": "Add to Favorites",
-    "share": "Share"
+    "share": "Share",
+    "applyFilters": "Apply Filters",
+    "noResults": "No properties found",
+    "transaction": "Transaction"
   },
   "nav": {
     "home": "Home",
@@ -181,3 +184,4 @@
     "milestone": "Milestone"
   }
 }
+
