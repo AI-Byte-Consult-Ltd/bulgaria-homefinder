@@ -19,9 +19,8 @@ import { supabase } from '@/integrations/supabase/client';
 
 /**
  * Страница вывода найденных объектов недвижимости.
- * Считывает параметры из URL (?location=..., type=..., transaction=...) и
- * делает запрос к таблице 'properties' в Supabase. Позволяет дополнительно
- * фильтровать результаты по цене, количеству спален и ванных комнат.
+ * Считывает параметры из URL (?location=..., type=..., transaction=...)
+ * и делает запрос к таблице 'properties' в Supabase.
  */
 const Properties = () => {
   const { t } = useTranslation();
@@ -34,7 +33,7 @@ const Properties = () => {
   // Локальные состояния для полей фильтра
   const [locFilter, setLocFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('all');
-  const [transactionFilter, setTransactionFilter] = useState<'sale' | 'rent'>('sale');
+  const [transactionFilter, setTransactionFilter] = useState<'sale' | 'rent' | 'all'>('all');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [bedrooms, setBedrooms] = useState('any');
@@ -44,7 +43,8 @@ const Properties = () => {
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const searchLoc = searchParams.get('location') ?? '';
-    const searchTransaction = (searchParams.get('transaction') as 'sale' | 'rent') ?? 'sale';
+    const searchTransaction =
+      (searchParams.get('transaction') as 'sale' | 'rent' | 'all') ?? 'all';
     const searchType = searchParams.get('type') ?? 'all';
 
     // Обновляем поля фильтра, чтобы UI соответствовал URL
@@ -57,12 +57,15 @@ const Properties = () => {
 
       let query: any = supabase.from('properties').select('*');
 
+      // Фильтр по местоположению
       if (searchLoc) {
         query = query.ilike('location', `%${searchLoc}%`);
       }
-      if (searchTransaction) {
+      // Фильтр по типу сделки (продажа/аренда), если указан и не "all"
+      if (searchTransaction && searchTransaction !== 'all') {
         query = query.eq('transaction_type', searchTransaction);
       }
+      // Фильтр по типу недвижимости
       if (searchType && searchType !== 'all') {
         query = query.eq('property_type', searchType);
       }
@@ -95,15 +98,20 @@ const Properties = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search, minPrice, maxPrice, bedrooms, bathrooms]);
 
-  // При нажатии на кнопку «Apply filters» обновляем URL для location/transaction/type,
-  // остальные фильтры остаются только в локальном состоянии
+  // При нажатии на кнопку «Apply filters» обновляем URL для location/transaction/type.
+  // Остальные фильтры остаются только в локальном состоянии.
   const handleApplyFilters = () => {
     const params = new URLSearchParams();
     if (locFilter) params.set('location', locFilter.trim());
-    if (transactionFilter && transactionFilter !== 'sale') params.set('transaction', transactionFilter);
+    if (transactionFilter && transactionFilter !== 'all')
+      params.set('transaction', transactionFilter);
     if (typeFilter && typeFilter !== 'all') params.set('type', typeFilter);
     const queryString = params.toString();
-    window.history.replaceState(null, '', `/properties${queryString ? `?${queryString}` : ''}`);
+    window.history.replaceState(
+      null,
+      '',
+      `/properties${queryString ? `?${queryString}` : ''}`
+    );
     // fetchProperties вызовется автоматически через useEffect
   };
 
@@ -146,7 +154,9 @@ const Properties = () => {
                 <div className="space-y-2">
                   <Label>{t('common.location')}</Label>
                   <Input
-                    placeholder={t('common.locationPlaceholder') || 'Enter location...'}
+                    placeholder={
+                      t('common.locationPlaceholder') || 'Enter location, city or region...'
+                    }
                     value={locFilter}
                     onChange={(e) => setLocFilter(e.target.value)}
                   />
@@ -173,12 +183,13 @@ const Properties = () => {
                   <Label>{t('common.transaction')}</Label>
                   <Select
                     value={transactionFilter}
-                    onValueChange={(v) => setTransactionFilter(v as 'sale' | 'rent')}
+                    onValueChange={(v) => setTransactionFilter(v as 'sale' | 'rent' | 'all')}
                   >
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="all">{t('transaction.all') || 'All'}</SelectItem>
                       <SelectItem value="sale">{t('transaction.forSale')}</SelectItem>
                       <SelectItem value="rent">{t('transaction.forRent')}</SelectItem>
                     </SelectContent>
@@ -266,7 +277,7 @@ const Properties = () => {
                     }
                     bedrooms={property.bedrooms}
                     bathrooms={property.bathrooms}
-                    area={property.area}
+                    area={property.size_sqm}
                     type={property.property_type}
                     transactionType={property.transaction_type as 'sale' | 'rent'}
                     featured={property.is_priority}

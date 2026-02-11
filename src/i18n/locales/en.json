@@ -15,7 +15,8 @@
     "share": "Share",
     "applyFilters": "Apply Filters",
     "noResults": "No properties found",
-    "transaction": "Transaction"
+    "transaction": "Transaction",
+    "locationPlaceholder": "Enter city, region or address..."
   },
   "nav": {
     "home": "Home",
@@ -43,6 +44,7 @@
     "commercial": "Commercial"
   },
   "transaction": {
+    "all": "All",
     "forSale": "For Sale",
     "forRent": "For Rent"
   },
@@ -184,4 +186,5 @@
     "milestone": "Milestone"
   }
 }
+
 

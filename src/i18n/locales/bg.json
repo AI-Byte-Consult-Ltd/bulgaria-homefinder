@@ -15,7 +15,8 @@
     "share": "Сподели",
     "applyFilters": "Приложи филтрите",
     "noResults": "Няма резултати",
-    "transaction": "Сделка"
+    "transaction": "Сделка",
+    "locationPlaceholder": "Въведете град, район или адрес..."
   },
   "nav": {
     "home": "Начало",
@@ -43,6 +44,7 @@
     "commercial": "Търговски"
   },
   "transaction": {
+    "all": "Всички",
     "forSale": "Продажба",
     "forRent": "Под наем"
   },
@@ -184,4 +186,5 @@
     "milestone": "Етап"
   }
 }
+
 
