@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-  import { Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 /**
@@ -20,16 +19,22 @@ import { useNavigate } from 'react-router-dom';
 export const SearchBar = () => {
   const { t } = useTranslation();
   const [location, setLocation] = useState('');
-  const [transactionType, setTransactionType] = useState('sale');
+  // По умолчанию показываем все типы сделки (sale/rent), поэтому значение "all"
+  const [transactionType, setTransactionType] = useState<'sale' | 'rent' | 'all'>('all');
   const [propertyType, setPropertyType] = useState('all');
   const navigate = useNavigate();
 
   // Формируем параметры строки запроса и переходим на страницу /properties
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (location) params.set('location', location.trim());
-    if (transactionType && transactionType !== 'sale') params.set('transaction', transactionType);
-    if (propertyType && propertyType !== 'all') params.set('type', propertyType);
+    if (location.trim()) params.set('location', location.trim());
+    // Если выбран не "all", передаём параметр transaction в URL
+    if (transactionType && transactionType !== 'all') {
+      params.set('transaction', transactionType);
+    }
+    if (propertyType && propertyType !== 'all') {
+      params.set('type', propertyType);
+    }
     const queryString = params.toString();
     navigate(`/properties${queryString ? `?${queryString}` : ''}`);
   };
@@ -47,12 +52,18 @@ export const SearchBar = () => {
           />
         </div>
 
-        {/* Тип сделки: покупка или аренда */}
-        <Select value={transactionType} onValueChange={setTransactionType}>
+        {/* Тип сделки: покупка, аренда или все */}
+        <Select
+          value={transactionType}
+          onValueChange={(value) =>
+            setTransactionType(value as 'sale' | 'rent' | 'all')
+          }
+        >
           <SelectTrigger className="h-12">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="all">{t('transaction.all') || 'All'}</SelectItem>
             <SelectItem value="sale">{t('transaction.forSale')}</SelectItem>
             <SelectItem value="rent">{t('transaction.forRent')}</SelectItem>
           </SelectContent>
