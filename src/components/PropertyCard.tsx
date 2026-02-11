@@ -24,6 +24,7 @@ interface PropertyCardProps {
 export const PropertyCard = ({
   id,
   title,
+  titleBg,
   price,
   location,
   image,
@@ -35,8 +36,10 @@ export const PropertyCard = ({
   featured,
   availableUnits,
   status,
-}: PropertyCardProps) => {
-  const { t } = useTranslation();
+}: PropertyCardProps & { titleBg?: string }) => {
+  const { t, i18n } = useTranslation();
+  const isBgOrRu = i18n.language === 'bg' || i18n.language === 'ru';
+  const displayTitle = isBgOrRu && titleBg ? titleBg : title;
 
   const getStatusBadge = () => {
     if (status === 'sold-out') {
@@ -92,7 +95,7 @@ export const PropertyCard = ({
       </div>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-semibold text-lg line-clamp-2">{title}</h3>
+          <h3 className="font-semibold text-lg line-clamp-2">{displayTitle}</h3>
           <p className="font-bold text-primary whitespace-nowrap">
             {formatPrice()}
             {transactionType === 'rent' && price > 0 && <span className="text-sm font-normal">/mo</span>}

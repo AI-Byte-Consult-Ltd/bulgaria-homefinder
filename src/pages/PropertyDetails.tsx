@@ -27,10 +27,13 @@ import {
 
 const PropertyDetails = () => {
   const { id } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isBgOrRu = i18n.language === 'bg' || i18n.language === 'ru';
   
   // In a real app, fetch property by ID
   const property = mockProperties.find(p => p.id === id) || mockProperties[0];
+  const displayTitle = isBgOrRu && (property as any).titleBg ? (property as any).titleBg : property.title;
+  const displayDescription = isBgOrRu && (property as any).descriptionBg ? (property as any).descriptionBg : (property as any).description;
 
   const images = [
     property.image,
@@ -74,7 +77,7 @@ const PropertyDetails = () => {
                   <Badge className="mb-2 bg-primary">
                     {property.transactionType === 'sale' ? t('transaction.forSale') : t('transaction.forRent')}
                   </Badge>
-                  <h1 className="text-3xl font-bold mb-2">{property.title}</h1>
+                  <h1 className="text-3xl font-bold mb-2">{displayTitle}</h1>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin className="h-4 w-4" />
                     <span>{property.location}</span>
@@ -157,17 +160,15 @@ const PropertyDetails = () => {
 
             {/* Description */}
             <div>
-              <h2 className="text-xl font-semibold mb-4">Description</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                This stunning {property.type} offers exceptional value and comfort. Located in the heart of {property.location}, 
-                it features modern amenities and finishes throughout. The property boasts {property.bedrooms} spacious bedrooms 
-                and {property.bathrooms} well-appointed bathrooms. With {property.area} square meters of living space, 
-                this property is perfect for families or professionals seeking quality accommodation.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">
-                The property is situated in a prime location with easy access to local amenities, schools, and transport links. 
-                Don't miss this opportunity to own a piece of Bulgarian real estate at an attractive price point.
-              </p>
+              <h2 className="text-xl font-semibold mb-4">{t('common.description', 'Description')}</h2>
+              {displayDescription ? (
+                <p className="text-muted-foreground leading-relaxed">{displayDescription}</p>
+              ) : (
+                <p className="text-muted-foreground leading-relaxed">
+                  This stunning {property.type} offers exceptional value and comfort. Located in the heart of {property.location}, 
+                  it features modern amenities and finishes throughout.
+                </p>
+              )}
             </div>
           </div>
 
