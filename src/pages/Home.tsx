@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -7,7 +6,6 @@ import { SearchBar } from '@/components/SearchBar';
 import { PropertyCard } from '@/components/PropertyCard';
 import { RestorationShowcase } from '@/components/RestorationShowcase';
 import Team from '@/components/Team';
-import { supabase } from '@/integrations/supabase/client';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -21,43 +19,48 @@ const Home = () => {
   const featuredProperties = mockProperties.filter((p) => p.featured);
   const newestProperties = mockProperties.slice(0, 3);
 
-  // Состояния для новостей
-  const [news, setNews] = useState<any[]>([]);
-  const [newsLoading, setNewsLoading] = useState(true);
-
-  // Запрос новостей из Supabase; cast to any, чтобы обойти ошибку типизации
-  useEffect(() => {
-    const fetchNews = async () => {
-      setNewsLoading(true);
-      const { data, error } = await (supabase as any)
-        .from('news_articles')
-        .select('title, title_ru, title_bg, excerpt, excerpt_ru, excerpt_bg, image_url, date, slug')
-        .order('date', { ascending: false })
-        .limit(3);
-      if (!error && data) {
-        setNews(data);
-      } else {
-        console.error('Failed to fetch news', error);
-      }
-      setNewsLoading(false);
-    };
-
-    fetchNews();
-  }, []);
-
-  // Форматирование даты в зависимости от языка
-  const formatDate = (dateStr: string) => {
-    try {
-      const date = new Date(dateStr);
-      return date.toLocaleDateString(i18n.language === 'ru' ? 'ru-RU' : 'en-US', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-      });
-    } catch {
-      return dateStr;
-    }
-  };
+  // Static articles data
+  const articles = [
+    {
+      title:
+        i18n.language === 'ru'
+          ? 'Покупка недвижимости в Болгарии в 2026 году: 7 ошибок, которые стоят покупателям десятки тысяч евро'
+          : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
+      excerpt:
+        i18n.language === 'ru'
+          ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
+          : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
+      image_url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+      date: 'Feb 5, 2026',
+      slug: 'buying-mistakes-2026',
+    },
+    {
+      title:
+        i18n.language === 'ru'
+          ? 'Прогноз цен на недвижимость в Болгарии: 2026, 5 лет и 10 лет'
+          : 'Bulgaria Property Price Forecasts: 2026, 5-Year & 10-Year Outlook',
+      excerpt:
+        i18n.language === 'ru'
+          ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
+          : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
+      image_url: 'https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80',
+      date: 'Feb 10, 2026',
+      slug: 'bulgaria-price-forecasts',
+    },
+    {
+      title:
+        i18n.language === 'ru'
+          ? 'Топ-5 прибрежных районов для инвестиций'
+          : 'Top 5 Coastal Areas for Investment',
+      excerpt:
+        i18n.language === 'ru'
+          ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+          : 'Discover the most promising locations along the Black Sea coast...',
+      image_url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
+      date: 'Jan 10, 2026',
+      slug: '',
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -174,138 +177,51 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Latest News */}
+      {/* Market Insights & Analysis */}
       <section className="py-16 bg-muted/30">
         <div className="container">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+            <h2 className="text-3xl font-bold mb-2">
+              {i18n.language === 'ru' ? 'Аналитика рынка недвижимости' : 'Market Insights & Analysis'}
+            </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
 
-          {newsLoading ? (
-            <p className="text-muted-foreground">Loading...</p>
-          ) : news.length > 0 ? (
-            <div className="grid md:grid-cols-3 gap-6">
-              {news.map((article) => {
-                const title =
-                  i18n.language === 'ru'
-                    ? article.title_ru || article.title
-                    : i18n.language === 'bg'
-                    ? article.title_bg || article.title
-                    : article.title;
-                const excerpt =
-                  i18n.language === 'ru'
-                    ? article.excerpt_ru || article.excerpt
-                    : i18n.language === 'bg'
-                    ? article.excerpt_bg || article.excerpt
-                    : article.excerpt;
-                return (
-                  <div
-                    key={article.slug}
-                    className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all"
-                  >
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={article.image_url}
-                        alt={title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-5">
-                      <p className="text-xs text-muted-foreground mb-2">
-                        {formatDate(article.date)}
-                      </p>
-                      <h3 className="font-bold text-lg mb-2 line-clamp-2">{title}</h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{excerpt}</p>
-                      <Link
-                        to={`/article/${article.slug}`}
-                        className="text-primary text-sm font-semibold hover:underline"
-                      >
-                        {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
-                      </Link>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            // Если в таблице news_articles нет записей – показываем статические карточки
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  title:
-                    i18n.language === 'ru'
-                      ? 'Покупка недвижимости в Болгарии в 2026 году: 7 ошибок, которые стоят покупателям десятки тысяч евро'
-                      : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
-                  excerpt:
-                    i18n.language === 'ru'
-                      ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
-                      : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
-                  image_url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
-                  date: 'Feb 5, 2026',
-                  slug: 'buying-mistakes-2026',
-                },
-                {
-                  title:
-                    i18n.language === 'ru'
-                      ? 'Прогноз цен на недвижимость в Болгарии: 2026, 5 лет и 10 лет'
-                      : 'Bulgaria Property Price Forecasts: 2026, 5-Year & 10-Year Outlook',
-                  excerpt:
-                    i18n.language === 'ru'
-                      ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
-                      : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
-                  image_url: 'https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80',
-                  date: 'Feb 10, 2026',
-                  slug: 'bulgaria-price-forecasts',
-                },
-                {
-                  title:
-                    i18n.language === 'ru'
-                      ? 'Топ-5 прибрежных районов для инвестиций'
-                      : 'Top 5 Coastal Areas for Investment',
-                  excerpt:
-                    i18n.language === 'ru'
-                      ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
-                      : 'Discover the most promising locations along the Black Sea coast...',
-                  image_url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
-                  date: 'Jan 10, 2026',
-                  slug: '',
-                },
-              ].map((article, idx) => (
-                <div
-                  key={idx}
-                  className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={article.image_url}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
-                    <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                      {article.excerpt}
-                    </p>
-                    {article.slug ? (
-                      <Link
-                        to={`/article/${article.slug}`}
-                        className="text-primary text-sm font-semibold hover:underline"
-                      >
-                        {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
-                      </Link>
-                    ) : (
-                      <span className="text-primary text-sm font-semibold">
-                        {i18n.language === 'ru' ? 'Скоро...' : 'Coming soon...'}
-                      </span>
-                    )}
-                  </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {articles.map((article, idx) => (
+              <div
+                key={idx}
+                className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={article.image_url}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-              ))}
-            </div>
-          )}
+                <div className="p-5">
+                  <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
+                  <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                    {article.excerpt}
+                  </p>
+                  {article.slug ? (
+                    <Link
+                      to={`/article/${article.slug}`}
+                      className="text-primary text-sm font-semibold hover:underline"
+                    >
+                      {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
+                    </Link>
+                  ) : (
+                    <span className="text-muted-foreground text-sm font-semibold">
+                      {i18n.language === 'ru' ? 'Скоро...' : 'Coming soon...'}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
