@@ -48,18 +48,23 @@ const Home = () => {
       slug: 'bulgaria-price-forecasts',
     },
     {
-      title:
-        i18n.language === 'ru'
-          ? 'Топ-5 прибрежных районов для инвестиций'
-          : 'Top 5 Coastal Areas for Investment',
-      excerpt:
-        i18n.language === 'ru'
-          ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
-          : 'Discover the most promising locations along the Black Sea coast...',
-      image_url: 'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
-      date: 'Jan 10, 2026',
-      slug: 'top-5-areas-in-bulgarian-cost-to-buy',
-    },
+  title:
+    i18n.language === 'ru'
+      ? 'Топ-5 прибрежных районов для инвестиций'
+      : i18n.language === 'bg'
+        ? 'Топ 5 крайбрежни зони за инвестиция'
+        : 'Top 5 Coastal Areas for Investment',
+  excerpt:
+    i18n.language === 'ru'
+      ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+      : i18n.language === 'bg'
+        ? 'Открийте най-перспективните локации по Черноморието...'
+        : 'Discover the most promising locations along the Black Sea coast...',
+  image_url:
+    'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
+  date: 'Jan 10, 2026',
+  slug: 'top-5-areas-in-bulgarian-coast-to-buy',
+},
   ];
 
   return (

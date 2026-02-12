@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,13 +14,13 @@ import Services from "./pages/Services";
 import RestorationProject from "./pages/RestorationProject";
 import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
 import BulgariaPriceForecastsArticle from "./pages/BulgariaPriceForecastsArticle";
+import Top5CoastalAreasForInvestmentArticle from "./pages/Top-5-areas-in-bulgarian-coast-to-buy";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import { ChatWidget } from "./components/ChatWidget";
-// Новый импорт страницы добавления объекта
 import AddProperty from "./pages/AddProperty";
 import "./i18n/config";
 
@@ -43,17 +42,25 @@ const App = () => (
             <Route path="/sell" element={<Sell />} />
             <Route path="/services" element={<Services />} />
             <Route path="/restoration/:id" element={<RestorationProject />} />
+
+            {/* Articles */}
             <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/article/bulgaria-price-forecasts" element={<BulgariaPriceForecastsArticle />} />
+            <Route
+              path="/article/top-5-areas-in-bulgarian-cost-to-buy"
+              element={<Top5CoastalAreasForInvestmentArticle />}
+            />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            {/* Новый маршрут для страницы добавления объекта */}
             <Route path="/dashboard/add-property" element={<AddProperty />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+
           <ChatWidget />
         </BrowserRouter>
       </TooltipProvider>
