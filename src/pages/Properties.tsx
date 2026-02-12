@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PropertyCard } from '@/components/PropertyCard';
@@ -30,6 +30,7 @@ const Properties = () => {
   const [loading, setLoading] = useState(true);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Локальные состояния для полей фильтра
   const [locFilter, setLocFilter] = useState('');
@@ -105,12 +106,7 @@ const Properties = () => {
       params.set('transaction', transactionFilter);
     if (typeFilter && typeFilter !== 'all') params.set('type', typeFilter);
     const queryString = params.toString();
-    window.history.replaceState(
-      null,
-      '',
-      `/properties${queryString ? `?${queryString}` : ''}`
-    );
-    // fetchProperties вызовется автоматически через useEffect
+    navigate(`/properties${queryString ? `?${queryString}` : ''}`, { replace: true });
   };
 
   return (
