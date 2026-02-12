@@ -56,9 +56,9 @@ const Home = () => {
         i18n.language === 'ru'
           ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
           : 'Discover the most promising locations along the Black Sea coast...',
-      image_url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
+      image_url: 'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
       date: 'Jan 10, 2026',
-      slug: '',
+      slug: 'top-5-areas-in-bulgarian-cost-to-buy',
     },
   ];
 
