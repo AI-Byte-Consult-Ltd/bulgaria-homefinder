@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/select';
 import { SlidersHorizontal } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { mockProperties } from '@/data/mockProperties';
 
 /**
  * Страница вывода найденных объектов недвижимости.
@@ -55,41 +56,38 @@ const Properties = () => {
     const fetchProperties = async () => {
       setLoading(true);
 
+      // Try Supabase first
       let query: any = supabase.from('properties').select('*');
-
-      // Фильтр по местоположению
-      if (searchLoc) {
-        query = query.ilike('location', `%${searchLoc}%`);
-      }
-      // Фильтр по типу сделки (продажа/аренда), если указан и не "all"
-      if (searchTransaction && searchTransaction !== 'all') {
-        query = query.eq('transaction_type', searchTransaction);
-      }
-      // Фильтр по типу недвижимости
-      if (searchType && searchType !== 'all') {
-        query = query.eq('property_type', searchType);
-      }
-
-      // Дополнительные фильтры по цене и количеству комнат
-      if (minPrice) {
-        query = query.gte('price', Number(minPrice));
-      }
-      if (maxPrice) {
-        query = query.lte('price', Number(maxPrice));
-      }
-      if (bedrooms !== 'any') {
-        query = query.gte('bedrooms', Number(bedrooms));
-      }
-      if (bathrooms !== 'any') {
-        query = query.gte('bathrooms', Number(bathrooms));
-      }
+      if (searchLoc) query = query.ilike('location', `%${searchLoc}%`);
+      if (searchTransaction && searchTransaction !== 'all') query = query.eq('transaction_type', searchTransaction);
+      if (searchType && searchType !== 'all') query = query.eq('property_type', searchType);
+      if (minPrice) query = query.gte('price', Number(minPrice));
+      if (maxPrice) query = query.lte('price', Number(maxPrice));
+      if (bedrooms !== 'any') query = query.gte('bedrooms', Number(bedrooms));
+      if (bathrooms !== 'any') query = query.gte('bathrooms', Number(bathrooms));
 
       const { data, error } = await query;
-      if (!error) {
-        setProperties(data ?? []);
+
+      if (!error && data && data.length > 0) {
+        setProperties(data);
       } else {
-        console.error(error);
-        setProperties([]);
+        // Fallback to mock data with client-side filtering
+        let filtered = [...mockProperties];
+        if (searchLoc) {
+          const q = searchLoc.toLowerCase();
+          filtered = filtered.filter(p => p.location.toLowerCase().includes(q) || p.title.toLowerCase().includes(q));
+        }
+        if (searchTransaction && searchTransaction !== 'all') {
+          filtered = filtered.filter(p => p.transactionType === searchTransaction);
+        }
+        if (searchType && searchType !== 'all') {
+          filtered = filtered.filter(p => p.type === searchType);
+        }
+        if (minPrice) filtered = filtered.filter(p => p.price >= Number(minPrice));
+        if (maxPrice) filtered = filtered.filter(p => p.price <= Number(maxPrice));
+        if (bedrooms !== 'any') filtered = filtered.filter(p => p.bedrooms >= Number(bedrooms));
+        if (bathrooms !== 'any') filtered = filtered.filter(p => p.bathrooms >= Number(bathrooms));
+        setProperties(filtered);
       }
       setLoading(false);
     };
@@ -267,21 +265,21 @@ const Properties = () => {
                     key={property.id}
                     id={property.id}
                     title={property.title}
-                    titleBg={property.title_bg}
+                    titleBg={property.title_bg || property.titleBg}
                     price={property.price}
                     location={property.location}
                     image={
                       property.images && property.images.length > 0
                         ? property.images[0]
-                        : '/placeholder.jpg'
+                        : property.image || '/placeholder.jpg'
                     }
                     bedrooms={property.bedrooms}
                     bathrooms={property.bathrooms}
-                    area={property.size_sqm}
-                    type={property.property_type}
-                    transactionType={property.transaction_type as 'sale' | 'rent'}
-                    featured={property.is_priority}
-                    availableUnits={property.available_units}
+                    area={property.size_sqm || property.area}
+                    type={property.property_type || property.type}
+                    transactionType={(property.transaction_type || property.transactionType) as 'sale' | 'rent'}
+                    featured={property.is_priority || property.featured}
+                    availableUnits={property.available_units || property.availableUnits}
                     status={property.status}
                   />
                 ))}
