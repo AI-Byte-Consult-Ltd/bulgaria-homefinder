@@ -30,7 +30,7 @@ const Home = () => {
         i18n.language === 'ru'
           ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
           : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
-      image_url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+      image_url: 'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
       date: 'Feb 5, 2026',
       slug: 'buying-mistakes-2026',
     },
@@ -43,7 +43,7 @@ const Home = () => {
         i18n.language === 'ru'
           ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
           : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
-      image_url: 'https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80',
+      image_url: 'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
       date: 'Feb 10, 2026',
       slug: 'bulgaria-price-forecasts',
     },
