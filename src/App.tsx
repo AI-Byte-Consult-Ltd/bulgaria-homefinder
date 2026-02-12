@@ -14,7 +14,7 @@ import Services from "./pages/Services";
 import RestorationProject from "./pages/RestorationProject";
 import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
 import BulgariaPriceForecastsArticle from "./pages/BulgariaPriceForecastsArticle";
-import Top5CoastalAreasForInvestmentArticle from "./pages/Top-5-areas-in-bulgarian-coast-to-buy";
+import Top5CoastalAreasForInvestmentArticle from "./pages/Top5CoastalAreasForInvestmentArticle";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
@@ -47,7 +47,7 @@ const App = () => (
             <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/article/bulgaria-price-forecasts" element={<BulgariaPriceForecastsArticle />} />
             <Route
-              path="/article/top-5-areas-in-bulgarian-cost-to-buy"
+              path="/article/top-5-areas-in-bulgarian-coast-to-buy"
               element={<Top5CoastalAreasForInvestmentArticle />}
             />
 
@@ -57,7 +57,6 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/add-property" element={<AddProperty />} />
 
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
 
