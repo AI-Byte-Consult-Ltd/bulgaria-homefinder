@@ -17,6 +17,7 @@ import {
 import { SlidersHorizontal } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { mockProperties } from '@/data/mockProperties';
+import { propertyMatchesQuery } from '@/data/cityAliases';
 
 /**
  * Страница вывода найденных объектов недвижимости.
@@ -75,8 +76,7 @@ const Properties = () => {
         // Fallback to mock data with client-side filtering
         let filtered = [...mockProperties];
         if (searchLoc) {
-          const q = searchLoc.toLowerCase();
-          filtered = filtered.filter(p => p.location.toLowerCase().includes(q) || p.title.toLowerCase().includes(q));
+          filtered = filtered.filter(p => propertyMatchesQuery(p, searchLoc));
         }
         if (searchTransaction && searchTransaction !== 'all') {
           filtered = filtered.filter(p => p.transactionType === searchTransaction);
