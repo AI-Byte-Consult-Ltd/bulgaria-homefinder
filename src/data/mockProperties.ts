@@ -13,7 +13,7 @@ export const mockProperties = [
 
   // Images (IPFS)
   images: [
-    'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa',
+    'https://ipfs.io/ipfs/bafybeidylrpkiheyqiut4hamwqdcubm5yc543u7rsn4fc7vztc4hdo6kba',
     'https://ipfs.io/ipfs/bafybeif44c4jydc6yur73ssehtshgyfujeymlwgxqkncinv4cmzlyzcaam',
     'https://ipfs.io/ipfs/bafybeicfeafagpaanfp7ivjlh2qelvu23ey5bn4x2l37xs2deswj2aijqu',
     'https://ipfs.io/ipfs/bafybeie5sf52o33upacbecj3qkjbi3ejzpuqswxwvhvulcckhir7hoxbue',
@@ -27,7 +27,7 @@ export const mockProperties = [
     'https://ipfs.io/ipfs/bafybeicblnxaain7klti5d7r55sxho7ikrmou7luvkkk2kmkox3q5lpfqe',
     'https://ipfs.io/ipfs/bafybeiepaf5h22g3mbyjh6lomsiyr22a5wwzpcqnj7hujunekosgnlafle',
     'https://ipfs.io/ipfs/bafybeiewahasytvotmuxdb4yvdpi6tuj4nmpkwub5zl37odq2fcan4tili',
-    'https://ipfs.io/ipfs/bafybeielx5pvpdmex77e4hnbzoudfzyyg6jog7wdy4tc623clwxey4cfay'
+    'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa'
   ],
 
   bedrooms: 2,
