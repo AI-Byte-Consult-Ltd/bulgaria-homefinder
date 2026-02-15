@@ -14,9 +14,20 @@ export const mockProperties = [
   // Images (IPFS)
   images: [
     'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa',
-    'https://ipfs.io/ipfs/bafybeieqpgikbk7wx74ekgs7w7mw6y6ifjaz36kjyor6plugsniy2hq5vu',
-    'https://ipfs.io/ipfs/YOUR_THIRD_IMAGE_HASH',
-    'https://ipfs.io/ipfs/YOUR_FOURTH_IMAGE_HASH'
+    'https://ipfs.io/ipfs/bafkreif66bnkpkeu4unl73lhqiqujwobyvxcivzgn6hve555ggrayrwbqq',
+    'https://ipfs.io/ipfs/bafkreibh7qnkozurw4psv3ykk5bajg45xvlm755c2tjdozy5kpi6nquhty',
+    'https://ipfs.io/ipfs/bafkreif42dedehkkjnsbx4gmsr2t6n3znv2x37cxb6plzocxpdchxnndoe',
+    'https://ipfs.io/ipfs/bafkreiflivv5drjojr673mitsx7jhrmnsoa22prpajbmt4ekd772g3frm4',
+    'https://ipfs.io/ipfs/bafkreiaged4zmqe7ihx7wn42sdtqqbtom6txsr4nf7nu5oh7besw3kr6ce',
+    'https://ipfs.io/ipfs/bafkreigf4ezahltyobbsnjgv623acltw6wl62v4zsk3tjkyxhshbc4bj6e',
+    'https://ipfs.io/ipfs/bafkreiao2xznejaaznqaxokqefjocix7gljnoz3s7egk4nkixakdwbldra',
+    'https://ipfs.io/ipfs/bafkreift63jm4q4e2lvrbjseqg6utitx7jqt2gf6yonwtfgggbw547duxa',
+    'https://ipfs.io/ipfs/bafkreiay2nj3g4z5wc7aobsyvpb4r4h4lfeuwv7lowzka2scalxu3hl2wm',
+    'https://ipfs.io/ipfs/bafkreiasgwn44vdj3rg2oxac7lcliyh73vqviikqsslsfffypwcwlwq5wi',
+    'https://ipfs.io/ipfs/bafkreieic5qpfdlpbbjw7qpntzhcxqp6xldsbteg4opdbkoofkl3u3jopi',
+    'https://ipfs.io/ipfs/bafkreicvim5umsaulkvzis35qwyccbgrqratucheooi2cp76ylen76mi2e',
+    'https://ipfs.io/ipfs/bafkreicce4jzldoqinhanokjclh7nkre3xalvglli2dphlhlqevapooyn4',
+    'https://ipfs.io/ipfs/bafkreidpvztz7ftpx4pd5jyctbmmkbwf5wloi46tavkvojn2zor63xmxhy'
   ],
 
   bedrooms: 2,
