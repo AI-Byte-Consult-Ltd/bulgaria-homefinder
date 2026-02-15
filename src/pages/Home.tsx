@@ -30,7 +30,8 @@ const Home = () => {
         i18n.language === 'ru'
           ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
           : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
-      image_url: 'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
+      image_url:
+        'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
       date: 'Feb 5, 2026',
       slug: 'buying-mistakes-2026',
     },
@@ -43,29 +44,49 @@ const Home = () => {
         i18n.language === 'ru'
           ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
           : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
-      image_url: 'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
+      image_url:
+        'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
       date: 'Feb 10, 2026',
       slug: 'bulgaria-price-forecasts',
     },
     {
-  title:
-    i18n.language === 'ru'
-      ? 'Топ-5 прибрежных районов для инвестиций'
-      : i18n.language === 'bg'
-        ? 'Топ 5 крайбрежни зони за инвестиция'
-        : 'Top 5 Coastal Areas for Investment',
-  excerpt:
-    i18n.language === 'ru'
-      ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
-      : i18n.language === 'bg'
-        ? 'Открийте най-перспективните локации по Черноморието...'
-        : 'Discover the most promising locations along the Black Sea coast...',
-  image_url:
-    'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
-  date: 'Jan 10, 2026',
-  slug: 'top-5-areas-in-bulgarian-coast-to-buy',
-},
+      title:
+        i18n.language === 'ru'
+          ? 'Топ-5 прибрежных районов для инвестиций'
+          : i18n.language === 'bg'
+            ? 'Топ 5 крайбрежни зони за инвестиция'
+            : 'Top 5 Coastal Areas for Investment',
+      excerpt:
+        i18n.language === 'ru'
+          ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+          : i18n.language === 'bg'
+            ? 'Открийте най-перспективните локации по Черноморието...'
+            : 'Discover the most promising locations along the Black Sea coast...',
+      image_url:
+        'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
+      date: 'Jan 10, 2026',
+      slug: 'top-5-areas-in-bulgarian-coast-to-buy',
+    },
   ];
+
+  /**
+   * Normalize property so main page always has a valid "image" for PropertyCard:
+   * - Prefer images[0] (new model)
+   * - Fallback to image (old model)
+   * - Fallback to placeholder
+   */
+  const withCardImage = (property: any) => {
+    const first =
+      (property.images && Array.isArray(property.images) && property.images.length > 0
+        ? property.images[0]
+        : property.image) || '/placeholder.jpg';
+
+    // Keep original fields, but force image for cards
+    return { ...property, image: first };
+  };
+
+  const featuredForCards = featuredProperties.map(withCardImage);
+  const newestForCards = newestProperties.map(withCardImage);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -103,7 +124,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProperties.map((property) => (
+          {featuredForCards.map((property) => (
             <PropertyCard key={property.id} {...property} />
           ))}
         </div>
@@ -120,7 +141,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newestProperties.map((property) => (
+            {newestForCards.map((property) => (
               <PropertyCard key={property.id} {...property} />
             ))}
           </div>

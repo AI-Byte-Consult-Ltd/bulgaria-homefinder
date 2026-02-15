@@ -35,12 +35,12 @@ const PropertyDetails = () => {
   const displayTitle = isBgOrRu && (property as any).titleBg ? (property as any).titleBg : property.title;
   const displayDescription = isBgOrRu && (property as any).descriptionBg ? (property as any).descriptionBg : (property as any).description;
 
-  const images = [
-    property.image,
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
-    'https://images.unsplash.com/photo-1574643156929-51fa098b0394?w=800&q=80',
-    'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&q=80',
-  ];
+  const images =
+  property.images && property.images.length > 0
+    ? property.images
+    : property.image
+      ? [property.image]
+      : ['/placeholder.jpg'];
 
   return (
     <div className="min-h-screen flex flex-col">

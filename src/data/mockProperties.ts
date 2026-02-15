@@ -1,22 +1,40 @@
 export const mockProperties = [
   // FEATURED PROPERTY - Mellia Park 10, Ravda
   {
-    id: 'mellia-park-10-ravda-77544',
-    title: 'Panoramic Sea-View Residence | Mellia Park 10, Ravda',
-    titleBg: 'Панорамна резиденция с морска гледка | Мелия Парк 10, Равда',
-    price: 130000,
-    location: 'Ravda, Burgas Region',
-    image: 'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa',
-    bedrooms: 2,
-    bathrooms: 1,
-    area: 91,
-    type: 'apartment',
-    transactionType: 'sale' as const,
-    featured: true,
-    availableUnits: 1,
-    status: 'for-sale',
-    description: 'Panoramic near-360° sea view from Ravda and Nessebar along the coastline. Located steps from Ravda central beach in Mellia Park 10 complex. Features living room with kitchen, 2 bedrooms, bathroom, and large panoramic terrace. Complex amenities: pool, children\'s playground, 24h security, landscaped gardens. Built 2016, top floor. Annual maintenance only 7 EUR/sq.m. Ideal for year-round living, holiday home, or rental investment.',
-  },
+  id: 'mellia-park-10-ravda-77544',
+
+  // Titles
+  title: 'Panoramic Sea-View Residence | Mellia Park 10, Ravda',
+  titleBg: 'Панорамна резиденция с морска гледка | Мелия Парк 10, Равда',
+  titleRu: 'Панорамная резиденция с видом на море | Mellia Park 10, Равда',
+
+  price: 130000,
+  location: 'Ravda, Burgas Region',
+
+  // Images (IPFS)
+  images: [
+    'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa',
+    'https://ipfs.io/ipfs/bafybeieqpgikbk7wx74ekgs7w7mw6y6ifjaz36kjyor6plugsniy2hq5vu',
+    'https://ipfs.io/ipfs/YOUR_THIRD_IMAGE_HASH',
+    'https://ipfs.io/ipfs/YOUR_FOURTH_IMAGE_HASH'
+  ],
+
+  bedrooms: 2,
+  bathrooms: 1,
+  area: 91,
+  type: 'apartment',
+  transactionType: 'sale' as const,
+  featured: true,
+  availableUnits: 1,
+  status: 'for-sale',
+
+  // Descriptions
+  description: 'Panoramic near-360° sea view from Ravda and Nessebar along the coastline. Steps from Ravda central beach in Mellia Park 10. Layout: living room with kitchen, 2 bedrooms, bathroom, large panoramic terrace. Amenities: pool, kids playground, 24/7 security, landscaped gardens. Built 2016, top floor. Annual maintenance: 7 EUR/sq.m. Great for living, holidays, or rental investment.',
+
+  descriptionBg: 'Панорамна почти 360° морска гледка от Равда и Несебър по цялата крайбрежна линия. На крачки от централния плаж на Равда, в комплекс Мелия Парк 10. Разпределение: дневна с кухня, 2 спални, баня и голяма панорамна тераса. Удобства: басейн, детска площадка, 24/7 охрана, озеленени площи. Построен 2016 г., последен етаж. Годишна такса поддръжка: 7 EUR/кв.м. Отличен за целогодишно живеене, ваканционен дом или инвестиция под наем.',
+
+  descriptionRu: 'Панорамный почти 360° вид на море — от Равды и Несебра вдоль всей береговой линии. В нескольких шагах от центрального пляжа Равды, комплекс Mellia Park 10. Планировка: гостиная с кухней, 2 спальни, санузел и большая панорамная терраса. Инфраструктура: бассейн, детская площадка, круглосуточная охрана, озеленение. Год постройки 2016, верхний этаж. Такса поддержки: 7 EUR/м² в год. Отлично для круглогодичного проживания, отдыха или аренды.'
+},
   // FEATURED PROPERTY - Zornitsa House
   {
     id: 'zornitsa-house-75239',
@@ -753,7 +771,7 @@ export const mockProperties = [
     titleBg: 'Жилищна сграда - 2 спални, Поморие',
     price: 116500,
     location: 'Pomorie',
-    image: 'https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreihwcx623espjlaboxii2cb6izewrk4ibl73jw2jgap4y6oytlokwu',
     bedrooms: 2,
     bathrooms: 1,
     area: 93,
@@ -770,7 +788,7 @@ export const mockProperties = [
     titleBg: 'ПАНОРАМА БЕЙ 1 - 2 спални, Свети Влас',
     price: 100000,
     location: 'Saint Vlas',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreifx2vktbgfpnssbixbendkq6lshrtie4pbsjvifg5qb4sspckjdxy',
     bedrooms: 2,
     bathrooms: 1,
     area: 75,
@@ -787,7 +805,7 @@ export const mockProperties = [
     titleBg: 'КАСА РЕАЛ - Луксозен 2 спални, Свети Влас',
     price: 330000,
     location: 'Saint Vlas',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreiaxejeqsoytovtxbuxlnmewn75oct2chimn7jgkyvknw2yo7acoly',
     bedrooms: 2,
     bathrooms: 2,
     area: 149,
@@ -804,7 +822,7 @@ export const mockProperties = [
     titleBg: 'ОРХИДЕЯ - Луксозен пентхаус 255 м², Свети Влас',
     price: 335900,
     location: 'Saint Vlas',
-    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreiflieov6medhr4hxu2qngwhv2coxda5grpauqyil66fwqiaxic7hy',
     bedrooms: 2,
     bathrooms: 2,
     area: 255,
@@ -822,7 +840,7 @@ export const mockProperties = [
     titleBg: 'Жилищна сграда - 3 спални, Свети Влас',
     price: 137000,
     location: 'Saint Vlas',
-    image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreiekankdy6eeecnwlcqde2zccyfhzkwi4bll6vni6h4cd4p34ducem',
     bedrooms: 3,
     bathrooms: 2,
     area: 99,
@@ -840,7 +858,7 @@ export const mockProperties = [
     titleBg: 'ПАРЦЕЛ + Стара къща - с. Горица',
     price: 35900,
     location: 'Goritsa',
-    image: 'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreieiqbepoaumd7yb6d6hdkehy5lnhrlwfkiz26nbpojh23y7aebcia',
     bedrooms: 1,
     bathrooms: 1,
     area: 0,
@@ -857,7 +875,7 @@ export const mockProperties = [
     titleBg: 'Нова едноетажна къща - Александрово',
     price: 250000,
     location: 'Alexandrovo',
-    image: 'https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreiawxuc7hvc2m776t2ylavp6flkvzzl7wqkri4aeu3rgw2trfntib4',
     bedrooms: 3,
     bathrooms: 2,
     area: 265,
@@ -874,7 +892,7 @@ export const mockProperties = [
     titleBg: 'Частна КЪЩА с басейн и гараж - Кошарица',
     price: 575000,
     location: 'Kosharitsa',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: 'https://ipfs.io/ipfs/bafkreia65swzwnaudf4ofbg2bpbwq3ywwvjdruz6setyltkodcmcjmivne',
     bedrooms: 4,
     bathrooms: 3,
     area: 239,
