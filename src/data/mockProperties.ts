@@ -64,6 +64,71 @@ export const mockProperties = [
     status: 'for-sale',
     description: 'Two-storey detached house with 1,910 sq.m. land plot in the quiet village of Zornitsa, Burgas region. 50 km from the sea. Connected to electricity and water, with a well nearby. Mineral springs 150m away. Ideal for renovation into a private home, guest house, or Airbnb. Year built: 1969. Construction: stone (ground floor) and brick (upper floor).',
   },
+  // FEATURED PROPERTY - Burgas, Slaveykov 50 - Luxury Apartment
+{
+  id: 'burgas-slaveykov-50-lux',
+  title: 'Luxury 1-Bedroom Apartment with Designer Renovation – Slaveykov',
+  titleBg: 'Луксозен двустаен апартамент с дизайнерски ремонт – Славейков',
+  titleRu: 'Люкс двухкомнатная квартира с дизайнерским ремонтом – Славейков',
+  titleDe: 'Luxuriöse 2-Zimmer-Wohnung mit Designer-Renovierung – Slaveykov',
+  titleIt: 'Appartamento bilocale di lusso con ristrutturazione di design – Slaveykov',
+
+  price: 140000,
+  location: 'Burgas, Slaveykov District',
+  // Images (IPFS)
+  images: [
+    'https://ipfs.io/ipfs/bafkreidexhabjubj5phpjwhi72rq3veybs5zmxfwp4t43q6cdn2klmxqju',
+    'https://ipfs.io/ipfs/bafkreihsb3mxv6ap4sn6jnmllwocd37cmjyydwudtw2rhcjncqik7x2lja',
+    'https://ipfs.io/ipfs/bafkreidmkv7eqmppkh2fsmt3s74ovpfk4zneztxomqrbce3smulrzf4eja',
+    'https://ipfs.io/ipfs/bafkreifxpqobjmd6po22clcwtfylegrvviswsmsg5rhntonuibaife2f4e',
+    'https://ipfs.io/ipfs/bafkreigrsjl3ybpbwu5b37k62lgjveg5al6dccdos6pjjjhyhzcwzs4i4i',
+    'https://ipfs.io/ipfs/bafkreiauptmf6kxm2owndnuz5ofxiavcgkadkarirquejycpgc6p2x336q',
+    'https://ipfs.io/ipfs/bafkreielabiz2y63bchhk4d6yfzczqlugzn3xo7hdlm4cgjyseg3netmia',
+    'https://ipfs.io/ipfs/bafkreic2tompgwqvtoi5mlcmmjkd5qfa27h4fth3ypifkkstlkjbt6gyla',
+    'https://ipfs.io/ipfs/bafkreidhtexyik42alqr2vcgmlkz6hzxvyf7643oerlt7xhrw3ebze4x2a',
+    'https://ipfs.io/ipfs/bafkreihpxox57oawokplglr7suqptljjlp24zutlwqpddqagorsmyml32m',
+    'https://ipfs.io/ipfs/bafkreibhz6iwatxvnwjjj7rzh75gyogiyolodmuje7ilw4be2m2jtltlkq',
+    'https://ipfs.io/ipfs/bafkreighoezlcpqxgih62s665jg56pwfslig4acqmwx4brgx6i3rifm6i4',
+    'https://ipfs.io/ipfs/bafkreihkxdvc3c6saqb6c7zifnw6wmbx6er7exbgsaajxn5i6npbputwum',
+    'https://ipfs.io/ipfs/bafkreihb7b4jkl7rmi2fox2rnqmigz3pwbvdt4log7mfqcwssu24walyw4',
+    'https://ipfs.io/ipfs/bafkreifcnactqbdqc3z3ysyxjgzgeu6dsbv22zy4ry5pbqymrgoy7b5zpu',
+    'https://ipfs.io/ipfs/bafkreie5rnjdxb7ffotk5xz7skua2j2ine43six7pknw7k6lah6yjbis3q',
+    'https://ipfs.io/ipfs/bafkreictnolyaor4oagnxvqj2l4ggyqrppwpio4btxhy7dynggjhnwyobm',
+    'https://ipfs.io/ipfs/bafkreidaxv4t5ddxlvkmpxk2ecsxuix7yoc4upwugtzdgoddvu4iy6hhkq',
+    'https://ipfs.io/ipfs/bafkreigfojsbo6incm5nvxupi4zlrtcyfe5hltemjytgeysagljm6iawea',
+    'https://ipfs.io/ipfs/bafkreicjfvowjmdnw4hqsigrfkwfuhtxngjaukqn6y7qurmtusrab5kawe',
+    'https://ipfs.io/ipfs/bafkreicadb6xllurz4nbl2yy3qyh6adgx2rcwywchja3ajlhveapko6tsi',
+    'https://ipfs.io/ipfs/bafkreiflcszws3ycebuk6gshjgs7v677fsl7ii26fxzseyd2ykuv5a4f6e',
+    'https://ipfs.io/ipfs/bafkreibydttajeseyc7xhkpvvfs4caswyyuyf5i3mxejszcfxspjne5n2e',
+    'https://ipfs.io/ipfs/bafkreidifsckd76oguxzu2oaq7mxcn7idy4zlfmj2gwqe3lthxsyfjgvua',
+    'https://ipfs.io/ipfs/bafkreicvfejrqavlco2lwo6o3c5n2mcouegzi4qwxafvxnr6auwe2bujki',
+    'https://ipfs.io/ipfs/bafkreia3riuwecssgneio6eys4ibptyiyupncm2pu3ztskietl7tc7cy2q',
+    'https://ipfs.io/ipfs/bafkreidvffc5fzn63xsl5kn5veal5hdajetyspd3d2of4jng2tgvo6juua',
+    'https://ipfs.io/ipfs/bafkreihpnl6mplfro4rtovgviomn6cwnirsfju3d4qwmw3sm5ia2z77a6a',
+    'https://ipfs.io/ipfs/bafkreianqglq3ffckxufzlzucqr4ahslucbxr6hyvi5lip46n3s7t3rqwq',
+    'https://ipfs.io/ipfs/bafkreieytezkhooq2e6e5qgdo5sdfkfugm752bx4ao7gb5hlevuk4rymii',
+    'https://ipfs.io/ipfs/bafkreicfwnvzud6jyji226t7oljtflrinvzlcqh4g6mdk5vubtpfqe7ggu',
+    'https://ipfs.io/ipfs/bafkreicvah22gltry3e6xc7tj2zfvnpa22pscya5ewnajidcn4iu2yvnnq'
+  ],
+
+  bedrooms: 1,
+  bathrooms: 1,
+  area: 60,
+  type: 'apartment',
+  transactionType: 'sale' as const,
+  featured: true,
+  status: 'for-sale',
+
+  description: 'Luxury 1-bedroom apartment located on the 16th (not top) floor. Fully furnished with premium furniture and high-end appliances. Modern interior design, functional layout, ideal for personal living or investment.',
+
+  descriptionBg: 'Луксозен двустаен апартамент, разположен на 16-ти (непоследен) етаж. Напълно обзаведен с висок клас мебели и електроуреди. Модерен интериор и функционално разпределение. Подходящ както за живеене, така и за инвестиция.',
+
+  descriptionRu: 'Люкс двухкомнатная квартира на 16-м (не последнем) этаже. Полностью укомплектована мебелью и техникой высокого класса. Современный интерьер и удобная планировка. Отличный вариант для проживания или инвестиции.',
+
+  descriptionDe: 'Luxuriöse 2-Zimmer-Wohnung im 16. (nicht letzten) Stock. Vollständig möbliert mit hochwertigen Möbeln und Elektrogeräten. Modernes Design und funktionale Raumaufteilung. Ideal sowohl zum Wohnen als auch als Kapitalanlage.',
+
+  descriptionIt: 'Appartamento bilocale di lusso situato al 16° piano (non ultimo). Completamente arredato con mobili ed elettrodomestici di alta qualità. Design moderno e disposizione funzionale. Ideale sia per abitazione che per investimento.',
+},
   // FEATURED PROPERTIES - From Skarabey
   {
     id: 'skarabey-madika',
