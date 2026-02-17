@@ -77,7 +77,7 @@ export const mockProperties = [
   location: 'Burgas, Slaveykov District',
   // Images (IPFS)
   images: [
-    'https://ipfs.io/ipfs/bafkreidexhabjubj5phpjwhi72rq3veybs5zmxfwp4t43q6cdn2klmxqju',
+    'https://ipfs.io/ipfs/bafybeidb6jnowpx77vumucgl3ymyqz3rh3xvzum3ebwdvbxmjrqz5z4bvq',
     'https://ipfs.io/ipfs/bafkreihsb3mxv6ap4sn6jnmllwocd37cmjyydwudtw2rhcjncqik7x2lja',
     'https://ipfs.io/ipfs/bafkreidmkv7eqmppkh2fsmt3s74ovpfk4zneztxomqrbce3smulrzf4eja',
     'https://ipfs.io/ipfs/bafkreifxpqobjmd6po22clcwtfylegrvviswsmsg5rhntonuibaife2f4e',
