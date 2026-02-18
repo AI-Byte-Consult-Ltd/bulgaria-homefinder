@@ -123,7 +123,7 @@ const Home = () => {
                 ? "Le ragioni strutturali del divario di prezzo bulgaro, cosa cambia con l'euro e perché il 2026 potrebbe essere l'ultimo anno per entrare alle valutazioni attuali."
                 : "A professional market analysis: the structural reasons behind Bulgaria's price gap, what euro adoption changes, and why 2026 may be the last year to enter at today's valuations.",
       image_url:
-        'https://images.unsplash.com/photo-1594394578732-35b74c9d3ee8?w=900&q=80&auto=format&fit=crop',
+        'https://ipfs.io/ipfs/bafybeibgzot364jw3ajiqptptaqqmx3gdfe7ockdfsznn3po5amrdvvb3a',
       date: 'Feb 18, 2026',
       slug: 'bulgaria-cheaper-than-eu',
     },

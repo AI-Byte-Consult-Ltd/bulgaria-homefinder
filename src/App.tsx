@@ -15,6 +15,7 @@ import RestorationProject from "./pages/RestorationProject";
 import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
 import BulgariaPriceForecastsArticle from "./pages/BulgariaPriceForecastsArticle";
 import Top5CoastalAreasForInvestmentArticle from "./pages/Top5CoastalAreasForInvestmentArticle";
+import BulgariaCheaperThanEUArticle from "./pages/BulgariaCheaperThanEUArticle";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
@@ -42,7 +43,6 @@ const App = () => (
             <Route path="/sell" element={<Sell />} />
             <Route path="/services" element={<Services />} />
             <Route path="/restoration/:id" element={<RestorationProject />} />
-
             {/* Articles */}
             <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/article/bulgaria-price-forecasts" element={<BulgariaPriceForecastsArticle />} />
@@ -50,16 +50,17 @@ const App = () => (
               path="/article/top-5-areas-in-bulgarian-coast-to-buy"
               element={<Top5CoastalAreasForInvestmentArticle />}
             />
-
+            <Route
+              path="/article/bulgaria-cheaper-than-eu"
+              element={<BulgariaCheaperThanEUArticle />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/add-property" element={<AddProperty />} />
-
             <Route path="*" element={<NotFound />} />
           </Routes>
-
           <ChatWidget />
         </BrowserRouter>
       </TooltipProvider>
