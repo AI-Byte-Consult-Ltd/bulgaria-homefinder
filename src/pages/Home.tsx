@@ -72,7 +72,7 @@ const Home = () => {
                 : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
       image_url:
         'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
-      date: 'Feb 10, 2026',
+      date: 'Feb 18, 2026',
       slug: 'bulgaria-price-forecasts',
     },
     {
