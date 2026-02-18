@@ -32,7 +32,7 @@ const Home = () => {
             : lang === 'de'
               ? 'Immobilienkauf in Bulgarien 2026: 7 Fehler, die Käufer Zehntausende Euro kosten'
               : lang === 'it'
-                ? "Acquistare casa in Bulgaria nel 2026: 7 errori che possono costare decine di migliaia di euro"
+                ? 'Acquistare casa in Bulgaria nel 2026: 7 errori che possono costare decine di migliaia di euro'
                 : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
       excerpt:
         lang === 'bg'
@@ -100,6 +100,32 @@ const Home = () => {
         'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
       date: 'Jan 10, 2026',
       slug: 'top-5-areas-in-bulgarian-coast-to-buy',
+    },
+    {
+      title:
+        lang === 'bg'
+          ? 'Защо България е още 2 пъти по-евтина от средното в ЕС - и защо тази възможност няма да трае вечно'
+          : lang === 'ru'
+            ? 'Почему Болгария всё ещё в 2 раза дешевле среднего по ЕС - и почему это окно не будет открыто вечно'
+            : lang === 'de'
+              ? 'Warum Bulgarien noch immer 2x günstiger ist als der EU-Durchschnitt - und warum dieses Fenster nicht für immer offen bleibt'
+              : lang === 'it'
+                ? "Perché la Bulgaria è ancora 2 volte più economica rispetto alla media UE - e perché questa finestra non resterà aperta per sempre"
+                : "Why Bulgaria Is Still 2x Cheaper Than the EU Average - And Why That Window Won't Stay Open Forever",
+      excerpt:
+        lang === 'bg'
+          ? 'Структурните причини зад ценовата разлика на България, какво промени еврото и защо 2026 г. може да е последната година за влизане по сегашните цени.'
+          : lang === 'ru'
+            ? 'Структурные причины ценового разрыва Болгарии, что изменило евро и почему 2026 год может быть последним для входа по сегодняшним ценам.'
+            : lang === 'de'
+              ? 'Die strukturellen Gründe für Bulgariens Preislücke, was die Euro-Einführung ändert und warum 2026 das letzte Jahr für einen Einstieg zu heutigen Preisen sein könnte.'
+              : lang === 'it'
+                ? "Le ragioni strutturali del divario di prezzo bulgaro, cosa cambia con l'euro e perché il 2026 potrebbe essere l'ultimo anno per entrare alle valutazioni attuali."
+                : "A professional market analysis: the structural reasons behind Bulgaria's price gap, what euro adoption changes, and why 2026 may be the last year to enter at today's valuations.",
+      image_url:
+        'https://images.unsplash.com/photo-1594394578732-35b74c9d3ee8?w=900&q=80&auto=format&fit=crop',
+      date: 'Feb 18, 2026',
+      slug: 'bulgaria-cheaper-than-eu',
     },
   ];
 
@@ -270,7 +296,7 @@ const Home = () => {
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {articles.map((article, idx) => (
               <div
                 key={idx}
