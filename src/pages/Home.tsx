@@ -16,20 +16,34 @@ import heroImage from '@/assets/hero-bg.jpg';
 const Home = () => {
   const { t, i18n } = useTranslation();
 
+  const lang = (i18n.language || 'en').split('-')[0];
+
   const featuredProperties = mockProperties.filter((p) => p.featured);
   const newestProperties = mockProperties.slice(0, 3);
 
-  // Static articles data
+  // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
     {
       title:
-        i18n.language === 'ru'
-          ? 'Покупка недвижимости в Болгарии в 2026 году: 7 ошибок, которые стоят покупателям десятки тысяч евро'
-          : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
+        lang === 'bg'
+          ? 'Покупка на имот в България през 2026 г.: 7 грешки, които струват на купувачите десетки хиляди евро'
+          : lang === 'ru'
+            ? 'Покупка недвижимости в Болгарии в 2026 году: 7 ошибок, которые стоят покупателям десятки тысяч евро'
+            : lang === 'de'
+              ? 'Immobilienkauf in Bulgarien 2026: 7 Fehler, die Käufer Zehntausende Euro kosten'
+              : lang === 'it'
+                ? "Acquistare casa in Bulgaria nel 2026: 7 errori che possono costare decine di migliaia di euro"
+                : 'Buying Property in Bulgaria in 2026: 7 Mistakes That Cost Buyers Tens of Thousands of Euros',
       excerpt:
-        i18n.language === 'ru'
-          ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
-          : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
+        lang === 'bg'
+          ? 'Пазарът на недвижими имоти в България остава един от най-достъпните в ЕС. Разглеждаме най-честите грешки на купувачите.'
+          : lang === 'ru'
+            ? 'Рынок недвижимости Болгарии остаётся одним из самых доступных в Евросоюзе. Разберём самые распространённые ошибки покупателей.'
+            : lang === 'de'
+              ? 'Der bulgarische Immobilienmarkt bleibt einer der erschwinglichsten in der EU. Wir analysieren die häufigsten Käuferfehler.'
+              : lang === 'it'
+                ? "Il mercato immobiliare in Bulgaria resta tra i più accessibili nell'UE. Analizziamo gli errori più comuni degli acquirenti."
+                : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
       image_url:
         'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
       date: 'Feb 5, 2026',
@@ -37,13 +51,25 @@ const Home = () => {
     },
     {
       title:
-        i18n.language === 'ru'
-          ? 'Прогноз цен на недвижимость в Болгарии: 2026, 5 лет и 10 лет'
-          : 'Bulgaria Property Price Forecasts: 2026, 5-Year & 10-Year Outlook',
+        lang === 'bg'
+          ? 'Прогноза за цените на имотите в България: 2026, 5 и 10 години'
+          : lang === 'ru'
+            ? 'Прогноз цен на недвижимость в Болгарии: 2026, 5 лет и 10 лет'
+            : lang === 'de'
+              ? 'Prognose der Immobilienpreise in Bulgarien: 2026, 5 Jahre & 10 Jahre'
+              : lang === 'it'
+                ? 'Previsioni dei prezzi immobiliari in Bulgaria: 2026, 5 anni e 10 anni'
+                : 'Bulgaria Property Price Forecasts: 2026, 5-Year & 10-Year Outlook',
       excerpt:
-        i18n.language === 'ru'
-          ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
-          : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
+        lang === 'bg'
+          ? 'Цените нараснаха с 15% през 2025 г. Анализ на текущите тенденции и прогнози след приемането на еврото.'
+          : lang === 'ru'
+            ? 'Цены выросли на 15% в 2025 году. Анализ текущих трендов и прогнозов после вступления в еврозону.'
+            : lang === 'de'
+              ? 'Die Preise stiegen 2025 um 15 %. Analyse aktueller Trends und Prognosen nach der Euro-Einführung.'
+              : lang === 'it'
+                ? "I prezzi sono cresciuti del 15% nel 2025. Analisi delle tendenze attuali e previsioni dopo l'adozione dell'euro."
+                : 'Prices grew 15% in 2025. Analysis of current trends and forecasts after euro adoption.',
       image_url:
         'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
       date: 'Feb 10, 2026',
@@ -51,17 +77,25 @@ const Home = () => {
     },
     {
       title:
-        i18n.language === 'ru'
-          ? 'Топ-5 прибрежных районов для инвестиций'
-          : i18n.language === 'bg'
-            ? 'Топ 5 крайбрежни зони за инвестиция'
-            : 'Top 5 Coastal Areas for Investment',
+        lang === 'bg'
+          ? 'Топ 5 крайбрежни зони за инвестиция'
+          : lang === 'ru'
+            ? 'Топ-5 прибрежных районов для инвестиций'
+            : lang === 'de'
+              ? 'Top 5 Küstenregionen für Investments'
+              : lang === 'it'
+                ? 'Top 5 zone costiere per investire'
+                : 'Top 5 Coastal Areas for Investment',
       excerpt:
-        i18n.language === 'ru'
-          ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
-          : i18n.language === 'bg'
-            ? 'Открийте най-перспективните локации по Черноморието...'
-            : 'Discover the most promising locations along the Black Sea coast...',
+        lang === 'bg'
+          ? 'Открийте най-перспективните локации по Черноморието...'
+          : lang === 'ru'
+            ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+            : lang === 'de'
+              ? 'Entdecken Sie die vielversprechendsten Standorte entlang der Schwarzmeerküste...'
+              : lang === 'it'
+                ? 'Scopri le località più promettenti lungo la costa del Mar Nero...'
+                : 'Discover the most promising locations along the Black Sea coast...',
       image_url:
         'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
       date: 'Jan 10, 2026',
@@ -165,22 +199,26 @@ const Home = () => {
           {[
             {
               name: 'Sofia',
-              image: 'https://images.unsplash.com/photo-1555990793-da11153b2473?w=400&q=80',
+              image:
+                'https://ipfs.io/ipfs/bafkreiea6o2c55kfvx2fjnmcvnavgsczabglkrf247uwipuk7a2u6auwcu',
               count: 1250,
             },
             {
               name: 'Varna',
-              image: 'https://images.unsplash.com/photo-1599737956238-a5417f68d5e6?w=400&q=80',
+              image:
+                'https://ipfs.io/ipfs/bafkreig7ca34ikjb7dsovmdxqrt3om5eoufroninc7je4gxyncgl4eqs3u',
               count: 890,
             },
             {
               name: 'Plovdiv',
-              image: 'https://images.unsplash.com/photo-1585009545920-d0be2bb9a6b5?w=400&q=80',
+              image:
+                'https://ipfs.io/ipfs/bafkreibpxnb7dm65uqczaqwwbxtkrp6j6ayhmwloa7hcwjoati6fvdaofm',
               count: 720,
             },
             {
               name: 'Burgas',
-              image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80',
+              image:
+                'https://ipfs.io/ipfs/bafybeictkyibpglu2nyov65unvnxjrx52oq33wg2rp63uhrcezrt3rvfom',
               count: 650,
             },
           ].map((region) => (
@@ -196,7 +234,18 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-bold text-xl">{region.name}</h3>
-                <p className="text-sm text-white/80">{region.count} properties</p>
+                <p className="text-sm text-white/80">
+                  {region.count}{' '}
+                  {lang === 'bg'
+                    ? 'имота'
+                    : lang === 'ru'
+                      ? 'объектов'
+                      : lang === 'de'
+                        ? 'Objekte'
+                        : lang === 'it'
+                          ? 'immobili'
+                          : 'properties'}
+                </p>
               </div>
             </div>
           ))}
@@ -208,7 +257,15 @@ const Home = () => {
         <div className="container">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-2">
-              {i18n.language === 'ru' ? 'Аналитика рынка недвижимости' : 'Market Insights & Analysis'}
+              {lang === 'bg'
+                ? 'Пазарни анализи и тенденции'
+                : lang === 'ru'
+                  ? 'Аналитика рынка недвижимости'
+                  : lang === 'de'
+                    ? 'Marktanalysen & Einblicke'
+                    : lang === 'it'
+                      ? 'Analisi e tendenze di mercato'
+                      : 'Market Insights & Analysis'}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
@@ -237,11 +294,27 @@ const Home = () => {
                       to={`/article/${article.slug}`}
                       className="text-primary text-sm font-semibold hover:underline"
                     >
-                      {i18n.language === 'ru' ? 'Читать далее →' : 'Read More →'}
+                      {lang === 'bg'
+                        ? 'Прочети още →'
+                        : lang === 'ru'
+                          ? 'Читать далее →'
+                          : lang === 'de'
+                            ? 'Mehr lesen →'
+                            : lang === 'it'
+                              ? 'Leggi di più →'
+                              : 'Read More →'}
                     </Link>
                   ) : (
                     <span className="text-muted-foreground text-sm font-semibold">
-                      {i18n.language === 'ru' ? 'Скоро...' : 'Coming soon...'}
+                      {lang === 'bg'
+                        ? 'Скоро...'
+                        : lang === 'ru'
+                          ? 'Скоро...'
+                          : lang === 'de'
+                            ? 'Demnächst...'
+                            : lang === 'it'
+                              ? 'In arrivo...'
+                              : 'Coming soon...'}
                     </span>
                   )}
                 </div>
@@ -254,25 +327,65 @@ const Home = () => {
       {/* Property Videos */}
       <section className="py-16 container">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">Property Tours & Videos</h2>
+          <h2 className="text-3xl font-bold mb-2">
+            {lang === 'bg'
+              ? 'Видео обиколки и турове'
+              : lang === 'ru'
+                ? 'Видео-обзоры и туры объектов'
+                : lang === 'de'
+                  ? 'Immobilien-Touren & Videos'
+                  : lang === 'it'
+                    ? 'Tour immobiliari e video'
+                    : 'Property Tours & Videos'}
+          </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: 'Luxury Villa Tour in Varna',
-              thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80',
+              title:
+                lang === 'bg'
+                  ? 'Обиколка на луксозна вила във Варна'
+                  : lang === 'ru'
+                    ? 'Тур по люкс-вилле в Варне'
+                    : lang === 'de'
+                      ? 'Tour durch eine Luxusvilla in Varna'
+                      : lang === 'it'
+                        ? 'Tour di una villa di lusso a Varna'
+                        : 'Luxury Villa Tour in Varna',
+              thumbnail:
+                'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80',
               duration: '5:30',
             },
             {
-              title: 'Modern Apartment in Sofia Center',
-              thumbnail: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80',
+              title:
+                lang === 'bg'
+                  ? 'Модерен апартамент в центъра на София'
+                  : lang === 'ru'
+                    ? 'Современные апартаменты в центре Софии'
+                    : lang === 'de'
+                      ? 'Moderne Wohnung im Zentrum von Sofia'
+                      : lang === 'it'
+                        ? 'Appartamento moderno nel centro di Sofia'
+                        : 'Modern Apartment in Sofia Center',
+              thumbnail:
+                'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80',
               duration: '3:45',
             },
             {
-              title: 'Beachfront Property Showcase',
-              thumbnail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
+              title:
+                lang === 'bg'
+                  ? 'Представяне на имот на първа линия'
+                  : lang === 'ru'
+                    ? 'Обзор недвижимости на первой линии'
+                    : lang === 'de'
+                      ? 'Präsentation einer Immobilie direkt am Strand'
+                      : lang === 'it'
+                        ? 'Presentazione di una proprietà fronte mare'
+                        : 'Beachfront Property Showcase',
+              thumbnail:
+                'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
               duration: '7:20',
             },
           ].map((video, idx) => (

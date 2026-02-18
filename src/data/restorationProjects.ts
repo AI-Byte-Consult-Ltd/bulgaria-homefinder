@@ -62,13 +62,13 @@ export const restorationProjects: RestorationProject[] = [
     architect: 'Arch. Maria Ivanova',
     year: '2022',
     description: 'A 150-year-old traditional Bulgarian house transformed into a modern family home while maintaining its authentic character and cultural heritage.',
-    thumbnail: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80',
+    thumbnail: 'https://ipfs.io/ipfs/bafkreiaw2u2vw5thjf7yyy7pxo3gk77xb5mkrogp344uaw2zhtfx5v5aea',
     beforeImages: [
       'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80',
       'https://images.unsplash.com/photo-1590725140246-20acddc35fce?w=800&q=80',
     ],
     afterImages: [
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&q=80',
+      'https://ipfs.io/ipfs/bafkreiaw2u2vw5thjf7yyy7pxo3gk77xb5mkrogp344uaw2zhtfx5v5aea',
       'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
     ],
     stages: [
@@ -101,13 +101,13 @@ export const restorationProjects: RestorationProject[] = [
     architect: 'Arch. Georgi Petkov',
     year: '2024',
     description: 'Luxury apartment renovation in a 1905 Art Nouveau building in central Sofia. Original stucco work and ceiling paintings carefully restored.',
-    thumbnail: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80',
+    thumbnail: 'https://ipfs.io/ipfs/bafkreiaihrshklkpevr3ays72dpnmxrunrx4pmicpw5wxv2z5cfzfwwxxy',
     beforeImages: [
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
       'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80',
     ],
     afterImages: [
-      'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80',
+      'https://ipfs.io/ipfs/bafkreiaihrshklkpevr3ays72dpnmxrunrx4pmicpw5wxv2z5cfzfwwxxy',
       'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
     ],
     stages: [

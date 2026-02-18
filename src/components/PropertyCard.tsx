@@ -7,7 +7,16 @@ import { Heart, MapPin, Bed, Bath, Maximize, Building } from 'lucide-react';
 
 interface PropertyCardProps {
   id: string;
+
+  // Default (EN)
   title: string;
+
+  // Optional localized titles
+  titleBg?: string;
+  titleRu?: string;
+  titleDe?: string;
+  titleIt?: string;
+
   price: number;
   location: string;
   image: string;
@@ -25,6 +34,9 @@ export const PropertyCard = ({
   id,
   title,
   titleBg,
+  titleRu,
+  titleDe,
+  titleIt,
   price,
   location,
   image,
@@ -36,17 +48,33 @@ export const PropertyCard = ({
   featured,
   availableUnits,
   status,
-}: PropertyCardProps & { titleBg?: string }) => {
+}: PropertyCardProps) => {
   const { t, i18n } = useTranslation();
-  const isBgOrRu = i18n.language === 'bg' || i18n.language === 'ru';
-  const displayTitle = isBgOrRu && titleBg ? titleBg : title;
+
+  // Normalize language like "ru-RU" -> "ru"
+  const lang = (i18n.language || 'en').split('-')[0];
+
+  const displayTitle =
+    (lang === 'bg' && titleBg) ||
+    (lang === 'ru' && titleRu) ||
+    (lang === 'de' && titleDe) ||
+    (lang === 'it' && titleIt) ||
+    title;
 
   const getStatusBadge = () => {
     if (status === 'sold-out') {
-      return <Badge className="absolute top-3 right-3 bg-destructive text-destructive-foreground">Sold Out</Badge>;
+      return (
+        <Badge className="absolute top-3 right-3 bg-destructive text-destructive-foreground">
+          Sold Out
+        </Badge>
+      );
     }
     if (status === 'coming-soon') {
-      return <Badge className="absolute top-3 right-3 bg-secondary text-secondary-foreground">Coming Soon</Badge>;
+      return (
+        <Badge className="absolute top-3 right-3 bg-secondary text-secondary-foreground">
+          Coming Soon
+        </Badge>
+      );
     }
     return null;
   };
@@ -63,15 +91,18 @@ export const PropertyCard = ({
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={image}
-          alt={title}
+          alt={displayTitle}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         />
+
         {featured && (
           <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">
             Featured
           </Badge>
         )}
+
         {getStatusBadge()}
+
         {!status && (
           <Button
             size="icon"
@@ -81,10 +112,12 @@ export const PropertyCard = ({
             <Heart className="h-4 w-4" />
           </Button>
         )}
+
         <div className="absolute bottom-3 left-3 flex gap-2">
           <Badge className="bg-primary">
             {transactionType === 'sale' ? t('transaction.forSale') : t('transaction.forRent')}
           </Badge>
+
           {availableUnits !== undefined && availableUnits > 0 && (
             <Badge variant="secondary" className="bg-background/90">
               <Building className="h-3 w-3 mr-1" />
@@ -93,15 +126,18 @@ export const PropertyCard = ({
           )}
         </div>
       </div>
+
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-semibold text-lg line-clamp-2">{displayTitle}</h3>
           <p className="font-bold text-primary whitespace-nowrap">
             {formatPrice()}
-            {transactionType === 'rent' && price > 0 && <span className="text-sm font-normal">/mo</span>}
+            {transactionType === 'rent' && price > 0 && (
+              <span className="text-sm font-normal">/mo</span>
+            )}
           </p>
         </div>
-        
+
         <div className="flex items-center gap-1 text-sm text-muted-foreground">
           <MapPin className="h-4 w-4" />
           <span className="line-clamp-1">{location}</span>
