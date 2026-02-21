@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { mockProperties } from '@/data/mockProperties';
+import { RichText } from '@/components/RichText';
 import {
   MapPin,
   Bed,
@@ -221,9 +222,10 @@ const PropertyDetails = () => {
                 </h2>
 
                 {displayDescription ? (
-                  <p className="text-muted-foreground leading-relaxed">
-                    {displayDescription}
-                  </p>
+                  <RichText
+                    text={displayDescription}
+                    className="text-muted-foreground leading-relaxed space-y-3"
+                  />
                 ) : (
                   <p className="text-muted-foreground leading-relaxed">
                     This stunning {(property as any).type} offers exceptional value and comfort.

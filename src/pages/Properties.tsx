@@ -76,18 +76,18 @@ const Properties = () => {
         // Fallback to mock data with client-side filtering
         let filtered = [...mockProperties];
         if (searchLoc) {
-          filtered = filtered.filter(p => propertyMatchesQuery(p, searchLoc));
+          filtered = filtered.filter((p) => propertyMatchesQuery(p, searchLoc));
         }
         if (searchTransaction && searchTransaction !== 'all') {
-          filtered = filtered.filter(p => p.transactionType === searchTransaction);
+          filtered = filtered.filter((p) => p.transactionType === searchTransaction);
         }
         if (searchType && searchType !== 'all') {
-          filtered = filtered.filter(p => p.type === searchType);
+          filtered = filtered.filter((p) => p.type === searchType);
         }
-        if (minPrice) filtered = filtered.filter(p => p.price >= Number(minPrice));
-        if (maxPrice) filtered = filtered.filter(p => p.price <= Number(maxPrice));
-        if (bedrooms !== 'any') filtered = filtered.filter(p => p.bedrooms >= Number(bedrooms));
-        if (bathrooms !== 'any') filtered = filtered.filter(p => p.bathrooms >= Number(bathrooms));
+        if (minPrice) filtered = filtered.filter((p) => p.price >= Number(minPrice));
+        if (maxPrice) filtered = filtered.filter((p) => p.price <= Number(maxPrice));
+        if (bedrooms !== 'any') filtered = filtered.filter((p) => (p.bedrooms ?? 0) >= Number(bedrooms));
+        if (bathrooms !== 'any') filtered = filtered.filter((p) => (p.bathrooms ?? 0) >= Number(bathrooms));
         setProperties(filtered);
       }
       setLoading(false);
@@ -148,9 +148,7 @@ const Properties = () => {
                 <div className="space-y-2">
                   <Label>{t('common.location')}</Label>
                   <Input
-                    placeholder={
-                      t('common.locationPlaceholder') || 'Enter location, city or region...'
-                    }
+                    placeholder={t('common.locationPlaceholder') || 'Enter location, city or region...'}
                     value={locFilter}
                     onChange={(e) => setLocFilter(e.target.value)}
                   />
@@ -262,8 +260,20 @@ const Properties = () => {
                     id={property.id}
                     title={property.title}
                     titleBg={property.title_bg || property.titleBg}
-                    price={property.price}
+                    titleRu={property.title_ru || property.titleRu}
+                    titleDe={property.title_de || property.titleDe}
+                    titleIt={property.title_it || property.titleIt}
                     location={property.location}
+                    locationBg={property.location_bg || property.locationBg}
+                    locationRu={property.location_ru || property.locationRu}
+                    locationDe={property.location_de || property.locationDe}
+                    locationIt={property.location_it || property.locationIt}
+                    description={property.description}
+                    descriptionBg={property.description_bg || property.descriptionBg}
+                    descriptionRu={property.description_ru || property.descriptionRu}
+                    descriptionDe={property.description_de || property.descriptionDe}
+                    descriptionIt={property.description_it || property.descriptionIt}
+                    price={property.price}
                     image={
                       property.images && property.images.length > 0
                         ? property.images[0]
@@ -277,6 +287,16 @@ const Properties = () => {
                     featured={property.is_priority || property.featured}
                     availableUnits={property.available_units || property.availableUnits}
                     status={property.status}
+                    livingRooms={property.living_rooms || property.livingRooms}
+                    floor={property.floor ?? undefined}
+                    totalFloors={property.total_floors || property.totalFloors}
+                    view={property.view}
+                    maintenanceFee={property.maintenance_fee || property.maintenanceFee}
+                    terraceArea={property.terrace_area || property.terraceArea}
+                    landArea={property.land_area || property.landArea}
+                    parkingSpots={property.parking_spots || property.parkingSpots}
+                    yearBuilt={property.year_built || property.yearBuilt}
+                    actSixteen={property.act_sixteen ?? property.actSixteen}
                   />
                 ))}
               </div>
@@ -291,4 +311,3 @@ const Properties = () => {
 };
 
 export default Properties;
-

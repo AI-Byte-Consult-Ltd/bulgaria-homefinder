@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import type { ReactNode } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { RichText } from '@/components/RichText';
 import {
   Heart, MapPin, Bed, Bath, Maximize, Building,
   Eye, Layers, Wrench, Trees, Car, Sofa, Landmark,
@@ -17,44 +19,51 @@ interface PropertyCardProps {
   id: string;
 
   // Titles
-  title:    string;
+  title: string;
   titleBg?: string;
   titleRu?: string;
   titleDe?: string;
   titleIt?: string;
 
   // Location
-  location:   string;
+  location: string;
   locationBg?: string;
   locationRu?: string;
   locationDe?: string;
   locationIt?: string;
 
-  price:           number;
-  image:           string;
-  type:            PropertyType;
+  // Description (optional preview in card)
+  description?: string;
+  descriptionBg?: string;
+  descriptionRu?: string;
+  descriptionDe?: string;
+  descriptionIt?: string;
+
+  price: number;
+  image: string;
+  type: PropertyType;
   transactionType: 'sale' | 'rent';
 
   // Core specs
-  area:       number;
-  bedrooms?:  number;
+  area: number;
+  bedrooms?: number;
   bathrooms?: number;
 
   // Extended specs (all optional — show only when present)
-  livingRooms?:    number;
-  floor?:          number;
-  totalFloors?:    number;
-  view?:           string;   // e.g. "Sea view", "Garden view"
-  maintenanceFee?: number;   // EUR/m²/year
-  terraceArea?:    number;   // m²
-  landArea?:       number;   // m² (for houses, farms, land plots)
-  parkingSpots?:   number;
+  livingRooms?: number;
+  floor?: number;
+  totalFloors?: number;
+  view?: string;          // e.g. "Sea view", "Garden view"
+  maintenanceFee?: number;// EUR/m²/year
+  terraceArea?: number;   // m²
+  landArea?: number;      // m² (for houses, farms, land plots)
+  parkingSpots?: number;
 
-  featured?:       boolean;
+  featured?: boolean;
   availableUnits?: number;
-  status?:         'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved';
-  yearBuilt?:      number;
-  actSixteen?:     boolean;  // Bulgarian Act 16 — legally commissioned
+  status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved';
+  yearBuilt?: number;
+  actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
 }
 
 // ─── i18n label maps ────────────────────────────────────────────────────────
@@ -79,31 +88,30 @@ const STATUS_LABELS: Record<string, Record<string, string>> = {
 };
 
 const UI: Record<string, Record<string, string>> = {
-  forSale:     { en: 'For Sale',    ru: 'Продажа',      bg: 'Продажба',      de: 'Kaufen',         it: 'Vendita'        },
-  forRent:     { en: 'For Rent',    ru: 'Аренда',       bg: 'Наем',          de: 'Miete',          it: 'Affitto'        },
-  units:       { en: 'units',       ru: 'объектов',     bg: 'имота',         de: 'Einheiten',      it: 'unità'          },
-  floor:       { en: 'Floor',       ru: 'Этаж',         bg: 'Етаж',          de: 'Etage',          it: 'Piano'          },
-  view:        { en: 'View',        ru: 'Вид',          bg: 'Изглед',        de: 'Aussicht',       it: 'Vista'          },
-  maintenance: { en: 'Maint.',      ru: 'Такса',        bg: 'Такса',         de: 'Nebenk.',        it: 'Manutenzione'   },
-  terrace:     { en: 'Terrace',     ru: 'Терраса',      bg: 'Тераса',        de: 'Terrasse',       it: 'Terrazza'       },
-  land:        { en: 'Land',        ru: 'Участок',      bg: 'Земя',          de: 'Grundstück',     it: 'Terreno'        },
-  parking:     { en: 'Parking',     ru: 'Паркинг',      bg: 'Паркинг',       de: 'Parkplatz',      it: 'Parcheggio'     },
-  act16:       { en: 'Act 16 ✓',   ru: 'Акт 16 ✓',    bg: 'Акт 16 ✓',     de: 'Act 16 ✓',      it: 'Act 16 ✓'      },
-  viewDetails: { en: 'View Details',ru: 'Подробнее',    bg: 'Детайли',       de: 'Details',        it: 'Dettagli'       },
-  tba:         { en: 'TBA',         ru: 'Уточняется',   bg: 'При запитване', de: 'Auf Anfrage',    it: 'Su richiesta'   },
-  perMonth:    { en: '/mo',         ru: '/мес',         bg: '/мес',          de: '/Mo.',           it: '/mese'          },
-  eurSqmYear:  { en: 'EUR/m²/yr',  ru: 'EUR/м²/год',   bg: 'EUR/м²/год',   de: 'EUR/m²/Jahr',    it: 'EUR/m²/anno'    },
-  built:       { en: 'Built',       ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno'           },
+  forSale:     { en: 'For Sale',     ru: 'Продажа',      bg: 'Продажба',      de: 'Kaufen',         it: 'Vendita'        },
+  forRent:     { en: 'For Rent',     ru: 'Аренда',       bg: 'Наем',          de: 'Miete',          it: 'Affitto'        },
+  units:       { en: 'units',        ru: 'объектов',     bg: 'имота',         de: 'Einheiten',      it: 'unità'          },
+  floor:       { en: 'Floor',        ru: 'Этаж',         bg: 'Етаж',          de: 'Etage',          it: 'Piano'          },
+  maintenance: { en: 'Maint.',       ru: 'Такса',        bg: 'Такса',         de: 'Nebenk.',        it: 'Manutenzione'   },
+  terrace:     { en: 'Terrace',      ru: 'Терраса',      bg: 'Тераса',        de: 'Terrasse',       it: 'Terrazza'       },
+  land:        { en: 'Land',         ru: 'Участок',      bg: 'Земя',          de: 'Grundstück',     it: 'Terreno'        },
+  parking:     { en: 'Parking',      ru: 'Паркинг',      bg: 'Паркинг',       de: 'Parkplatz',      it: 'Parcheggio'     },
+  act16:       { en: 'Act 16 ✓',     ru: 'Акт 16 ✓',     bg: 'Акт 16 ✓',      de: 'Act 16 ✓',       it: 'Act 16 ✓'       },
+  viewDetails: { en: 'View Details', ru: 'Подробнее',    bg: 'Детайли',       de: 'Details',        it: 'Dettagli'       },
+  tba:         { en: 'TBA',          ru: 'Уточняется',   bg: 'При запитване', de: 'Auf Anfrage',    it: 'Su richiesta'   },
+  perMonth:    { en: '/mo',          ru: '/мес',         bg: '/мес',          de: '/Mo.',           it: '/mese'          },
+  eurSqmYear:  { en: 'EUR/m²/yr',    ru: 'EUR/м²/год',   bg: 'EUR/м²/год',    de: 'EUR/m²/Jahr',    it: 'EUR/m²/anno'    },
+  built:       { en: 'Built',        ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno'           },
 };
 
-const lbl = (map: Record<string, string>, lang: string) =>
-  map[lang] ?? map['en'];
+const lbl = (map: Record<string, string>, lang: string) => map[lang] ?? map['en'];
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
 export const PropertyCard = ({
   id, title, titleBg, titleRu, titleDe, titleIt,
   price, location, locationBg, locationRu, locationDe, locationIt,
+  description, descriptionBg, descriptionRu, descriptionDe, descriptionIt,
   image, type, transactionType, featured, availableUnits, status,
   area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
   view, maintenanceFee, terraceArea, landArea, parkingSpots,
@@ -120,8 +128,12 @@ export const PropertyCard = ({
     (lang === 'bg' && locationBg) || (lang === 'ru' && locationRu) ||
     (lang === 'de' && locationDe) || (lang === 'it' && locationIt) || location;
 
-  const typeLabel   = lbl(TYPE_LABELS[type] ?? TYPE_LABELS['other'], lang);
-  const saleLabel   = lbl(transactionType === 'sale' ? UI.forSale : UI.forRent, lang);
+  const displayDescription =
+    (lang === 'bg' && descriptionBg) || (lang === 'ru' && descriptionRu) ||
+    (lang === 'de' && descriptionDe) || (lang === 'it' && descriptionIt) || description;
+
+  const typeLabel = lbl(TYPE_LABELS[type] ?? TYPE_LABELS.other, lang);
+  const saleLabel = lbl(transactionType === 'sale' ? UI.forSale : UI.forRent, lang);
 
   const formatPrice = () => {
     if (price === 0 || status === 'coming-soon') return lbl(UI.tba, lang);
@@ -129,29 +141,32 @@ export const PropertyCard = ({
   };
 
   const statusBadge = status && STATUS_LABELS[status] ? (
-    <Badge className={`absolute top-3 right-3 ${
-      status === 'sold-out'  ? 'bg-destructive text-destructive-foreground' :
-      status === 'reserved'  ? 'bg-yellow-500 text-black' :
-                               'bg-secondary text-secondary-foreground'
-    }`}>
+    <Badge
+      className={`absolute top-3 right-3 ${
+        status === 'sold-out'
+          ? 'bg-destructive text-destructive-foreground'
+          : status === 'reserved'
+            ? 'bg-yellow-500 text-black'
+            : 'bg-secondary text-secondary-foreground'
+      }`}
+    >
       {lbl(STATUS_LABELS[status], lang)}
     </Badge>
   ) : null;
 
   // Spec rows — only render when value is defined
-  const specs: { icon: React.ReactNode; value: string }[] = [];
+  const specs: { icon: ReactNode; value: string }[] = [];
 
-  if ((bedrooms  ?? 0) > 0) specs.push({ icon: <Bed      className="h-3.5 w-3.5" />, value: `${bedrooms}` });
-  if ((bathrooms ?? 0) > 0) specs.push({ icon: <Bath     className="h-3.5 w-3.5" />, value: `${bathrooms}` });
-  if ((livingRooms ?? 0) > 0) specs.push({ icon: <Sofa   className="h-3.5 w-3.5" />, value: `${livingRooms}` });
-  if (area > 0)             specs.push({ icon: <Maximize  className="h-3.5 w-3.5" />, value: `${area} m²` });
-  if (terraceArea)          specs.push({ icon: <Landmark  className="h-3.5 w-3.5" />, value: `${terraceArea} m²` });
-  if (landArea)             specs.push({ icon: <Trees     className="h-3.5 w-3.5" />, value: `${landArea} m²` });
-  if (parkingSpots)         specs.push({ icon: <Car       className="h-3.5 w-3.5" />, value: `${parkingSpots}` });
+  if ((bedrooms ?? 0) > 0) specs.push({ icon: <Bed className="h-3.5 w-3.5" />, value: `${bedrooms}` });
+  if ((bathrooms ?? 0) > 0) specs.push({ icon: <Bath className="h-3.5 w-3.5" />, value: `${bathrooms}` });
+  if ((livingRooms ?? 0) > 0) specs.push({ icon: <Sofa className="h-3.5 w-3.5" />, value: `${livingRooms}` });
+  if (area > 0) specs.push({ icon: <Maximize className="h-3.5 w-3.5" />, value: `${area} m²` });
+  if (terraceArea) specs.push({ icon: <Landmark className="h-3.5 w-3.5" />, value: `${terraceArea} m²` });
+  if (landArea) specs.push({ icon: <Trees className="h-3.5 w-3.5" />, value: `${landArea} m²` });
+  if (parkingSpots) specs.push({ icon: <Car className="h-3.5 w-3.5" />, value: `${parkingSpots}` });
 
   return (
     <Card className="group overflow-hidden hover:shadow-[var(--card-shadow-hover)] transition-all duration-300 flex flex-col">
-
       {/* ── Image ── */}
       <div className="relative aspect-[4/3] overflow-hidden shrink-0">
         <img
@@ -209,7 +224,6 @@ export const PropertyCard = ({
 
       {/* ── Content ── */}
       <CardContent className="p-4 space-y-3 flex flex-col flex-1">
-
         {/* Title + Price */}
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-semibold text-base leading-snug line-clamp-2 flex-1">
@@ -231,6 +245,13 @@ export const PropertyCard = ({
           <span className="line-clamp-1">{displayLocation}</span>
         </div>
 
+        {/* Description preview (optional) */}
+        {displayDescription && (
+          <div className="text-sm text-muted-foreground leading-relaxed max-h-[92px] overflow-hidden">
+            <RichText text={displayDescription} className="space-y-2" />
+          </div>
+        )}
+
         {/* Core specs grid */}
         {specs.length > 0 && (
           <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-muted-foreground">
@@ -245,8 +266,7 @@ export const PropertyCard = ({
 
         {/* Secondary info row */}
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground border-t pt-2">
-
-          {floor !== undefined && (
+          {floor !== undefined && floor !== null && (
             <span className="flex items-center gap-1">
               <Layers className="h-3 w-3" />
               {lbl(UI.floor, lang)}: {floor}{totalFloors ? `/${totalFloors}` : ''}
@@ -260,7 +280,7 @@ export const PropertyCard = ({
             </span>
           )}
 
-          {maintenanceFee !== undefined && (
+          {maintenanceFee !== undefined && maintenanceFee !== null && (
             <span className="flex items-center gap-1">
               <Wrench className="h-3 w-3" />
               {maintenanceFee} {lbl(UI.eurSqmYear, lang)}
@@ -282,7 +302,6 @@ export const PropertyCard = ({
             </Button>
           </Link>
         </div>
-
       </CardContent>
     </Card>
   );
