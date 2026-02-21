@@ -71,15 +71,190 @@ export const mockProperties = [
   maintenanceFee: 7,        // EUR/m²/year — one of the lowest on the coast
 
   // ── Descriptions ─────────────────────────────────────────
-  description: `Panoramic near-360° sea view from Ravda and Nessebar along the full coastline. Steps from Ravda central beach in Mellia Park 10. Layout: open living room with kitchen, 2 bedrooms, bathroom, and a large panoramic terrace. Complex amenities: pool, kids playground, 24/7 security, landscaped gardens. Built 2016, top floor. Annual maintenance: 7 EUR/m². Ideal for year-round living, a holiday home, or a rental investment.`,
 
-  descriptionRu: `Панорамный почти 360° вид на море — от Равды и Несебра вдоль всей береговой линии. В нескольких шагах от центрального пляжа Равды, комплекс Mellia Park 10. Планировка: гостиная с кухней открытого типа, 2 спальни, санузел и большая панорамная терраса. Инфраструктура комплекса: бассейн, детская площадка, круглосуточная охрана, озеленённая территория. Год постройки — 2016, верхний этаж. Такса поддержки: 7 EUR/м² в год. Отлично подходит для круглогодичного проживания, отдыха или арендной инвестиции.`,
+description: `
+This is not simply a sea-view apartment — this is a structured coastal investment asset in one of Bulgaria’s most liquid Black Sea micro-markets.
 
-  descriptionBg: `Панорамна почти 360° морска гледка от Равда и Несебър по цялата крайбрежна линия. На крачки от централния плаж на Равда, в комплекс Мелия Парк 10. Разпределение: дневна с кухня от отворен тип, 2 спални, баня и голяма панорамна тераса. Удобства в комплекса: басейн, детска площадка, 24/7 охрана, озеленени площи. Построен 2016 г., последен етаж. Годишна такса поддръжка: 7 EUR/кв.м. Отличен избор за целогодишно живеене, ваканционен дом или инвестиция под наем.`,
+Located on the top floor of Mellia Park 10, just steps from Ravda central beach, this 91 m² residence offers a near 360° panoramic sea exposure covering Ravda and Nessebar coastline. Large 28 m² terrace significantly increases rental attractiveness and resale premium.
 
-  descriptionDe: `Panoramablick auf das Meer — fast 360° von Rawda und Nessebar entlang der gesamten Küstenlinie. Nur wenige Schritte vom Zentralstrand Rawdas entfernt, im Komplex Mellia Park 10. Grundriss: offene Wohnküche, 2 Schlafzimmer, Bad und eine große Panoramaterrasse. Komplex-Ausstattung: Pool, Kinderspielplatz, 24/7-Sicherheitsdienst, gepflegte Gartenanlagen. Baujahr 2016, Dachgeschoss. Jährliche Instandhaltungsgebühr: 7 EUR/m². Ideal als Ganzjahreswohnsitz, Feriendomizil oder Mietinvestition.`,
+INVESTMENT METRICS:
 
-  descriptionIt: `Vista mare panoramica quasi a 360° da Ravda e Nessebar lungo l'intera costa. A pochi passi dalla spiaggia centrale di Ravda, nel complesso Mellia Park 10. Planimetria: soggiorno con cucina open space, 2 camere da letto, bagno e un'ampia terrazza panoramica. Servizi del complesso: piscina, parco giochi per bambini, sicurezza 24/7, giardini curati. Costruito nel 2016, ultimo piano. Quota annuale di manutenzione: 7 EUR/m². Ideale come residenza tutto l'anno, casa vacanza o investimento da affitto.`,
+• Purchase price: €120,000  
+• Estimated high-season rent: €100–130/night  
+• 90-day conservative summer occupancy: ~€10,000–11,000 gross  
+• Mid-season & shoulder bookings: €4,000–6,000  
+• Estimated annual short-term rental income: €14,000–17,000  
+• Projected gross yield: 11–14%  
+
+Long-term rental alternative:  
+• €800–950/month annual contract  
+• ~8–9% gross yield
+
+Annual maintenance: only 7 EUR/m² — among the lowest on the Southern Black Sea coast.
+
+Why this asset works:
+
+• Prime beach proximity (liquidity factor)  
+• Top-floor panoramic exposure (scarcity premium)  
+• Low holding costs  
+• Strong demand from EU tourists (Romania, Poland, Germany, Czech Republic)  
+• Bulgaria in Schengen + Eurozone trajectory = structural capital appreciation  
+
+5-year projection (conservative 5% appreciation annually):  
+~€33,000 capital growth potential + rental income.
+
+This property fits three strategies:
+• Short-term rental cash-flow model  
+• Hybrid use (personal + income)  
+• Medium-term capital appreciation in EU coastal market  
+
+A European gateway asset combining lifestyle positioning with measurable ROI.
+`,
+
+descriptionRu: `
+Это не просто квартира с видом на море — это структурированный инвестиционный актив на одном из самых ликвидных участков болгарского побережья Чёрного моря.
+
+Апартамент расположен на последнем этаже комплекса Mellia Park 10, в нескольких шагах от центрального пляжа Равды. Площадь 91 м² и панорамная терраса 28 м² обеспечивают почти 360° обзор побережья Равды и Несебра — фактор, который напрямую влияет на стоимость аренды и перепродажи.
+
+ИНВЕСТИЦИОННЫЕ ПОКАЗАТЕЛИ:
+
+• Цена покупки: €120 000  
+• Высокий сезон: €100–130/сутки  
+• Консервативная загрузка 90 дней: €10 000–11 000  
+• Межсезонье: €4 000–6 000  
+• Потенциальный доход в год: €14 000–17 000  
+• Валовая доходность: 11–14%
+
+Альтернатива — долгосрочная аренда:  
+• €800–950/мес  
+• ~8–9% валовых
+
+Такса поддержки: всего 7 EUR/м² — одна из самых низких на Южном побережье.
+
+Почему этот актив стабилен:
+
+• Пешая доступность к пляжу  
+• Последний этаж + панорамный вид (дефицитный формат)  
+• Низкие расходы владения  
+• Стабильный спрос со стороны граждан ЕС  
+• Шенген + курс на евроинтеграцию = рост капитализации  
+
+Прогноз на 5 лет при умеренном росте 5% в год:  
+~€33 000 прироста капитала + арендный поток.
+
+Формат подходит для:
+• Краткосрочной аренды  
+• Гибридного использования  
+• Среднесрочного роста капитала  
+
+Европейский инвестиционный актив с реальной доходностью.
+`,
+
+descriptionBg: `
+Това не е просто апартамент с морска гледка — това е структуриран инвестиционен актив в една от най-ликвидните зони по Южното Черноморие.
+
+Разположен на последен етаж в Mellia Park 10, на крачки от централния плаж на Равда. 91 кв.м площ и 28 кв.м панорамна тераса осигуряват почти 360° морска експозиция към Равда и Несебър — ключов фактор за наемна доходност и препродажна стойност.
+
+ИНВЕСТИЦИОННИ ПОКАЗАТЕЛИ:
+
+• Цена: €120 000  
+• Висок сезон: €100–130/вечер  
+• 90 дни консервативна заетост: €10 000–11 000  
+• Междинни сезони: €4 000–6 000  
+• Потенциален годишен приход: €14 000–17 000  
+• Брутна доходност: 11–14%
+
+Дългосрочен наем:  
+• €800–950/месец  
+• ~8–9% доходност
+
+Годишна такса: 7 EUR/кв.м — сред най-ниските по крайбрежието.
+
+Предимства:
+
+• Непосредствена близост до плажа  
+• Последен етаж + панорамна гледка  
+• Ниски разходи за поддръжка  
+• Силен туристически поток от ЕС  
+• Шенген и евроинтеграция = структурен растеж на цените  
+
+5-годишна прогноза при 5% годишно поскъпване:  
+~€33 000 капиталов ръст + наемни приходи.
+
+Подходящ за:
+• Краткосрочен наем  
+• Смесено ползване  
+• Средносрочна инвестиция  
+
+Европейски крайбрежен актив с измерима възвръщаемост.
+`,
+
+descriptionDe: `
+Dies ist nicht nur eine Wohnung mit Meerblick – sondern ein strukturiertes Küsten-Investment in einem der liquidesten Mikrostandorte an Bulgariens Schwarzmeerküste.
+
+Gelegen im obersten Stock von Mellia Park 10, nur wenige Schritte vom Zentralstrand Rawda entfernt. 91 m² Wohnfläche plus 28 m² Panoramaterrasse mit nahezu 360° Meerblick auf Rawda und Nessebar.
+
+INVESTITIONSKENNZAHLEN:
+
+• Kaufpreis: €120.000  
+• Hochsaison: €100–130/Nacht  
+• 90 Tage konservative Auslastung: €10.000–11.000  
+• Nebensaison: €4.000–6.000  
+• Potenzielles Jahreseinkommen: €14.000–17.000  
+• Bruttorendite: 11–14%
+
+Langzeitvermietung:  
+• €800–950/Monat  
+• ~8–9% Rendite
+
+Jährliche Instandhaltung: 7 EUR/m² — sehr niedrige Haltekosten.
+
+Warum dieses Objekt überzeugt:
+
+• Strandnähe (Liquiditätsfaktor)  
+• Dachgeschoss mit Panorama-Exposition  
+• Niedrige laufende Kosten  
+• Starke EU-Nachfrage  
+• Schengen + Euro-Integration = strukturelles Wertsteigerungspotenzial  
+
+5-Jahres-Prognose bei 5% Wertsteigerung jährlich:  
+~€33.000 Kapitalwachstum + Mieteinnahmen.
+
+Ein europäisches Küsteninvestment mit Lifestyle-Komponente und klarer ROI-Struktur.
+`,
+
+descriptionIt: `
+Non è solo un appartamento vista mare — è un asset di investimento costiero strutturato in una delle micro-zone più liquide del Mar Nero bulgaro.
+
+Situato all’ultimo piano del complesso Mellia Park 10, a pochi passi dalla spiaggia centrale di Ravda. 91 m² più terrazza panoramica di 28 m² con vista mare quasi a 360° su Ravda e Nessebar.
+
+DATI DI INVESTIMENTO:
+
+• Prezzo: €120.000  
+• Alta stagione: €100–130/notte  
+• 90 giorni occupazione conservativa: €10.000–11.000  
+• Media stagione: €4.000–6.000  
+• Reddito annuo stimato: €14.000–17.000  
+• Rendimento lordo: 11–14%
+
+Locazione annuale alternativa:  
+• €800–950/mese  
+• ~8–9% lordo
+
+Quota manutenzione: 7 EUR/m² — tra le più basse della costa.
+
+Punti chiave:
+
+• Prossimità immediata alla spiaggia  
+• Ultimo piano con esposizione panoramica  
+• Costi di gestione ridotti  
+• Forte domanda turistica UE  
+• Integrazione Schengen ed euro = crescita strutturale del valore  
+
+Proiezione a 5 anni con 5% annuo:  
+~€33.000 rivalutazione + flussi locativi.
+
+Un asset europeo costiero che combina lifestyle e rendimento misurabile.`,
 },
   // FEATURED PROPERTY - Zornitsa House
   {
