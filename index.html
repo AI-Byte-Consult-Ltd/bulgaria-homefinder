@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GitHub Pages SPA fix (custom domain): restore path from ?p=... (set by 404.html) -->
+    <!-- GitHub Pages SPA fix: restore path from ?p= (set by 404.html) -->
     <script>
       (function () {
         var url = new URL(window.location.href);
@@ -16,119 +16,216 @@
       })();
     </script>
 
-    <!-- Primary SEO -->
-    <title>BulgariaEstate by AI Byte Consult — Property & Business Services in Bulgaria</title>
-    <meta
-      name="description"
-      content="Buy, sell, and rent property in Bulgaria — apartments, houses, villas, land, and commercial real estate. Also: legal services, company & trade representative office registration, certified translations, legalization & document support. Multilingual service."
-    />
-    <meta
-      name="keywords"
-      content="Bulgaria real estate, property in Bulgaria, apartments Bulgaria, houses Bulgaria, commercial real estate Bulgaria, rent Bulgaria, buy property Bulgaria, sell property Bulgaria, legal services Bulgaria, company registration Bulgaria, trade representative office Bulgaria, document legalization Bulgaria, certified translation Bulgaria, relocation Bulgaria, Nessebar real estate"
-    />
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY META
+    ═══════════════════════════════════════════════ -->
+    <title>BulgariaEstate — Buy, Sell & Rent Property in Bulgaria | Legal & Business Services</title>
+
+    <meta name="description"
+      content="Buy, sell and rent apartments, houses, villas, land and commercial real estate in Bulgaria. Legal services, company registration, certified translations and document legalization. Multilingual: EN · RU · BG · DE · IT." />
+
+    <meta name="keywords"
+      content="Bulgaria real estate, property Bulgaria 2026, buy apartment Bulgaria, Sunny Beach property, Sofia apartment, Nessebar real estate, Varna property, invest Bulgaria, legal services Bulgaria, company registration Bulgaria, certified translation Bulgaria, document legalization Bulgaria, EUR property EU cheapest, Bulgaria Black Sea coast" />
+
     <meta name="author" content="BulgariaEstate by AI Byte Consult" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="color-scheme" content="dark light" />
 
-    <!-- Canonical -->
+    <!-- ═══════════════════════════════════════════════
+         CANONICAL + HREFLANG (5 languages)
+    ═══════════════════════════════════════════════ -->
     <link rel="canonical" href="https://estate.aibyteconsult.com/" />
 
-    <!-- Hreflang (оставьте только те языки/URL, которые реально существуют) -->
-    <link rel="alternate" href="https://estate.aibyteconsult.com/" hreflang="en" />
-    <link rel="alternate" href="https://estate.aibyteconsult.com/ru/" hreflang="ru" />
-    <link rel="alternate" href="https://estate.aibyteconsult.com/bg/" hreflang="bg" />
-    <link rel="alternate" href="https://estate.aibyteconsult.com/" hreflang="x-default" />
+    <link rel="alternate" hreflang="en"       href="https://estate.aibyteconsult.com/" />
+    <link rel="alternate" hreflang="ru"       href="https://estate.aibyteconsult.com/ru/" />
+    <link rel="alternate" hreflang="bg"       href="https://estate.aibyteconsult.com/bg/" />
+    <link rel="alternate" hreflang="de"       href="https://estate.aibyteconsult.com/de/" />
+    <link rel="alternate" hreflang="it"       href="https://estate.aibyteconsult.com/it/" />
+    <link rel="alternate" hreflang="x-default" href="https://estate.aibyteconsult.com/" />
 
-    <!-- (Опционально) дополнительные описания для других языков — НЕ стандарт SEO, но не мешает -->
-    <meta
-      name="description:ru"
-      content="Недвижимость в Болгарии: покупка, продажа и аренда квартир, домов, вилл, земли и коммерческих объектов. Также: юридические услуги, регистрация компаний и торговых представительств, переводы, легализация и сопровождение документов. Мультиязычный сервис."
-    />
-    <meta
-      name="description:bg"
-      content="Недвижими имоти в България: покупка, продажба и наем на апартаменти, къщи, вили, земя и търговски имоти. Също: правни услуги, регистрация на фирми и търговски представителства, преводи и легализация на документи. Многоезично обслужване."
-    />
-
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="BulgariaEstate by AI Byte Consult" />
-    <meta property="og:title" content="BulgariaEstate — Real Estate, Legal & Business Services in Bulgaria" />
-    <meta
-      property="og:description"
-      content="Property in Bulgaria: buy, sell, rent (residential & commercial). Legal services, company & trade representative office registration, certified translations and document legalization. Multilingual support."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://estate.aibyteconsult.com/" />
-    <meta property="og:locale" content="en_US" />
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH — controls Facebook, LinkedIn,
+         WhatsApp, Telegram previews
+    ═══════════════════════════════════════════════ -->
+    <meta property="og:site_name"        content="BulgariaEstate by AI Byte Consult" />
+    <meta property="og:type"             content="website" />
+    <meta property="og:url"              content="https://estate.aibyteconsult.com/" />
+    <meta property="og:title"            content="BulgariaEstate — Property, Legal & Business Services in Bulgaria" />
+    <meta property="og:description"
+      content="Buy, sell or rent property in Bulgaria at EU's lowest prices. Apartments, villas, commercial real estate. Plus: company registration, legal support, certified translations. Multilingual team." />
+    <meta property="og:image"            content="https://estate.aibyteconsult.com/assets/og/bulgaria-estate-og-1200x630.jpg" />
+    <meta property="og:image:secure_url" content="https://estate.aibyteconsult.com/assets/og/bulgaria-estate-og-1200x630.jpg" />
+    <meta property="og:image:width"      content="1200" />
+    <meta property="og:image:height"     content="630" />
+    <meta property="og:image:type"       content="image/jpeg" />
+    <meta property="og:image:alt"        content="Old town of Nessebar, Bulgaria — Black Sea coast waterfront" />
+    <meta property="og:locale"           content="en_US" />
     <meta property="og:locale:alternate" content="ru_RU" />
     <meta property="og:locale:alternate" content="bg_BG" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="it_IT" />
 
-    <!-- IMPORTANT: лучше хостить OG‑изображение у себя (1200x630) -->
-    <meta property="og:image" content="https://estate.aibyteconsult.com/assets/og/nesebar-1200x630.jpg" />
-    <meta property="og:image:secure_url" content="https://estate.aibyteconsult.com/assets/og/nesebar-1200x630.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Old town of Nessebar, Bulgaria — waterfront houses" />
+    <!-- ═══════════════════════════════════════════════
+         TWITTER / X CARD
+         summary_large_image = big image in feed
+    ═══════════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="BulgariaEstate — Property, Legal & Business Services in Bulgaria" />
+    <meta name="twitter:description"
+      content="Buy, sell or rent property in Bulgaria. Legal services, company registration, certified translations. EU's most affordable real estate market." />
+    <meta name="twitter:image"       content="https://estate.aibyteconsult.com/assets/og/bulgaria-estate-og-1200x630.jpg" />
+    <meta name="twitter:image:alt"   content="Nessebar old town, Bulgaria — Black Sea coast" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Если нет реального аккаунта — лучше убрать, чем оставлять фейковый -->
-    <!-- <meta name="twitter:site" content="@BulgariaEstate" /> -->
-    <meta name="twitter:title" content="BulgariaEstate — Real Estate, Legal & Business Services in Bulgaria" />
-    <meta
-      name="twitter:description"
-      content="Buy/sell/rent property in Bulgaria + legal services, company registration, translations & document legalization. Multilingual support."
-    />
-    <meta name="twitter:image" content="https://estate.aibyteconsult.com/assets/og/nesebar-1200x630.jpg" />
-    <meta name="twitter:image:alt" content="Old town of Nessebar, Bulgaria — waterfront houses" />
+    <!-- ═══════════════════════════════════════════════
+         MULTILINGUAL META DESCRIPTIONS
+         (non-standard but harmless; helps crawlers
+          that index alternate-language versions)
+    ═══════════════════════════════════════════════ -->
+    <meta name="description:ru"
+      content="Недвижимость в Болгарии: покупка, продажа и аренда квартир, домов, вилл, земли и коммерческих объектов. Юридические услуги, регистрация компаний, переводы и легализация документов. Многоязычная команда." />
+    <meta name="description:bg"
+      content="Недвижими имоти в България: покупка, продажба и наем на апартаменти, къщи, вили, земя и търговски имоти. Правни услуги, регистрация на фирми, преводи и легализация на документи." />
+    <meta name="description:de"
+      content="Immobilien in Bulgarien kaufen, verkaufen und mieten — Wohnungen, Häuser, Villen, Grundstücke und Gewerbeimmobilien. Rechtsdienstleistungen, Firmengründung, beglaubigte Übersetzungen und Dokumentenlegalisierung." />
+    <meta name="description:it"
+      content="Compra, vendi e affitta immobili in Bulgaria — appartamenti, case, ville, terreni e immobili commerciali. Servizi legali, registrazione aziendale, traduzioni certificate e legalizzazione di documenti." />
 
-    <!-- Favicons (добавьте файлы в /public) -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#0b1220" />
-
-    <!-- Performance hints -->
-    <link rel="preconnect" href="https://estate.aibyteconsult.com" crossorigin />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-    <!-- Structured Data (JSON‑LD): организация + услуги -->
+    <!-- ═══════════════════════════════════════════════
+         STRUCTURED DATA — Organization + RealEstateAgent
+         + BreadcrumbList
+         Helps Google show rich results and sitelinks
+    ═══════════════════════════════════════════════ -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "BulgariaEstate by AI Byte Consult",
-        "url": "https://estate.aibyteconsult.com/",
-        "logo": "https://estate.aibyteconsult.com/assets/brand/logo.png",
-        "image": "https://estate.aibyteconsult.com/assets/og/nesebar-1200x630.jpg",
-        "description": "Real estate services in Bulgaria (buy, sell, rent, residential & commercial) plus legal services, company & trade representative office registration, certified translations and document legalization. Multilingual support.",
-        "areaServed": ["BG", "EU", "UK", "UA", "TR", "IL", "KZ", "UZ"],
-        "knowsLanguage": ["en", "ru", "bg"],
-        "sameAs": [],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real estate brokerage (buy/sell/rent)" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial real estate (lease & sales)" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Legal services & document support" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Company registration in Bulgaria" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trade representative office registration" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certified translations & legalization" } }
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "RealEstateAgent"],
+          "@id": "https://estate.aibyteconsult.com/#organization",
+          "name": "BulgariaEstate by AI Byte Consult",
+          "url": "https://estate.aibyteconsult.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://estate.aibyteconsult.com/assets/brand/logo.png",
+            "width": 300,
+            "height": 60
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://estate.aibyteconsult.com/assets/og/bulgaria-estate-og-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          },
+          "description": "Real estate brokerage and business services in Bulgaria. Buy, sell, rent residential and commercial property. Legal services, company registration, certified translations and document legalization. Multilingual team: EN, RU, BG, DE, IT.",
+          "areaServed": [
+            { "@type": "Country", "name": "Bulgaria" },
+            { "@type": "Place", "name": "European Union" }
+          ],
+          "knowsLanguage": ["en", "ru", "bg", "de", "it"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Russian", "Bulgarian", "German", "Italian"],
+            "email": "estate@aibyteconsult.com"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Property & Business Services in Bulgaria",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential real estate — buy, sell, rent" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial real estate — offices, retail, warehouses" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Legal services and due diligence" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Company registration in Bulgaria" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trade representative office registration" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certified translations and apostille" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Document legalization" } }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://estate.aibyteconsult.com/#website",
+          "url": "https://estate.aibyteconsult.com/",
+          "name": "BulgariaEstate by AI Byte Consult",
+          "publisher": { "@id": "https://estate.aibyteconsult.com/#organization" },
+          "inLanguage": ["en", "ru", "bg", "de", "it"],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://estate.aibyteconsult.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://estate.aibyteconsult.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can foreigners buy property in Bulgaria?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EU citizens can buy property and land in Bulgaria freely. Non-EU citizens can purchase apartments and buildings but require a Bulgarian company to own land. We guide you through the full process."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does property cost in Bulgaria in 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prices vary by location. Sofia city center: 1,500–2,500 EUR/m². Black Sea coast (Sunny Beach, Sveti Vlas, Sozopol): 900–2,700 EUR/m². Varna: 1,200–2,500 EUR/m². Bulgaria remains one of the EU's most affordable property markets."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What additional costs should I expect when buying property in Bulgaria?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typical additional costs are 4–6% of the purchase price: transfer tax (approx. 3%), notary fees, registration fees, and legal support. Annual maintenance fees in resort complexes range from 6–18 EUR/m²/month."
+              }
+            }
           ]
         }
-      }
+      ]
+    }
     </script>
 
-    <!-- Unsplash attribution (SEO не даёт, но честно и корректно).
-         Лучше также продублировать на странице Credits/Legal. -->
-    <meta name="photo:credit" content="Photo by Neven Myst on Unsplash (Nessebar, Bulgaria)" />
+    <!-- ═══════════════════════════════════════════════
+         PERFORMANCE: preconnect + dns-prefetch
+    ═══════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="//estate.aibyteconsult.com" />
+
+    <!-- ═══════════════════════════════════════════════
+         FAVICONS
+         Generate full set at: realfavicongenerator.net
+    ═══════════════════════════════════════════════ -->
+    <link rel="icon"             href="/favicon.ico" sizes="any" />
+    <link rel="icon"             href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest"         href="/site.webmanifest" />
+
+    <!-- ═══════════════════════════════════════════════
+         PHOTO CREDIT (Unsplash compliance)
+    ═══════════════════════════════════════════════ -->
+    <meta name="photo:credit" content="Photos by Neven Myst and Ondrej Bocek on Unsplash (Nessebar & Sunny Beach, Bulgaria)" />
   </head>
 
   <body>
-    <noscript>This website requires JavaScript to run.</noscript>
+    <noscript>
+      <p style="font-family:sans-serif;text-align:center;padding:40px">
+        This website requires JavaScript. Please enable JavaScript in your browser to continue.<br />
+        <a href="mailto:estate@aibyteconsult.com">estate@aibyteconsult.com</a>
+      </p>
+    </noscript>
 
     <div id="root"></div>
 
-    <!-- скрипты приложения -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

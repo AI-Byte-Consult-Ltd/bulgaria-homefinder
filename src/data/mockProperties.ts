@@ -1,17 +1,23 @@
 export const mockProperties = [
-  // FEATURED PROPERTY - Mellia Park 10, Ravda
   {
   id: 'mellia-park-10-ravda-77544',
 
-  // Titles
-  title: 'Panoramic Sea-View Residence | Mellia Park 10, Ravda',
-  titleBg: 'Панорамна резиденция с морска гледка | Мелия Парк 10, Равда',
+  // ── Titles ──────────────────────────────────────────────
+  title:   'Panoramic Sea-View Residence | Mellia Park 10, Ravda',
   titleRu: 'Панорамная резиденция с видом на море | Mellia Park 10, Равда',
+  titleBg: 'Панорамна резиденция с морска гледка | Мелия Парк 10, Равда',
+  titleDe: 'Panorama-Meerblick-Residenz | Mellia Park 10, Rawda',
+  titleIt: 'Residenza Panoramica Vista Mare | Mellia Park 10, Ravda',
 
-  price: 130000,
-  location: 'Ravda, Burgas Region',
+  // ── Price & Location ─────────────────────────────────────
+  price:    120000,
+  location:   'Ravda, Burgas Region',
+  locationRu: 'Равда, область Бургас',
+  locationBg: 'Равда, област Бургас',
+  locationDe: 'Rawda, Region Burgas',
+  locationIt: 'Ravda, Regione di Burgas',
 
-  // Images (IPFS)
+  // ── Images (IPFS) ────────────────────────────────────────
   images: [
     'https://ipfs.io/ipfs/bafybeidylrpkiheyqiut4hamwqdcubm5yc543u7rsn4fc7vztc4hdo6kba',
     'https://ipfs.io/ipfs/bafybeif44c4jydc6yur73ssehtshgyfujeymlwgxqkncinv4cmzlyzcaam',
@@ -27,55 +33,205 @@ export const mockProperties = [
     'https://ipfs.io/ipfs/bafybeicblnxaain7klti5d7r55sxho7ikrmou7luvkkk2kmkox3q5lpfqe',
     'https://ipfs.io/ipfs/bafybeiepaf5h22g3mbyjh6lomsiyr22a5wwzpcqnj7hujunekosgnlafle',
     'https://ipfs.io/ipfs/bafybeiewahasytvotmuxdb4yvdpi6tuj4nmpkwub5zl37odq2fcan4tili',
-    'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa'
+    'https://ipfs.io/ipfs/bafybeiemrnzyzks3mbpdu3mcichvvexqpr7jlcx4xrws7fybtroak4rvpa',
   ],
 
-  bedrooms: 2,
-  bathrooms: 1,
-  area: 91,
-  type: 'apartment',
+  // ── Type & Transaction ───────────────────────────────────
+  type:            'apartment',   // apartment | house | land | block | farm | commercial | garage | industrial | office | other
   transactionType: 'sale' as const,
-  featured: true,
+
+  // ── Status & Availability ────────────────────────────────
+  status:         'for-sale',     // for-sale | for-rent | sold-out | coming-soon | reserved
+  featured:       true,
   availableUnits: 1,
-  status: 'for-sale',
 
-  // Descriptions
-  description: 'Panoramic near-360° sea view from Ravda and Nessebar along the coastline. Steps from Ravda central beach in Mellia Park 10. Layout: living room with kitchen, 2 bedrooms, bathroom, large panoramic terrace. Amenities: pool, kids playground, 24/7 security, landscaped gardens. Built 2016, top floor. Annual maintenance: 7 EUR/sq.m. Great for living, holidays, or rental investment.',
+  // ── Core Specs ───────────────────────────────────────────
+  area:        91,   // m² — total apartment area
+  bedrooms:    2,
+  bathrooms:   1,
+  livingRooms: 1,    // TODO: confirm
 
-  descriptionBg: 'Панорамна почти 360° морска гледка от Равда и Несебър по цялата крайбрежна линия. На крачки от централния плаж на Равда, в комплекс Мелия Парк 10. Разпределение: дневна с кухня, 2 спални, баня и голяма панорамна тераса. Удобства: басейн, детска площадка, 24/7 охрана, озеленени площи. Построен 2016 г., последен етаж. Годишна такса поддръжка: 7 EUR/кв.м. Отличен за целогодишно живеене, ваканционен дом или инвестиция под наем.',
+  // ── Floor & Building ─────────────────────────────────────
+  floor:       5, // TODO: add floor number (e.g. 4)
+  totalFloors: 5, // TODO: add total floors in building (e.g. 4 — top floor)
+  yearBuilt:   2016,
+  actSixteen:  true, // Act 16 confirmed — building legally commissioned
 
-  descriptionRu: 'Панорамный почти 360° вид на море — от Равды и Несебра вдоль всей береговой линии. В нескольких шагах от центрального пляжа Равды, комплекс Mellia Park 10. Планировка: гостиная с кухней, 2 спальни, санузел и большая панорамная терраса. Инфраструктура: бассейн, детская площадка, круглосуточная охрана, озеленение. Год постройки 2016, верхний этаж. Такса поддержки: 7 EUR/м² в год. Отлично для круглогодичного проживания, отдыха или аренды.'
+  // ── View & Terrace ───────────────────────────────────────
+  view:        'Sea view',  // near-360° panoramic sea view — Ravda + Nessebar coastline
+  terraceArea: 28,        // TODO: add terrace m² (large panoramic terrace — confirm size)
+
+  // ── Land ─────────────────────────────────────────────────
+  landArea:    null,        // N/A for apartment
+
+  // ── Parking ──────────────────────────────────────────────
+  parkingSpots: null,       // TODO: confirm parking availability in complex
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: 7,        // EUR/m²/year — one of the lowest on the coast
+
+  // ── Descriptions ─────────────────────────────────────────
+  description: `Panoramic near-360° sea view from Ravda and Nessebar along the full coastline. Steps from Ravda central beach in Mellia Park 10. Layout: open living room with kitchen, 2 bedrooms, bathroom, and a large panoramic terrace. Complex amenities: pool, kids playground, 24/7 security, landscaped gardens. Built 2016, top floor. Annual maintenance: 7 EUR/m². Ideal for year-round living, a holiday home, or a rental investment.`,
+
+  descriptionRu: `Панорамный почти 360° вид на море — от Равды и Несебра вдоль всей береговой линии. В нескольких шагах от центрального пляжа Равды, комплекс Mellia Park 10. Планировка: гостиная с кухней открытого типа, 2 спальни, санузел и большая панорамная терраса. Инфраструктура комплекса: бассейн, детская площадка, круглосуточная охрана, озеленённая территория. Год постройки — 2016, верхний этаж. Такса поддержки: 7 EUR/м² в год. Отлично подходит для круглогодичного проживания, отдыха или арендной инвестиции.`,
+
+  descriptionBg: `Панорамна почти 360° морска гледка от Равда и Несебър по цялата крайбрежна линия. На крачки от централния плаж на Равда, в комплекс Мелия Парк 10. Разпределение: дневна с кухня от отворен тип, 2 спални, баня и голяма панорамна тераса. Удобства в комплекса: басейн, детска площадка, 24/7 охрана, озеленени площи. Построен 2016 г., последен етаж. Годишна такса поддръжка: 7 EUR/кв.м. Отличен избор за целогодишно живеене, ваканционен дом или инвестиция под наем.`,
+
+  descriptionDe: `Panoramablick auf das Meer — fast 360° von Rawda und Nessebar entlang der gesamten Küstenlinie. Nur wenige Schritte vom Zentralstrand Rawdas entfernt, im Komplex Mellia Park 10. Grundriss: offene Wohnküche, 2 Schlafzimmer, Bad und eine große Panoramaterrasse. Komplex-Ausstattung: Pool, Kinderspielplatz, 24/7-Sicherheitsdienst, gepflegte Gartenanlagen. Baujahr 2016, Dachgeschoss. Jährliche Instandhaltungsgebühr: 7 EUR/m². Ideal als Ganzjahreswohnsitz, Feriendomizil oder Mietinvestition.`,
+
+  descriptionIt: `Vista mare panoramica quasi a 360° da Ravda e Nessebar lungo l'intera costa. A pochi passi dalla spiaggia centrale di Ravda, nel complesso Mellia Park 10. Planimetria: soggiorno con cucina open space, 2 camere da letto, bagno e un'ampia terrazza panoramica. Servizi del complesso: piscina, parco giochi per bambini, sicurezza 24/7, giardini curati. Costruito nel 2016, ultimo piano. Quota annuale di manutenzione: 7 EUR/m². Ideale come residenza tutto l'anno, casa vacanza o investimento da affitto.`,
 },
   // FEATURED PROPERTY - Zornitsa House
   {
-    id: 'zornitsa-house-75239',
-    title: 'Two-Storey House with Large Plot - Zornitsa',
-    titleBg: 'Двуетажна къща с голям парцел - с. Зорница',
-    price: 25000,
-    location: 'Zornitsa, Sredets, Burgas Region',
-    image: 'https://www.listproperty4free.com/uploaded_files/6/c/e/c/6cec5672ff1ccdc22f5c331063b8ff32.jpeg',
-    bedrooms: 4,
-    bathrooms: 2,
-    area: 112,
-    type: 'house',
-    transactionType: 'sale' as const,
-    featured: true,
-    availableUnits: 1,
-    status: 'for-sale',
-    description: 'Two-storey detached house with 1,910 sq.m. land plot in the quiet village of Zornitsa, Burgas region. 50 km from the sea. Connected to electricity and water, with a well nearby. Mineral springs 150m away. Ideal for renovation into a private home, guest house, or Airbnb. Year built: 1969. Construction: stone (ground floor) and brick (upper floor).',
+  id: 'zornitsa-house-75239',
+
+  // ── Titles ──────────────────────────────────────────────
+  title:   'Value-Add Investment: Two-Storey Stone House + 1,910 m² Plot | Zornitsa Village',
+  titleRu: 'Инвестиционный проект: двухэтажный каменный дом + участок 1 910 м² | с. Зорница',
+  titleBg: 'Инвестиционен проект: двуетажна каменна къща + парцел 1 910 м² | с. Зорница',
+  titleDe: 'Investment-Projekt: Zweistöckiges Steinhaus + 1.910 m² Grundstück | Dorf Zornitsa',
+  titleIt: 'Progetto Investimento: Casa in Pietra + Terreno 1.910 m² | Villaggio Zornitsa',
+
+  // ── Price & Location ─────────────────────────────────────
+  price:    19700,
+  location:   'Zornitsa, Sredets Municipality, Burgas Region',
+  locationRu: 'с. Зорница, общ. Средец, область Бургас',
+  locationBg: 'с. Зорница, общ. Средец, обл. Бургас',
+  locationDe: 'Dorf Zornitsa, Gemeinde Sredets, Region Burgas',
+  locationIt: 'Villaggio Zornitsa, Comune di Sredets, Regione di Burgas',
+
+  // ── Images ───────────────────────────────────────────────
+  images: [
+    'https://www.listproperty4free.com/uploaded_files/6/c/e/c/6cec5672ff1ccdc22f5c331063b8ff32.jpeg',
+    // TODO: add more photos of exterior, interior, plot, well, surroundings
+  ],
+
+  // ── Type & Transaction ───────────────────────────────────
+  type:            'house',
+  transactionType: 'sale' as const,
+
+  // ── Status & Availability ────────────────────────────────
+  status:         'for-sale',
+  featured:       true,
+  availableUnits: 1,
+
+  // ── Core Specs ───────────────────────────────────────────
+  area:        112,   // m² — total house area (two floors)
+  bedrooms:    4,
+  bathrooms:   2,
+  livingRooms: 1,     // TODO: confirm room count layout
+
+  // ── Floor & Building ─────────────────────────────────────
+  floor:       null,  // N/A — detached house
+  totalFloors: 2,
+  yearBuilt:   1969,
+  actSixteen:  null,  // TODO: confirm — older rural properties often require verification
+
+  // ── View & Outdoor ───────────────────────────────────────
+  view:        'Village & nature view',
+  terraceArea: null,  // TODO: confirm — likely has yard/porch area
+
+  // ── Land ─────────────────────────────────────────────────
+  landArea:    1910,  // m² — privately owned, fully fenced plot
+
+  // ── Parking ──────────────────────────────────────────────
+  parkingSpots: null, // TODO: confirm — large plot likely allows 2+ cars
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: null, // N/A — standalone rural house, no complex fees
+
+  // ── Investment Case ──────────────────────────────────────
+  investmentCase: {
+    purchasePrice:          19700,   // EUR — acquisition cost
+    renovationEstimateMin:  20000,   // EUR
+    renovationEstimateMax:  25000,   // EUR
+    totalInvestmentMin:     39700,   // EUR
+    totalInvestmentMax:     44700,   // EUR
+    comparableMarketValueMin: 78000, // EUR — renovated comparable houses in area
+    potentialUpsideMin:     33300,   // EUR vs total investment max
+    potentialUpsideMax:     38300,   // EUR vs total investment min
+    roiEstimateMin:         74,      // % — (78k - 44.7k) / 44.7k
+    roiEstimateMax:         97,      // % — (78k - 39.7k) / 39.7k
+    useCase: ['private-home', 'guest-house', 'airbnb', 'eu-residency-base'],
+    distanceToSea:          50,      // km
+    mineralSprings:         150,     // m — natural mineral springs nearby
+    utilities:              ['electricity', 'water-mains', 'well'],
+    construction:           'stone-ground-floor-brick-upper',
+    conditionOnPurchase:    'full-renovation-required',
   },
+
+  // ── Descriptions ─────────────────────────────────────────
+  description: `Value-add investment opportunity: two-storey detached house (112 m²) on a privately owned 1,910 m² plot in the quiet village of Zornitsa, Burgas Region — 50 km from the Black Sea coast.
+
+Purchase price: €19,700. Estimated full renovation budget: €20,000–25,000. Total investment: ~€40,000–45,000. Comparable renovated houses in the area start from €78,000 — implying potential upside of €33,000–38,000 (74–97% ROI on total invested capital).
+
+The house requires full renovation and represents a blank canvas. Ground floor: stone construction. Upper floor: brick. Connected to mains electricity and water; private well on plot. Natural mineral springs 150m away. The plot is large enough for a garden, terrace extension, outbuilding, or parking.
+
+Use cases: primary or secondary private residence, guest house, rural retreat, Airbnb / short-term rental operation, or a base for EU residency via Bulgarian property ownership. Bulgaria has been an EU member since 2007 — property ownership grants legal grounds for residency applications.
+
+Ideal for investors, renovation specialists, or buyers seeking an EU foothold at the lowest possible entry price.`,
+
+  descriptionRu: `Инвестиционный проект с добавленной стоимостью: двухэтажный отдельно стоящий дом (112 м²) на частном земельном участке 1 910 м² в тихом селе Зорница, Бургасская область — 50 км от Черноморского побережья.
+
+Цена покупки: €19 700. Расчётный бюджет полной реконструкции: €20 000–25 000. Совокупный объём инвестиций: ~€40 000–45 000. Сопоставимые отремонтированные дома в районе продаются от €78 000 — потенциальный прирост стоимости: €33 000–38 000 (ROI 74–97% на вложенный капитал).
+
+Дом требует полного ремонта — это чистый холст для реализации. Первый этаж: каменная кладка. Второй этаж: кирпич. Подключён к электросети и центральному водоснабжению; на участке имеется собственный колодец. Минеральные источники в 150 м. Участок позволяет разбить сад, обустроить террасу, построить хозблок или организовать парковку.
+
+Варианты использования: основное или второе жильё, гостевой дом, сельский ретрит, работа по модели Airbnb / краткосрочная аренда, а также база для получения вида на жительство в ЕС через владение недвижимостью в Болгарии. Болгария является членом ЕС с 2007 года — право собственности на недвижимость является законным основанием для оформления вида на жительство.
+
+Подходит для инвесторов, специалистов по реновации или покупателей, которым нужна точка входа в ЕС по минимальной цене.`,
+
+  descriptionBg: `Инвестиционен проект с добавена стойност: двуетажна самостоятелна къща (112 м²) на частен поземлен имот от 1 910 м² в тихото село Зорница, обл. Бургас — 50 км от Черноморието.
+
+Покупна цена: €19 700. Прогнозен бюджет за пълна реновация: €20 000–25 000. Обща инвестиция: ~€40 000–45 000. Сравними реновирани къщи в района се предлагат от €78 000 — потенциална добавена стойност: €33 000–38 000 (ROI 74–97% върху вложения капитал).
+
+Имотът изисква цялостна реновация — напълно свободен за концепция. Първи етаж: каменна зидария. Втори етаж: тухлена конструкция. Включена електричество и водоснабдяване; собствен кладенец в двора. Минерални извори на 150 м. Парцелът позволява градина, тераса, стопанска постройка или паркинг.
+
+Приложения: основно или ваканционно жилище, гостилница, селски retreat, Airbnb / краткосрочен наем или база за получаване на разрешение за пребиваване в ЕС. България е член на ЕС от 2007 г. — притежаването на имот е законово основание за кандидатстване за пребиваване.
+
+Идеален за инвеститори, специалисти по реновации или купувачи, търсещи достъп до ЕС на минимална цена.`,
+
+  descriptionDe: `Wertsteigerungsprojekt: zweistöckiges freistehendes Haus (112 m²) auf einem privaten Grundstück von 1.910 m² im ruhigen Dorf Zornitsa, Region Burgas — 50 km vom Schwarzen Meer entfernt.
+
+Kaufpreis: €19.700. Geschätztes Renovierungsbudget: €20.000–25.000. Gesamtinvestition: ~€40.000–45.000. Vergleichbare renovierte Häuser in der Region beginnen bei €78.000 — potenzieller Wertzuwachs: €33.000–38.000 (ROI 74–97% auf das investierte Kapital).
+
+Das Haus erfordert eine Vollrenovierung. Erdgeschoss: Steinbau. Obergeschoss: Ziegel. Anschluss an Strom und Wasserversorgung; eigener Brunnen auf dem Grundstück. Mineralquellen in 150 m Entfernung. Das Grundstück bietet Platz für Garten, Terrasse, Nebengebäude oder Stellplätze.
+
+Verwendungsmöglichkeiten: Erst- oder Zweitwohnsitz, Gästehaus, Landhaus, Airbnb / Kurzzeitvermietung oder Basis für einen EU-Aufenthaltstitel durch bulgarischen Immobilienbesitz. Bulgarien ist seit 2007 EU-Mitglied — Immobilieneigentum bildet eine rechtliche Grundlage für Aufenthaltsanträge.
+
+Ideal für Investoren, Renovierungsspezialisten oder Käufer, die einen EU-Einstieg zum niedrigstmöglichen Preis suchen.`,
+
+  descriptionIt: `Progetto di investimento a valore aggiunto: casa indipendente su due piani (112 m²) su un terreno privato di 1.910 m² nel tranquillo villaggio di Zornitsa, Regione di Burgas — 50 km dalla costa del Mar Nero.
+
+Prezzo di acquisto: €19.700. Budget stimato per la ristrutturazione completa: €20.000–25.000. Investimento totale: ~€40.000–45.000. Case ristrutturate comparabili nella zona partono da €78.000 — potenziale plusvalore: €33.000–38.000 (ROI 74–97% sul capitale investito).
+
+La casa richiede una ristrutturazione completa — tela bianca per qualsiasi progetto. Piano terra: costruzione in pietra. Piano superiore: mattoni. Allacciata a elettricità e acqua; pozzo privato nel terreno. Sorgenti minerali a 150 m. Il terreno consente giardino, terrazza, dependance o parcheggio.
+
+Utilizzi: residenza principale o secondaria, casa per gli ospiti, agriturismo, Airbnb / affitto breve, o base per la residenza UE tramite proprietà immobiliare bulgara. La Bulgaria è membro UE dal 2007 — la proprietà immobiliare costituisce base legale per le domande di residenza.
+
+Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano un accesso all'UE al prezzo minimo possibile.`,
+},
   // FEATURED PROPERTY - Burgas, Slaveykov 50 - Luxury Apartment
+// ── INVESTMENT APARTMENT — Burgas Slaveykov, active rental income ────────────
 {
   id: 'burgas-slaveykov-50-lux',
-  title: 'Luxury 1-Bedroom Apartment with Designer Renovation – Slaveykov',
-  titleBg: 'Луксозен двустаен апартамент с дизайнерски ремонт – Славейков',
-  titleRu: 'Люкс двухкомнатная квартира с дизайнерским ремонтом – Славейков',
-  titleDe: 'Luxuriöse 2-Zimmer-Wohnung mit Designer-Renovierung – Slaveykov',
-  titleIt: 'Appartamento bilocale di lusso con ristrutturazione di design – Slaveykov',
 
-  price: 140000,
-  location: 'Burgas, Slaveykov District',
-  // Images (IPFS)
+  // ── Titles ──────────────────────────────────────────────
+  title:   'Income-Generating Luxury Apartment | Signed Rental Contract €450/mo | Slaveykov, Burgas',
+  titleRu: 'Доходная люкс-квартира | Действующий договор аренды €450/мес | Славейков, Бургас',
+  titleBg: 'Апартамент с доход | Активен наемен договор €450/мес | Славейков, Бургас',
+  titleDe: 'Rendite-Luxuswohnung | Laufender Mietvertrag €450/Monat | Slaveykov, Burgas',
+  titleIt: 'Appartamento con Reddito Attivo | Contratto Affitto €450/mese | Slaveykov, Burgas',
+
+  // ── Price & Location ─────────────────────────────────────
+  price:    140000,
+  location:   'Burgas, Slaveykov District',
+  locationRu: 'Бургас, квартал Славейков',
+  locationBg: 'Бургас, кв. Славейков',
+  locationDe: 'Burgas, Stadtviertel Slaveykov',
+  locationIt: 'Burgas, Quartiere Slaveykov',
+
+  // ── Images (IPFS) ────────────────────────────────────────
   images: [
     'https://ipfs.io/ipfs/bafybeidb6jnowpx77vumucgl3ymyqz3rh3xvzum3ebwdvbxmjrqz5z4bvq',
     'https://ipfs.io/ipfs/bafkreihsb3mxv6ap4sn6jnmllwocd37cmjyydwudtw2rhcjncqik7x2lja',
@@ -108,26 +264,295 @@ export const mockProperties = [
     'https://ipfs.io/ipfs/bafkreianqglq3ffckxufzlzucqr4ahslucbxr6hyvi5lip46n3s7t3rqwq',
     'https://ipfs.io/ipfs/bafkreieytezkhooq2e6e5qgdo5sdfkfugm752bx4ao7gb5hlevuk4rymii',
     'https://ipfs.io/ipfs/bafkreicfwnvzud6jyji226t7oljtflrinvzlcqh4g6mdk5vubtpfqe7ggu',
-    'https://ipfs.io/ipfs/bafkreicvah22gltry3e6xc7tj2zfvnpa22pscya5ewnajidcn4iu2yvnnq'
+    'https://ipfs.io/ipfs/bafkreicvah22gltry3e6xc7tj2zfvnpa22pscya5ewnajidcn4iu2yvnnq',
   ],
 
-  bedrooms: 1,
-  bathrooms: 1,
-  area: 60,
-  type: 'apartment',
+  // ── Type & Transaction ───────────────────────────────────
+  type:            'apartment',
   transactionType: 'sale' as const,
-  featured: true,
-  status: 'for-sale',
 
-  description: 'Luxury 1-bedroom apartment located on the 16th (not top) floor. Fully furnished with premium furniture and high-end appliances. Modern interior design, functional layout, ideal for personal living or investment.',
+  // ── Status & Availability ────────────────────────────────
+  status:         'for-sale',
+  featured:       true,
+  availableUnits: 1,
 
-  descriptionBg: 'Луксозен двустаен апартамент, разположен на 16-ти (непоследен) етаж. Напълно обзаведен с висок клас мебели и електроуреди. Модерен интериор и функционално разпределение. Подходящ както за живеене, така и за инвестиция.',
+  // ── Core Specs ───────────────────────────────────────────
+  area:        60,   // m²
+  bedrooms:    1,
+  bathrooms:   1,
+  livingRooms: 1,
 
-  descriptionRu: 'Люкс двухкомнатная квартира на 16-м (не последнем) этаже. Полностью укомплектована мебелью и техникой высокого класса. Современный интерьер и удобная планировка. Отличный вариант для проживания или инвестиции.',
+  // ── Floor & Building ─────────────────────────────────────
+  floor:       16,
+  totalFloors: null,  // TODO: confirm total floors (not top floor per description)
+  yearBuilt:   null,  // TODO: confirm
+  actSixteen:  true,
 
-  descriptionDe: 'Luxuriöse 2-Zimmer-Wohnung im 16. (nicht letzten) Stock. Vollständig möbliert mit hochwertigen Möbeln und Elektrogeräten. Modernes Design und funktionale Raumaufteilung. Ideal sowohl zum Wohnen als auch als Kapitalanlage.',
+  // ── View & Outdoor ───────────────────────────────────────
+  view:        null,  // TODO: confirm — 16th floor likely has city / sea view
+  terraceArea: null,  // TODO: confirm balcony/terrace
 
-  descriptionIt: 'Appartamento bilocale di lusso situato al 16° piano (non ultimo). Completamente arredato con mobili ed elettrodomestici di alta qualità. Design moderno e disposizione funzionale. Ideale sia per abitazione che per investimento.',
+  // ── Land & Parking ───────────────────────────────────────
+  landArea:     null,   // N/A — apartment
+  parkingSpots: null,   // TODO: confirm
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: null, // TODO: confirm — request from seller
+
+  // ── Furnishing ───────────────────────────────────────────
+  furnished:       true,
+  furnishingLevel: 'luxury', // luxury | full | partial | unfurnished
+
+  // ── Investment Case ──────────────────────────────────────
+  investmentCase: {
+    // Income
+    monthlyRent:         450,    // EUR/month — signed contract
+    annualRentalIncome:  5400,   // EUR/year (450 × 12)
+    rentalContractStatus: 'signed-active', // signed-active | verbal | none
+
+    // Acquisition costs (Bulgaria standard)
+    purchasePrice:       140000,
+    acquisitionCosts:    7000,   // ~5% — transfer tax ~3% + notary + registration
+    totalCashIn:         147000, // purchase + acquisition costs
+
+    // Gross yield on purchase price
+    grossYieldOnPrice:   3.86,   // % = 5400 / 140000 × 100
+
+    // Gross yield on total cash invested (incl. acquisition costs)
+    grossYieldOnTotal:   3.67,   // % = 5400 / 147000 × 100
+
+    // Net yield estimate (deduct ~15% for tax, minor maintenance, vacancy buffer)
+    estimatedNetYield:   3.10,   // % conservative estimate
+
+    // Payback
+    paybackYearsGross:   25.9,   // years = 140000 / 5400
+    paybackYearsOnTotal: 27.2,   // years = 147000 / 5400
+
+    // Monthly cash flow (before tax)
+    monthlyCashFlowGross: 450,   // EUR
+
+    // Capital appreciation context (NSI Q3 2025: Burgas +6.2% single quarter)
+    marketAppreciationNote: 'Burgas recorded +6.2% in Q2 2025 alone (NSI). At 5% annual appreciation, asset reaches ~€178,500 in 5 years.',
+
+    // 5-year total return scenario (conservative)
+    fiveYearRentalIncome:    27000,  // EUR = 5400 × 5
+    fiveYearAppreciation:    38500,  // EUR = 140000 × (1.05^5 - 1), ~27.6%
+    fiveYearTotalReturn:     65500,  // EUR combined
+    fiveYearROI:             44.6,   // % = 65500 / 147000 × 100
+
+    useCase: ['passive-income', 'long-term-rental', 'capital-appreciation', 'eu-residency-base'],
+  },
+
+  // ── Descriptions ─────────────────────────────────────────
+  description: `Turnkey income-generating investment: luxury 1-bedroom apartment on the 16th floor in Slaveykov district, Burgas — sold with an active signed rental contract at €450/month.
+
+INVESTMENT NUMBERS:
+- Purchase price: €140,000
+- Monthly rental income: €450 (signed contract — income starts Day 1)
+- Annual rental income: €5,400
+- Gross yield: 3.86% on purchase price
+- 5-year scenario: €27,000 rental income + ~€38,500 capital appreciation = ~€65,500 total return on €147,000 invested (~44.6% ROI over 5 years)
+- Burgas market: +6.2% in a single quarter (NSI Q2 2025) — one of the fastest-growing EU coastal cities
+
+The apartment: 60 m², fully furnished with premium furniture and high-end appliances. Modern designer interior, functional layout. Floor 16 — panoramic views. No renovation needed. No management overhead — tenant in place.
+
+Buy it today, receive rent from Day 1. Ideal for passive income investors, EU residency applicants, or buyers seeking a premium Burgas city asset.`,
+
+  descriptionRu: `Готовая доходная инвестиция: люкс однокомнатная квартира на 16-м этаже в квартале Славейков, Бургас — продаётся с действующим подписанным договором аренды на €450 в месяц.
+
+ИНВЕСТИЦИОННЫЕ ПОКАЗАТЕЛИ:
+- Цена покупки: €140 000
+- Ежемесячный арендный доход: €450 (подписанный договор — доход с первого дня)
+- Годовой арендный доход: €5 400
+- Валовая доходность: 3,86% от цены покупки
+- Сценарий на 5 лет: €27 000 аренды + ~€38 500 прироста стоимости = ~€65 500 совокупная доходность на €147 000 вложенных (~44,6% ROI за 5 лет)
+- Рынок Бургаса: +6,2% за один квартал (NSI, Q2 2025) — один из самых быстрорастущих прибрежных городов ЕС
+
+Квартира: 60 м², полностью меблирована мебелью и техникой премиум-класса. Современный дизайнерский интерьер, продуманная планировка. 16-й этаж — панорамные виды. Ремонт не требуется. Управление не нужно — арендатор уже есть.
+
+Покупаете сегодня — получаете арендный доход с первого дня. Идеально для пассивных инвесторов, желающих получить вид на жительство в ЕС или премиальный актив в Бургасе.`,
+
+  descriptionBg: `Готова доходна инвестиция: луксозен едностаен апартамент на 16-и етаж в кв. Славейков, Бургас — продава се с активен подписан наемен договор на €450/месец.
+
+ИНВЕСТИЦИОННИ ПОКАЗАТЕЛИ:
+- Покупна цена: €140 000
+- Месечен наемен приход: €450 (подписан договор — доход от първия ден)
+- Годишен наемен приход: €5 400
+- Брутна доходност: 3,86% от покупната цена
+- Сценарий за 5 години: €27 000 наем + ~€38 500 ценово поскъпване = ~€65 500 обща доходност на €147 000 вложени (~44,6% ROI за 5 години)
+- Пазар Бургас: +6,2% за едно тримесечие (НСИ, Q2 2025) — един от най-бързо растящите крайбрежни градове в ЕС
+
+Апартаментът: 60 м², напълно обзаведен с висококласни мебели и уреди. Модерен дизайнерски интериор, функционално разпределение. 16-и етаж — панорамна гледка. Не се изисква ремонт. Без управленски усилия — наемателят е на място.
+
+Купувате днес — получавате наем от първия ден. Идеален за пасивни инвеститори, кандидати за пребиваване в ЕС или купувачи, търсещи премиален актив в Бургас.`,
+
+  descriptionDe: `Schlüsselfertige Renditeanlage: Luxuriöse 1-Zimmer-Wohnung im 16. Stock im Stadtviertel Slaveykov, Burgas — verkauft mit aktivem unterzeichnetem Mietvertrag über €450/Monat.
+
+INVESTITIONSKENNZAHLEN:
+- Kaufpreis: €140.000
+- Monatliche Mieteinnahme: €450 (unterzeichneter Vertrag — Einnahmen ab Tag 1)
+- Jährliche Mieteinnahme: €5.400
+- Bruttorendite: 3,86% auf den Kaufpreis
+- 5-Jahres-Szenario: €27.000 Mieteinnahmen + ~€38.500 Wertsteigerung = ~€65.500 Gesamtrendite auf €147.000 investiertes Kapital (~44,6% ROI in 5 Jahren)
+- Markt Burgas: +6,2% in einem einzigen Quartal (NSI, Q2 2025) — eine der am schnellsten wachsenden Küstenstädte der EU
+
+Die Wohnung: 60 m², vollständig mit Premiummöbeln und hochwertigen Geräten ausgestattet. Modernes Designer-Interieur, funktionale Raumaufteilung. 16. Etage — Panoramablick. Keine Renovierung erforderlich. Kein Verwaltungsaufwand — Mieter ist bereits vorhanden.
+
+Kaufen Sie heute — erhalten Sie Mieteinnahmen ab dem ersten Tag. Ideal für Passiveinkommensinvestoren, EU-Aufenthaltsbewerber oder Käufer, die ein Premium-Asset in Burgas suchen.`,
+
+  descriptionIt: `Investimento chiavi in mano con reddito attivo: appartamento di lusso con 1 camera da letto al 16° piano nel quartiere Slaveykov, Burgas — venduto con contratto d'affitto firmato e attivo a €450/mese.
+
+DATI DELL'INVESTIMENTO:
+- Prezzo di acquisto: €140.000
+- Reddito mensile da locazione: €450 (contratto firmato — reddito dal giorno 1)
+- Reddito annuale da locazione: €5.400
+- Rendimento lordo: 3,86% sul prezzo di acquisto
+- Scenario a 5 anni: €27.000 di affitti + ~€38.500 di rivalutazione = ~€65.500 rendimento totale su €147.000 investiti (~44,6% ROI in 5 anni)
+- Mercato di Burgas: +6,2% in un solo trimestre (NSI, Q2 2025) — una delle città costiere UE in più rapida crescita
+
+L'appartamento: 60 m², completamente arredato con mobili ed elettrodomestici premium. Interior design moderno, planimetria funzionale. 16° piano — viste panoramiche. Nessuna ristrutturazione necessaria. Nessuna gestione — l'inquilino è già presente.
+
+Acquistate oggi — ricevete l'affitto dal primo giorno. Ideale per investitori a reddito passivo, richiedenti residenza UE o acquirenti che cercano un asset premium a Burgas.`,
+},
+
+// ── SKARABEY MADIKA — New Development Block ─────────────────────────────────
+{
+  id: 'skarabey-madika',
+
+  // ── Titles ──────────────────────────────────────────────
+  title:   'New Development | Skarabey Madika Residential Building | Burgas',
+  titleRu: 'Новостройка | Жилой комплекс «Скарабей Мадика» | Бургас',
+  titleBg: 'Ново строителство | Жилищна сграда "Скарабей Мадика" | Бургас',
+  titleDe: 'Neubau | Wohngebäude Skarabey Madika | Burgas',
+  titleIt: 'Nuova Costruzione | Edificio Residenziale Skarabey Madika | Burgas',
+
+  // ── Price & Location ─────────────────────────────────────
+  price:    85000,
+  location:   'Burgas, Madika District',
+  locationRu: 'Бургас, квартал Мадика',
+  locationBg: 'Бургас, кв. Мадика',
+  locationDe: 'Burgas, Stadtviertel Madika',
+  locationIt: 'Burgas, Quartiere Madika',
+
+  // ── Images ───────────────────────────────────────────────
+  images: [
+    'https://ipfs.io/ipfs/bafybeih2yeesnsbwv66tm7yjmor77ngfeocf7htpd4lixfzinpk2ml7wju',
+    // TODO: add more photos — exterior, interior units, floor plans, common areas
+  ],
+
+  // ── Type & Transaction ───────────────────────────────────
+  type:            'apartment',
+  transactionType: 'sale' as const,
+
+  // ── Status & Availability ────────────────────────────────
+  status:         'for-sale',
+  featured:       true,
+  availableUnits: 25,
+
+  // ── Core Specs (per unit — confirm per floor plan) ───────
+  area:        75,   // m² — confirm per specific unit chosen
+  bedrooms:    2,
+  bathrooms:   1,
+  livingRooms: 1,
+
+  // ── Floor & Building ─────────────────────────────────────
+  floor:       null,  // varies by unit — TODO: specify per unit
+  totalFloors: null,  // TODO: confirm building height
+  yearBuilt:   null,  // TODO: confirm completion / delivery date
+  actSixteen:  null,  // TODO: confirm — new build, check completion stage
+
+  // ── View & Outdoor ───────────────────────────────────────
+  view:        null,  // TODO: confirm per floor/unit
+  terraceArea: null,  // TODO: confirm balcony size per unit
+
+  // ── Land & Parking ───────────────────────────────────────
+  landArea:     null,  // N/A — apartment block
+  parkingSpots: null,  // TODO: confirm parking availability
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: null, // TODO: confirm — request from developer Skarabey
+
+  // ── Furnishing ───────────────────────────────────────────
+  furnished:       false,
+  furnishingLevel: 'unfurnished', // new build — buyer finishes
+
+  // ── Investment Case ──────────────────────────────────────
+  investmentCase: {
+    purchasePrice:    85000,
+    acquisitionCosts: 4250,   // ~5% standard Bulgaria
+    totalCashIn:      89250,
+
+    // Estimated rental potential (Madika district, Burgas — 2-bed)
+    estimatedMonthlyRent:   400,   // EUR/month — conservative estimate
+    estimatedAnnualIncome:  4800,  // EUR/year
+    estimatedGrossYield:    5.65,  // % = 4800 / 85000 × 100
+    rentalContractStatus:   'none', // new build — no tenant yet
+
+    // 5-year scenario
+    fiveYearRentalIncome:    24000,  // EUR
+    fiveYearAppreciation:    23100,  // EUR = 85000 × (1.05^5 - 1)
+    fiveYearTotalReturn:     47100,  // EUR
+    fiveYearROI:             52.8,   // % = 47100 / 89250 × 100
+
+    useCase: ['new-build-discount', 'long-term-rental', 'capital-appreciation', 'eu-residency-base'],
+    note: '25 units available — bulk purchase discount may be negotiable with developer.',
+  },
+
+  // ── Descriptions ─────────────────────────────────────────
+  description: `New residential building in Madika district, Burgas — 25 units available now. Entry price from €85,000 for a 75 m² 2-bedroom apartment.
+
+INVESTMENT NUMBERS:
+- Purchase price: €85,000
+- Estimated rental yield: ~5.65% gross (2-bed in Madika, Burgas market)
+- Estimated monthly rent: ~€400/month
+- 5-year scenario: €24,000 rental income + ~€23,100 appreciation = ~€47,100 total return (~52.8% ROI)
+- Burgas market context: +6.2% single-quarter growth Q2 2025 (NSI)
+
+Quality new construction with excellent amenities. Multiple units available — contact us about bulk purchase pricing. Ideal for investors building a Burgas portfolio or buyers seeking a modern city apartment at below-market price per m².`,
+
+  descriptionRu: `Новый жилой дом в квартале Мадика, Бургас — в продаже 25 квартир. Входная цена от €85 000 за 2-комнатную квартиру площадью 75 м².
+
+ИНВЕСТИЦИОННЫЕ ПОКАЗАТЕЛИ:
+- Цена покупки: €85 000
+- Расчётная арендная доходность: ~5,65% валовых (2-комн., рынок Бургаса)
+- Расчётная аренда: ~€400/мес
+- Сценарий на 5 лет: €24 000 аренды + ~€23 100 прироста = ~€47 100 совокупно (~52,8% ROI)
+- Рынок Бургаса: +6,2% за один квартал Q2 2025 (NSI)
+
+Качественное новое строительство с развитой инфраструктурой. Доступно несколько квартир — уточните скидку при покупке нескольких объектов. Отлично подходит для формирования портфеля в Бургасе.`,
+
+  descriptionBg: `Нова жилищна сграда в кв. Мадика, Бургас — 25 апартамента в продажба. Входна цена от €85 000 за двустаен апартамент от 75 м².
+
+ИНВЕСТИЦИОННИ ПОКАЗАТЕЛИ:
+- Покупна цена: €85 000
+- Прогнозна наемна доходност: ~5,65% брутни (2-стаен, пазар Бургас)
+- Прогнозен наем: ~€400/месец
+- Сценарий за 5 години: €24 000 наем + ~€23 100 поскъпване = ~€47 100 общо (~52,8% ROI)
+- Пазар Бургас: +6,2% за едно тримесечие Q2 2025 (НСИ)
+
+Качествено ново строителство с отлична инфраструктура. Налични множество апартаменти — свържете се с нас за ценова оферта при покупка на повече от един.`,
+
+  descriptionDe: `Neues Wohngebäude im Stadtviertel Madika, Burgas — 25 Einheiten verfügbar. Einstiegspreis ab €85.000 für eine 75 m² 2-Zimmer-Wohnung.
+
+INVESTITIONSKENNZAHLEN:
+- Kaufpreis: €85.000
+- Geschätzte Mietrendite: ~5,65% brutto (2-Zimmer, Burgas-Markt)
+- Geschätzte Monatsmiete: ~€400/Monat
+- 5-Jahres-Szenario: €24.000 Mieteinnahmen + ~€23.100 Wertsteigerung = ~€47.100 gesamt (~52,8% ROI)
+- Markt Burgas: +6,2% in einem Quartal Q2 2025 (NSI)
+
+Qualitätsneu bau mit ausgezeichneter Ausstattung. Mehrere Einheiten verfügbar — fragen Sie nach Mengenrabatt. Ideal für Investoren, die ein Burgas-Portfolio aufbauen.`,
+
+  descriptionIt: `Nuovo edificio residenziale nel quartiere Madika, Burgas — 25 unità disponibili. Prezzo di ingresso da €85.000 per un appartamento di 75 m² con 2 camere da letto.
+
+DATI DELL'INVESTIMENTO:
+- Prezzo di acquisto: €85.000
+- Rendimento locativo stimato: ~5,65% lordo (2 camere, mercato Burgas)
+- Affitto mensile stimato: ~€400/mese
+- Scenario a 5 anni: €24.000 di affitti + ~€23.100 di rivalutazione = ~€47.100 totale (~52,8% ROI)
+- Mercato Burgas: +6,2% in un solo trimestre Q2 2025 (NSI)
+
+Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — contattateci per prezzi su acquisto multiplo. Ideale per investitori che costruiscono un portafoglio a Burgas.`,
 },
   // FEATURED PROPERTIES - From Skarabey
   {

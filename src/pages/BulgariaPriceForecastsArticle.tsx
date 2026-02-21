@@ -39,9 +39,9 @@ const BulgariaPriceForecastsArticle = () => {
   const cover = {
     image_url:
       'https://images.unsplash.com/photo-1758695537300-cc5f7c85a578?w=900&q=80&auto=format&fit=crop',
-    unsplash_author_name: 'Unsplash',
-    unsplash_author_url: 'https://unsplash.com',
-    unsplash_photo_url: 'https://unsplash.com',
+    unsplash_author_name: 'Jakub Żerdzicki',
+    unsplash_author_url: 'https://unsplash.com/@jakubzerdzicki',
+    unsplash_photo_url: 'https://unsplash.com/photos/hand-holding-house-keys-over-euro-banknotes-and-charts-UlDvTJ4zc-g',
   };
 
   const sources = [
