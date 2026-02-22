@@ -24,6 +24,35 @@ const Home = () => {
   // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
     {
+  title:
+    lang === 'bg'
+      ? 'Данъци върху имотите в България 2026: Пълно ръководство за Sofia, Бургас, Варна, Слънчев бряг и курортите'
+      : lang === 'ru'
+      ? 'Налоги на недвижимость в Болгарии 2026: Полное руководство для Софии, Бургаса, Варны, Черноморья и курортов'
+      : lang === 'de'
+      ? 'Immobiliensteuern in Bulgarien 2026: Vollständiger Leitfaden für Sofia, Burgas, Varna und die Resorts'
+      : lang === 'it'
+      ? 'Tasse sugli immobili in Bulgaria 2026: Guida completa per Sofia, Burgas, Varna e le località turistiche'
+      : 'Property Taxes in Bulgaria 2026: Complete Guide for Sofia, Burgas, Varna, the Black Sea Coast & Mountain Resorts',
+  excerpt:
+    lang === 'bg'
+      ? 'Годишни данъчни ставки, такси за смет, данък върху наемен доход и сравнение по градове — актуализирано февруари 2026.'
+      : lang === 'ru'
+      ? 'Ставки ежегодного налога, сборы за вывоз мусора, налог на арендный доход и сравнение по городам — обновлено февраль 2026.'
+      : lang === 'de'
+      ? 'Jährliche Steuersätze, Abfallgebühren, Mieteinkommensteuer und Städtevergleich — aktualisiert Februar 2026.'
+      : lang === 'it'
+      ? 'Aliquote annuali, tasse sui rifiuti, tassazione dei redditi da locazione e confronto per città — aggiornato febbraio 2026.'
+      : 'Annual tax rates, garbage fees, rental income tax, and city-by-city comparison — updated February 2026.',
+  image_url: 'https://ipfs.io/ipfs/bafybeiarxej25ipcdazsrji3el5ruie7vhiqrlpguowrrsiehj67sjnfnm',
+  date:
+    lang === 'bg' ? '21 февруари 2026'
+    : lang === 'ru' ? '21 февраля 2026'
+    : lang === 'de' ? '21. Februar 2026'
+    : lang === 'it' ? '21 febbraio 2026'
+    : 'Feb 21, 2026',
+  slug: 'bulgaria-property-taxes-2026',
+},{
       title:
         lang === 'bg'
           ? 'Покупка на имот в България през 2026 г.: 7 грешки, които струват на купувачите десетки хиляди евро'
