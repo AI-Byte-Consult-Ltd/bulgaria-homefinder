@@ -75,7 +75,12 @@ const Home = () => {
                 : "Bulgaria's real estate market remains one of the most affordable in the EU. We analyze the most common buyer mistakes.",
       image_url:
         'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
-      date: 'Feb 5, 2026',
+      date:
+    lang === 'bg' ? '20 февруари 2026'
+    : lang === 'ru' ? '20 февраля 2026'
+    : lang === 'de' ? '20. Februar 2026'
+    : lang === 'it' ? '20 febbraio 2026'
+    : 'Feb 20, 2026',
       slug: 'buying-mistakes-2026',
     },
     {

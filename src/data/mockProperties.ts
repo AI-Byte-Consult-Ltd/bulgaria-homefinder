@@ -729,24 +729,6 @@ DATI DELL'INVESTIMENTO:
 
 Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — contattateci per prezzi su acquisto multiplo. Ideale per investitori che costruiscono un portafoglio a Burgas.`,
 },
-  // FEATURED PROPERTIES - From Skarabey
-  {
-    id: 'skarabey-madika',
-    title: 'SKARABEY MADIKA - Residential Building',
-    titleBg: 'Жилищна сграда "СКАРАБЕЙ МАДИКА", кв.Мадика',
-    price: 85000,
-    location: 'Burgas, Madika District',
-    image: 'https://ipfs.io/ipfs/bafybeih2yeesnsbwv66tm7yjmor77ngfeocf7htpd4lixfzinpk2ml7wju',
-    bedrooms: 2,
-    bathrooms: 1,
-    area: 75,
-    type: 'apartment',
-    transactionType: 'sale' as const,
-    featured: true,
-    availableUnits: 25,
-    status: 'for-sale',
-    description: 'Modern residential building in Madika district, Burgas. Now on SALE! Quality construction with excellent amenities.',
-  },
   {
     id: 'skarabey-tortuga-a',
     title: 'SKARABEY TORTUGA - Entrance A, Horizont',

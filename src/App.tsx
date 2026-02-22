@@ -12,10 +12,16 @@ import Rent from "./pages/Rent";
 import Sell from "./pages/Sell";
 import Services from "./pages/Services";
 import RestorationProject from "./pages/RestorationProject";
+
+// Articles
 import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
 import BulgariaPriceForecastsArticle from "./pages/BulgariaPriceForecastsArticle";
 import Top5CoastalAreasForInvestmentArticle from "./pages/Top5CoastalAreasForInvestmentArticle";
 import BulgariaCheaperThanEUArticle from "./pages/BulgariaCheaperThanEUArticle";
+
+// NEW ARTICLE: rename import to your real page component name/file
+import NewArticle from "./pages/BulgariaPropertyTaxesArticle";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
@@ -38,11 +44,13 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/properties" element={<Properties />} />
             <Route path="/property/:id" element={<PropertyDetails />} />
+
             <Route path="/buy" element={<Buy />} />
             <Route path="/rent" element={<Rent />} />
             <Route path="/sell" element={<Sell />} />
             <Route path="/services" element={<Services />} />
             <Route path="/restoration/:id" element={<RestorationProject />} />
+
             {/* Articles */}
             <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/article/bulgaria-price-forecasts" element={<BulgariaPriceForecastsArticle />} />
@@ -54,13 +62,22 @@ const App = () => (
               path="/article/bulgaria-cheaper-than-eu"
               element={<BulgariaCheaperThanEUArticle />}
             />
+
+            {/* NEW ARTICLE ROUTE: replace slug with the exact link from Home.tsx */}
+            <Route
+              path="/article/bulgaria-property-taxes-2026"
+              element={<NewArticle />}
+            />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/add-property" element={<AddProperty />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
+
           <ChatWidget />
         </BrowserRouter>
       </TooltipProvider>
