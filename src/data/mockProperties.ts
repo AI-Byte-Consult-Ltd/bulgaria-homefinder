@@ -277,7 +277,13 @@ Un asset europeo costiero che combina lifestyle e rendimento misurabile.`,
 
   // ── Images ───────────────────────────────────────────────
   images: [
-    'https://www.listproperty4free.com/uploaded_files/6/c/e/c/6cec5672ff1ccdc22f5c331063b8ff32.jpeg',
+    'https://ipfs.io/ipfs/bafybeidnyorzlykkbt7qi2ms73ilw4hui4f47temcxakodcg4w4v76ydsy',
+    'https://ipfs.io/ipfs/bafkreicbhnevrmpnwkdwccm3v7oqqrfzzhol64rnwbdk44infobygbvqdm',
+    'https://ipfs.io/ipfs/bafybeia5n3qyzv36p4vijsy3dgvghwitvovhopbte46lku5qhw46ofzdfa',
+    'https://ipfs.io/ipfs/bafkreibq755ehvqw7kgykilprafx2hu3gjmjb6h3j5us5sglkuacvicpk4',
+    'https://ipfs.io/ipfs/bafkreigcvkzmtuapsglxfdgsif3kmgnwydzrnf5rqvmgdusex3f7a6mt7i',
+    'https://ipfs.io/ipfs/bafkreiblnq3z7apbzedkwu6lvr4br3ibixj2u5larxjysjziw4nk3y2m4a'
+
     // TODO: add more photos of exterior, interior, plot, well, surroundings
   ],
 
@@ -611,7 +617,19 @@ Acquistate oggi — ricevete l'affitto dal primo giorno. Ideale per investitori 
 
   // ── Images ───────────────────────────────────────────────
   images: [
+    'https://ipfs.io/ipfs/bafybeibzjlm6mb7pi3burappedtxvaa2bxfqgrmenqlzizzaf32qym2euq',
     'https://ipfs.io/ipfs/bafybeih2yeesnsbwv66tm7yjmor77ngfeocf7htpd4lixfzinpk2ml7wju',
+    'https://ipfs.io/ipfs/bafybeih5khejl63qfui5bkamgxzirzbv7yd2hapzhm5nky2l3fhbxs7ftq',
+    'https://ipfs.io/ipfs/bafybeicv24mfjasbzcoi63but3xeyqz3ceksroyqa4ndpjz3erxeoywwci',
+    'https://ipfs.io/ipfs/bafkreifbbrkdxrzb7bnsu2qoxfky2hl2kico5j4ritc5r2wygozr7domla',
+    'https://ipfs.io/ipfs/bafkreiac3aa2mptafjbvupfajeeio4pvo7icfkqib3ma5oknieqbqwmotq',
+    'https://ipfs.io/ipfs/bafybeie5pbcg2gbq2q2oev4csdzuludqyvjucjggygeg3ianjp3lvocqt4',
+    'https://ipfs.io/ipfs/bafkreibgg3zhl7dvahjly6nttqogqj3awr6ce5eqll5o3t3s5upbdnn64e',
+    'https://ipfs.io/ipfs/bafkreiesn6ytwyk56ymm2ji3tntrcttmcleuns7ocedpm5nyu46hdxmt4a',
+    'https://ipfs.io/ipfs/bafkreibs3nf6hmv5iefouuh62e5gxc6gvebspwglnayohez6marnry4vra',
+    'https://ipfs.io/ipfs/bafybeihuch42qhuhuppfcixrlk6pceskyvxi3qdwfbcjnqtfhl3qd6kvbe',
+    'https://ipfs.io/ipfs/bafkreig5xuv5tp5kvwqzbkn3mztveadno7dmtayxpcnpfyaadwvaeyzjdu'
+
     // TODO: add more photos — exterior, interior units, floor plans, common areas
   ],
 
