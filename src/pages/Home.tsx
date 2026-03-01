@@ -186,20 +186,20 @@ const Home = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
+      {/* Hero Section — clean Apple-style */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80" />
+        <div className="absolute inset-0" style={{ background: 'var(--hero-gradient)' }} />
 
         <div className="container relative z-10 text-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-white animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
               {t('hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-light">
               {t('hero.subtitle')}
             </p>
           </div>

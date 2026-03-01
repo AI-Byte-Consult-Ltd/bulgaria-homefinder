@@ -7,14 +7,14 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="border-t border-border/50 bg-muted/20">
       <div className="container py-12 grid md:grid-cols-4 gap-8">
         {/* Логотип и контакты */}
         <div>
-          <Link to="/" className="flex items-center gap-2 font-bold text-xl mb-4">
-            <Home className="h-6 w-6 text-primary" />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              BulgariaEstate
+          <Link to="/" className="flex items-center gap-2 font-semibold text-xl mb-4 tracking-tight">
+            <Home className="h-5 w-5 text-primary" />
+            <span className="text-foreground">
+              Bulgaria<span className="text-primary">Estate</span>
             </span>
           </Link>
           <p className="text-sm text-muted-foreground mb-2">

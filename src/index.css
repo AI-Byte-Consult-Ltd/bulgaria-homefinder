@@ -2,92 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Golden & White — Apple-inspired design system. All colors HSL. */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 13%;
 
-    /* Emerald primary for real estate (trust, growth) */
-    --primary: 158 64% 52%;
+    /* Golden primary — warm, luxurious */
+    --primary: 38 92% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 158 64% 92%;
-    --primary-dark: 158 64% 42%;
+    --primary-light: 40 80% 95%;
+    --primary-dark: 35 92% 40%;
 
-    /* Navy secondary (professionalism, depth) */
-    --secondary: 217 91% 20%;
+    /* Dark charcoal secondary */
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 217 91% 95%;
+    --secondary-light: 0 0% 96%;
 
-    /* Gold accent (premium, luxury) */
-    --accent: 45 90% 55%;
-    --accent-foreground: 222 47% 11%;
-    --accent-light: 45 90% 95%;
+    /* Warm gold accent */
+    --accent: 40 80% 58%;
+    --accent-foreground: 0 0% 13%;
+    --accent-light: 40 60% 95%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 158 64% 52%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 38 92% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(158 64% 52% / 0.95), hsl(217 91% 20% / 0.95));
-    --card-shadow: 0 2px 8px hsl(222 47% 11% / 0.08);
-    --card-shadow-hover: 0 8px 24px hsl(222 47% 11% / 0.12);
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0% / 0.55), hsl(0 0% 0% / 0.35));
+    --card-shadow: 0 1px 3px hsl(0 0% 0% / 0.06);
+    --card-shadow-hover: 0 4px 16px hsl(0 0% 0% / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
 
-    --card: 222 47% 15%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222 47% 15%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 158 64% 52%;
+    --primary: 38 92% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 158 64% 22%;
-    --primary-dark: 158 64% 62%;
+    --primary-light: 38 70% 20%;
+    --primary-dark: 38 92% 60%;
 
-    --secondary: 217 91% 30%;
-    --secondary-foreground: 210 40% 98%;
-    --secondary-light: 217 91% 20%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-light: 0 0% 15%;
 
-    --accent: 45 90% 60%;
-    --accent-foreground: 222 47% 11%;
-    --accent-light: 45 90% 25%;
+    --accent: 40 80% 55%;
+    --accent-foreground: 0 0% 7%;
+    --accent-light: 40 60% 18%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 158 64% 52%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 38 92% 50%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(158 64% 42% / 0.95), hsl(217 91% 15% / 0.95));
-    --card-shadow: 0 2px 8px hsl(0 0% 0% / 0.3);
-    --card-shadow-hover: 0 8px 24px hsl(0 0% 0% / 0.4);
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0% / 0.7), hsl(0 0% 0% / 0.5));
+    --card-shadow: 0 1px 3px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 4px 16px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -98,5 +95,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

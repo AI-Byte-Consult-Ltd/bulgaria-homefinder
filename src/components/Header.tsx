@@ -25,12 +25,12 @@ export const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-bold text-xl">
-          <Home className="h-6 w-6 text-primary" />
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            BulgariaEstate
+        <Link to="/" className="flex items-center gap-2 font-semibold text-xl tracking-tight">
+          <Home className="h-5 w-5 text-primary" />
+          <span className="text-foreground">
+            Bulgaria<span className="text-primary">Estate</span>
           </span>
         </Link>
 
