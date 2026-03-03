@@ -6,6 +6,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { PropertyCard } from '@/components/PropertyCard';
 import { RestorationShowcase } from '@/components/RestorationShowcase';
 import Team from '@/components/Team';
+import { Testimonials } from '@/components/Testimonials';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -244,6 +245,9 @@ const Home = () => {
 
       {/* Restoration Showcase */}
       <RestorationShowcase />
+
+      {/* Client Testimonials */}
+      <Testimonials />
 
       {/* Team / Founders */}
       <Team />
