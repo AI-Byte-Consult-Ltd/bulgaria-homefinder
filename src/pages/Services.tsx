@@ -13,8 +13,8 @@ const Services = () => {
       icon: Building2,
       title: t('services.companyRegistration'),
       description: t('services.companyRegistrationDesc'),
-      price: '€500',
-      badge: 'fixed',
+      price: t('services.from') + ' €350',
+      badge: 'starting',
     },
     {
       icon: FileText,
