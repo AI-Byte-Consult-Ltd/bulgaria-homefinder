@@ -7,6 +7,13 @@ import { PropertyCard } from '@/components/PropertyCard';
 import { RestorationShowcase } from '@/components/RestorationShowcase';
 import Team from '@/components/Team';
 import { Testimonials } from '@/components/Testimonials';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from '@/components/ui/carousel';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -218,11 +225,17 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredForCards.map((property) => (
-            <PropertyCard key={property.id} {...property} />
-          ))}
-        </div>
+        <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+          <CarouselContent className="-ml-4">
+            {featuredForCards.map((property) => (
+              <CarouselItem key={property.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <PropertyCard {...property} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
+          <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
+        </Carousel>
       </section>
 
       {/* Newest Listings */}
@@ -235,11 +248,17 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newestForCards.map((property) => (
-              <PropertyCard key={property.id} {...property} />
-            ))}
-          </div>
+          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {newestForCards.map((property) => (
+                <CarouselItem key={property.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <PropertyCard {...property} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
+            <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
+          </Carousel>
         </div>
       </section>
 
@@ -334,57 +353,60 @@ const Home = () => {
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {articles.map((article, idx) => (
-              <div
-                key={idx}
-                className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={article.image_url}
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
-                  <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                    {article.excerpt}
-                  </p>
-                  {article.slug ? (
-                    <Link
-                      to={`/article/${article.slug}`}
-                      className="text-primary text-sm font-semibold hover:underline"
-                    >
-                      {lang === 'bg'
-                        ? 'Прочети още →'
-                        : lang === 'ru'
-                          ? 'Читать далее →'
-                          : lang === 'de'
-                            ? 'Mehr lesen →'
-                            : lang === 'it'
-                              ? 'Leggi di più →'
-                              : 'Read More →'}
-                    </Link>
-                  ) : (
-                    <span className="text-muted-foreground text-sm font-semibold">
-                      {lang === 'bg'
-                        ? 'Скоро...'
-                        : lang === 'ru'
-                          ? 'Скоро...'
-                          : lang === 'de'
-                            ? 'Demnächst...'
-                            : lang === 'it'
-                              ? 'In arrivo...'
-                              : 'Coming soon...'}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {articles.map((article, idx) => (
+                <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all h-full">
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={article.image_url}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
+                      <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                        {article.excerpt}
+                      </p>
+                      {article.slug ? (
+                        <Link
+                          to={`/article/${article.slug}`}
+                          className="text-primary text-sm font-semibold hover:underline"
+                        >
+                          {lang === 'bg'
+                            ? 'Прочети още →'
+                            : lang === 'ru'
+                              ? 'Читать далее →'
+                              : lang === 'de'
+                                ? 'Mehr lesen →'
+                                : lang === 'it'
+                                  ? 'Leggi di più →'
+                                  : 'Read More →'}
+                        </Link>
+                      ) : (
+                        <span className="text-muted-foreground text-sm font-semibold">
+                          {lang === 'bg'
+                            ? 'Скоро...'
+                            : lang === 'ru'
+                              ? 'Скоро...'
+                              : lang === 'de'
+                                ? 'Demnächst...'
+                                : lang === 'it'
+                                  ? 'In arrivo...'
+                                  : 'Coming soon...'}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
+            <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
+          </Carousel>
         </div>
       </section>
 
