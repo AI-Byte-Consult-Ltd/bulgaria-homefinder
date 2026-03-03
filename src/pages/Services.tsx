@@ -79,6 +79,20 @@ const Services = () => {
       price: t('services.from') + ' €300',
       badge: 'per property',
     },
+    {
+      icon: FileText,
+      title: t('services.tradeRepresentative'),
+      description: t('services.tradeRepresentativeDesc'),
+      price: t('services.from') + ' €1,180',
+      badge: 'starting',
+    },
+    {
+      icon: Home,
+      title: t('services.rentalManagement'),
+      description: t('services.rentalManagementDesc'),
+      price: '30%',
+      badge: 'of rent',
+    },
   ];
 
   return (
