@@ -277,7 +277,7 @@ const Services = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "NIC Services Bulgaria",
+    "name": "NICS Services Bulgaria",
     "description": "Professional legal, corporate, real estate, and consulting services in Bulgaria with transparent pricing.",
     "areaServed": "Bulgaria",
     "availableLanguage": ["en", "ru", "bg", "de", "it"],
