@@ -1,5 +1,344 @@
 export const mockProperties = [
   {
+  id: 'tsar-petrovo-house-19890',
+
+  // ── Titles ──────────────────────────────────────────────
+  title:   'Move-In Ready Village House with Two Land Plots | Tsar Petrovo, Vidin Region',
+  titleRu: 'Готовый к проживанию сельский дом с двумя участками | село Царь Петрово, область Видин',
+  titleBg: 'Готова за живеене селска къща с два парцела | село Цар Петрово, област Видин',
+  titleDe: 'Bezugsfertiges Dorfhaus mit zwei Grundstücken | Tsar Petrovo, Region Vidin',
+  titleIt: 'Casa di Villaggio Abitabile con Due Terreni | Tsar Petrovo, Regione Vidin',
+
+  // ── Price & Location ─────────────────────────────────────
+  price: 19890,
+
+  location: 'Tsar Petrovo, Vidin Region',
+  locationRu: 'с. Царь Петрово, область Видин',
+  locationBg: 'с. Цар Петрово, област Видин',
+  locationDe: 'Tsar Petrovo, Region Vidin',
+  locationIt: 'Tsar Petrovo, Regione Vidin',
+
+  // ── Images ───────────────────────────────────────────────
+  images: [
+    'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=1200&q=80'
+  ],
+
+  // ── Type & Transaction ───────────────────────────────────
+  type: 'house',
+  transactionType: 'sale' as const,
+
+  // ── Status & Availability ────────────────────────────────
+  status: 'for-sale',
+  featured: false,
+  availableUnits: 1,
+
+  // ── Core Specs ───────────────────────────────────────────
+  area: 112,
+  bedrooms: 3,
+  bathrooms: 1,
+  livingRooms: 1,
+
+  // ── Floor & Building ─────────────────────────────────────
+  floor: null,
+  totalFloors: 1,
+  yearBuilt: null,
+  actSixteen: null,
+
+  // ── View & Outdoor ───────────────────────────────────────
+  view: 'Village & countryside view',
+  terraceArea: null,
+
+  // ── Land ─────────────────────────────────────────────────
+  landArea: 1478, // 655 + 823 m²
+
+  // ── Parking ──────────────────────────────────────────────
+  parkingSpots: null,
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: null,
+
+  // ── Descriptions ─────────────────────────────────────────
+
+description: `
+Comfortable countryside home located in the village of Tsar Petrovo, Vidin Region. The property includes a well-maintained one-storey house with a total living area of 112 m² and two separate land plots with a combined area of 1,478 m² (655 m² + 823 m²).
+
+The house is in excellent structural condition and is already suitable for living. Only minor cosmetic renovation may be desired depending on the buyer’s preferences.
+
+Electricity and mains water are fully connected and operational.
+
+The property also includes a traditional outbuilding (barn/shed) which can be used for storage of tools, equipment or firewood. The current owner has prepared a supply of firewood that can last for several heating seasons.
+
+Key features:
+
+• Total house area: 112 m²  
+• Two land plots: 655 m² + 823 m²  
+• Total land area: 1,478 m²  
+• One-storey house  
+• Electricity and water connected  
+• Storage building / barn on the property  
+• Firewood supply available  
+
+This property is ideal for buyers seeking an affordable rural residence in Bulgaria with plenty of outdoor space and immediate usability.
+
+Possible uses:
+
+• permanent countryside residence  
+• holiday home  
+• small agricultural or gardening property  
+• affordable EU real estate investment.
+`,
+
+descriptionRu: `
+Ухоженный сельский дом в селе Царь Петрово, область Видин. В состав недвижимости входит одноэтажный дом площадью 112 м² и два земельных участка площадью 655 м² и 823 м² (общая площадь земли 1 478 м²).
+
+Дом находится в отличном состоянии и уже пригоден для проживания. Возможен лишь косметический ремонт по желанию нового владельца.
+
+Электричество и водопровод подключены и полностью функционируют.
+
+На участке расположен сарай, который можно использовать для хранения инструментов, хозяйственного инвентаря или дров. Также имеется запас дров, которого хватит на несколько отопительных сезонов.
+
+Основные характеристики:
+
+• Площадь дома: 112 м²  
+• Два участка земли: 655 м² + 823 м²  
+• Общая площадь участка: 1 478 м²  
+• Одноэтажный дом  
+• Подключены электричество и водопровод  
+• Сарай / хозяйственная постройка  
+• Запас дров на несколько лет  
+
+Идеальный вариант для тех, кто ищет спокойный сельский дом в Болгарии по доступной цене.
+`,
+
+descriptionBg: `
+Поддържан селски имот в село Цар Петрово, област Видин. Имотът включва едноетажна къща с площ 112 м² и два отделни парцела с площ 655 м² и 823 м² (общо 1 478 м²).
+
+Къщата е в отлично състояние и е напълно годна за живеене. Необходим е само лек козметичен ремонт по желание на новия собственик.
+
+Електричество и водоснабдяване са свързани и работят.
+
+В имота има и стопанска постройка (сарай), подходяща за съхранение на инструменти, оборудване или дърва за огрев. Наличен е запас от дърва, достатъчен за няколко отоплителни сезона.
+
+Основни характеристики:
+
+• Къща: 112 м²  
+• Два парцела: 655 м² + 823 м²  
+• Обща площ на земята: 1 478 м²  
+• Едноетажна къща  
+• Свързани ток и вода  
+• Стопанска постройка  
+• Запас от дърва за отопление  
+
+Подходящ имот за постоянно живеене или ваканционна къща в спокойна селска среда.
+`,
+
+descriptionDe: `
+Gepflegtes Dorfhaus im Dorf Tsar Petrovo, Region Vidin. Die Immobilie umfasst ein einstöckiges Haus mit einer Wohnfläche von 112 m² sowie zwei Grundstücke mit 655 m² und 823 m² (insgesamt 1.478 m²).
+
+Das Haus befindet sich in sehr gutem Zustand und ist sofort bewohnbar. Lediglich kleinere kosmetische Renovierungen können je nach Wunsch durchgeführt werden.
+
+Strom und Wasser sind angeschlossen und funktionieren einwandfrei.
+
+Auf dem Grundstück befindet sich außerdem ein Nebengebäude (Scheune), das zur Lagerung von Werkzeugen oder Brennholz genutzt werden kann. Es gibt bereits einen Vorrat an Brennholz für mehrere Heizperioden.
+
+Ideal als ruhiges Landhaus oder günstige Immobilie innerhalb der EU.
+`,
+
+descriptionIt: `
+Casa di campagna ben mantenuta situata nel villaggio di Tsar Petrovo, nella regione di Vidin. La proprietà comprende una casa a un piano di 112 m² e due terreni separati di 655 m² e 823 m² (totale 1.478 m²).
+
+La casa è in ottime condizioni ed è già abitabile. Potrebbe essere necessario solo un leggero rinnovamento estetico secondo le preferenze del nuovo proprietario.
+
+Elettricità e acqua sono collegate e funzionanti.
+
+Nel terreno è presente anche un edificio agricolo (capanno) utilizzabile per conservare attrezzi o legna da ardere. È disponibile una scorta di legna sufficiente per diversi anni.
+
+Ideale come residenza rurale tranquilla o come proprietà accessibile nell'Unione Europea.
+`,
+},
+{
+  id: 'kireevo-house-14980',
+
+  // ── Titles ──────────────────────────────────────────────
+  title:   'Village House for Renovation | Kireevo, Vidin Region',
+  titleRu: 'Сельский дом под реновацию | село Киреево, область Видин',
+  titleBg: 'Селска къща за ремонт | село Киреево, област Видин',
+  titleDe: 'Dorfhaus zur Renovierung | Kireevo, Region Vidin',
+  titleIt: 'Casa di Villaggio da Ristrutturare | Kireevo, Regione Vidin',
+
+  // ── Price & Location ─────────────────────────────────────
+  price: 14980,
+
+  location: 'Kireevo, Vidin Region',
+  locationRu: 'с. Киреево, область Видин',
+  locationBg: 'с. Киреево, област Видин',
+  locationDe: 'Kireevo, Region Vidin',
+  locationIt: 'Kireevo, Regione Vidin',
+
+  // ── Images ───────────────────────────────────────────────
+  images: [
+    'https://ipfs.io/ipfs/bafybeihiqh2hrzw7jf6ivnpuohedtzdwityaw4kxilgxwz22fu6hsvrxeq',
+    'https://ipfs.io/ipfs/bafybeiexlocn3lgtsqpktmdddsjuhwhqynvanpgp7vycetvm57fnyksioi'
+  ],
+
+  // ── Type & Transaction ───────────────────────────────────
+  type: 'house',
+  transactionType: 'sale' as const,
+
+  // ── Status & Availability ────────────────────────────────
+  status: 'for-sale',
+  featured: false,
+  availableUnits: 1,
+
+  // ── Core Specs ───────────────────────────────────────────
+  area: 90,
+  bedrooms: 2,
+  bathrooms: 1,
+  livingRooms: 1,
+
+  // ── Floor & Building ─────────────────────────────────────
+  floor: null,
+  totalFloors: 1,
+  yearBuilt: null,
+  actSixteen: null,
+
+  // ── View & Outdoor ───────────────────────────────────────
+  view: 'Village & countryside view',
+  terraceArea: null,
+
+  // ── Land ─────────────────────────────────────────────────
+  landArea: 1200,
+
+  // ── Parking ──────────────────────────────────────────────
+  parkingSpots: null,
+
+  // ── Maintenance ──────────────────────────────────────────
+  maintenanceFee: null,
+
+  // ── Descriptions ─────────────────────────────────────────
+
+description: `
+Affordable countryside property in the village of Kireevo, Vidin Region — offered at an entry-level price of €14,980.
+
+This single-storey house requires renovation and provides an excellent opportunity for buyers looking to create a private rural home, a quiet holiday retreat, or a renovation investment project.
+
+The property is located in a peaceful Bulgarian village surrounded by nature, agricultural land, and traditional houses. The plot allows space for a garden, outdoor seating area, or additional structures.
+
+Key highlights:
+
+• Entry-level investment price: €14,980  
+• One-storey village house  
+• Private land plot included  
+• Quiet rural environment  
+• Ideal renovation project  
+
+After renovation, the property could serve as:
+
+• a countryside residence  
+• a holiday retreat  
+• a rental property for rural tourism  
+• an affordable EU property base  
+
+Properties in rural Bulgaria remain among the most affordable real estate opportunities within the European Union, offering strong long-term lifestyle and investment potential.
+`,
+
+descriptionRu: `
+Недорогой сельский дом в селе Киреево, область Видин, по цене €14 980.
+
+Дом одноэтажный и требует реновации, что делает его отличным вариантом для покупателей, которые хотят создать собственный сельский дом, дачу или инвестиционный проект по реконструкции.
+
+Имущество расположено в тихом болгарском селе, окружённом природой, сельскохозяйственными землями и традиционной застройкой. Участок позволяет сделать сад, зону отдыха или дополнительные постройки.
+
+Основные преимущества:
+
+• Цена входа: €14 980  
+• Одноэтажный сельский дом  
+• Частный земельный участок  
+• Тихая сельская среда  
+• Отличный проект для реновации  
+
+После ремонта дом может использоваться как:
+
+• загородное жильё  
+• дача для отдыха  
+• объект для сельского туризма  
+• доступная недвижимость в ЕС  
+
+Недвижимость в сельских регионах Болгарии остаётся одной из самых доступных в Европейском союзе.
+`,
+
+descriptionBg: `
+Достъпен селски имот в село Киреево, област Видин, на цена €14 980.
+
+Къщата е едноетажна и се нуждае от ремонт, което я прави отлична възможност за купувачи, които искат да създадат собствен селски дом, ваканционна къща или инвестиционен проект.
+
+Имотът се намира в спокойно българско село, заобиколено от природа и земеделски земи. Парцелът позволява изграждане на градина, зона за отдих или допълнителни постройки.
+
+Основни предимства:
+
+• Цена: €14 980  
+• Едноетажна селска къща  
+• Частен парцел  
+• Спокойна среда  
+• Отличен проект за ремонт  
+
+След реновация имотът може да се използва като:
+
+• постоянно жилище  
+• ваканционна къща  
+• имот за селски туризъм  
+• достъпна инвестиция в ЕС  
+
+Селските имоти в България остават едни от най-достъпните в Европейския съюз.
+`,
+
+descriptionDe: `
+Erschwingliches Dorfhaus im Dorf Kireevo, Region Vidin — angeboten für €14.980.
+
+Dieses einstöckige Haus benötigt Renovierung und stellt eine hervorragende Gelegenheit für Käufer dar, die ein ländliches Zuhause, ein Ferienhaus oder ein Renovierungsprojekt suchen.
+
+Das Grundstück befindet sich in einem ruhigen bulgarischen Dorf, umgeben von Natur und landwirtschaftlichen Flächen. Der Garten bietet Platz für eine Terrasse, Garten oder zusätzliche Gebäude.
+
+Hauptmerkmale:
+
+• Einstiegspreis: €14.980  
+• Einstöckiges Dorfhaus  
+• Privates Grundstück  
+• Ruhige ländliche Umgebung  
+• Renovierungsprojekt mit Potenzial  
+
+Nach der Renovierung eignet sich die Immobilie als:
+
+• Landhaus  
+• Ferienimmobilie  
+• Objekt für ländlichen Tourismus  
+• günstiger Einstieg in EU-Immobilien.
+`,
+
+descriptionIt: `
+Proprietà rurale conveniente nel villaggio di Kireevo, Regione di Vidin, al prezzo di €14.980.
+
+Questa casa a un piano necessita di ristrutturazione ed è un’ottima opportunità per chi desidera creare una casa di campagna, una residenza vacanze o un progetto di investimento.
+
+Il terreno offre spazio per giardino, area relax o edifici aggiuntivi.
+
+Caratteristiche principali:
+
+• Prezzo accessibile: €14.980  
+• Casa di villaggio su un piano  
+• Terreno privato incluso  
+• Ambiente tranquillo  
+• Ottimo progetto di ristrutturazione  
+
+Dopo la ristrutturazione la proprietà può diventare:
+
+• casa di campagna  
+• residenza vacanze  
+• affitto turistico rurale  
+• investimento immobiliare economico nell’UE.
+`,
+},
+{
   id: 'mellia-park-10-ravda-77544',
 
   // ── Titles ──────────────────────────────────────────────
