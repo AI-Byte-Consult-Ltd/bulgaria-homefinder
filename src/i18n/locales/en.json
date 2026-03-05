@@ -68,6 +68,9 @@
     "bankAccount": "Bank Account Opening Assistance",
     "bankAccountTime": "Depends on the bank",
     "legalConsultCompany": "Legal Consultation for Company Registration",
+
+    "companyAddress": "Registered Company Address",
+
     "section2Title": "Trade Representation Office Registration",
     "tradeRep": "Registration of Trade Representation Office in Bulgaria",
     "tradeRepInclude1": "Registration at the Bulgarian Chamber of Commerce and Industry",
@@ -94,6 +97,26 @@
     "monthlyLegalInclude2": "Business and corporate advice",
     "monthlyLegalInclude3": "Document review",
     "monthlyLegalExtra": "Additional hours billed separately",
+
+    "section7Title": "Real Estate Services",
+    "propertySearch": "Property Search & Buyer Support",
+    "propertySearchInclude1": "Property shortlist based on your criteria",
+    "propertySearchInclude2": "Coordination with sellers/agents and support with documents",
+    "propertySearchTime": "Depends on the case",
+    "brokerCommission": "Brokerage Commission (Buyer/Seller Representation)",
+    "brokerCommissionPrice": "3.6% of purchase price, min. €1,000",
+    "brokerCommissionInclude1": "Professional representation and negotiation support",
+    "brokerCommissionInclude2": "Coordination of the transaction process",
+
+    "section8Title": "Insurance (Individual Pricing)",
+    "insurance": "Insurance Assistance",
+    "insuranceTime": "Depends on the insurer and coverage",
+    "insMedical": "Health insurance",
+    "insTravel": "Travel insurance",
+    "insProperty": "Property insurance",
+    "insLiability": "Third-party liability insurance",
+    "insCasco": "Motor insurance (CASCO)",
+
     "section6Title": "Additional Services",
     "registeredAddress": "Registered Legal Address for Company",
     "individual": "Individual pricing",

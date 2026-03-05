@@ -63,6 +63,9 @@
     "bankAccount": "Unterstützung bei der Kontoeröffnung",
     "bankAccountTime": "Abhängig von der Bank",
     "legalConsultCompany": "Rechtsberatung zur Firmenregistrierung",
+
+    "companyAddress": "Eingetragener Firmensitz",
+
     "section2Title": "Registrierung eines Handelsvertretungsbüros",
     "tradeRep": "Registrierung eines Handelsvertretungsbüros in Bulgarien",
     "tradeRepInclude1": "Registrierung bei der Bulgarischen Industrie- und Handelskammer",
@@ -89,6 +92,26 @@
     "monthlyLegalInclude2": "Geschäfts- und Unternehmensberatung",
     "monthlyLegalInclude3": "Dokumentenprüfung",
     "monthlyLegalExtra": "Zusätzliche Stunden werden separat berechnet",
+
+    "section7Title": "Immobilienservices",
+    "propertySearch": "Immobiliensuche & Käuferbetreuung",
+    "propertySearchInclude1": "Objektauswahl nach Ihren Kriterien",
+    "propertySearchInclude2": "Koordination mit Verkäufern/Maklern und Unterstützung bei Unterlagen",
+    "propertySearchTime": "Je nach Fall",
+    "brokerCommission": "Maklerprovision (Vertretung Käufer/Verkäufer)",
+    "brokerCommissionPrice": "3,6% des Kaufpreises, mind. €1.000",
+    "brokerCommissionInclude1": "Professionelle Vertretung und Verhandlungsunterstützung",
+    "brokerCommissionInclude2": "Koordination des gesamten Transaktionsprozesses",
+
+    "section8Title": "Versicherungen (individuelle Preisgestaltung)",
+    "insurance": "Versicherungsberatung und -abwicklung",
+    "insuranceTime": "Abhängig vom Versicherer und Deckungsumfang",
+    "insMedical": "Krankenversicherung",
+    "insTravel": "Reiseversicherung",
+    "insProperty": "Immobilienversicherung",
+    "insLiability": "Haftpflichtversicherung",
+    "insCasco": "Kaskoversicherung (Auto)",
+
     "section6Title": "Zusätzliche Dienstleistungen",
     "registeredAddress": "Eingetragener Firmensitz",
     "individual": "Individuelle Preisgestaltung",

@@ -63,6 +63,9 @@
     "bankAccount": "Assistenza apertura conto bancario",
     "bankAccountTime": "Dipende dalla banca",
     "legalConsultCompany": "Consulenza legale per registrazione società",
+
+    "companyAddress": "Sede legale della società",
+
     "section2Title": "Registrazione ufficio di rappresentanza commerciale",
     "tradeRep": "Registrazione ufficio di rappresentanza commerciale in Bulgaria",
     "tradeRepInclude1": "Registrazione presso la Camera di commercio e industria bulgara",
@@ -89,6 +92,26 @@
     "monthlyLegalInclude2": "Consulenza aziendale e societaria",
     "monthlyLegalInclude3": "Revisione documenti",
     "monthlyLegalExtra": "Le ore aggiuntive vengono fatturate separatamente",
+
+    "section7Title": "Servizi immobiliari",
+    "propertySearch": "Ricerca immobile e assistenza all’acquirente",
+    "propertySearchInclude1": "Selezione immobili in base ai tuoi criteri",
+    "propertySearchInclude2": "Coordinamento con venditori/agenzie e supporto documentale",
+    "propertySearchTime": "Dipende dal caso",
+    "brokerCommission": "Commissione di intermediazione (rappresentanza acquirente/venditore)",
+    "brokerCommissionPrice": "3,6% del valore della transazione, minimo €1.000",
+    "brokerCommissionInclude1": "Rappresentanza professionale e supporto nella trattativa",
+    "brokerCommissionInclude2": "Coordinamento dell’intero processo di compravendita",
+
+    "section8Title": "Assicurazioni (prezzo su richiesta)",
+    "insurance": "Assistenza assicurativa",
+    "insuranceTime": "Dipende dalla compagnia e dalla copertura",
+    "insMedical": "Assicurazione sanitaria",
+    "insTravel": "Assicurazione viaggio",
+    "insProperty": "Assicurazione immobile",
+    "insLiability": "Responsabilità civile",
+    "insCasco": "Kasko auto",
+
     "section6Title": "Servizi aggiuntivi",
     "registeredAddress": "Sede legale registrata per azienda",
     "individual": "Prezzo individuale",
