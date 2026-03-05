@@ -20,7 +20,7 @@ export const mockProperties = [
 
   // ── Images ───────────────────────────────────────────────
   images: [
-    'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=1200&q=80'
+    'https://ipfs.io/ipfs/bafybeieh5glx4k3aqtgndnubujol7gk6titpjlrdbtnsi6dxzlg4glamkm'
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -358,6 +358,8 @@ Dopo la ristrutturazione la proprietà può diventare:
 
   // ── Images (IPFS) ────────────────────────────────────────
   images: [
+    'https://ipfs.io/ipfs/bafybeidgbwft2znk7vewte7dzxv66e2mf3zxmjyeuhvglm656sh6yjhsje',
+    'https://ipfs.io/ipfs/bafybeidgbwft2znk7vewte7dzxv66e2mf3zxmjyeuhvglm656sh6yjhsje',
     'https://ipfs.io/ipfs/bafybeidylrpkiheyqiut4hamwqdcubm5yc543u7rsn4fc7vztc4hdo6kba',
     'https://ipfs.io/ipfs/bafybeif44c4jydc6yur73ssehtshgyfujeymlwgxqkncinv4cmzlyzcaam',
     'https://ipfs.io/ipfs/bafybeicfeafagpaanfp7ivjlh2qelvu23ey5bn4x2l37xs2deswj2aijqu',
