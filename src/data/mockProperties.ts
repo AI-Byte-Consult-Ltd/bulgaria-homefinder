@@ -359,7 +359,7 @@ Dopo la ristrutturazione la proprietà può diventare:
   // ── Images (IPFS) ────────────────────────────────────────
   images: [
     'https://ipfs.io/ipfs/bafybeidgbwft2znk7vewte7dzxv66e2mf3zxmjyeuhvglm656sh6yjhsje',
-    'https://ipfs.io/ipfs/bafybeidgbwft2znk7vewte7dzxv66e2mf3zxmjyeuhvglm656sh6yjhsje',
+    'https://ipfs.io/ipfs/bafybeihvidj6ww7aabe5jedtkaa2wf4ev75g4link2a3khcj6ha46sxl7m',
     'https://ipfs.io/ipfs/bafybeidylrpkiheyqiut4hamwqdcubm5yc543u7rsn4fc7vztc4hdo6kba',
     'https://ipfs.io/ipfs/bafybeif44c4jydc6yur73ssehtshgyfujeymlwgxqkncinv4cmzlyzcaam',
     'https://ipfs.io/ipfs/bafybeicfeafagpaanfp7ivjlh2qelvu23ey5bn4x2l37xs2deswj2aijqu',
@@ -755,7 +755,7 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
 
   // ── Images (IPFS) ────────────────────────────────────────
   images: [
-    'https://ipfs.io/ipfs/bafybeidb6jnowpx77vumucgl3ymyqz3rh3xvzum3ebwdvbxmjrqz5z4bvq',
+    'https://ipfs.io/ipfs/bafybeihhbiio3wwn7nv2nuuh5p3duut4pbnoyn6eqtliuksn5ztyapmgky',
     'https://ipfs.io/ipfs/bafkreihsb3mxv6ap4sn6jnmllwocd37cmjyydwudtw2rhcjncqik7x2lja',
     'https://ipfs.io/ipfs/bafkreidmkv7eqmppkh2fsmt3s74ovpfk4zneztxomqrbce3smulrzf4eja',
     'https://ipfs.io/ipfs/bafkreifxpqobjmd6po22clcwtfylegrvviswsmsg5rhntonuibaife2f4e',
