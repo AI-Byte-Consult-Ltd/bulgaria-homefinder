@@ -23,6 +23,24 @@ const team = [
   image: alexImg,
   linkedin: "https://www.linkedin.com/in/luntick",
 },
+{
+  name: "Aleksandr Tochilov",
+
+  role: "Head of 3D Visualization & Graphic Design",
+  roleRu: "Руководитель отдела 3D-визуализации и графики",
+  roleBg: "Ръководител на 3D визуализация и графичен дизайн",
+  roleDe: "Leiter für 3D-Visualisierung und Grafikdesign",
+  roleIt: "Responsabile 3D visualizzazione e grafica",
+
+  bio: "Leads the 3D visualization and graphic design department. Specializes in architectural visualization, house project concepts, 3D presentations, and visual materials used for real estate marketing and property development.",
+  bioRu: "Руководит направлением 3D-визуализации и графического дизайна. Специализируется на архитектурной визуализации, подготовке проектов домов, создании 3D-концепций и визуальных материалов для презентации объектов недвижимости и строительных проектов.",
+  bioBg: "Отговаря за 3D визуализация, графичен дизайн и визуално представяне на недвижими имоти. Специализира в архитектурни визуализации, проекти на къщи, 3D концепции и маркетингови материали за представяне на имоти и строителни проекти.",
+  bioDe: "Leitet den Bereich 3D-Visualisierung und Grafikdesign. Spezialisiert auf architektonische Visualisierung, Hausprojekte, 3D-Konzepte und visuelle Materialien für Immobilien- und Bauprojekte.",
+  bioIt: "Responsabile della visualizzazione 3D e della grafica. Specializzato in visualizzazione architettonica, progetti di case, concetti 3D e materiali visivi per la presentazione di immobili e progetti di sviluppo.",
+
+  image: aleksImg,
+  linkedin: "https://www.linkedin.com/in/alekstoch",
+}
 ];
 
 const Team = () => {
