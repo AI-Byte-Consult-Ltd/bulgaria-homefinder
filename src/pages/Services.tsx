@@ -26,10 +26,16 @@ interface ServiceItem {
   time?: string;
 }
 
+interface ServiceGroup {
+  groupTitle: string;
+  services: ServiceItem[];
+}
+
 interface PriceSection {
   icon: React.ElementType;
   title: string;
-  services: ServiceItem[];
+  services?: ServiceItem[];
+  groups?: ServiceGroup[];
 }
 
 const ServiceRow = ({ service }: { service: ServiceItem }) => (
@@ -86,8 +92,16 @@ const PriceSectionBlock = ({ section, index }: { section: PriceSection; index: n
         <h2 className="text-xl sm:text-2xl font-bold text-foreground">{section.title}</h2>
       </div>
       <div className="space-y-3">
-        {section.services.map((service, i) => (
+        {section.services && section.services.map((service, i) => (
           <ServiceRow key={i} service={service} />
+        ))}
+        {section.groups && section.groups.map((group, gi) => (
+          <div key={gi} className="space-y-3">
+            <h3 className="text-base font-semibold text-muted-foreground uppercase tracking-wide pt-3 first:pt-0">{group.groupTitle}</h3>
+            {group.services.map((service, i) => (
+              <ServiceRow key={i} service={service} />
+            ))}
+          </div>
         ))}
       </div>
     </section>
@@ -108,27 +122,61 @@ const Services = () => {
     {
       icon: Building2,
       title: t('pricelist.section1Title', { defaultValue: 'Company Registration in Bulgaria' }),
+      groups: [
+        {
+          groupTitle: t('pricelist.euCitizens', { defaultValue: 'For EU Citizens' }),
+          services: [
+            {
+              name: t('pricelist.eood', { defaultValue: 'EOOD Registration (Single-Owner LLC)' }),
+              price: '€255',
+              includes: [t('pricelist.eoodIncludes', { defaultValue: 'Preparation and submission of registration documents' })],
+              time: t('pricelist.eoodTime', { defaultValue: '5–7 business days' }),
+            },
+            {
+              name: t('pricelist.ood', { defaultValue: 'OOD Registration (Multi-Owner LLC)' }),
+              price: '€285',
+              includes: [t('pricelist.oodIncludes', { defaultValue: 'Up to 2 shareholders included' })],
+              extras: [t('pricelist.oodExtra', { defaultValue: 'Each additional shareholder: +€50' })],
+              time: t('pricelist.oodTime', { defaultValue: '3–5 business days' }),
+            },
+          ],
+        },
+        {
+          groupTitle: t('pricelist.nonEuCitizens', { defaultValue: 'For Non-EU Citizens' }),
+          services: [
+            {
+              name: t('pricelist.eoodNonEu', { defaultValue: 'EOOD / OOD Registration (Non-EU)' }),
+              price: t('services.from', { defaultValue: 'from' }) + ' €485',
+              includes: [t('pricelist.eoodIncludes', { defaultValue: 'Preparation and submission of registration documents' })],
+              time: t('pricelist.eoodTime', { defaultValue: '5–7 business days' }),
+            },
+            {
+              name: t('pricelist.nonEuBankAccount', { defaultValue: 'Capital Collection Bank Account (Набирателна сметка)' }),
+              price: '€295',
+            },
+            {
+              name: t('pricelist.nonEuPowerOfAttorney', { defaultValue: 'Power of Attorney — Drafting & Notarization' }),
+              price: '€25',
+            },
+            {
+              name: t('pricelist.nonEuDirectorSignature', { defaultValue: "Director's Specimen Signature" }),
+              price: '€25',
+            },
+            {
+              name: t('pricelist.nonEuContactDeclaration', { defaultValue: 'Contact Person Declaration' }),
+              price: '€75',
+            },
+          ],
+        },
+      ],
       services: [
-        {
-          name: t('pricelist.eood', { defaultValue: 'EOOD Registration' }),
-          price: '€255',
-          includes: [t('pricelist.eoodIncludes', { defaultValue: 'Preparation and submission of registration documents' })],
-          time: t('pricelist.eoodTime', { defaultValue: '3–5 business days (typical)' }),
-        },
-        {
-          name: t('pricelist.ood', { defaultValue: 'OOD Registration' }),
-          price: '€285',
-          includes: [t('pricelist.oodIncludes', { defaultValue: 'Includes up to 2 shareholders' })],
-          extras: [t('pricelist.oodExtra', { defaultValue: 'Each additional shareholder: +€50' })],
-          time: t('pricelist.oodTime', { defaultValue: '3–5 business days (typical)' }),
-        },
         {
           name: t('pricelist.bankAccount', { defaultValue: 'Bank Account Opening Assistance' }),
           price: '€75',
           time: t('pricelist.bankAccountTime', { defaultValue: 'Depends on the bank' }),
         },
         {
-          name: t('pricelist.legalConsultCompany', { defaultValue: 'Company Registration Consultation' }),
+          name: t('pricelist.legalConsultCompany', { defaultValue: 'Legal Consultation for Company Registration' }),
           price: '€25 / 30 min',
         },
         {
