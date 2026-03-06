@@ -6,19 +6,23 @@ import aleksImg from "@/assets/aleksImg.jpg";
 
 const team = [
   {
-    name: "Alexander Lunin",
-    role: "Co-Founder & AI Architect",
-    bio: "Leads AI architecture and Web3 integrations across the NICS AI Ecosystem. Over 15 years of experience in cutting-edge technology.",
-    image: alexImg,
-    linkedin: "https://www.linkedin.com/in/luntick",
-  },
-  {
-    name: "Aleksandr Tochilov",
-    role: "Co-Founder & Product Director",
-    bio: "Co-founder of AI Byte Consult | SaaS & MTS Engineer, Digital Project Manager, Graphic designer and more… | Charged with 60+ countries.",
-    image: aleksImg,
-    linkedin: "https://www.linkedin.com/in/alekstoch",
-  },
+  name: "Alexander Lunin",
+
+  role: "Co-Founder, Real Estate Broker & Legal Consultant",
+  roleRu: "Сооснователь, брокер по недвижимости и юридический консультант",
+  roleBg: "Съосновател, брокер на недвижими имоти и правен консултант",
+  roleDe: "Mitgründer, Immobilienmakler und Rechtsberater",
+  roleIt: "Co-fondatore, agente immobiliare e consulente legale",
+
+  bio: "Co-founder of the company and real estate professional since 2011. Specializing in residential and commercial property sales, acquisitions, rentals, property management, construction support, legal documentation, contract drafting of any complexity, residence permit assistance, insurance services, and consulting on relocation and citizenship matters in Bulgaria.",
+  bioRu: "Сооснователь компании и брокер по недвижимости с 2011 года. Специализация: покупка и продажа жилой и коммерческой недвижимости, управление объектами, аренда, сопровождение строительных проектов, юридическая поддержка сделок, составление договоров любой сложности, помощь в получении ВНЖ, страховые решения и консультации по вопросам релокации и гражданства в Болгарии.",
+  bioBg: "Съосновател на компанията и специалист по недвижими имоти от 2011 г. Специализира в покупко-продажба и управление на жилищни и търговски имоти, наеми, строителни проекти, юридическо обслужване, изготвяне на договори с всякаква сложност, съдействие за разрешение за пребиваване, застрахователни услуги и консултации относно релокация и гражданство в България.",
+  bioDe: "Mitgründer des Unternehmens und Immobilienexperte seit 2011. Spezialisiert auf Kauf und Verkauf von Wohn- und Gewerbeimmobilien, Immobilienverwaltung, Vermietung, Bauprojekte, rechtliche Unterstützung, Vertragsgestaltung jeder Komplexität, Unterstützung bei Aufenthaltstiteln, Versicherungsdienstleistungen und Beratung zu Relocation und Staatsbürgerschaft in Bulgarien.",
+  bioIt: "Co-fondatore della società e professionista immobiliare dal 2011. Specializzato nella compravendita di immobili residenziali e commerciali, gestione immobiliare, locazioni, supporto a progetti di costruzione, consulenza legale, redazione di contratti complessi, assistenza per permessi di soggiorno, servizi assicurativi e consulenza su trasferimento e cittadinanza in Bulgaria.",
+
+  image: alexImg,
+  linkedin: "https://www.linkedin.com/in/luntick",
+},
 ];
 
 const Team = () => {

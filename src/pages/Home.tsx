@@ -7,13 +7,7 @@ import { PropertyCard } from '@/components/PropertyCard';
 import { RestorationShowcase } from '@/components/RestorationShowcase';
 import Team from '@/components/Team';
 import { Testimonials } from '@/components/Testimonials';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from '@/components/ui/carousel';
+import { PropertyCarousel, PropertyCarouselItem } from '@/components/PropertyCarousel';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
 
@@ -32,35 +26,40 @@ const Home = () => {
   // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
     {
-  title:
-    lang === 'bg'
-      ? 'Данъци върху имотите в България 2026: Пълно ръководство за Sofia, Бургас, Варна, Слънчев бряг и курортите'
-      : lang === 'ru'
-      ? 'Налоги на недвижимость в Болгарии 2026: Полное руководство для Софии, Бургаса, Варны, Черноморья и курортов'
-      : lang === 'de'
-      ? 'Immobiliensteuern in Bulgarien 2026: Vollständiger Leitfaden für Sofia, Burgas, Varna und die Resorts'
-      : lang === 'it'
-      ? 'Tasse sugli immobili in Bulgaria 2026: Guida completa per Sofia, Burgas, Varna e le località turistiche'
-      : 'Property Taxes in Bulgaria 2026: Complete Guide for Sofia, Burgas, Varna, the Black Sea Coast & Mountain Resorts',
-  excerpt:
-    lang === 'bg'
-      ? 'Годишни данъчни ставки, такси за смет, данък върху наемен доход и сравнение по градове — актуализирано февруари 2026.'
-      : lang === 'ru'
-      ? 'Ставки ежегодного налога, сборы за вывоз мусора, налог на арендный доход и сравнение по городам — обновлено февраль 2026.'
-      : lang === 'de'
-      ? 'Jährliche Steuersätze, Abfallgebühren, Mieteinkommensteuer und Städtevergleich — aktualisiert Februar 2026.'
-      : lang === 'it'
-      ? 'Aliquote annuali, tasse sui rifiuti, tassazione dei redditi da locazione e confronto per città — aggiornato febbraio 2026.'
-      : 'Annual tax rates, garbage fees, rental income tax, and city-by-city comparison — updated February 2026.',
-  image_url: 'https://ipfs.io/ipfs/bafybeiarxej25ipcdazsrji3el5ruie7vhiqrlpguowrrsiehj67sjnfnm',
-  date:
-    lang === 'bg' ? '21 февруари 2026'
-    : lang === 'ru' ? '21 февраля 2026'
-    : lang === 'de' ? '21. Februar 2026'
-    : lang === 'it' ? '21 febbraio 2026'
-    : 'Feb 21, 2026',
-  slug: 'bulgaria-property-taxes-2026',
-},{
+      title:
+        lang === 'bg'
+          ? 'Данъци върху имотите в България 2026: Пълно ръководство за Sofia, Бургас, Варна, Слънчев бряг и курортите'
+          : lang === 'ru'
+            ? 'Налоги на недвижимость в Болгарии 2026: Полное руководство для Софии, Бургаса, Варны, Черноморья и курортов'
+            : lang === 'de'
+              ? 'Immobiliensteuern in Bulgarien 2026: Vollständiger Leitfaden für Sofia, Burgas, Varna und die Resorts'
+              : lang === 'it'
+                ? 'Tasse sugli immobili in Bulgaria 2026: Guida completa per Sofia, Burgas, Varna e le località turistiche'
+                : 'Property Taxes in Bulgaria 2026: Complete Guide for Sofia, Burgas, Varna, the Black Sea Coast & Mountain Resorts',
+      excerpt:
+        lang === 'bg'
+          ? 'Годишни данъчни ставки, такси за смет, данък върху наемен доход и сравнение по градове — актуализирано февруари 2026.'
+          : lang === 'ru'
+            ? 'Ставки ежегодного налога, сборы за вывоз мусора, налог на арендный доход и сравнение по городам — обновлено февраль 2026.'
+            : lang === 'de'
+              ? 'Jährliche Steuersätze, Abfallgebühren, Mieteinkommensteuer und Städtevergleich — aktualisiert Februar 2026.'
+              : lang === 'it'
+                ? 'Aliquote annuali, tasse sui rifiuti, tassazione dei redditi da locazione e confronto per città — aggiornato febbraio 2026.'
+                : 'Annual tax rates, garbage fees, rental income tax, and city-by-city comparison — updated February 2026.',
+      image_url: 'https://ipfs.io/ipfs/bafybeiarxej25ipcdazsrji3el5ruie7vhiqrlpguowrrsiehj67sjnfnm',
+      date:
+        lang === 'bg'
+          ? '21 февруари 2026'
+          : lang === 'ru'
+            ? '21 февраля 2026'
+            : lang === 'de'
+              ? '21. Februar 2026'
+              : lang === 'it'
+                ? '21 febbraio 2026'
+                : 'Feb 21, 2026',
+      slug: 'bulgaria-property-taxes-2026',
+    },
+    {
       title:
         lang === 'bg'
           ? 'Покупка на имот в България през 2026 г.: 7 грешки, които струват на купувачите десетки хиляди евро'
@@ -84,11 +83,15 @@ const Home = () => {
       image_url:
         'https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?w=1600&q=80&auto=format&fit=crop',
       date:
-    lang === 'bg' ? '20 февруари 2026'
-    : lang === 'ru' ? '20 февраля 2026'
-    : lang === 'de' ? '20. Februar 2026'
-    : lang === 'it' ? '20 febbraio 2026'
-    : 'Feb 20, 2026',
+        lang === 'bg'
+          ? '20 февруари 2026'
+          : lang === 'ru'
+            ? '20 февраля 2026'
+            : lang === 'de'
+              ? '20. Februar 2026'
+              : lang === 'it'
+                ? '20 febbraio 2026'
+                : 'Feb 20, 2026',
       slug: 'buying-mistakes-2026',
     },
     {
@@ -164,8 +167,7 @@ const Home = () => {
               : lang === 'it'
                 ? "Le ragioni strutturali del divario di prezzo bulgaro, cosa cambia con l'euro e perché il 2026 potrebbe essere l'ultimo anno per entrare alle valutazioni attuali."
                 : "A professional market analysis: the structural reasons behind Bulgaria's price gap, what euro adoption changes, and why 2026 may be the last year to enter at today's valuations.",
-      image_url:
-        'https://ipfs.io/ipfs/bafybeibgzot364jw3ajiqptptaqqmx3gdfe7ockdfsznn3po5amrdvvb3a',
+      image_url: 'https://ipfs.io/ipfs/bafybeibgzot364jw3ajiqptptaqqmx3gdfe7ockdfsznn3po5amrdvvb3a',
       date: 'Feb 18, 2026',
       slug: 'bulgaria-cheaper-than-eu',
     },
@@ -183,7 +185,6 @@ const Home = () => {
         ? property.images[0]
         : property.image) || '/placeholder.jpg';
 
-    // Keep original fields, but force image for cards
     return { ...property, image: first };
   };
 
@@ -225,17 +226,13 @@ const Home = () => {
           </div>
         </div>
 
-        <Carousel opts={{ align: 'start', loop: true }} className="w-full">
-          <CarouselContent className="-ml-4">
-            {featuredForCards.map((property) => (
-              <CarouselItem key={property.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <PropertyCard {...property} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
-          <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
-        </Carousel>
+        <PropertyCarousel>
+          {featuredForCards.map((property) => (
+            <PropertyCarouselItem key={property.id}>
+              <PropertyCard {...property} />
+            </PropertyCarouselItem>
+          ))}
+        </PropertyCarousel>
       </section>
 
       {/* Newest Listings */}
@@ -248,17 +245,13 @@ const Home = () => {
             </div>
           </div>
 
-          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
-            <CarouselContent className="-ml-4">
-              {newestForCards.map((property) => (
-                <CarouselItem key={property.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <PropertyCard {...property} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
-            <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
-          </Carousel>
+          <PropertyCarousel>
+            {newestForCards.map((property) => (
+              <PropertyCarouselItem key={property.id}>
+                <PropertyCard {...property} />
+              </PropertyCarouselItem>
+            ))}
+          </PropertyCarousel>
         </div>
       </section>
 
@@ -353,60 +346,56 @@ const Home = () => {
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
 
-          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
-            <CarouselContent className="-ml-4">
-              {articles.map((article, idx) => (
-                <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all h-full">
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={article.image_url}
-                        alt={article.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-5">
-                      <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
-                      <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                        {article.excerpt}
-                      </p>
-                      {article.slug ? (
-                        <Link
-                          to={`/article/${article.slug}`}
-                          className="text-primary text-sm font-semibold hover:underline"
-                        >
-                          {lang === 'bg'
-                            ? 'Прочети още →'
-                            : lang === 'ru'
-                              ? 'Читать далее →'
-                              : lang === 'de'
-                                ? 'Mehr lesen →'
-                                : lang === 'it'
-                                  ? 'Leggi di più →'
-                                  : 'Read More →'}
-                        </Link>
-                      ) : (
-                        <span className="text-muted-foreground text-sm font-semibold">
-                          {lang === 'bg'
-                            ? 'Скоро...'
-                            : lang === 'ru'
-                              ? 'Скоро...'
-                              : lang === 'de'
-                                ? 'Demnächst...'
-                                : lang === 'it'
-                                  ? 'In arrivo...'
-                                  : 'Coming soon...'}
-                        </span>
-                      )}
-                    </div>
+          <PropertyCarousel>
+            {articles.map((article, idx) => (
+              <PropertyCarouselItem key={idx}>
+                <div className="group bg-card rounded-lg overflow-hidden border hover:shadow-lg transition-all h-full">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={article.image_url}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-14 border-primary/20 text-primary hover:bg-primary/10" />
-            <CarouselNext className="hidden md:flex -right-14 border-primary/20 text-primary hover:bg-primary/10" />
-          </Carousel>
+                  <div className="p-5">
+                    <p className="text-xs text-muted-foreground mb-2">{article.date}</p>
+                    <h3 className="font-bold text-lg mb-2 line-clamp-2">{article.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                      {article.excerpt}
+                    </p>
+                    {article.slug ? (
+                      <Link
+                        to={`/article/${article.slug}`}
+                        className="text-primary text-sm font-semibold hover:underline"
+                      >
+                        {lang === 'bg'
+                          ? 'Прочети още →'
+                          : lang === 'ru'
+                            ? 'Читать далее →'
+                            : lang === 'de'
+                              ? 'Mehr lesen →'
+                              : lang === 'it'
+                                ? 'Leggi di più →'
+                                : 'Read More →'}
+                      </Link>
+                    ) : (
+                      <span className="text-muted-foreground text-sm font-semibold">
+                        {lang === 'bg'
+                          ? 'Скоро...'
+                          : lang === 'ru'
+                            ? 'Скоро...'
+                            : lang === 'de'
+                              ? 'Demnächst...'
+                              : lang === 'it'
+                                ? 'In arrivo...'
+                                : 'Coming soon...'}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </PropertyCarouselItem>
+            ))}
+          </PropertyCarousel>
         </div>
       </section>
 
