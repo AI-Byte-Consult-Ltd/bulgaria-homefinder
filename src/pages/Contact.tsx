@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -5,15 +6,52 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Loader2 } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission
-    console.log('Form submitted');
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: t('contact.successTitle', 'Message sent!'),
+        description: t('contact.successMessage', 'Thank you for your message. We will get back to you soon.'),
+      });
+
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: t('contact.errorTitle', 'Error'),
+        description: t('contact.errorMessage', 'Failed to send message. Please try again or contact us directly.'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -45,22 +83,29 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name">{t('contact.name')}</Label>
-                    <Input id="name" type="text" required />
+                    <Input id="name" type="text" required value={formData.name} onChange={handleChange} />
                   </div>
                   <div>
                     <Label htmlFor="email">{t('contact.email')}</Label>
-                    <Input id="email" type="email" required />
+                    <Input id="email" type="email" required value={formData.email} onChange={handleChange} />
                   </div>
                   <div>
                     <Label htmlFor="phone">{t('contact.phone')}</Label>
-                    <Input id="phone" type="tel" />
+                    <Input id="phone" type="tel" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div>
                     <Label htmlFor="message">{t('contact.message')}</Label>
-                    <Textarea id="message" rows={5} required />
+                    <Textarea id="message" rows={5} required value={formData.message} onChange={handleChange} />
                   </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    {t('contact.send')}
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {t('contact.sending', 'Sending...')}
+                      </>
+                    ) : (
+                      t('contact.send')
+                    )}
                   </Button>
                 </form>
               </div>
