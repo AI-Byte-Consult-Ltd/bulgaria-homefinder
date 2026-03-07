@@ -1075,7 +1075,7 @@ const Services = () => {
   };
 
   return (
-    <HelmetProvider>
+    <>
       <div className="min-h-screen flex flex-col">
         <Helmet>
           <html lang={lang} />
@@ -1199,7 +1199,7 @@ const Services = () => {
 
         <Footer />
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

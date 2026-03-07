@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { PropertyCard } from '@/components/PropertyCard';
 import { mockProperties } from '@/data/mockProperties';
 import { SearchBar } from '@/components/SearchBar';
@@ -16,6 +17,15 @@ const Rent = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('rent.title', 'Rent Property in Bulgaria')}
+        description="Find apartments, houses and commercial spaces for rent in Bulgaria. Long-term and short-term rental options in Sofia, Varna, Burgas and coastal areas."
+        path="/rent"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Rent', url: '/rent' },
+        ]}
+      />
       <Header />
       
       <main className="flex-1">

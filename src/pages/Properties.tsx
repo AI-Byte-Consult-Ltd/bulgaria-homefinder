@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { PageSEO } from '@/components/PageSEO';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -111,6 +112,11 @@ const Properties = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('properties.title', 'Properties in Bulgaria — Search Results')}
+        description="Search and filter properties for sale and rent in Bulgaria. Apartments, houses, villas, land and commercial real estate across all regions."
+        path="/properties"
+      />
       <Header />
 
       <div className="container py-8 flex-1">

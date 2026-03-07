@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
@@ -442,6 +443,17 @@ const BuyingMistakesArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={d.title}
+        description="7 costly mistakes when buying property in Bulgaria in 2026. Avoid hidden fees, legal traps and bad investments. Expert guide for foreign buyers."
+        path="/article/buying-mistakes-2026"
+        type="article"
+        article={{ publishedTime: '2026-02-21', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: d.title, url: '/article/buying-mistakes-2026' },
+        ]}
+      />
       <Header />
 
       <div className="container py-12 max-w-3xl mx-auto">

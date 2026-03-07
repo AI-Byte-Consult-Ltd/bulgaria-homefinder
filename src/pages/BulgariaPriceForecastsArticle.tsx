@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -975,6 +976,17 @@ const BulgariaPriceForecastsArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t.title}
+        description="Bulgaria property price forecasts for 2026, 5-year and 10-year outlook. NSI, Eurostat data. Investment analysis for Sofia, coast and rural areas."
+        path="/article/bulgaria-price-forecasts"
+        type="article"
+        article={{ publishedTime: '2026-02-15', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: t.title, url: '/article/bulgaria-price-forecasts' },
+        ]}
+      />
       <Header />
 
       {/* Hero */}

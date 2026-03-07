@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { PageSEO } from '@/components/PageSEO';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SearchBar } from '@/components/SearchBar';
@@ -261,6 +262,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('home.heroTitle', 'Buy, Sell & Rent Property in Bulgaria')}
+        description="Find apartments, houses, villas and commercial property in Bulgaria. Legal services, company registration, certified translations. Multilingual: EN, RU, BG, DE, IT."
+        path="/"
+      />
       <Header />
 
       {/* Hero Section — clean Apple-style */}

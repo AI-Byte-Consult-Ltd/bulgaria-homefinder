@@ -2,6 +2,7 @@ import { useEffect, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -1263,6 +1264,17 @@ const BulgariaSocialInsuranceArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={d.title}
+        description="Social insurance contributions in Bulgaria 2026. Rates, self-employment, health insurance, practical examples in euro. Complete guide for expats and business owners."
+        path="/article/bulgaria-social-insurance-2026"
+        type="article"
+        article={{ publishedTime: '2026-03-05', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: d.title, url: '/article/bulgaria-social-insurance-2026' },
+        ]}
+      />
       <Header />
 
       <main id="main-content" className="flex-1">
