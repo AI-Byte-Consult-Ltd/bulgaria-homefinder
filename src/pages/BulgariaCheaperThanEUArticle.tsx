@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -630,6 +631,17 @@ const BulgariaCheaperThanEUArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t.title}
+        description="Why Bulgaria is still 2x cheaper than the EU average. Cost of living, property prices, and investment opportunities compared to Western Europe."
+        path="/article/bulgaria-cheaper-than-eu"
+        type="article"
+        article={{ publishedTime: '2026-02-05', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: t.title, url: '/article/bulgaria-cheaper-than-eu' },
+        ]}
+      />
       <Header />
 
       {/* Hero */}

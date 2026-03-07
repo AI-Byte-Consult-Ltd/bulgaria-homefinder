@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft, ExternalLink, TrendingUp, MapPin,
@@ -654,6 +655,17 @@ const BulgariaPropertyTaxesArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t.title}
+        description="Complete guide to property taxes in Bulgaria 2026. Annual property tax, transfer tax, capital gains, and municipal fees explained with examples."
+        path="/article/bulgaria-property-taxes-2026"
+        type="article"
+        article={{ publishedTime: '2026-03-01', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: t.title, url: '/article/bulgaria-property-taxes-2026' },
+        ]}
+      />
       <Header />
 
       {/* ── Hero ── */}

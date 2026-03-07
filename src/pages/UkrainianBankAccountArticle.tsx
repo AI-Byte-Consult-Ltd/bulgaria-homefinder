@@ -2,6 +2,7 @@ import { useEffect, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -1046,6 +1047,17 @@ const UkrainianBankAccountArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={d.title}
+        description="How to open a bank account in Bulgaria as a Ukrainian citizen in 2026. Required documents, best banks, fees and step-by-step process."
+        path="/article/ukraine-bank-account-bulgaria-2026"
+        type="article"
+        article={{ publishedTime: '2026-02-28', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: d.title, url: '/article/ukraine-bank-account-bulgaria-2026' },
+        ]}
+      />
       <Header />
 
       <main id="main-content" className="flex-1">

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -694,6 +695,17 @@ const Top5CoastalAreasForInvestmentArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t.title}
+        description="Top 5 areas on the Bulgarian Black Sea coast to invest in property. Rental yields, price trends and growth forecasts for 2026."
+        path="/article/top-5-areas-in-bulgarian-coast-to-buy"
+        type="article"
+        article={{ publishedTime: '2026-02-10', author: 'BulgariaEstate by AI Byte Consult' }}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: t.title, url: '/article/top-5-areas-in-bulgarian-coast-to-buy' },
+        ]}
+      />
       <Header />
       <section className="relative py-16 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
         <div className="container max-w-4xl">
