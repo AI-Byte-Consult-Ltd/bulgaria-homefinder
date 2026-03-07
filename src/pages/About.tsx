@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import Team from '@/components/Team';
 import { CheckCircle, Building2, Users, Award, TrendingUp, Calendar, MapPin } from 'lucide-react';
 
