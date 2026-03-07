@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { Button } from '@/components/ui/button';
 import { Home, Users, TrendingUp } from 'lucide-react';
 
@@ -9,6 +10,15 @@ const Sell = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('sell.title', 'Sell Your Property in Bulgaria')}
+        description="List your property for sale in Bulgaria. Professional marketing, property valuation and legal support. Reach international buyers across Europe."
+        path="/sell"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Sell', url: '/sell' },
+        ]}
+      />
       <Header />
       
       <main className="flex-1">

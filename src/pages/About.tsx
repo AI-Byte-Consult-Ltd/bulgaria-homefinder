@@ -16,6 +16,15 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('about.title', 'About Us — Real Estate Experts in Bulgaria')}
+        description="BulgariaEstate by AI Byte Consult — since 2011. 500+ properties sold, 1000+ happy clients across 15+ regions. Multilingual real estate agency in Bulgaria."
+        path="/about"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'About', url: '/about' },
+        ]}
+      />
       <Header />
       
       <main className="flex-1">

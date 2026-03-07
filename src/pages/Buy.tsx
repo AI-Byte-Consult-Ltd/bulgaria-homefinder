@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageSEO } from '@/components/PageSEO';
 import { PropertyCard } from '@/components/PropertyCard';
 import { mockProperties } from '@/data/mockProperties';
 import { SearchBar } from '@/components/SearchBar';
@@ -16,6 +17,15 @@ const Buy = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('buy.title', 'Buy Property in Bulgaria')}
+        description="Browse apartments, houses, villas and land for sale in Bulgaria. Find your dream property in Sofia, Varna, Burgas, Sunny Beach and the Black Sea coast."
+        path="/buy"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Buy', url: '/buy' },
+        ]}
+      />
       <Header />
       
       <main className="flex-1">
