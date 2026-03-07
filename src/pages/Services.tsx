@@ -1199,7 +1199,7 @@ const Services = () => {
 
         <Footer />
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 
