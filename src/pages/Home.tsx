@@ -26,6 +26,74 @@ const Home = () => {
   // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
     {
+  title:
+    lang === 'bg'
+      ? 'Осигуровки в България 2026: кой плаща, колко и как се изчисляват — в евро'
+      : lang === 'ru'
+        ? 'Осигуровки в Болгарии 2026: кто платит, сколько и как рассчитывать — в евро'
+        : lang === 'de'
+          ? 'Sozialversicherung in Bulgarien 2026: Wer zahlt, wie viel und wie wird gerechnet — in Euro'
+          : lang === 'it'
+            ? 'Contributi previdenziali in Bulgaria 2026: chi paga, quanto e come si calcolano — in euro'
+            : 'Social Insurance Contributions in Bulgaria 2026: Who Pays, How Much, and How to Calculate — In Euro',
+  excerpt:
+    lang === 'bg'
+      ? 'Осигурителни ставки, самоосигуряване, управител със и без заплата, здравни вноски и практически примери в евро — актуализирано 2026.'
+      : lang === 'ru'
+        ? 'Ставки осигуровок, самоосигуряване, управитель с зарплатой и без, здравные взносы и практические примеры в евро — обновлено 2026.'
+        : lang === 'de'
+          ? 'Beitragssätze, Selbstversicherung, Geschäftsführer mit und ohne Gehalt, Krankenversicherung und Praxisbeispiele in Euro — aktualisiert 2026.'
+          : lang === 'it'
+            ? 'Aliquote contributive, lavoro autonomo, amministratore con o senza stipendio, assicurazione sanitaria ed esempi pratici in euro — aggiornato 2026.'
+            : 'Contribution rates, self-insurance, manager with or without salary, health insurance, and practical examples in euro — updated 2026.',
+  image_url: 'https://ipfs.io/ipfs/bafybeiao2vgs2fim3ry5zmxga4z7fcvpknrnjodyrs47yfpbambfmdbnmm',
+  date:
+    lang === 'bg'
+      ? '7 март 2026'
+      : lang === 'ru'
+        ? '7 марта 2026'
+        : lang === 'de'
+          ? '7. März 2026'
+          : lang === 'it'
+            ? '7 marzo 2026'
+            : 'Mar 7, 2026',
+  slug: 'bulgaria-social-insurance-2026',
+},
+{
+  title:
+    lang === 'bg'
+      ? 'Как граждани на Украйна могат да открият банкова сметка за регистрация на фирма в България през 2026 г.'
+      : lang === 'ru'
+        ? 'Как гражданам Украины открыть банковский счёт для регистрации компании в Болгарии в 2026 году'
+        : lang === 'de'
+          ? 'Wie ukrainische Staatsbürger 2026 ein Bankkonto zur Firmengründung in Bulgarien eröffnen'
+          : lang === 'it'
+            ? 'Come i cittadini ucraini possono aprire un conto bancario per registrare una società in Bulgaria nel 2026'
+            : 'How Ukrainian Citizens Can Open a Bank Account to Register a Company in Bulgaria in 2026',
+  excerpt:
+    lang === 'bg'
+      ? 'Набирателна сметка, банкови изисквания, срокове, такси и анализ на банки в България — актуализирано 2026.'
+      : lang === 'ru'
+        ? 'Набирательная сметка, требования банков, сроки, стоимость и анализ банков в Болгарии — обновлено 2026.'
+        : lang === 'de'
+          ? 'Nabiratelna-Konto, Bankanforderungen, Kosten, Fristen und Bankenvergleich in Bulgarien — aktualisiert 2026.'
+          : lang === 'it'
+            ? 'Nabiratelna smetka, requisiti bancari, costi, tempistiche e confronto tra banche in Bulgaria — aggiornato 2026.'
+            : 'Nabiratelna account, Bulgarian bank requirements, costs, timelines, and bank comparison — updated 2026.',
+  image_url: 'https://ipfs.io/ipfs/bafybeia5yab2t4k2sv2sbb5jqnbz2hgeghq66jndnsw5c3ooia43ucancu',
+  date:
+    lang === 'bg'
+      ? '28 февруари 2026'
+      : lang === 'ru'
+        ? '28 февраля 2026'
+        : lang === 'de'
+          ? '28. Februar 2026'
+          : lang === 'it'
+            ? '28 febbraio 2026'
+            : 'Feb 28, 2026',
+  slug: 'ukraine-bank-account-bulgaria-2026',
+},
+{
       title:
         lang === 'bg'
           ? 'Данъци върху имотите в България 2026: Пълно ръководство за Sofia, Бургас, Варна, Слънчев бряг и курортите'

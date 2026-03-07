@@ -30,6 +30,8 @@ import NotFound from "./pages/NotFound";
 import { ChatWidget } from "./components/ChatWidget";
 import AddProperty from "./pages/AddProperty";
 import "./i18n/config";
+import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
+import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +54,8 @@ const App = () => (
             <Route path="/restoration/:id" element={<RestorationProject />} />
 
             {/* Articles */}
+            <Route path="/article/bulgaria-social-insurance-2026" element={<BulgariaSocialInsuranceArticle />} />
+            <Route path="/article/ukraine-bank-account-bulgaria-2026" element={<UkrainianBankAccountArticle />} />
             <Route path="/article/buying-mistakes-2026" element={<BuyingMistakesArticle />} />
             <Route path="/article/bulgaria-price-forecasts" element={<BulgariaPriceForecastsArticle />} />
             <Route

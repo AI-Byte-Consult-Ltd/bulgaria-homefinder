@@ -349,7 +349,7 @@ Dopo la ristrutturazione la proprietà può diventare:
   titleIt: 'Residenza Panoramica Vista Mare | Mellia Park 10, Ravda',
 
   // ── Price & Location ─────────────────────────────────────
-  price:    120000,
+  price:    122000,
   location:   'Ravda, Burgas Region',
   locationRu: 'Равда, область Бургас',
   locationBg: 'Равда, област Бургас',
