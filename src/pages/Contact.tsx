@@ -57,6 +57,15 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <PageSEO
+        title={t('contact.title', 'Contact Us')}
+        description="Get in touch with BulgariaEstate. Office in Bulgaria, multilingual support in EN, RU, BG, DE, IT. Phone: +359 9888 99109. Email: info@aibyteconsult.com."
+        path="/contact"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Contact', url: '/contact' },
+        ]}
+      />
       <Header />
       
       <main className="flex-1">
