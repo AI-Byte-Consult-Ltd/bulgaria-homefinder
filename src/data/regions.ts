@@ -265,8 +265,8 @@ export const regions: Region[] = [
   {
     slug: 'bansko',
     name: { en: 'Bansko', bg: 'Банско', ru: 'Банско', de: 'Bansko', it: 'Bansko' },
-    image: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1600&h=900&fit=crop',
     propertyCount: 680,
     excerpt: {
       en: 'Bulgaria\'s premier ski resort at the foot of the Pirin Mountains, popular year-round.',
