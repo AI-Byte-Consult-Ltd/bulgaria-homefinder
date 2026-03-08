@@ -411,6 +411,12 @@ Dopo la ristrutturazione la proprietà può diventare:
   // ── Maintenance ──────────────────────────────────────────
   maintenanceFee: 7,        // EUR/m²/year — one of the lowest on the coast
 
+  // ── Virtual Tour ─────────────────────────────────────────
+  // IDX/MLS INTEGRATION: Map your feed's virtual tour field here:
+  //   virtualTourUrl: idxListing.VirtualTourURLUnbranded ?? null,
+  virtualTourUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // placeholder — replace with real Matterport/360 tour URL
+  virtualTourType: 'youtube' as const,
+
   // ── Descriptions ─────────────────────────────────────────
 
 description: `
