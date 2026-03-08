@@ -112,11 +112,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Documento generato con successo!',
   },
   successDesc: {
-    en: 'Complete the payment of €25 via the link below. After we confirm your payment, the document will be sent to your email.',
-    ru: 'Оплатите €25 по ссылке ниже. После подтверждения оплаты документ будет отправлен на ваш email.',
-    bg: 'Завършете плащането от €25 чрез линка по-долу. След потвърждение на плащането, документът ще бъде изпратен на вашия email.',
-    de: 'Schließen Sie die Zahlung von €25 über den Link ab. Nach Bestätigung der Zahlung wird das Dokument an Ihre E-Mail gesendet.',
-    it: 'Completa il pagamento di €25 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
+    en: 'Complete the payment of €35 via the link below. After we confirm your payment, the document will be sent to your email.',
+    ru: 'Оплатите €35 по ссылке ниже. После подтверждения оплаты документ будет отправлен на ваш email.',
+    bg: 'Завършете плащането от €35 чрез линка по-долу. След потвърждение на плащането, документът ще бъде изпратен на вашия email.',
+    de: 'Schließen Sie die Zahlung von €35 über den Link ab. Nach Bestätigung der Zahlung wird das Dokument an Ihre E-Mail gesendet.',
+    it: 'Completa il pagamento di €35 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
   },
   payButton: {
     en: 'Pay €35 via Revolut',
