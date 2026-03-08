@@ -290,10 +290,18 @@ const PropertyDetails = () => {
                     </Button>
                   </a>
 
-                  <Button variant="outline" className="w-full gap-2">
-                    <Calendar className="h-4 w-4" />
-                    {t('common.scheduleVisit', 'Schedule a Visit')}
-                  </Button>
+                  <a
+                    href={`https://wa.me/491628184658?text=${encodeURIComponent(
+                      `Hi! I'd like to schedule a visit for the property: "${displayTitle}" (ID: ${(property as any).id}). Please let me know available dates and times.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="w-full gap-2">
+                      <Calendar className="h-4 w-4" />
+                      {t('common.scheduleVisit', 'Schedule a Visit')}
+                    </Button>
+                  </a>
 
                   <Separator />
 
