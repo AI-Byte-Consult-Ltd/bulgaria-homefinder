@@ -428,8 +428,9 @@ const Home = () => {
                   <div className="aspect-video overflow-hidden">
                     <img
                       src={article.image_url}
-                      alt={article.title}
+                      alt={`Article: ${article.title}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-5">
