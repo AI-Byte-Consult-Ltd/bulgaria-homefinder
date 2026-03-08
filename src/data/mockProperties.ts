@@ -2242,7 +2242,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Свети Влас, Бургас',
     locationDe: 'Sveti Vlas, Burgas',
     locationIt: 'Sveti Vlas, Burgas',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop'],
     type: 'apartment',
     transactionType: 'sale' as const,
     status: 'for-sale',
