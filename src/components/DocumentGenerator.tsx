@@ -210,8 +210,8 @@ export const DocumentGenerator = () => {
       <div className="container max-w-4xl">
         <div className="text-center mb-8">
           <Badge variant="secondary" className="mb-3 gap-1.5">
-            <Sparkles className="h-3.5 w-3.5" />
-            AI-Powered
+            <FileText className="h-3.5 w-3.5" />
+            Legal Document Service
           </Badge>
           <h2 className="text-3xl font-bold mb-2">{lbl('title', lang)}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{lbl('subtitle', lang)}</p>
