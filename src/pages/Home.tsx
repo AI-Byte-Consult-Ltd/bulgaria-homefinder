@@ -386,16 +386,7 @@ const Home = () => {
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-bold text-xl">{region.name}</h3>
                 <p className="text-sm text-white/80">
-                  {region.count}{' '}
-                  {lang === 'bg'
-                    ? 'имота'
-                    : lang === 'ru'
-                      ? 'объектов'
-                      : lang === 'de'
-                        ? 'Objekte'
-                        : lang === 'it'
-                          ? 'immobili'
-                          : 'properties'}
+                  {region.count} {t('common.properties')}
                 </p>
               </div>
             </div>
@@ -408,15 +399,7 @@ const Home = () => {
         <div className="container">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-2">
-              {lang === 'bg'
-                ? 'Пазарни анализи и тенденции'
-                : lang === 'ru'
-                  ? 'Аналитика рынка недвижимости'
-                  : lang === 'de'
-                    ? 'Marktanalysen & Einblicke'
-                    : lang === 'it'
-                      ? 'Analisi e tendenze di mercato'
-                      : 'Market Insights & Analysis'}
+              {t('common.marketInsights')}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
@@ -444,27 +427,11 @@ const Home = () => {
                         to={`/article/${article.slug}`}
                         className="text-primary text-sm font-semibold hover:underline"
                       >
-                        {lang === 'bg'
-                          ? 'Прочети още →'
-                          : lang === 'ru'
-                            ? 'Читать далее →'
-                            : lang === 'de'
-                              ? 'Mehr lesen →'
-                              : lang === 'it'
-                                ? 'Leggi di più →'
-                                : 'Read More →'}
+                        {t('common.readMore')}
                       </Link>
                     ) : (
                       <span className="text-muted-foreground text-sm font-semibold">
-                        {lang === 'bg'
-                          ? 'Скоро...'
-                          : lang === 'ru'
-                            ? 'Скоро...'
-                            : lang === 'de'
-                              ? 'Demnächst...'
-                              : lang === 'it'
-                                ? 'In arrivo...'
-                                : 'Coming soon...'}
+                        {t('common.comingSoon')}
                       </span>
                     )}
                   </div>
@@ -479,15 +446,7 @@ const Home = () => {
       <section className="py-16 container">
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2">
-            {lang === 'bg'
-              ? 'Видео обиколки и турове'
-              : lang === 'ru'
-                ? 'Видео-обзоры и туры объектов'
-                : lang === 'de'
-                  ? 'Immobilien-Touren & Videos'
-                  : lang === 'it'
-                    ? 'Tour immobiliari e video'
-                    : 'Property Tours & Videos'}
+              {t('common.propertyTours')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
         </div>

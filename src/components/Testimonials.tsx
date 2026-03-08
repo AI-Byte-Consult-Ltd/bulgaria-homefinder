@@ -96,7 +96,7 @@ function getTestimonialText(t: any, lang: string) {
 }
 
 export const Testimonials = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
   const getText = getTestimonialText(null, lang);
 
@@ -104,12 +104,7 @@ export const Testimonials = () => {
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
-  const sectionTitle =
-    lang === 'bg' ? 'Какво казват нашите клиенти'
-    : lang === 'ru' ? 'Отзывы наших клиентов'
-    : lang === 'de' ? 'Was unsere Kunden sagen'
-    : lang === 'it' ? 'Cosa dicono i nostri clienti'
-    : 'What Our Clients Say';
+  const sectionTitle = t('common.whatClientsSay');
 
   return (
     <section className="py-20 bg-muted/30">
