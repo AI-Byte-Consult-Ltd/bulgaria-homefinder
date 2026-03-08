@@ -2090,7 +2090,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Равда, Бургас',
     locationDe: 'Ravda, Burgas',
     locationIt: 'Ravda, Burgas',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop'],
     type: 'apartment',
     transactionType: 'sale' as const,
     status: 'for-sale',
