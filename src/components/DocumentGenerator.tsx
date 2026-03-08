@@ -147,6 +147,7 @@ export const DocumentGenerator = () => {
   const [generatedDoc, setGeneratedDoc] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [paymentConfirmed, setPaymentConfirmed] = useState(false);
   const docRef = useRef<HTMLDivElement>(null);
 
   const handleGenerate = async () => {
