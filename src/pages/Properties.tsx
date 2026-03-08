@@ -303,6 +303,7 @@ const Properties = () => {
                     parkingSpots={property.parking_spots || property.parkingSpots}
                     yearBuilt={property.year_built || property.yearBuilt}
                     actSixteen={property.act_sixteen ?? property.actSixteen}
+                    virtualTourUrl={property.virtual_tour_url || property.virtualTourUrl}
                   />
                 ))}
               </div>
