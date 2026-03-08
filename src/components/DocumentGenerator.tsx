@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FileText, Send, Loader2, Download, CreditCard, Sparkles, RotateCcw } from 'lucide-react';
+import { FileText, Send, Loader2, Download, CreditCard, Sparkles, RotateCcw, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
