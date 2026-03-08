@@ -253,7 +253,7 @@ const Properties = () => {
           {/* Сетка объектов */}
           <div className={showFilters ? 'lg:col-span-3' : 'lg:col-span-4'}>
             {loading ? (
-              <p className="text-muted-foreground">Loading...</p>
+              <p className="text-muted-foreground">{t('common.loading')}</p>
             ) : properties.length === 0 ? (
               <p className="text-muted-foreground">
                 {t('common.noResults') || 'No properties found'}
