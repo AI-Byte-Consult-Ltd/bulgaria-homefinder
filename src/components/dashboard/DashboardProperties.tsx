@@ -83,8 +83,9 @@ export const DashboardProperties = () => {
             <div className="aspect-video bg-muted">
               <img
                 src={property.images[0]}
-                alt={property.title}
+                alt={`${property.title} — property listing in ${property.location}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           )}

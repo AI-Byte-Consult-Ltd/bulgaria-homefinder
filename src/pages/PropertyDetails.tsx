@@ -92,8 +92,9 @@ const PropertyDetails = () => {
                     <div className="aspect-[16/9] rounded-2xl overflow-hidden">
                       <img
                         src={image}
-                        alt={`${displayTitle} - ${index + 1}`}
+                        alt={`${displayTitle} — photo ${index + 1} of ${images.length}`}
                         className="w-full h-full object-cover"
+                        loading={index === 0 ? 'eager' : 'lazy'}
                       />
                     </div>
                   </CarouselItem>

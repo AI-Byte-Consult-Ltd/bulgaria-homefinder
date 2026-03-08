@@ -171,7 +171,8 @@ export const PropertyCard = ({
       <div className="relative aspect-[4/3] overflow-hidden shrink-0">
         <img
           src={image}
-          alt={displayTitle}
+          alt={`${displayTitle} — ${(property as any).type || 'property'} for ${(property as any).transactionType === 'rent' ? 'rent' : 'sale'} in ${(property as any).location}`}
+          loading="lazy"
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />

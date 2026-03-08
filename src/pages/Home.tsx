@@ -544,8 +544,9 @@ const Home = () => {
               <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
                 <img
                   src={video.thumbnail}
-                  alt={video.title}
+                  alt={`Video thumbnail: ${video.title}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">

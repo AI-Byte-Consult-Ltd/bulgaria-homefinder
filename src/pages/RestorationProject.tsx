@@ -123,8 +123,9 @@ const RestorationProject = () => {
                 <div className="aspect-video md:aspect-auto">
                   <img 
                     src={stage.image} 
-                    alt={stage.title}
+                    alt={`${project.title} restoration stage: ${stage.title}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <CardContent className="md:col-span-2 p-6 flex flex-col justify-center">
