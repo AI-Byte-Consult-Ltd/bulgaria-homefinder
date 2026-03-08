@@ -224,6 +224,10 @@ export const PropertyCard = ({
               {availableUnits} {lbl(UI.units, lang)}
             </Badge>
           )}
+
+          {hasVirtualTour(virtualTourUrl) && (
+            <VirtualTourBadge />
+          )}
         </div>
       </div>
 
