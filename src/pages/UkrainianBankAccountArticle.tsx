@@ -78,7 +78,7 @@ const UkrainianBankAccountArticle = () => {
   const t: Record<string, any> = {
     en: {
       back: 'Back to Home',
-      date: 'February 28, 2026',
+      date: 'March 7, 2026',
       readTime: 'Reading time: ~15 minutes',
       title:
         'How Ukrainian Citizens Can Open a Bank Account to Register a Company in Bulgaria in 2026',
