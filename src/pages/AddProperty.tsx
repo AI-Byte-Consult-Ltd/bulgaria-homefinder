@@ -56,7 +56,6 @@ const AddProperty = () => {
 
     const { error } = await supabase.from('properties').insert({
       title,
-      title_bg: titleBg,
       description,
       location,
       price: priceNum,
@@ -64,9 +63,10 @@ const AddProperty = () => {
       transaction_type: transactionType,
       bedrooms: bedroomsNum,
       bathrooms: bathroomsNum,
-      area: areaNum,
+      size_sqm: areaNum || null,
       year_built: yearBuiltNum,
       user_id: user.id,
+      status: 'published',
     });
 
     setLoading(false);
