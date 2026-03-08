@@ -137,7 +137,7 @@ const PropertyDetails = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                   <Button variant="outline" size="sm" className="gap-2">
                     <Heart className="h-4 w-4" />
                     {t('common.favorite')}
@@ -146,6 +146,13 @@ const PropertyDetails = () => {
                     <Share2 className="h-4 w-4" />
                     {t('common.share')}
                   </Button>
+
+                  {/* Virtual Tour button near gallery */}
+                  <VirtualTourButton
+                    virtualTourUrl={(property as any).virtualTourUrl}
+                    virtualTourType={(property as any).virtualTourType}
+                    propertyTitle={displayTitle}
+                  />
                 </div>
               </div>
 
