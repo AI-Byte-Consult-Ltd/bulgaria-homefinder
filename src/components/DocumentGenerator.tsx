@@ -14,18 +14,18 @@ const REVOLUT_LINK = 'https://checkout.revolut.com/payment-link/15ba2228-4452-4d
 
 const LABELS: Record<string, Record<string, string>> = {
   title: {
-    en: 'AI Document Generator',
-    ru: 'ИИ Генератор Документов',
-    bg: 'AI Генератор на Документи',
-    de: 'KI-Dokumentengenerator',
-    it: 'Generatore Documenti AI',
+    en: 'Legal Document Generator',
+    ru: 'Генератор Юридических Документов',
+    bg: 'Генератор на Юридически Документи',
+    de: 'Rechtsdokument-Generator',
+    it: 'Generatore di Documenti Legali',
   },
   subtitle: {
-    en: 'Describe what document you need — our AI will draft it for you in seconds',
-    ru: 'Опишите какой документ вам нужен — наш ИИ составит его за секунды',
-    bg: 'Опишете какъв документ ви трябва — нашият AI ще го изготви за секунди',
-    de: 'Beschreiben Sie, welches Dokument Sie benötigen — unsere KI erstellt es in Sekunden',
-    it: 'Descrivi il documento di cui hai bisogno — la nostra AI lo preparerà in pochi secondi',
+    en: 'Describe what document you need — we will draft it for you in minutes',
+    ru: 'Опишите какой документ вам нужен — мы составим его за несколько минут',
+    bg: 'Опишете какъв документ ви трябва — ще го изготвим за вас за няколко минути',
+    de: 'Beschreiben Sie, welches Dokument Sie benötigen — wir erstellen es für Sie in wenigen Minuten',
+    it: 'Descrivi il documento di cui hai bisogno — lo prepareremo per te in pochi minuti',
   },
   docType: {
     en: 'What document do you need?',
