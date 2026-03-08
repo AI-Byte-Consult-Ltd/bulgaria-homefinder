@@ -2,19 +2,22 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Home, Plus, Settings, FileText } from 'lucide-react';
+import { Home, Plus, Settings, FileText, FileCog } from 'lucide-react';
 import { DashboardProperties } from '@/components/dashboard/DashboardProperties';
 import { DashboardProfile } from '@/components/dashboard/DashboardProfile';
 import { DashboardProjects } from '@/components/dashboard/DashboardProjects';
+import { DashboardDocuments } from '@/components/dashboard/DashboardDocuments';
 import { toast } from 'sonner';
 
 const Dashboard = () => {
   const { t } = useTranslation();
   const { user, loading, signOut } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,6 +26,20 @@ const Dashboard = () => {
       navigate('/auth');
     }
   }, [user, loading, navigate, t]);
+
+  useEffect(() => {
+    if (user) {
+      supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', user.id)
+        .eq('role', 'admin')
+        .maybeSingle()
+        .then(({ data }) => {
+          setIsAdmin(!!data);
+        });
+    }
+  }, [user]);
 
   const handleSignOut = async () => {
     await signOut();
@@ -52,7 +69,7 @@ const Dashboard = () => {
           </div>
 
           <Tabs defaultValue="properties" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-3 lg:w-auto">
+            <TabsList className={`grid w-full lg:w-auto ${isAdmin ? 'grid-cols-4' : 'grid-cols-3'}`}>
               <TabsTrigger value="properties" className="flex items-center gap-2">
                 <Home className="h-4 w-4" />
                 {t('dashboard.properties')}
@@ -61,6 +78,12 @@ const Dashboard = () => {
                 <FileText className="h-4 w-4" />
                 {t('dashboard.projects')}
               </TabsTrigger>
+              {isAdmin && (
+                <TabsTrigger value="documents" className="flex items-center gap-2">
+                  <FileCog className="h-4 w-4" />
+                  Документы
+                </TabsTrigger>
+              )}
               <TabsTrigger value="profile" className="flex items-center gap-2">
                 <Settings className="h-4 w-4" />
                 {t('dashboard.profile')}
@@ -81,6 +104,12 @@ const Dashboard = () => {
             <TabsContent value="projects">
               <DashboardProjects />
             </TabsContent>
+
+            {isAdmin && (
+              <TabsContent value="documents">
+                <DashboardDocuments />
+              </TabsContent>
+            )}
 
             <TabsContent value="profile">
               <DashboardProfile />
