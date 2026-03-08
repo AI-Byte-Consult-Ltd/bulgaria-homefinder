@@ -2,13 +2,14 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { restorationProjects } from '@/data/restorationProjects';
+import { restorationProjects, l } from '@/data/restorationProjects';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, MapPin, User, Calendar, ArrowRight } from 'lucide-react';
 
 const RestorationProject = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.language || 'en').split('-')[0];
   const { id } = useParams<{ id: string }>();
   
   const project = restorationProjects.find(p => p.id === id);
@@ -29,6 +30,10 @@ const RestorationProject = () => {
       </div>
     );
   }
+
+  const title = l(project.title, lang);
+  const location = l(project.location, lang);
+  const description = l(project.description, lang);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -51,14 +56,14 @@ const RestorationProject = () => {
           <div className="space-y-6">
             <div>
               <Badge className="mb-4">{t('restoration.completedProject')}</Badge>
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">{project.title}</h1>
-              <p className="text-lg text-muted-foreground">{project.description}</p>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
+              <p className="text-lg text-muted-foreground">{description}</p>
             </div>
             
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>{project.location}</span>
+                <span>{location}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <User className="h-5 w-5 text-primary" />
@@ -74,7 +79,7 @@ const RestorationProject = () => {
           <div className="aspect-video rounded-xl overflow-hidden">
             <img 
               src={project.thumbnail} 
-              alt={project.title}
+              alt={title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -92,7 +97,7 @@ const RestorationProject = () => {
               <div className="grid gap-4">
                 {project.beforeImages.map((img, idx) => (
                   <div key={idx} className="aspect-video rounded-lg overflow-hidden">
-                    <img src={img} alt={`${project.title} before restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                    <img src={img} alt={`${title} before restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
               </div>
@@ -103,7 +108,7 @@ const RestorationProject = () => {
               <div className="grid gap-4">
                 {project.afterImages.map((img, idx) => (
                   <div key={idx} className="aspect-video rounded-lg overflow-hidden">
-                    <img src={img} alt={`${project.title} after restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                    <img src={img} alt={`${title} after restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
               </div>
@@ -123,7 +128,7 @@ const RestorationProject = () => {
                 <div className="aspect-video md:aspect-auto">
                   <img 
                     src={stage.image} 
-                    alt={`${project.title} restoration stage: ${stage.title}`}
+                    alt={`${title} restoration stage: ${l(stage.title, lang)}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -133,9 +138,9 @@ const RestorationProject = () => {
                     <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">
                       {index + 1}
                     </span>
-                    <h3 className="text-xl font-semibold">{stage.title}</h3>
+                    <h3 className="text-xl font-semibold">{l(stage.title, lang)}</h3>
                   </div>
-                  <p className="text-muted-foreground">{stage.description}</p>
+                  <p className="text-muted-foreground">{l(stage.description, lang)}</p>
                 </CardContent>
               </div>
             </Card>

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { restorationProjects } from '@/data/restorationProjects';
+import { restorationProjects, l } from '@/data/restorationProjects';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, ArrowRight } from 'lucide-react';
 
 export const RestorationShowcase = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.language || 'en').split('-')[0];
 
   return (
     <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
@@ -26,7 +27,7 @@ export const RestorationShowcase = () => {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.thumbnail}
-                    alt={`Restoration project: ${project.title} in ${project.location}`}
+                    alt={`Restoration project: ${l(project.title, lang)} in ${l(project.location, lang)}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -35,14 +36,14 @@ export const RestorationShowcase = () => {
                 </div>
                 <CardContent className="p-5">
                   <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                    {project.title}
+                    {l(project.title, lang)}
                   </h3>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                     <MapPin className="h-4 w-4" />
-                    <span>{project.location}</span>
+                    <span>{l(project.location, lang)}</span>
                   </div>
                   <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                    {project.description}
+                    {l(project.description, lang)}
                   </p>
                   <div className="flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
                     {t('restoration.viewProject')}
