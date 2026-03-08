@@ -69,8 +69,8 @@ export const regions: Region[] = [
   {
     slug: 'plovdiv',
     name: { en: 'Plovdiv', bg: 'Пловдив', ru: 'Пловдив', de: 'Plovdiv', it: 'Plovdiv' },
-    image: 'https://images.unsplash.com/photo-1601284749439-57d3ba508e2b?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1601284749439-57d3ba508e2b?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558551649-e44c8f992010?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1558551649-e44c8f992010?w=1600&h=900&fit=crop',
     propertyCount: 720,
     excerpt: {
       en: 'One of Europe\'s oldest cities, European Capital of Culture 2019, with a thriving arts scene.',
