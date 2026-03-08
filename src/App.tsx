@@ -77,6 +77,7 @@ const App = () => (
 
             {/* Regions */}
             <Route path="/regions/:slug" element={<RegionPage />} />
+            <Route path="/tools/rental-estimator" element={<RentalEstimator />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
