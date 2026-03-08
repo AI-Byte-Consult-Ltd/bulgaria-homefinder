@@ -153,8 +153,8 @@ export const regions: Region[] = [
   {
     slug: 'saint-vlas',
     name: { en: 'Saint Vlas', bg: 'Свети Влас', ru: 'Свети Влас', de: 'Sveti Vlas', it: 'Sveti Vlas' },
-    image: 'https://images.unsplash.com/photo-1540541338287-41700c307c07?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1540541338287-41700c307c07?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop',
     propertyCount: 480,
     excerpt: {
       en: 'An upscale coastal town with a luxury marina and stunning mountain-sea panoramas.',
