@@ -125,8 +125,8 @@ export const regions: Region[] = [
   {
     slug: 'sunny-beach',
     name: { en: 'Sunny Beach', bg: 'Слънчев бряг', ru: 'Солнечный Берег', de: 'Sonnenstrand', it: 'Sunny Beach' },
-    image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop',
     propertyCount: 2100,
     excerpt: {
       en: 'Bulgaria\'s largest and most popular seaside resort with 8 km of golden sandy beach.',
