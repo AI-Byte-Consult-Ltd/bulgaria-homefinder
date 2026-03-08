@@ -2318,7 +2318,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Созопол, Бургас',
     locationDe: 'Sozopol, Burgas',
     locationIt: 'Sozopol, Burgas',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop'],
     type: 'apartment',
     transactionType: 'sale' as const,
     status: 'for-sale',
