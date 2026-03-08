@@ -29,6 +29,8 @@ const LABELS: Record<string, Record<string, string>> = {
                    bg: 'Този тур не може да бъде вграден. Отворете в нов раздел.',
                    de: 'Dieser Rundgang kann nicht eingebettet werden. Öffnen Sie ihn in einem neuen Tab.',
                    it: 'Questo tour non può essere incorporato. Aprilo in una nuova scheda.' },
+  fullscreen:    { en: 'Fullscreen',         ru: 'Полный экран',         bg: 'Цял екран',         de: 'Vollbild',              it: 'Schermo intero'     },
+  close:         { en: 'Close',              ru: 'Закрыть',             bg: 'Затвори',           de: 'Schließen',             it: 'Chiudi'             },
 };
 
 const lbl = (key: string, lang: string) => LABELS[key]?.[lang] ?? LABELS[key]?.['en'] ?? key;
@@ -68,16 +70,15 @@ export const VirtualTourSection = ({
 }: VirtualTourSectionProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
-
-  const safeUrl = validateTourUrl(virtualTourUrl);
-  if (!safeUrl) return null;
-
-  const provider = virtualTourType ?? detectTourProvider(safeUrl);
-  const embedUrl = provider ? getEmbedUrl(safeUrl, provider) : null;
-  const canEmbed = embedUrl && isSafeToEmbed(embedUrl);
-
   const [showEmbed, setShowEmbed] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  const safeUrl = validateTourUrl(virtualTourUrl);
+  const provider = virtualTourType ?? detectTourProvider(safeUrl);
+  const embedUrl = provider && safeUrl ? getEmbedUrl(safeUrl, provider) : null;
+  const canEmbed = !!embedUrl && isSafeToEmbed(embedUrl);
+
+  if (!safeUrl) return null;
 
   return (
     <div className="space-y-4">
@@ -86,7 +87,6 @@ export const VirtualTourSection = ({
         {lbl('virtualTour', lang)}
       </h2>
 
-      {/* Preview / activate area */}
       {!showEmbed ? (
         <div className="relative rounded-xl border-2 border-dashed border-primary/20 bg-muted/30 flex flex-col items-center justify-center py-16 gap-4">
           <div className="p-4 rounded-full bg-primary/10">
@@ -102,7 +102,7 @@ export const VirtualTourSection = ({
                 </Button>
                 <Button variant="outline" onClick={() => setShowModal(true)} className="gap-2">
                   <Box className="h-4 w-4" />
-                  Fullscreen
+                  {lbl('fullscreen', lang)}
                 </Button>
               </>
             ) : (
@@ -123,27 +123,25 @@ export const VirtualTourSection = ({
       ) : (
         <div className="space-y-2">
           <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border bg-black">
-            {canEmbed && (
-              <iframe
-                src={embedUrl!}
-                title={propertyTitle ? `${lbl('virtualTour', lang)} — ${propertyTitle}` : lbl('virtualTour', lang)}
-                className="absolute inset-0 w-full h-full"
-                allowFullScreen
-                allow="xr-spatial-tracking; gyroscope; accelerometer"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              />
-            )}
+            <iframe
+              src={embedUrl!}
+              title={propertyTitle ? `${lbl('virtualTour', lang)} — ${propertyTitle}` : lbl('virtualTour', lang)}
+              className="absolute inset-0 w-full h-full"
+              allowFullScreen
+              allow="xr-spatial-tracking; gyroscope; accelerometer"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+            />
           </div>
 
           <div className="flex items-center justify-between">
             <Button variant="ghost" size="sm" onClick={() => setShowEmbed(false)}>
               <X className="h-4 w-4 mr-1" />
-              Close
+              {lbl('close', lang)}
             </Button>
             <div className="flex gap-2">
               <Button variant="outline" size="sm" onClick={() => setShowModal(true)}>
-                Fullscreen
+                {lbl('fullscreen', lang)}
               </Button>
               <a href={safeUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="gap-1">
@@ -156,7 +154,6 @@ export const VirtualTourSection = ({
         </div>
       )}
 
-      {/* Fullscreen modal */}
       {canEmbed && (
         <VirtualTourModal
           open={showModal}
@@ -184,23 +181,22 @@ export const VirtualTourButton = ({
 }: VirtualTourButtonProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
+  const [showModal, setShowModal] = useState(false);
 
   const safeUrl = validateTourUrl(virtualTourUrl);
-  if (!safeUrl) return null;
-
   const provider = virtualTourType ?? detectTourProvider(safeUrl);
-  const embedUrl = provider ? getEmbedUrl(safeUrl, provider) : null;
-  const canEmbed = embedUrl && isSafeToEmbed(embedUrl);
-
-  const [showModal, setShowModal] = useState(false);
+  const embedUrl = provider && safeUrl ? getEmbedUrl(safeUrl, provider) : null;
+  const canEmbed = !!embedUrl && isSafeToEmbed(embedUrl);
 
   const handleClick = useCallback(() => {
     if (canEmbed) {
       setShowModal(true);
-    } else {
+    } else if (safeUrl) {
       window.open(safeUrl, '_blank', 'noopener,noreferrer');
     }
   }, [canEmbed, safeUrl]);
+
+  if (!safeUrl) return null;
 
   return (
     <>
