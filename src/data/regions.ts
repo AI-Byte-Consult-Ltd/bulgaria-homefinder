@@ -41,8 +41,8 @@ export const regions: Region[] = [
   {
     slug: 'varna',
     name: { en: 'Varna', bg: 'Варна', ru: 'Варна', de: 'Varna', it: 'Varna' },
-    image: 'https://images.unsplash.com/photo-1596395463246-7c43a2a35945?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1596395463246-7c43a2a35945?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1600&h=900&fit=crop',
     propertyCount: 890,
     excerpt: {
       en: 'The maritime capital of Bulgaria, known as the "Pearl of the Black Sea".',
