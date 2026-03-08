@@ -120,7 +120,7 @@ export const PropertyCard = ({
   image, type, transactionType, featured, availableUnits, status,
   area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
   view, maintenanceFee, terraceArea, landArea, parkingSpots,
-  yearBuilt, actSixteen,
+  yearBuilt, actSixteen, virtualTourUrl,
 }: PropertyCardProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
