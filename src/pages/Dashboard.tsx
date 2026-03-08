@@ -69,7 +69,7 @@ const Dashboard = () => {
           </div>
 
           <Tabs defaultValue="properties" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-3 lg:w-auto">
+            <TabsList className={`grid w-full lg:w-auto ${isAdmin ? 'grid-cols-4' : 'grid-cols-3'}`}>
               <TabsTrigger value="properties" className="flex items-center gap-2">
                 <Home className="h-4 w-4" />
                 {t('dashboard.properties')}
@@ -78,6 +78,12 @@ const Dashboard = () => {
                 <FileText className="h-4 w-4" />
                 {t('dashboard.projects')}
               </TabsTrigger>
+              {isAdmin && (
+                <TabsTrigger value="documents" className="flex items-center gap-2">
+                  <FileCog className="h-4 w-4" />
+                  Документы
+                </TabsTrigger>
+              )}
               <TabsTrigger value="profile" className="flex items-center gap-2">
                 <Settings className="h-4 w-4" />
                 {t('dashboard.profile')}
