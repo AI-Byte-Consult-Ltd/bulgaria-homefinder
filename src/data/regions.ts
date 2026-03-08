@@ -13,8 +13,8 @@ export const regions: Region[] = [
   {
     slug: 'sofia',
     name: { en: 'Sofia', bg: 'София', ru: 'София', de: 'Sofia', it: 'Sofia' },
-    image: 'https://images.unsplash.com/photo-1563804951532-85e2d5e4dcf0?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1563804951532-85e2d5e4dcf0?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1555990538-1085d1e45e5f?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1555990538-1085d1e45e5f?w=1600&h=900&fit=crop',
     propertyCount: 1250,
     excerpt: {
       en: 'Bulgaria\'s capital and largest city, blending ancient history with modern urban living.',
@@ -41,8 +41,8 @@ export const regions: Region[] = [
   {
     slug: 'varna',
     name: { en: 'Varna', bg: 'Варна', ru: 'Варна', de: 'Varna', it: 'Varna' },
-    image: 'https://images.unsplash.com/photo-1592486958290-d6c14bda760d?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1592486958290-d6c14bda760d?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1596395463246-7c43a2a35945?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1596395463246-7c43a2a35945?w=1600&h=900&fit=crop',
     propertyCount: 890,
     excerpt: {
       en: 'The maritime capital of Bulgaria, known as the "Pearl of the Black Sea".',
@@ -69,8 +69,8 @@ export const regions: Region[] = [
   {
     slug: 'plovdiv',
     name: { en: 'Plovdiv', bg: 'Пловдив', ru: 'Пловдив', de: 'Plovdiv', it: 'Plovdiv' },
-    image: 'https://images.unsplash.com/photo-1601284749439-57d3ba508e2b?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1601284749439-57d3ba508e2b?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558551649-e44c8f992010?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1558551649-e44c8f992010?w=1600&h=900&fit=crop',
     propertyCount: 720,
     excerpt: {
       en: 'One of Europe\'s oldest cities, European Capital of Culture 2019, with a thriving arts scene.',
@@ -97,8 +97,8 @@ export const regions: Region[] = [
   {
     slug: 'burgas',
     name: { en: 'Burgas', bg: 'Бургас', ru: 'Бургас', de: 'Burgas', it: 'Burgas' },
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?w=1600&h=900&fit=crop',
     propertyCount: 650,
     excerpt: {
       en: 'Gateway to the southern Black Sea coast with beautiful beaches and lakeside parks.',
@@ -125,8 +125,8 @@ export const regions: Region[] = [
   {
     slug: 'sunny-beach',
     name: { en: 'Sunny Beach', bg: 'Слънчев бряг', ru: 'Солнечный Берег', de: 'Sonnenstrand', it: 'Sunny Beach' },
-    image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop',
     propertyCount: 2100,
     excerpt: {
       en: 'Bulgaria\'s largest and most popular seaside resort with 8 km of golden sandy beach.',
@@ -153,8 +153,8 @@ export const regions: Region[] = [
   {
     slug: 'saint-vlas',
     name: { en: 'Saint Vlas', bg: 'Свети Влас', ru: 'Свети Влас', de: 'Sveti Vlas', it: 'Sveti Vlas' },
-    image: 'https://images.unsplash.com/photo-1540541338287-41700c307c07?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1540541338287-41700c307c07?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop',
     propertyCount: 480,
     excerpt: {
       en: 'An upscale coastal town with a luxury marina and stunning mountain-sea panoramas.',
@@ -181,8 +181,8 @@ export const regions: Region[] = [
   {
     slug: 'nessebar',
     name: { en: 'Nessebar', bg: 'Несебър', ru: 'Несебр', de: 'Nessebar', it: 'Nessebar' },
-    image: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1600&h=900&fit=crop',
     propertyCount: 350,
     excerpt: {
       en: 'A UNESCO World Heritage Site with 3,000 years of history on a picturesque peninsula.',
@@ -209,8 +209,8 @@ export const regions: Region[] = [
   {
     slug: 'sozopol',
     name: { en: 'Sozopol', bg: 'Созопол', ru: 'Созопол', de: 'Sozopol', it: 'Sozopol' },
-    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1600&h=900&fit=crop',
     propertyCount: 280,
     excerpt: {
       en: 'A charming ancient fishing town with bohemian atmosphere and pristine beaches.',
@@ -237,8 +237,8 @@ export const regions: Region[] = [
   {
     slug: 'golden-sands',
     name: { en: 'Golden Sands', bg: 'Златни пясъци', ru: 'Золотые Пески', de: 'Goldstrand', it: 'Golden Sands' },
-    image: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1520942702018-0862200e6873?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1520942702018-0862200e6873?w=1600&h=900&fit=crop',
     propertyCount: 520,
     excerpt: {
       en: 'A premier beach resort near Varna with golden sandy beaches set within a nature park.',
@@ -265,8 +265,8 @@ export const regions: Region[] = [
   {
     slug: 'bansko',
     name: { en: 'Bansko', bg: 'Банско', ru: 'Банско', de: 'Bansko', it: 'Bansko' },
-    image: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1600&h=900&fit=crop',
     propertyCount: 680,
     excerpt: {
       en: 'Bulgaria\'s premier ski resort at the foot of the Pirin Mountains, popular year-round.',
@@ -293,8 +293,8 @@ export const regions: Region[] = [
   {
     slug: 'pamporovo',
     name: { en: 'Pamporovo', bg: 'Пампорово', ru: 'Пампорово', de: 'Pamporovo', it: 'Pamporovo' },
-    image: 'https://images.unsplash.com/photo-1486495939893-f5c13229950a?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1486495939893-f5c13229950a?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=1600&h=900&fit=crop',
     propertyCount: 220,
     excerpt: {
       en: 'A family-friendly ski resort in the Rhodope Mountains with the sunniest slopes in Bulgaria.',
@@ -321,8 +321,8 @@ export const regions: Region[] = [
   {
     slug: 'vitosha',
     name: { en: 'Vitosha', bg: 'Витоша', ru: 'Витоша', de: 'Vitosha', it: 'Vitosha' },
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1600&h=900&fit=crop',
     propertyCount: 180,
     excerpt: {
       en: 'Sofia\'s mountain retreat offering skiing, hiking, and luxury properties with city views.',
