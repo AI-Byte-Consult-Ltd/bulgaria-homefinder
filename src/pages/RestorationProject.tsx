@@ -103,7 +103,7 @@ const RestorationProject = () => {
               <div className="grid gap-4">
                 {project.afterImages.map((img, idx) => (
                   <div key={idx} className="aspect-video rounded-lg overflow-hidden">
-                    <img src={img} alt={`After ${idx + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`${project.title} after restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
               </div>
