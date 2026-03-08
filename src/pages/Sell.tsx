@@ -64,6 +64,11 @@ const Sell = () => {
     } else {
       setSubmitted(true);
       toast.success(t('sell.submitSuccess', 'Your property submission has been received!'));
+
+      // Send email notification (fire-and-forget)
+      supabase.functions.invoke('send-sell-notification', {
+        body: { name, email, phone, location, propertyType, priceExpectation, areaSqm, bedrooms, description },
+      }).catch((err) => console.error('Email notification error:', err));
     }
   };
 
