@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { mockProperties } from '@/data/mockProperties';
 import { RichText } from '@/components/RichText';
+import { VirtualTourButton, VirtualTourSection } from '@/components/VirtualTour';
+import { hasVirtualTour } from '@/lib/virtualTour';
 import {
   MapPin,
   Bed,
@@ -135,7 +137,7 @@ const PropertyDetails = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                   <Button variant="outline" size="sm" className="gap-2">
                     <Heart className="h-4 w-4" />
                     {t('common.favorite')}
@@ -144,6 +146,13 @@ const PropertyDetails = () => {
                     <Share2 className="h-4 w-4" />
                     {t('common.share')}
                   </Button>
+
+                  {/* Virtual Tour button near gallery */}
+                  <VirtualTourButton
+                    virtualTourUrl={(property as any).virtualTourUrl}
+                    virtualTourType={(property as any).virtualTourType}
+                    propertyTitle={displayTitle}
+                  />
                 </div>
               </div>
 
@@ -235,6 +244,18 @@ const PropertyDetails = () => {
                   </p>
                 )}
               </div>
+
+              {/* Virtual Tour Section */}
+              {hasVirtualTour((property as any).virtualTourUrl) && (
+                <>
+                  <Separator />
+                  <VirtualTourSection
+                    virtualTourUrl={(property as any).virtualTourUrl}
+                    virtualTourType={(property as any).virtualTourType}
+                    propertyTitle={displayTitle}
+                  />
+                </>
+              )}
             </div>
 
             {/* Contact Card */}

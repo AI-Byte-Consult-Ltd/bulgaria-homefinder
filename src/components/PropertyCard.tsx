@@ -5,6 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { RichText } from '@/components/RichText';
+import { VirtualTourBadge } from '@/components/VirtualTour';
+import { hasVirtualTour } from '@/lib/virtualTour';
 import {
   Heart, MapPin, Bed, Bath, Maximize, Building,
   Eye, Layers, Wrench, Trees, Car, Sofa, Landmark,
@@ -64,6 +66,9 @@ interface PropertyCardProps {
   status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved';
   yearBuilt?: number;
   actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
+
+  // Virtual Tour
+  virtualTourUrl?: string | null;
 }
 
 // ─── i18n label maps ────────────────────────────────────────────────────────
@@ -115,7 +120,7 @@ export const PropertyCard = ({
   image, type, transactionType, featured, availableUnits, status,
   area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
   view, maintenanceFee, terraceArea, landArea, parkingSpots,
-  yearBuilt, actSixteen,
+  yearBuilt, actSixteen, virtualTourUrl,
 }: PropertyCardProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
@@ -218,6 +223,10 @@ export const PropertyCard = ({
               <Building className="h-3 w-3 mr-1" />
               {availableUnits} {lbl(UI.units, lang)}
             </Badge>
+          )}
+
+          {hasVirtualTour(virtualTourUrl) && (
+            <VirtualTourBadge />
           )}
         </div>
       </div>
