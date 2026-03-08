@@ -22,7 +22,7 @@ const Home = () => {
   const lang = (i18n.language || 'en').split('-')[0];
 
   const featuredProperties = mockProperties.filter((p) => p.featured);
-  const newestProperties = mockProperties.slice(0, 3);
+  const newestProperties = [...mockProperties].reverse();
 
   // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
