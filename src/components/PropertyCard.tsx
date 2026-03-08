@@ -218,12 +218,12 @@ export const PropertyCard = ({
             </Badge>
           )}
 
-          {availableUnits !== undefined && availableUnits > 0 && (
-            <Badge variant="secondary" className="bg-background/90 text-xs">
-              <Building className="h-3 w-3 mr-1" />
-              {availableUnits} {lbl(UI.units, lang)}
-            </Badge>
-          )}
+           {availableUnits !== undefined && availableUnits > 0 && (
+             <Badge variant="secondary" className="bg-background/90 text-xs text-black">
+               <Building className="h-3 w-3 mr-1" />
+               {availableUnits} {lbl(UI.units, lang)}
+             </Badge>
+           )}
 
           {hasVirtualTour(virtualTourUrl) && (
             <VirtualTourBadge />
