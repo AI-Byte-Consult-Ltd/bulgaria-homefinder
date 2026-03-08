@@ -1,3 +1,19 @@
+import rhodopeBefore1 from '@/assets/restoration/rhodope-before-1.jpg';
+import rhodopeAfter1 from '@/assets/restoration/rhodope-after-1.jpg';
+import rhodopeStage1 from '@/assets/restoration/rhodope-stage-1.jpg';
+import rhodopeStage2 from '@/assets/restoration/rhodope-stage-2.jpg';
+import rhodopeStage3 from '@/assets/restoration/rhodope-stage-3.jpg';
+
+import koprivshtitsaBefore1 from '@/assets/restoration/koprivshtitsa-before-1.jpg';
+import koprivshtitsaAfter1 from '@/assets/restoration/koprivshtitsa-after-1.jpg';
+import koprivshtitsaStage1 from '@/assets/restoration/koprivshtitsa-stage-1.jpg';
+import koprivshtitsaStage2 from '@/assets/restoration/koprivshtitsa-stage-2.jpg';
+
+import balkanBefore1 from '@/assets/restoration/balkan-before-1.jpg';
+import balkanAfter1 from '@/assets/restoration/balkan-after-1.jpg';
+import balkanStage1 from '@/assets/restoration/balkan-stage-1.jpg';
+import balkanStage2 from '@/assets/restoration/balkan-stage-2.jpg';
+
 export interface RestorationProject {
   id: string;
   title: string;
@@ -17,119 +33,76 @@ export interface RestorationProject {
 
 export const restorationProjects: RestorationProject[] = [
   {
-    id: 'villa-varna',
-    title: 'Historic Villa Restoration in Varna',
-    location: 'Varna, Bulgaria',
-    architect: 'Arch. Petar Dimitrov',
-    year: '2023',
-    description: 'Complete restoration of a 1920s Art Deco villa overlooking the Black Sea. The project preserved original architectural details while modernizing infrastructure and interiors.',
-    thumbnail: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80',
-    beforeImages: [
-      'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80',
-      'https://images.unsplash.com/photo-1597211833712-5e41faa202ea?w=800&q=80',
-    ],
-    afterImages: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-    ],
+    id: 'rhodope-stone-house',
+    title: 'Traditional Rhodope Stone House Revival',
+    location: 'Shiroka Laka, Rhodope Mountains',
+    architect: 'NIC\'s Renovation Team',
+    year: '2024',
+    description: 'Full restoration of a 19th-century Rhodope stone house in the picturesque village of Shiroka Laka. The original stone masonry, traditional wooden balcony and clay tile roof were carefully restored while adding modern insulation, plumbing and underfloor heating. The house now serves as a family retreat with 3 bedrooms and panoramic mountain views.',
+    thumbnail: rhodopeAfter1,
+    beforeImages: [rhodopeBefore1],
+    afterImages: [rhodopeAfter1],
     stages: [
-      {
-        title: 'Initial Assessment',
-        description: 'Complete structural analysis and historical documentation of the original building.',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
-      },
-      {
-        title: 'Foundation & Structural Work',
-        description: 'Reinforcement of foundations and structural elements while preserving original walls.',
-        image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80',
-      },
-      {
-        title: 'Roof Restoration',
-        description: 'Traditional clay tile roof restored with modern insulation underneath.',
-        image: 'https://images.unsplash.com/photo-1632759145354-523c3e9ee141?w=600&q=80',
-      },
-      {
-        title: 'Interior Finishing',
-        description: 'Original wood floors refinished, period-appropriate fixtures installed.',
-        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80',
-      },
-    ],
-  },
-  {
-    id: 'rural-house-plovdiv',
-    title: 'Traditional Rural House Revival',
-    location: 'Plovdiv Region, Bulgaria',
-    architect: 'Arch. Maria Ivanova',
-    year: '2022',
-    description: 'A 150-year-old traditional Bulgarian house transformed into a modern family home while maintaining its authentic character and cultural heritage.',
-    thumbnail: 'https://ipfs.io/ipfs/bafkreiaw2u2vw5thjf7yyy7pxo3gk77xb5mkrogp344uaw2zhtfx5v5aea',
-    beforeImages: [
-      'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80',
-      'https://images.unsplash.com/photo-1590725140246-20acddc35fce?w=800&q=80',
-    ],
-    afterImages: [
-      'https://ipfs.io/ipfs/bafkreiaw2u2vw5thjf7yyy7pxo3gk77xb5mkrogp344uaw2zhtfx5v5aea',
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
-    ],
-    stages: [
-      {
-        title: 'Heritage Documentation',
-        description: 'Detailed photography and measurement of original elements for preservation.',
-        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
-      },
       {
         title: 'Stone Wall Restoration',
-        description: 'Traditional stone masonry repaired using authentic techniques.',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+        description: 'Local stonemasons rebuilt crumbling sections using authentic Rhodope stone and traditional lime mortar techniques. Each stone was hand-selected to match the original pattern.',
+        image: rhodopeStage1,
       },
       {
-        title: 'Wooden Elements',
-        description: 'Hand-carved wooden details restored by local craftsmen.',
-        image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80',
+        title: 'Roof & Timber Replacement',
+        description: 'The collapsed roof was entirely rebuilt with new oak beams and traditional clay tiles. Modern waterproofing membrane was added beneath the tiles for long-term durability.',
+        image: rhodopeStage2,
       },
       {
-        title: 'Modern Amenities',
-        description: 'Integration of modern heating, plumbing, and electrical systems.',
-        image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80',
+        title: 'Interior Modernisation',
+        description: 'New oak plank floors, white lime-plastered walls and restored ceiling beams. A fully equipped modern kitchen was installed while preserving the traditional Bulgarian aesthetic.',
+        image: rhodopeStage3,
       },
     ],
   },
   {
-    id: 'apartment-sofia',
-    title: 'Sofia Art Nouveau Apartment',
-    location: 'Sofia, Bulgaria',
-    architect: 'Arch. Georgi Petkov',
-    year: '2024',
-    description: 'Luxury apartment renovation in a 1905 Art Nouveau building in central Sofia. Original stucco work and ceiling paintings carefully restored.',
-    thumbnail: 'https://ipfs.io/ipfs/bafkreiaihrshklkpevr3ays72dpnmxrunrx4pmicpw5wxv2z5cfzfwwxxy',
-    beforeImages: [
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80',
-      'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80',
-    ],
-    afterImages: [
-      'https://ipfs.io/ipfs/bafkreiaihrshklkpevr3ays72dpnmxrunrx4pmicpw5wxv2z5cfzfwwxxy',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
-    ],
+    id: 'koprivshtitsa-revival-house',
+    title: 'Bulgarian Revival House Restoration',
+    location: 'Koprivshtitsa, Sofia Province',
+    architect: 'NIC\'s Renovation Team',
+    year: '2025',
+    description: 'Meticulous restoration of a Bulgarian Revival-era house in the historic town of Koprivshtitsa. The project focused on preserving the ornate hand-carved wooden bay windows (erker), restoring original wall frescoes and the colourful painted facade — a hallmark of the National Revival period. The building is now a fully functioning guesthouse.',
+    thumbnail: koprivshtitsaAfter1,
+    beforeImages: [koprivshtitsaBefore1],
+    afterImages: [koprivshtitsaAfter1],
     stages: [
       {
-        title: 'Art Survey',
-        description: 'Expert analysis of original ceiling paintings and decorative elements.',
-        image: 'https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=600&q=80',
+        title: 'Woodwork & Erker Restoration',
+        description: 'Master woodcarvers painstakingly restored the ornate bay-window panels and decorative facade elements using traditional hand tools and aged walnut timber.',
+        image: koprivshtitsaStage1,
       },
       {
-        title: 'Stucco Restoration',
-        description: 'Painstaking repair of ornate plasterwork by specialized artisans.',
-        image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80',
+        title: 'Fresco & Facade Painting',
+        description: 'Art conservators cleaned and repainted the traditional floral wall frescoes using period-correct natural pigments bound in lime wash.',
+        image: koprivshtitsaStage2,
+      },
+    ],
+  },
+  {
+    id: 'balkan-village-house',
+    title: 'Rural Village House Transformation',
+    location: 'Teteven, Stara Planina',
+    architect: 'NIC\'s Renovation Team',
+    year: '2025',
+    description: 'Complete transformation of a derelict single-storey village house at the foot of the Balkan Mountains near Teteven. The collapsed roof and crumbling walls were rebuilt from the foundations up. New wooden shutters, a garden with traditional wooden fence and a modern interior make this an ideal countryside retreat — purchased for under €10,000 and renovated on a budget.',
+    thumbnail: balkanAfter1,
+    beforeImages: [balkanBefore1],
+    afterImages: [balkanAfter1],
+    stages: [
+      {
+        title: 'Foundation Reinforcement',
+        description: 'The original river-stone foundation was excavated, repaired and reinforced with a concrete ring beam to ensure structural stability for decades to come.',
+        image: balkanStage1,
       },
       {
-        title: 'Painting Conservation',
-        description: 'Professional cleaning and restoration of historic ceiling frescoes.',
-        image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80',
-      },
-      {
-        title: 'Luxury Finishing',
-        description: 'High-end finishes and custom millwork to complement historic details.',
-        image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80',
+        title: 'Veranda & Woodwork',
+        description: 'A new traditional-style wooden veranda and balcony were constructed using locally sourced pine, adding character and extra living space.',
+        image: balkanStage2,
       },
     ],
   },
