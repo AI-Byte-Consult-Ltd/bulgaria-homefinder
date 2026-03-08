@@ -1976,7 +1976,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Орлинци, Болгария',
     locationDe: 'Orlintsi, Bulgarien',
     locationIt: 'Orlintsi, Bulgaria',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop'],
     type: 'house',
     transactionType: 'sale' as const,
     status: 'for-sale',
