@@ -34,7 +34,10 @@
     "propertyTours": "Immobilien-Touren & Videos",
     "meetFounders": "Lernen Sie die Gründer kennen",
     "foundersSubtitle": "Die Visionäre hinter AI Byte Consult Ltd.",
-    "whatClientsSay": "Was unsere Kunden sagen"
+    "whatClientsSay": "Was unsere Kunden sagen",
+    "viewAll": "Alle anzeigen",
+    "any": "Beliebig",
+    "loading": "Laden..."
   },
   "nav": {
     "home": "Startseite",

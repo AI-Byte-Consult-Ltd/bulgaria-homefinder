@@ -34,7 +34,10 @@
     "propertyTours": "Видео обиколки и турове",
     "meetFounders": "Запознайте се с основателите",
     "foundersSubtitle": "Визионерите зад AI Byte Consult Ltd.",
-    "whatClientsSay": "Какво казват нашите клиенти"
+    "whatClientsSay": "Какво казват нашите клиенти",
+    "viewAll": "Виж всички",
+    "any": "Всички",
+    "loading": "Зареждане..."
   },
   "nav": {
     "home": "Начало",

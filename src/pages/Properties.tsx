@@ -127,7 +127,7 @@ const Properties = () => {
             </h1>
             <p className="text-muted-foreground">
               {loading
-                ? 'Loading...'
+                ? t('common.loading')
                 : `${properties.length} ${t('common.results')?.toLowerCase() || 'results'}`}
             </p>
           </div>
@@ -219,7 +219,7 @@ const Properties = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="any">Any</SelectItem>
+                      <SelectItem value="any">{t('common.any')}</SelectItem>
                       <SelectItem value="1">1+</SelectItem>
                       <SelectItem value="2">2+</SelectItem>
                       <SelectItem value="3">3+</SelectItem>
@@ -235,7 +235,7 @@ const Properties = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="any">Any</SelectItem>
+                      <SelectItem value="any">{t('common.any')}</SelectItem>
                       <SelectItem value="1">1+</SelectItem>
                       <SelectItem value="2">2+</SelectItem>
                       <SelectItem value="3">3+</SelectItem>
@@ -253,7 +253,7 @@ const Properties = () => {
           {/* Сетка объектов */}
           <div className={showFilters ? 'lg:col-span-3' : 'lg:col-span-4'}>
             {loading ? (
-              <p className="text-muted-foreground">Loading...</p>
+              <p className="text-muted-foreground">{t('common.loading')}</p>
             ) : properties.length === 0 ? (
               <p className="text-muted-foreground">
                 {t('common.noResults') || 'No properties found'}
