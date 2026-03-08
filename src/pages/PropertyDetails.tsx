@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { mockProperties } from '@/data/mockProperties';
 import { RichText } from '@/components/RichText';
+import { VirtualTourButton, VirtualTourSection } from '@/components/VirtualTour';
+import { hasVirtualTour } from '@/lib/virtualTour';
 import {
   MapPin,
   Bed,
