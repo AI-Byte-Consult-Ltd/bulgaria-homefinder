@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -35,11 +36,18 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { documentType, userDetails, additionalInfo, language } = await req.json();
+    const { documentType, userDetails, additionalInfo, language, userEmail } = await req.json();
 
     if (!documentType) {
       return new Response(
         JSON.stringify({ error: "Document type is required" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if (!userEmail) {
+      return new Response(
+        JSON.stringify({ error: "Email is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -73,7 +81,7 @@ Please generate a complete, professional document ready for review.`;
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: userPrompt },
         ],
-        stream: true,
+        stream: false,
       }),
     });
 
@@ -95,9 +103,64 @@ Please generate a complete, professional document ready for review.`;
       });
     }
 
-    return new Response(response.body, {
-      headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
-    });
+    const data = await response.json();
+    const generatedContent = data.choices?.[0]?.message?.content || "";
+
+    // Save to database
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    const { error: dbError } = await supabase
+      .from("document_generations")
+      .insert({
+        document_type: documentType,
+        user_email: userEmail,
+        user_details: userDetails || null,
+        additional_info: additionalInfo || null,
+        language: language || "en",
+        generated_content: generatedContent,
+        payment_status: "pending",
+      });
+
+    if (dbError) {
+      console.error("DB insert error:", dbError);
+    }
+
+    // Notify admin about new document generation
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    if (resendApiKey) {
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${resendApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "NICS Estate Docs <noreply@aibyteconsult.com>",
+            to: ["info@aibyteconsult.com"],
+            subject: `New Document Generation: ${documentType} — ${userEmail}`,
+            html: `
+              <h2>New Document Generated</h2>
+              <p><strong>Document Type:</strong> ${documentType}</p>
+              <p><strong>User Email:</strong> ${userEmail}</p>
+              <p><strong>Language:</strong> ${language || "en"}</p>
+              <p><strong>Payment Status:</strong> Pending</p>
+              <hr/>
+              <p>Log in to the admin dashboard to review and send the document after payment confirmation.</p>
+            `,
+          }),
+        });
+      } catch (emailErr) {
+        console.error("Admin notification email error:", emailErr);
+      }
+    }
+
+    return new Response(
+      JSON.stringify({ success: true }),
+      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
   } catch (e) {
     console.error("generate-document error:", e);
     return new Response(JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }), {

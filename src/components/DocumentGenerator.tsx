@@ -1,13 +1,12 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FileText, Send, Loader2, Download, CreditCard, Sparkles, RotateCcw, CheckCircle } from 'lucide-react';
+import { FileText, Loader2, CreditCard, Sparkles, RotateCcw, CheckCircle, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
 
 const GENERATE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/generate-document`;
@@ -41,6 +40,20 @@ const LABELS: Record<string, Record<string, string>> = {
     bg: 'напр. Договор за наем, Пълномощно, Бизнес писмо...',
     de: 'z.B. Mietvertrag, Vollmacht, Geschäftsbrief...',
     it: 'es. Contratto di locazione, Procura, Lettera commerciale...',
+  },
+  email: {
+    en: 'Your email *',
+    ru: 'Ваш email *',
+    bg: 'Вашият email *',
+    de: 'Ihre E-Mail *',
+    it: 'La tua email *',
+  },
+  emailPlaceholder: {
+    en: 'We will send the document to this email after payment',
+    ru: 'Мы отправим документ на этот email после оплаты',
+    bg: 'Ще изпратим документа на този email след плащане',
+    de: 'Wir senden das Dokument nach Zahlung an diese E-Mail',
+    it: 'Invieremo il documento a questa email dopo il pagamento',
   },
   yourDetails: {
     en: 'Your details (name, address, etc.)',
@@ -78,11 +91,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Genera documento',
   },
   generating: {
-    en: 'Generating...',
-    ru: 'Генерация...',
-    bg: 'Генериране...',
-    de: 'Wird generiert...',
-    it: 'Generazione...',
+    en: 'Generating your document...',
+    ru: 'Генерируем ваш документ...',
+    bg: 'Генерираме вашия документ...',
+    de: 'Ihr Dokument wird generiert...',
+    it: 'Generazione del documento...',
   },
   price: {
     en: '€25 per generation',
@@ -91,19 +104,19 @@ const LABELS: Record<string, Record<string, string>> = {
     de: '€25 pro Generierung',
     it: '€25 per generazione',
   },
-  payTitle: {
-    en: 'Pay for Document Generation',
-    ru: 'Оплата генерации документа',
-    bg: 'Заплащане за генерация на документ',
-    de: 'Zahlung für Dokumentengenerierung',
-    it: 'Pagamento per generazione documento',
+  successTitle: {
+    en: 'Document Generated Successfully!',
+    ru: 'Документ успешно сгенерирован!',
+    bg: 'Документът е генериран успешно!',
+    de: 'Dokument erfolgreich erstellt!',
+    it: 'Documento generato con successo!',
   },
-  payDesc: {
-    en: 'Your document has been generated successfully! Complete the payment of €25 via Revolut to access your document.',
-    ru: 'Ваш документ успешно сгенерирован! Завершите оплату €25 через Revolut, чтобы получить доступ к документу.',
-    bg: 'Вашият документ е генериран успешно! Завършете плащането от €25 чрез Revolut, за да получите достъп до документа.',
-    de: 'Ihr Dokument wurde erfolgreich erstellt! Schließen Sie die Zahlung von €25 über Revolut ab, um Zugriff auf Ihr Dokument zu erhalten.',
-    it: 'Il tuo documento è stato generato con successo! Completa il pagamento di €25 tramite Revolut per accedere al documento.',
+  successDesc: {
+    en: 'Complete the payment of €25 via the link below. After we confirm your payment, the document will be sent to your email.',
+    ru: 'Оплатите €25 по ссылке ниже. После подтверждения оплаты документ будет отправлен на ваш email.',
+    bg: 'Завършете плащането от €25 чрез линка по-долу. След потвърждение на плащането, документът ще бъде изпратен на вашия email.',
+    de: 'Schließen Sie die Zahlung von €25 über den Link ab. Nach Bestätigung der Zahlung wird das Dokument an Ihre E-Mail gesendet.',
+    it: 'Completa il pagamento di €25 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
   },
   payButton: {
     en: 'Pay €25 via Revolut',
@@ -112,19 +125,12 @@ const LABELS: Record<string, Record<string, string>> = {
     de: '€25 über Revolut zahlen',
     it: 'Paga €25 tramite Revolut',
   },
-  paidConfirm: {
-    en: 'I have paid — show my document',
-    ru: 'Я оплатил — показать документ',
-    bg: 'Платих — покажи документа',
-    de: 'Ich habe bezahlt — Dokument anzeigen',
-    it: 'Ho pagato — mostra il documento',
-  },
-  copyDoc: {
-    en: 'Copy Document',
-    ru: 'Скопировать документ',
-    bg: 'Копирай документ',
-    de: 'Dokument kopieren',
-    it: 'Copia documento',
+  emailSentTo: {
+    en: 'Document will be sent to:',
+    ru: 'Документ будет отправлен на:',
+    bg: 'Документът ще бъде изпратен на:',
+    de: 'Dokument wird gesendet an:',
+    it: 'Il documento verrà inviato a:',
   },
   newDoc: {
     en: 'Generate Another',
@@ -142,23 +148,24 @@ export const DocumentGenerator = () => {
   const lang = (i18n.language || 'en').split('-')[0];
 
   const [documentType, setDocumentType] = useState('');
+  const [userEmail, setUserEmail] = useState('');
   const [userDetails, setUserDetails] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
-  const [generatedDoc, setGeneratedDoc] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [showPayment, setShowPayment] = useState(false);
-  const [paymentConfirmed, setPaymentConfirmed] = useState(false);
-  const docRef = useRef<HTMLDivElement>(null);
+  const [isComplete, setIsComplete] = useState(false);
 
   const handleGenerate = async () => {
     if (!documentType.trim()) {
       toast.error('Please specify the document type');
       return;
     }
+    if (!userEmail.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
 
     setIsGenerating(true);
-    setGeneratedDoc('');
-    setShowPayment(false);
+    setIsComplete(false);
 
     try {
       const resp = await fetch(GENERATE_URL, {
@@ -172,62 +179,28 @@ export const DocumentGenerator = () => {
           userDetails,
           additionalInfo,
           language: lang,
+          userEmail,
         }),
       });
 
-      if (!resp.ok || !resp.body) {
+      if (!resp.ok) {
         const err = await resp.json().catch(() => ({}));
         throw new Error(err.error || 'Failed to generate');
       }
 
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = '';
-      let docSoFar = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-
-        let idx: number;
-        while ((idx = buffer.indexOf('\n')) !== -1) {
-          let line = buffer.slice(0, idx);
-          buffer = buffer.slice(idx + 1);
-          if (line.endsWith('\r')) line = line.slice(0, -1);
-          if (!line.startsWith('data: ')) continue;
-          const jsonStr = line.slice(6).trim();
-          if (jsonStr === '[DONE]') break;
-          try {
-            const parsed = JSON.parse(jsonStr);
-            const content = parsed.choices?.[0]?.delta?.content;
-            if (content) {
-              docSoFar += content;
-              setGeneratedDoc(docSoFar);
-            }
-          } catch { /* partial */ }
-        }
-      }
-
-      setShowPayment(true);
-      setIsGenerating(false);
+      setIsComplete(true);
     } catch (e) {
       console.error(e);
       toast.error(e instanceof Error ? e.message : 'Generation failed');
+    } finally {
       setIsGenerating(false);
     }
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedDoc);
-    toast.success('Document copied to clipboard');
-  };
-
   const handleReset = () => {
-    setGeneratedDoc('');
-    setShowPayment(false);
-    setPaymentConfirmed(false);
+    setIsComplete(false);
     setDocumentType('');
+    setUserEmail('');
     setUserDetails('');
     setAdditionalInfo('');
   };
@@ -245,7 +218,8 @@ export const DocumentGenerator = () => {
           <p className="text-sm text-primary font-semibold mt-2">{lbl('price', lang)}</p>
         </div>
 
-        {!generatedDoc && !isGenerating ? (
+        {/* Form */}
+        {!isGenerating && !isComplete && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
@@ -264,6 +238,17 @@ export const DocumentGenerator = () => {
                     value={documentType}
                     onChange={(e) => setDocumentType(e.target.value)}
                     placeholder={lbl('docTypePlaceholder', lang)}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <Label>{lbl('email', lang)}</Label>
+                  <Input
+                    type="email"
+                    value={userEmail}
+                    onChange={(e) => setUserEmail(e.target.value)}
+                    placeholder={lbl('emailPlaceholder', lang)}
                     required
                   />
                 </div>
@@ -295,76 +280,54 @@ export const DocumentGenerator = () => {
               </form>
             </CardContent>
           </Card>
-        ) : (
-          <div className="space-y-4">
-            {/* Generating indicator */}
-            {isGenerating && (
-              <Card>
-                <CardContent className="pt-6 text-center space-y-3">
-                  <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />
-                  <p className="text-sm text-muted-foreground">{lbl('generating', lang)}</p>
-                </CardContent>
-              </Card>
-            )}
+        )}
 
-            {/* Payment gate — show after generation, before revealing doc */}
-            {showPayment && !paymentConfirmed && (
-              <Card className="border-primary/30 bg-primary/5">
-                <CardContent className="pt-6 space-y-4">
-                  <div className="text-center space-y-2">
-                    <CreditCard className="h-10 w-10 text-primary mx-auto" />
-                    <h3 className="font-bold text-xl">{lbl('payTitle', lang)}</h3>
-                    <p className="text-sm text-muted-foreground max-w-md mx-auto">{lbl('payDesc', lang)}</p>
-                  </div>
+        {/* Generating indicator */}
+        {isGenerating && (
+          <Card>
+            <CardContent className="pt-6 text-center space-y-3">
+              <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />
+              <p className="text-sm text-muted-foreground">{lbl('generating', lang)}</p>
+            </CardContent>
+          </Card>
+        )}
 
-                  <div className="flex flex-col gap-3 max-w-sm mx-auto">
-                    <Button asChild className="gap-2" size="lg">
-                      <a href={REVOLUT_LINK} target="_blank" rel="noopener noreferrer">
-                        <CreditCard className="h-4 w-4" />
-                        {lbl('payButton', lang)}
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      onClick={() => setPaymentConfirmed(true)}
-                      className="gap-2"
-                      size="lg"
-                    >
-                      <CheckCircle className="h-4 w-4" />
-                      {lbl('paidConfirm', lang)}
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
+        {/* Success + Payment */}
+        {isComplete && (
+          <Card className="border-primary/30 bg-primary/5">
+            <CardContent className="pt-6 space-y-5">
+              <div className="text-center space-y-3">
+                <CheckCircle className="h-12 w-12 text-green-500 mx-auto" />
+                <h3 className="font-bold text-xl">{lbl('successTitle', lang)}</h3>
+                <p className="text-sm text-muted-foreground max-w-md mx-auto">
+                  {lbl('successDesc', lang)}
+                </p>
+              </div>
 
-            {/* Document revealed after payment confirmation */}
-            {paymentConfirmed && (
-              <>
-                <Card>
-                  <CardContent className="pt-6">
-                    <div
-                      ref={docRef}
-                      className="prose prose-sm max-w-none dark:prose-invert min-h-[200px]"
-                    >
-                      <ReactMarkdown>{generatedDoc}</ReactMarkdown>
-                    </div>
-                  </CardContent>
-                </Card>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <span>{lbl('emailSentTo', lang)}</span>
+                <strong className="text-foreground">{userEmail}</strong>
+              </div>
 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button variant="outline" onClick={handleCopy} className="flex-1 gap-2">
-                    <Download className="h-4 w-4" />
-                    {lbl('copyDoc', lang)}
-                  </Button>
-                  <Button variant="ghost" onClick={handleReset} className="gap-2">
-                    <RotateCcw className="h-4 w-4" />
-                    {lbl('newDoc', lang)}
-                  </Button>
-                </div>
-              </>
-            )}
-          </div>
+              <div className="flex flex-col gap-3 max-w-sm mx-auto">
+                <Button asChild className="gap-2" size="lg">
+                  <a href={REVOLUT_LINK} target="_blank" rel="noopener noreferrer">
+                    <CreditCard className="h-4 w-4" />
+                    {lbl('payButton', lang)}
+                  </a>
+                </Button>
+                <Button
+                  variant="ghost"
+                  onClick={handleReset}
+                  className="gap-2"
+                >
+                  <RotateCcw className="h-4 w-4" />
+                  {lbl('newDoc', lang)}
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         )}
       </div>
     </section>
