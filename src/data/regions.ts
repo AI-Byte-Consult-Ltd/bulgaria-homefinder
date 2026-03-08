@@ -209,8 +209,8 @@ export const regions: Region[] = [
   {
     slug: 'sozopol',
     name: { en: 'Sozopol', bg: 'Созопол', ru: 'Созопол', de: 'Sozopol', it: 'Sozopol' },
-    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1600&h=900&fit=crop',
     propertyCount: 280,
     excerpt: {
       en: 'A charming ancient fishing town with bohemian atmosphere and pristine beaches.',
