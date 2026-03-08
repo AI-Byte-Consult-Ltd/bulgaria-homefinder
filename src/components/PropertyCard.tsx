@@ -5,6 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { RichText } from '@/components/RichText';
+import { VirtualTourBadge } from '@/components/VirtualTour';
+import { hasVirtualTour } from '@/lib/virtualTour';
 import {
   Heart, MapPin, Bed, Bath, Maximize, Building,
   Eye, Layers, Wrench, Trees, Car, Sofa, Landmark,
