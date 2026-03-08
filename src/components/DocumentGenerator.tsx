@@ -14,18 +14,18 @@ const REVOLUT_LINK = 'https://checkout.revolut.com/payment-link/15ba2228-4452-4d
 
 const LABELS: Record<string, Record<string, string>> = {
   title: {
-    en: 'AI Document Generator',
-    ru: 'ИИ Генератор Документов',
-    bg: 'AI Генератор на Документи',
-    de: 'KI-Dokumentengenerator',
-    it: 'Generatore Documenti AI',
+    en: 'Legal Document Generator',
+    ru: 'Генератор Юридических Документов',
+    bg: 'Генератор на Юридически Документи',
+    de: 'Rechtsdokument-Generator',
+    it: 'Generatore di Documenti Legali',
   },
   subtitle: {
-    en: 'Describe what document you need — our AI will draft it for you in seconds',
-    ru: 'Опишите какой документ вам нужен — наш ИИ составит его за секунды',
-    bg: 'Опишете какъв документ ви трябва — нашият AI ще го изготви за секунди',
-    de: 'Beschreiben Sie, welches Dokument Sie benötigen — unsere KI erstellt es in Sekunden',
-    it: 'Descrivi il documento di cui hai bisogno — la nostra AI lo preparerà in pochi secondi',
+    en: 'Describe what document you need — we will draft it for you in minutes',
+    ru: 'Опишите какой документ вам нужен — мы составим его за несколько минут',
+    bg: 'Опишете какъв документ ви трябва — ще го изготвим за вас за няколко минути',
+    de: 'Beschreiben Sie, welches Dokument Sie benötigen — wir erstellen es für Sie in wenigen Minuten',
+    it: 'Descrivi il documento di cui hai bisogno — lo prepareremo per te in pochi minuti',
   },
   docType: {
     en: 'What document do you need?',
@@ -98,11 +98,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Generazione del documento...',
   },
   price: {
-    en: '€25 per generation',
-    ru: '€25 за генерацию',
-    bg: '€25 за генерация',
-    de: '€25 pro Generierung',
-    it: '€25 per generazione',
+    en: '€35 per generation',
+    ru: '€35 за составление',
+    bg: '€35 за съставяне',
+    de: '€35 pro Dokument',
+    it: '€35 per documento',
   },
   successTitle: {
     en: 'Document Generated Successfully!',
@@ -112,18 +112,18 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Documento generato con successo!',
   },
   successDesc: {
-    en: 'Complete the payment of €25 via the link below. After we confirm your payment, the document will be sent to your email.',
-    ru: 'Оплатите €25 по ссылке ниже. После подтверждения оплаты документ будет отправлен на ваш email.',
-    bg: 'Завършете плащането от €25 чрез линка по-долу. След потвърждение на плащането, документът ще бъде изпратен на вашия email.',
-    de: 'Schließen Sie die Zahlung von €25 über den Link ab. Nach Bestätigung der Zahlung wird das Dokument an Ihre E-Mail gesendet.',
-    it: 'Completa il pagamento di €25 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
+    en: 'Complete the payment of €35 via the link below. After we confirm your payment, the document will be sent to your email.',
+    ru: 'Оплатите €35 по ссылке ниже. После подтверждения оплаты документ будет отправлен на ваш email.',
+    bg: 'Завършете плащането от €35 чрез линка по-долу. След потвърждение на плащането, документът ще бъде изпратен на вашия email.',
+    de: 'Schließen Sie die Zahlung von €35 über den Link ab. Nach Bestätigung der Zahlung wird das Dokument an Ihre E-Mail gesendet.',
+    it: 'Completa il pagamento di €35 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
   },
   payButton: {
-    en: 'Pay €25 via Revolut',
-    ru: 'Оплатить €25 через Revolut',
-    bg: 'Платете €25 чрез Revolut',
-    de: '€25 über Revolut zahlen',
-    it: 'Paga €25 tramite Revolut',
+    en: 'Pay €35 via Revolut',
+    ru: 'Оплатить €35 через Revolut',
+    bg: 'Платете €35 чрез Revolut',
+    de: '€35 über Revolut zahlen',
+    it: 'Paga €35 tramite Revolut',
   },
   emailSentTo: {
     en: 'Document will be sent to:',
@@ -210,8 +210,8 @@ export const DocumentGenerator = () => {
       <div className="container max-w-4xl">
         <div className="text-center mb-8">
           <Badge variant="secondary" className="mb-3 gap-1.5">
-            <Sparkles className="h-3.5 w-3.5" />
-            AI-Powered
+            <FileText className="h-3.5 w-3.5" />
+            Legal Document Service
           </Badge>
           <h2 className="text-3xl font-bold mb-2">{lbl('title', lang)}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{lbl('subtitle', lang)}</p>
