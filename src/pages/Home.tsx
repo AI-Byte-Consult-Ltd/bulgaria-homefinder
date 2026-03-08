@@ -23,7 +23,7 @@ const Home = () => {
   const lang = (i18n.language || 'en').split('-')[0];
 
   const featuredProperties = mockProperties.filter((p) => p.featured);
-  const newestProperties = [...mockProperties].reverse();
+  const newestProperties = [...mockProperties].reverse().slice(0, 10);
 
   // Static articles data (5 languages, fallback to existing text when missing)
   const articles = [
@@ -318,6 +318,12 @@ const Home = () => {
               <h2 className="text-3xl font-bold mb-2">{t('home.newest')}</h2>
               <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
             </div>
+            <Link
+              to="/properties"
+              className="text-primary hover:underline text-sm font-semibold"
+            >
+              {t('common.viewAll', 'View All')} →
+            </Link>
           </div>
 
           <PropertyCarousel>
