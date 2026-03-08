@@ -99,11 +99,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Pagamento per generazione documento',
   },
   payDesc: {
-    en: 'Your document has been generated. Please complete the payment of €5 via Revolut.',
-    ru: 'Ваш документ сгенерирован. Пожалуйста, завершите оплату €5 через Revolut.',
-    bg: 'Вашият документ е генериран. Моля, завършете плащането от €5 чрез Revolut.',
-    de: 'Ihr Dokument wurde erstellt. Bitte schließen Sie die Zahlung von €5 über Revolut ab.',
-    it: 'Il tuo documento è stato generato. Completa il pagamento di €5 tramite Revolut.',
+    en: 'Your document has been generated successfully! Complete the payment of €5 via Revolut to access your document.',
+    ru: 'Ваш документ успешно сгенерирован! Завершите оплату €5 через Revolut, чтобы получить доступ к документу.',
+    bg: 'Вашият документ е генериран успешно! Завършете плащането от €5 чрез Revolut, за да получите достъп до документа.',
+    de: 'Ihr Dokument wurde erfolgreich erstellt! Schließen Sie die Zahlung von €5 über Revolut ab, um Zugriff auf Ihr Dokument zu erhalten.',
+    it: 'Il tuo documento è stato generato con successo! Completa il pagamento di €5 tramite Revolut per accedere al documento.',
   },
   payButton: {
     en: 'Pay €5 via Revolut',
@@ -111,6 +111,13 @@ const LABELS: Record<string, Record<string, string>> = {
     bg: 'Платете €5 чрез Revolut',
     de: '€5 über Revolut zahlen',
     it: 'Paga €5 tramite Revolut',
+  },
+  paidConfirm: {
+    en: 'I have paid — show my document',
+    ru: 'Я оплатил — показать документ',
+    bg: 'Платих — покажи документа',
+    de: 'Ich habe bezahlt — Dokument anzeigen',
+    it: 'Ho pagato — mostra il documento',
   },
   copyDoc: {
     en: 'Copy Document',
