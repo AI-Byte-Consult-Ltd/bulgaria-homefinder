@@ -2432,7 +2432,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Бургас, Болгария',
     locationDe: 'Burgas, Bulgarien',
     locationIt: 'Burgas, Bulgaria',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop'],
     type: 'commercial',
     transactionType: 'sale' as const,
     status: 'for-sale',
