@@ -73,6 +73,9 @@ const App = () => (
               element={<NewArticle />}
             />
 
+            {/* Regions */}
+            <Route path="/regions/:slug" element={<RegionPage />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
