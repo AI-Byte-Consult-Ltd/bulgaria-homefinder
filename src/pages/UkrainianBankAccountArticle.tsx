@@ -721,7 +721,7 @@ const UkrainianBankAccountArticle = () => {
 
     de: {
       back: 'Zur Startseite',
-      date: '28. Februar 2026',
+      date: '7. März 2026',
       readTime: 'Lesezeit: ~15 Minuten',
       title:
         'Wie ukrainische Staatsbürger ein Bankkonto zur Firmengründung in Bulgarien eröffnen können — 2026',
