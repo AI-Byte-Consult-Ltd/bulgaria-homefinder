@@ -1052,7 +1052,7 @@ const UkrainianBankAccountArticle = () => {
         description="How to open a bank account in Bulgaria as a Ukrainian citizen in 2026. Required documents, best banks, fees and step-by-step process."
         path="/article/ukraine-bank-account-bulgaria-2026"
         type="article"
-        article={{ publishedTime: '2026-02-28', author: 'BulgariaEstate by AI Byte Consult' }}
+        article={{ publishedTime: '2026-03-07', author: 'BulgariaEstate by AI Byte Consult' }}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: d.title, url: '/article/ukraine-bank-account-bulgaria-2026' },
