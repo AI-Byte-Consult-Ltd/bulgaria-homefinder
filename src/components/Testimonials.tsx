@@ -81,6 +81,36 @@ const testimonials = [
     textDe: 'Die beste Entscheidung, die ich je getroffen habe. Ich habe eine Wohnung in Sofia für die Hälfte des UK-Preises gekauft. Das Team spricht perfektes Englisch.',
     textIt: "La miglior decisione che abbia mai preso. Ho comprato un appartamento a Sofia a metà prezzo rispetto al Regno Unito. Il team parla un inglese perfetto.",
   },
+  {
+    name: 'Sophie Lefèvre',
+    location: '🇫🇷 Lyon, France',
+    rating: 5,
+    text: 'I discovered Bulgaria through friends and BulgariaEstate made the purchase incredibly easy. They handled all the paperwork, translation and notary coordination. I now own a lovely apartment in Nessebar — merci beaucoup!',
+    textBg: 'Открих България чрез приятели и BulgariaEstate направиха покупката невероятно лесна. Те се заеха с цялата документация, превод и координация с нотариус. Сега притежавам прекрасен апартамент в Несебър!',
+    textRu: 'Я узнала о Болгарии через друзей, и BulgariaEstate сделали покупку невероятно простой. Они взяли на себя всю документацию, перевод и координацию с нотариусом. Теперь у меня квартира в Несебре!',
+    textDe: 'Ich entdeckte Bulgarien durch Freunde und BulgariaEstate machte den Kauf unglaublich einfach. Sie kümmerten sich um den gesamten Papierkram, Übersetzung und Notarkoordination. Jetzt besitze ich eine schöne Wohnung in Nessebar!',
+    textIt: "Ho scoperto la Bulgaria tramite amici e BulgariaEstate ha reso l'acquisto incredibilmente facile. Hanno gestito tutta la documentazione, traduzione e coordinamento notarile. Ora possiedo un bellissimo appartamento a Nessebar!",
+  },
+  {
+    name: 'Emily & Richard Clarke',
+    location: '🇬🇧 Bristol, United Kingdom',
+    rating: 5,
+    text: 'We were looking for a retirement home somewhere warm and affordable. Bulgaria ticked every box. BulgariaEstate found us a gorgeous house near Burgas with a garden — at a fraction of UK prices. The ongoing support has been exceptional.',
+    textBg: 'Търсехме дом за пенсиониране някъде топло и достъпно. България отговори на всичко. BulgariaEstate ни намериха прекрасна къща близо до Бургас с градина — на малка част от цените в UK.',
+    textRu: 'Мы искали дом для пенсии в тёплом и доступном месте. Болгария подошла идеально. BulgariaEstate нашли нам великолепный дом рядом с Бургасом с садом — за долю цен в Великобритании.',
+    textDe: 'Wir suchten ein Altersheim irgendwo warm und erschwinglich. Bulgarien erfüllte alle Kriterien. BulgariaEstate fand uns ein wunderschönes Haus bei Burgas mit Garten — zu einem Bruchteil der UK-Preise.',
+    textIt: "Cercavamo una casa per la pensione in un posto caldo e accessibile. La Bulgaria soddisfava tutti i requisiti. BulgariaEstate ci ha trovato una casa splendida vicino a Burgas con giardino — a una frazione dei prezzi UK.",
+  },
+  {
+    name: 'Димитър Стоянов',
+    location: '🇧🇬 Варна, България',
+    rating: 5,
+    text: 'I needed to sell my family house in Varna quickly due to relocation. BulgariaEstate organized viewings within days and found a serious buyer in under two weeks. Transparent fees, no hidden costs. The best agency I have worked with in Bulgaria.',
+    textBg: 'Трябваше да продам фамилната къща във Варна бързо заради преместване. BulgariaEstate организираха огледи за дни и намериха сериозен купувач за по-малко от две седмици. Прозрачни такси, без скрити разходи. Най-добрата агенция, с която съм работил в България.',
+    textRu: 'Мне нужно было быстро продать семейный дом в Варне из-за переезда. BulgariaEstate организовали просмотры за дни и нашли серьёзного покупателя менее чем за две недели. Прозрачные тарифы, без скрытых расходов.',
+    textDe: 'Ich musste mein Familienhaus in Varna schnell verkaufen. BulgariaEstate organisierte Besichtigungen innerhalb weniger Tage und fand einen seriösen Käufer in unter zwei Wochen. Transparente Gebühren, keine versteckten Kosten.',
+    textIt: "Dovevo vendere la casa di famiglia a Varna rapidamente. BulgariaEstate ha organizzato le visite in pochi giorni e trovato un acquirente serio in meno di due settimane. Tariffe trasparenti, nessun costo nascosto.",
+  },
 ];
 
 function getTestimonialText(t: any, lang: string) {
