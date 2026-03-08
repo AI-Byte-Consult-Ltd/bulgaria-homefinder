@@ -266,6 +266,8 @@ export type Database = {
           updated_at: string | null
           user_id: string
           views: number | null
+          virtual_tour_type: string | null
+          virtual_tour_url: string | null
           year_built: number | null
         }
         Insert: {
@@ -290,6 +292,8 @@ export type Database = {
           updated_at?: string | null
           user_id: string
           views?: number | null
+          virtual_tour_type?: string | null
+          virtual_tour_url?: string | null
           year_built?: number | null
         }
         Update: {
@@ -314,6 +318,8 @@ export type Database = {
           updated_at?: string | null
           user_id?: string
           views?: number | null
+          virtual_tour_type?: string | null
+          virtual_tour_url?: string | null
           year_built?: number | null
         }
         Relationships: []
