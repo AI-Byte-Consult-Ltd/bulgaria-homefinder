@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Home, Plus, Settings, FileText } from 'lucide-react';
+import { Home, Plus, Settings, FileText, FileCog } from 'lucide-react';
 import { DashboardProperties } from '@/components/dashboard/DashboardProperties';
 import { DashboardProfile } from '@/components/dashboard/DashboardProfile';
 import { DashboardProjects } from '@/components/dashboard/DashboardProjects';
+import { DashboardDocuments } from '@/components/dashboard/DashboardDocuments';
 import { toast } from 'sonner';
 
 const Dashboard = () => {
