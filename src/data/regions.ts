@@ -321,8 +321,8 @@ export const regions: Region[] = [
   {
     slug: 'vitosha',
     name: { en: 'Vitosha', bg: 'Витоша', ru: 'Витоша', de: 'Vitosha', it: 'Vitosha' },
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1600&h=900&fit=crop',
     propertyCount: 180,
     excerpt: {
       en: 'Sofia\'s mountain retreat offering skiing, hiking, and luxury properties with city views.',
