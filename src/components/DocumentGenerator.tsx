@@ -297,52 +297,72 @@ export const DocumentGenerator = () => {
           </Card>
         ) : (
           <div className="space-y-4">
-            {/* Generated Document */}
-            <Card>
-              <CardContent className="pt-6">
-                <div
-                  ref={docRef}
-                  className="prose prose-sm max-w-none dark:prose-invert min-h-[200px]"
-                >
-                  <ReactMarkdown>{generatedDoc}</ReactMarkdown>
-                </div>
-                {isGenerating && (
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    {lbl('generating', lang)}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+            {/* Generating indicator */}
+            {isGenerating && (
+              <Card>
+                <CardContent className="pt-6 text-center space-y-3">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />
+                  <p className="text-sm text-muted-foreground">{lbl('generating', lang)}</p>
+                </CardContent>
+              </Card>
+            )}
 
-            {/* Payment & Actions */}
-            {showPayment && (
+            {/* Payment gate — show after generation, before revealing doc */}
+            {showPayment && !paymentConfirmed && (
               <Card className="border-primary/30 bg-primary/5">
                 <CardContent className="pt-6 space-y-4">
                   <div className="text-center space-y-2">
-                    <CreditCard className="h-8 w-8 text-primary mx-auto" />
-                    <h3 className="font-bold text-lg">{lbl('payTitle', lang)}</h3>
-                    <p className="text-sm text-muted-foreground">{lbl('payDesc', lang)}</p>
+                    <CreditCard className="h-10 w-10 text-primary mx-auto" />
+                    <h3 className="font-bold text-xl">{lbl('payTitle', lang)}</h3>
+                    <p className="text-sm text-muted-foreground max-w-md mx-auto">{lbl('payDesc', lang)}</p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button asChild className="flex-1 gap-2" size="lg">
+                  <div className="flex flex-col gap-3 max-w-sm mx-auto">
+                    <Button asChild className="gap-2" size="lg">
                       <a href={REVOLUT_LINK} target="_blank" rel="noopener noreferrer">
                         <CreditCard className="h-4 w-4" />
                         {lbl('payButton', lang)}
                       </a>
                     </Button>
-                    <Button variant="outline" onClick={handleCopy} className="gap-2">
-                      <Download className="h-4 w-4" />
-                      {lbl('copyDoc', lang)}
-                    </Button>
-                    <Button variant="ghost" onClick={handleReset} className="gap-2">
-                      <RotateCcw className="h-4 w-4" />
-                      {lbl('newDoc', lang)}
+                    <Button
+                      variant="outline"
+                      onClick={() => setPaymentConfirmed(true)}
+                      className="gap-2"
+                      size="lg"
+                    >
+                      <CheckCircle className="h-4 w-4" />
+                      {lbl('paidConfirm', lang)}
                     </Button>
                   </div>
                 </CardContent>
               </Card>
+            )}
+
+            {/* Document revealed after payment confirmation */}
+            {paymentConfirmed && (
+              <>
+                <Card>
+                  <CardContent className="pt-6">
+                    <div
+                      ref={docRef}
+                      className="prose prose-sm max-w-none dark:prose-invert min-h-[200px]"
+                    >
+                      <ReactMarkdown>{generatedDoc}</ReactMarkdown>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button variant="outline" onClick={handleCopy} className="flex-1 gap-2">
+                    <Download className="h-4 w-4" />
+                    {lbl('copyDoc', lang)}
+                  </Button>
+                  <Button variant="ghost" onClick={handleReset} className="gap-2">
+                    <RotateCcw className="h-4 w-4" />
+                    {lbl('newDoc', lang)}
+                  </Button>
+                </div>
+              </>
             )}
           </div>
         )}
