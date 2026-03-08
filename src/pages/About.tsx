@@ -83,8 +83,9 @@ const About = () => {
               <div className="relative">
                 <img
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
-                  alt="Modern architecture"
+                  alt="Modern glass office building representing AI Byte Consult real estate expertise in Bulgaria"
                   className="rounded-2xl shadow-2xl"
+                  loading="lazy"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl border">
                   <div className="flex items-center gap-4">

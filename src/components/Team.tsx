@@ -67,7 +67,7 @@ const Team = () => {
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-gold">
                     <img
                       src={member.image}
-                      alt={member.name}
+                      alt={`${member.name}, ${member.role} at AI Byte Consult`}
                       className="w-full h-full object-cover"
                     />
                   </div>
