@@ -446,15 +446,7 @@ const Home = () => {
       <section className="py-16 container">
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2">
-            {lang === 'bg'
-              ? 'Видео обиколки и турове'
-              : lang === 'ru'
-                ? 'Видео-обзоры и туры объектов'
-                : lang === 'de'
-                  ? 'Immobilien-Touren & Videos'
-                  : lang === 'it'
-                    ? 'Tour immobiliari e video'
-                    : 'Property Tours & Videos'}
+              {t('common.propertyTours')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
         </div>
