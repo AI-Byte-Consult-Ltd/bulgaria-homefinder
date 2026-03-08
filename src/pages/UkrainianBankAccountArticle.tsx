@@ -78,7 +78,7 @@ const UkrainianBankAccountArticle = () => {
   const t: Record<string, any> = {
     en: {
       back: 'Back to Home',
-      date: 'February 28, 2026',
+      date: 'March 7, 2026',
       readTime: 'Reading time: ~15 minutes',
       title:
         'How Ukrainian Citizens Can Open a Bank Account to Register a Company in Bulgaria in 2026',
@@ -347,7 +347,7 @@ const UkrainianBankAccountArticle = () => {
 
     ru: {
       back: 'На главную',
-      date: '28 февраля 2026',
+      date: '7 марта 2026',
       readTime: 'Время чтения: ~15 минут',
       title:
         'Как гражданам Украины открыть банковский счёт для регистрации компании в Болгарии в 2026 году',
@@ -616,7 +616,7 @@ const UkrainianBankAccountArticle = () => {
 
     bg: {
       back: 'Към началото',
-      date: '28 февруари 2026',
+      date: '7 март 2026',
       readTime: 'Време за четене: ~15 минути',
       title:
         'Как граждани на Украйна могат да открият банкова сметка за регистрация на фирма в България през 2026 г.',
@@ -721,7 +721,7 @@ const UkrainianBankAccountArticle = () => {
 
     de: {
       back: 'Zur Startseite',
-      date: '28. Februar 2026',
+      date: '7. März 2026',
       readTime: 'Lesezeit: ~15 Minuten',
       title:
         'Wie ukrainische Staatsbürger ein Bankkonto zur Firmengründung in Bulgarien eröffnen können — 2026',
@@ -816,7 +816,7 @@ const UkrainianBankAccountArticle = () => {
 
     it: {
       back: 'Torna alla home',
-      date: '28 febbraio 2026',
+      date: '7 marzo 2026',
       readTime: 'Tempo di lettura: ~15 minuti',
       title:
         'Come i cittadini ucraini possono aprire un conto bancario per registrare una società in Bulgaria nel 2026',
@@ -996,8 +996,8 @@ const UkrainianBankAccountArticle = () => {
         '@type': 'Organization',
         name: siteName,
       },
-      datePublished: '2026-02-28',
-      dateModified: '2026-02-28',
+      datePublished: '2026-03-07',
+      dateModified: '2026-03-07',
       articleSection: 'Business',
       keywords: [
         'Bulgaria company registration',
@@ -1052,7 +1052,7 @@ const UkrainianBankAccountArticle = () => {
         description="How to open a bank account in Bulgaria as a Ukrainian citizen in 2026. Required documents, best banks, fees and step-by-step process."
         path="/article/ukraine-bank-account-bulgaria-2026"
         type="article"
-        article={{ publishedTime: '2026-02-28', author: 'BulgariaEstate by AI Byte Consult' }}
+        article={{ publishedTime: '2026-03-07', author: 'BulgariaEstate by AI Byte Consult' }}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: d.title, url: '/article/ukraine-bank-account-bulgaria-2026' },
@@ -1077,7 +1077,7 @@ const UkrainianBankAccountArticle = () => {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-4">
                 <span className="inline-flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  <time dateTime="2026-02-28">{d.date}</time>
+                  <time dateTime="2026-03-07">{d.date}</time>
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <BarChart3 className="w-4 h-4" />
@@ -1177,8 +1177,8 @@ const UkrainianBankAccountArticle = () => {
           >
             <meta itemProp="headline" content={d.title} />
             <meta itemProp="description" content={d.seoDescription || d.subtitle} />
-            <meta itemProp="datePublished" content="2026-02-28" />
-            <meta itemProp="dateModified" content="2026-02-28" />
+            <meta itemProp="datePublished" content="2026-03-07" />
+            <meta itemProp="dateModified" content="2026-03-07" />
             <meta itemProp="inLanguage" content={lang} />
             <meta itemProp="mainEntityOfPage" content={articleUrl} />
             <meta itemProp="image" content={cover.image_url} />
