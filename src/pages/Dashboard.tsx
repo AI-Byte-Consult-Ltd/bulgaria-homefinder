@@ -17,6 +17,7 @@ import { toast } from 'sonner';
 const Dashboard = () => {
   const { t } = useTranslation();
   const { user, loading, signOut } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
