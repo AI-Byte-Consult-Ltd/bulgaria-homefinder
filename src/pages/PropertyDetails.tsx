@@ -257,6 +257,10 @@ const PropertyDetails = () => {
                 </>
               )}
             </div>
+
+            {/* Contact Card */}
+            <div className="lg:col-span-1">
+              <Card className="sticky top-20">
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">
                     {t('common.contactAgent', 'Contact Agent')}
