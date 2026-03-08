@@ -92,7 +92,7 @@ const RestorationProject = () => {
               <div className="grid gap-4">
                 {project.beforeImages.map((img, idx) => (
                   <div key={idx} className="aspect-video rounded-lg overflow-hidden">
-                    <img src={img} alt={`Before ${idx + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`${project.title} before restoration - photo ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 ))}
               </div>
