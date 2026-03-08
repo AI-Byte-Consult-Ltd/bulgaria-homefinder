@@ -66,6 +66,9 @@ interface PropertyCardProps {
   status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved';
   yearBuilt?: number;
   actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
+
+  // Virtual Tour
+  virtualTourUrl?: string | null;
 }
 
 // ─── i18n label maps ────────────────────────────────────────────────────────
