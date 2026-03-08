@@ -13,8 +13,8 @@ export const regions: Region[] = [
   {
     slug: 'sofia',
     name: { en: 'Sofia', bg: 'София', ru: 'София', de: 'Sofia', it: 'Sofia' },
-    image: 'https://images.unsplash.com/photo-1555990538-1085d1e45e5f?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1555990538-1085d1e45e5f?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1601367252366-bac879ae7c1d?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1601367252366-bac879ae7c1d?w=1600&h=900&fit=crop',
     propertyCount: 1250,
     excerpt: {
       en: 'Bulgaria\'s capital and largest city, blending ancient history with modern urban living.',
