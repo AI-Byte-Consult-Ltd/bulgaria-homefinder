@@ -11,6 +11,7 @@ import { Testimonials } from '@/components/Testimonials';
 import { PropertyCarousel, PropertyCarouselItem } from '@/components/PropertyCarousel';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
+import { RegionsCarousel } from '@/components/RegionsCarousel';
 
 /**
  * Главная страница, включающая поиск, избранные и новые объявления,
