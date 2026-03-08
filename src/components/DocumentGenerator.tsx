@@ -11,7 +11,7 @@ import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
 
 const GENERATE_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/generate-document`;
-const REVOLUT_LINK = 'https://revolut.me/nicsestate';
+const REVOLUT_LINK = 'https://checkout.revolut.com/payment-link/15ba2228-4452-4d31-bc14-8a001a7e4401';
 
 const LABELS: Record<string, Record<string, string>> = {
   title: {
