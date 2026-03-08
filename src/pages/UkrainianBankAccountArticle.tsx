@@ -1077,7 +1077,7 @@ const UkrainianBankAccountArticle = () => {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-4">
                 <span className="inline-flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  <time dateTime="2026-02-28">{d.date}</time>
+                  <time dateTime="2026-03-07">{d.date}</time>
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <BarChart3 className="w-4 h-4" />
