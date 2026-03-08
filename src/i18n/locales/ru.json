@@ -34,7 +34,10 @@
     "propertyTours": "Видео-обзоры и туры объектов",
     "meetFounders": "Познакомьтесь с основателями",
     "foundersSubtitle": "Визионеры, стоящие за AI Byte Consult Ltd.",
-    "whatClientsSay": "Отзывы наших клиентов"
+    "whatClientsSay": "Отзывы наших клиентов",
+    "viewAll": "Смотреть все",
+    "any": "Любой",
+    "loading": "Загрузка..."
   },
   "nav": {
     "home": "Главная",
