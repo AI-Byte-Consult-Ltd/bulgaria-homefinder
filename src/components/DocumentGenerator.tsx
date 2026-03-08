@@ -98,11 +98,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Generazione del documento...',
   },
   price: {
-    en: '€25 per generation',
-    ru: '€25 за генерацию',
-    bg: '€25 за генерация',
-    de: '€25 pro Generierung',
-    it: '€25 per generazione',
+    en: '€35 per generation',
+    ru: '€35 за составление',
+    bg: '€35 за съставяне',
+    de: '€35 pro Dokument',
+    it: '€35 per documento',
   },
   successTitle: {
     en: 'Document Generated Successfully!',
