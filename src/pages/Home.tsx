@@ -427,15 +427,7 @@ const Home = () => {
                         to={`/article/${article.slug}`}
                         className="text-primary text-sm font-semibold hover:underline"
                       >
-                        {lang === 'bg'
-                          ? 'Прочети още →'
-                          : lang === 'ru'
-                            ? 'Читать далее →'
-                            : lang === 'de'
-                              ? 'Mehr lesen →'
-                              : lang === 'it'
-                                ? 'Leggi di più →'
-                                : 'Read More →'}
+                        {t('common.readMore')}
                       </Link>
                     ) : (
                       <span className="text-muted-foreground text-sm font-semibold">
