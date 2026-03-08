@@ -181,8 +181,8 @@ export const regions: Region[] = [
   {
     slug: 'nessebar',
     name: { en: 'Nessebar', bg: 'Несебър', ru: 'Несебр', de: 'Nessebar', it: 'Nessebar' },
-    image: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1600&h=900&fit=crop',
     propertyCount: 350,
     excerpt: {
       en: 'A UNESCO World Heritage Site with 3,000 years of history on a picturesque peninsula.',
