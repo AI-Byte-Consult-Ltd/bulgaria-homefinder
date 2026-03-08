@@ -337,6 +337,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* AI Document Generator */}
+      <DocumentGenerator />
+
       {/* Restoration Showcase */}
       <RestorationShowcase />
 

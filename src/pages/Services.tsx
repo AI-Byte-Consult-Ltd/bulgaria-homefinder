@@ -1182,6 +1182,9 @@ const Services = () => {
             </div>
           </section>
 
+          {/* AI Document Generator */}
+          <DocumentGenerator />
+
           <section className="py-16 bg-muted/30">
             <div className="container text-center space-y-6 max-w-2xl">
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">{ctaTitle}</h2>
