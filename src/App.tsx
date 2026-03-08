@@ -32,6 +32,7 @@ import AddProperty from "./pages/AddProperty";
 import "./i18n/config";
 import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
 import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
+import RegionPage from "./pages/RegionPage";
 
 const queryClient = new QueryClient();
 
