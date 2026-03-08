@@ -226,6 +226,7 @@ export const DocumentGenerator = () => {
   const handleReset = () => {
     setGeneratedDoc('');
     setShowPayment(false);
+    setPaymentConfirmed(false);
     setDocumentType('');
     setUserDetails('');
     setAdditionalInfo('');
