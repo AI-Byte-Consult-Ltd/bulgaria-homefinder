@@ -96,17 +96,13 @@ function getTestimonialText(t: any, lang: string) {
 }
 
 export const Testimonials = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
   const getText = getTestimonialText(null, lang);
 
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
-
-  const { t, i18n } = useTranslation();
-  const lang = (i18n.language || 'en').split('-')[0];
-  const getText = getTestimonialText(null, lang);
 
   const sectionTitle = t('common.whatClientsSay');
 
