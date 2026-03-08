@@ -237,8 +237,8 @@ export const regions: Region[] = [
   {
     slug: 'golden-sands',
     name: { en: 'Golden Sands', bg: 'Златни пясъци', ru: 'Золотые Пески', de: 'Goldstrand', it: 'Golden Sands' },
-    image: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1520942702018-0862200e6873?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1520942702018-0862200e6873?w=1600&h=900&fit=crop',
     propertyCount: 520,
     excerpt: {
       en: 'A premier beach resort near Varna with golden sandy beaches set within a nature park.',
