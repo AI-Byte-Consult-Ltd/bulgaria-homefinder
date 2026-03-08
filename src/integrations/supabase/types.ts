@@ -121,6 +121,48 @@ export type Database = {
         }
         Relationships: []
       }
+      document_generations: {
+        Row: {
+          additional_info: string | null
+          admin_notes: string | null
+          created_at: string
+          document_type: string
+          generated_content: string
+          id: string
+          language: string | null
+          payment_status: string
+          sent_at: string | null
+          user_details: string | null
+          user_email: string
+        }
+        Insert: {
+          additional_info?: string | null
+          admin_notes?: string | null
+          created_at?: string
+          document_type: string
+          generated_content: string
+          id?: string
+          language?: string | null
+          payment_status?: string
+          sent_at?: string | null
+          user_details?: string | null
+          user_email: string
+        }
+        Update: {
+          additional_info?: string | null
+          admin_notes?: string | null
+          created_at?: string
+          document_type?: string
+          generated_content?: string
+          id?: string
+          language?: string | null
+          payment_status?: string
+          sent_at?: string | null
+          user_details?: string | null
+          user_email?: string
+        }
+        Relationships: []
+      }
       payments: {
         Row: {
           amount: number
