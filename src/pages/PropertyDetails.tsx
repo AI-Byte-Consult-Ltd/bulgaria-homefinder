@@ -244,11 +244,19 @@ const PropertyDetails = () => {
                   </p>
                 )}
               </div>
-            </div>
 
-            {/* Contact Card */}
-            <div className="lg:col-span-1">
-              <Card className="sticky top-20">
+              {/* Virtual Tour Section */}
+              {hasVirtualTour((property as any).virtualTourUrl) && (
+                <>
+                  <Separator />
+                  <VirtualTourSection
+                    virtualTourUrl={(property as any).virtualTourUrl}
+                    virtualTourType={(property as any).virtualTourType}
+                    propertyTitle={displayTitle}
+                  />
+                </>
+              )}
+            </div>
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">
                     {t('common.contactAgent', 'Contact Agent')}
