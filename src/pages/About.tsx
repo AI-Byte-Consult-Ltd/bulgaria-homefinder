@@ -9,10 +9,19 @@ const About = () => {
   const { t } = useTranslation();
 
   const stats = [
-    { icon: Calendar, value: '2011', label: 'Founded' },
-    { icon: Building2, value: '500+', label: 'Properties Sold' },
-    { icon: Users, value: '1000+', label: 'Happy Clients' },
-    { icon: MapPin, value: '15+', label: 'Regions Covered' },
+    { icon: Calendar, value: '2011', label: t('about.founded') },
+    { icon: Building2, value: '500+', label: t('about.propertiesSold') },
+    { icon: Users, value: '1000+', label: t('about.happyClients') },
+    { icon: MapPin, value: '15+', label: t('about.regionsCovered') },
+  ];
+
+  const benefits = [
+    { title: t('about.benefit1Title'), desc: t('about.benefit1Desc') },
+    { title: t('about.benefit2Title'), desc: t('about.benefit2Desc') },
+    { title: t('about.benefit3Title'), desc: t('about.benefit3Desc') },
+    { title: t('about.benefit4Title'), desc: t('about.benefit4Desc') },
+    { title: t('about.benefit5Title'), desc: t('about.benefit5Desc') },
+    { title: t('about.benefit6Title'), desc: t('about.benefit6Desc') },
   ];
 
   return (
@@ -34,13 +43,13 @@ const About = () => {
           <div className="container text-center">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="h-4 w-4" />
-              Established 2011
+              {t('about.established')}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('about.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Founded by AI Byte Consult Ltd., we have been making success in Bulgarian real estate for over a decade. Our commitment to excellence and innovation sets us apart.
+              {t('about.heroDescription')}
             </p>
           </div>
         </section>
@@ -69,15 +78,9 @@ const About = () => {
                   {t('about.ourStory')}
                 </h2>
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    In 2011, AI Byte Consult Ltd. was founded with a vision to transform the Bulgarian real estate market. What started as a small consultancy has grown into one of the most trusted names in property services across Bulgaria.
-                  </p>
-                  <p>
-                    Over the years, we have helped thousands of clients find their dream homes, make smart investments, and navigate the complexities of the Bulgarian property market. Our deep understanding of local markets, combined with cutting-edge technology, gives our clients an unmatched advantage.
-                  </p>
-                  <p>
-                    Today, we continue to innovate, bringing AI-powered solutions and personalized service to every client relationship. Our success is built on trust, expertise, and an unwavering commitment to our clients' goals.
-                  </p>
+                  <p>{t('about.storyP1')}</p>
+                  <p>{t('about.storyP2')}</p>
+                  <p>{t('about.storyP3')}</p>
                 </div>
               </div>
               <div className="relative">
@@ -93,8 +96,8 @@ const About = () => {
                       <TrendingUp className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold">13+ Years</div>
-                      <div className="text-muted-foreground">Of Excellence</div>
+                      <div className="text-2xl font-bold">13+</div>
+                      <div className="text-muted-foreground">{t('about.yearsOfExcellence')}</div>
                     </div>
                   </div>
                 </div>
@@ -116,7 +119,7 @@ const About = () => {
             </div>
             <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border rounded-2xl p-8 md:p-12">
               <p className="text-xl text-center leading-relaxed">
-                Our mission is to make Bulgarian real estate accessible, transparent, and rewarding for everyone. We combine local expertise with innovative technology to deliver exceptional results for buyers, sellers, and investors worldwide.
+                {t('about.missionStatement')}
               </p>
             </div>
           </div>
@@ -130,19 +133,12 @@ const About = () => {
                 {t('about.whyChooseUs')}
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                What sets us apart in the Bulgarian real estate market
+                {t('about.whyChooseUsSubtitle')}
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {[
-                { title: 'Expert Local Knowledge', desc: 'Deep understanding of every Bulgarian region, from coastal properties to mountain retreats.' },
-                { title: 'Full-Service Support', desc: 'From property search to legal documentation, we handle every step of your journey.' },
-                { title: 'Multilingual Team', desc: 'We speak your language – English, German, Russian, Italian, and Bulgarian.' },
-                { title: 'Proven Track Record', desc: 'Over 500 successful transactions and counting, with satisfied clients worldwide.' },
-                { title: 'Transparent Pricing', desc: 'No hidden fees, clear communication, and honest advice every step of the way.' },
-                { title: 'After-Sale Support', desc: 'Our relationship continues after the sale – we\'re here for property management and more.' },
-              ].map((item, idx) => (
+              {benefits.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4 bg-card p-6 rounded-xl border">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
