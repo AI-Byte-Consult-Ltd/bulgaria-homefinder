@@ -127,7 +127,7 @@ const Properties = () => {
             </h1>
             <p className="text-muted-foreground">
               {loading
-                ? 'Loading...'
+                ? t('common.loading')
                 : `${properties.length} ${t('common.results')?.toLowerCase() || 'results'}`}
             </p>
           </div>
