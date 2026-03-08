@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FileText, Send, Loader2, Download, CreditCard, Sparkles, RotateCcw } from 'lucide-react';
+import { FileText, Send, Loader2, Download, CreditCard, Sparkles, RotateCcw, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -99,11 +99,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Pagamento per generazione documento',
   },
   payDesc: {
-    en: 'Your document has been generated. Please complete the payment of €5 via Revolut.',
-    ru: 'Ваш документ сгенерирован. Пожалуйста, завершите оплату €5 через Revolut.',
-    bg: 'Вашият документ е генериран. Моля, завършете плащането от €5 чрез Revolut.',
-    de: 'Ihr Dokument wurde erstellt. Bitte schließen Sie die Zahlung von €5 über Revolut ab.',
-    it: 'Il tuo documento è stato generato. Completa il pagamento di €5 tramite Revolut.',
+    en: 'Your document has been generated successfully! Complete the payment of €5 via Revolut to access your document.',
+    ru: 'Ваш документ успешно сгенерирован! Завершите оплату €5 через Revolut, чтобы получить доступ к документу.',
+    bg: 'Вашият документ е генериран успешно! Завършете плащането от €5 чрез Revolut, за да получите достъп до документа.',
+    de: 'Ihr Dokument wurde erfolgreich erstellt! Schließen Sie die Zahlung von €5 über Revolut ab, um Zugriff auf Ihr Dokument zu erhalten.',
+    it: 'Il tuo documento è stato generato con successo! Completa il pagamento di €5 tramite Revolut per accedere al documento.',
   },
   payButton: {
     en: 'Pay €5 via Revolut',
@@ -111,6 +111,13 @@ const LABELS: Record<string, Record<string, string>> = {
     bg: 'Платете €5 чрез Revolut',
     de: '€5 über Revolut zahlen',
     it: 'Paga €5 tramite Revolut',
+  },
+  paidConfirm: {
+    en: 'I have paid — show my document',
+    ru: 'Я оплатил — показать документ',
+    bg: 'Платих — покажи документа',
+    de: 'Ich habe bezahlt — Dokument anzeigen',
+    it: 'Ho pagato — mostra il documento',
   },
   copyDoc: {
     en: 'Copy Document',
@@ -140,6 +147,7 @@ export const DocumentGenerator = () => {
   const [generatedDoc, setGeneratedDoc] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [paymentConfirmed, setPaymentConfirmed] = useState(false);
   const docRef = useRef<HTMLDivElement>(null);
 
   const handleGenerate = async () => {
@@ -218,6 +226,7 @@ export const DocumentGenerator = () => {
   const handleReset = () => {
     setGeneratedDoc('');
     setShowPayment(false);
+    setPaymentConfirmed(false);
     setDocumentType('');
     setUserDetails('');
     setAdditionalInfo('');
@@ -288,52 +297,72 @@ export const DocumentGenerator = () => {
           </Card>
         ) : (
           <div className="space-y-4">
-            {/* Generated Document */}
-            <Card>
-              <CardContent className="pt-6">
-                <div
-                  ref={docRef}
-                  className="prose prose-sm max-w-none dark:prose-invert min-h-[200px]"
-                >
-                  <ReactMarkdown>{generatedDoc}</ReactMarkdown>
-                </div>
-                {isGenerating && (
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    {lbl('generating', lang)}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+            {/* Generating indicator */}
+            {isGenerating && (
+              <Card>
+                <CardContent className="pt-6 text-center space-y-3">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary mx-auto" />
+                  <p className="text-sm text-muted-foreground">{lbl('generating', lang)}</p>
+                </CardContent>
+              </Card>
+            )}
 
-            {/* Payment & Actions */}
-            {showPayment && (
+            {/* Payment gate — show after generation, before revealing doc */}
+            {showPayment && !paymentConfirmed && (
               <Card className="border-primary/30 bg-primary/5">
                 <CardContent className="pt-6 space-y-4">
                   <div className="text-center space-y-2">
-                    <CreditCard className="h-8 w-8 text-primary mx-auto" />
-                    <h3 className="font-bold text-lg">{lbl('payTitle', lang)}</h3>
-                    <p className="text-sm text-muted-foreground">{lbl('payDesc', lang)}</p>
+                    <CreditCard className="h-10 w-10 text-primary mx-auto" />
+                    <h3 className="font-bold text-xl">{lbl('payTitle', lang)}</h3>
+                    <p className="text-sm text-muted-foreground max-w-md mx-auto">{lbl('payDesc', lang)}</p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button asChild className="flex-1 gap-2" size="lg">
+                  <div className="flex flex-col gap-3 max-w-sm mx-auto">
+                    <Button asChild className="gap-2" size="lg">
                       <a href={REVOLUT_LINK} target="_blank" rel="noopener noreferrer">
                         <CreditCard className="h-4 w-4" />
                         {lbl('payButton', lang)}
                       </a>
                     </Button>
-                    <Button variant="outline" onClick={handleCopy} className="gap-2">
-                      <Download className="h-4 w-4" />
-                      {lbl('copyDoc', lang)}
-                    </Button>
-                    <Button variant="ghost" onClick={handleReset} className="gap-2">
-                      <RotateCcw className="h-4 w-4" />
-                      {lbl('newDoc', lang)}
+                    <Button
+                      variant="outline"
+                      onClick={() => setPaymentConfirmed(true)}
+                      className="gap-2"
+                      size="lg"
+                    >
+                      <CheckCircle className="h-4 w-4" />
+                      {lbl('paidConfirm', lang)}
                     </Button>
                   </div>
                 </CardContent>
               </Card>
+            )}
+
+            {/* Document revealed after payment confirmation */}
+            {paymentConfirmed && (
+              <>
+                <Card>
+                  <CardContent className="pt-6">
+                    <div
+                      ref={docRef}
+                      className="prose prose-sm max-w-none dark:prose-invert min-h-[200px]"
+                    >
+                      <ReactMarkdown>{generatedDoc}</ReactMarkdown>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button variant="outline" onClick={handleCopy} className="flex-1 gap-2">
+                    <Download className="h-4 w-4" />
+                    {lbl('copyDoc', lang)}
+                  </Button>
+                  <Button variant="ghost" onClick={handleReset} className="gap-2">
+                    <RotateCcw className="h-4 w-4" />
+                    {lbl('newDoc', lang)}
+                  </Button>
+                </div>
+              </>
             )}
           </div>
         )}
