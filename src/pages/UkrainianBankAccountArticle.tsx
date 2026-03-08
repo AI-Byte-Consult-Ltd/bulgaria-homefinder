@@ -996,8 +996,8 @@ const UkrainianBankAccountArticle = () => {
         '@type': 'Organization',
         name: siteName,
       },
-      datePublished: '2026-02-28',
-      dateModified: '2026-02-28',
+      datePublished: '2026-03-07',
+      dateModified: '2026-03-07',
       articleSection: 'Business',
       keywords: [
         'Bulgaria company registration',
