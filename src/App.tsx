@@ -32,6 +32,7 @@ import AddProperty from "./pages/AddProperty";
 import "./i18n/config";
 import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
 import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
+import RegionPage from "./pages/RegionPage";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,9 @@ const App = () => (
               path="/article/bulgaria-property-taxes-2026"
               element={<NewArticle />}
             />
+
+            {/* Regions */}
+            <Route path="/regions/:slug" element={<RegionPage />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

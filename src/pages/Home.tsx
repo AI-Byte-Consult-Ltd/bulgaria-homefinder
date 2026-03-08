@@ -11,6 +11,7 @@ import { Testimonials } from '@/components/Testimonials';
 import { PropertyCarousel, PropertyCarouselItem } from '@/components/PropertyCarousel';
 import { mockProperties } from '@/data/mockProperties';
 import heroImage from '@/assets/hero-bg.jpg';
+import { RegionsCarousel } from '@/components/RegionsCarousel';
 
 /**
  * Главная страница, включающая поиск, избранные и новые объявления,
@@ -339,60 +340,7 @@ const Home = () => {
       <Team />
 
       {/* Popular Regions */}
-      <section className="py-16 container">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">{t('home.popularRegions')}</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            {
-              name: 'Sofia',
-              image:
-                'https://ipfs.io/ipfs/bafkreiea6o2c55kfvx2fjnmcvnavgsczabglkrf247uwipuk7a2u6auwcu',
-              count: 1250,
-            },
-            {
-              name: 'Varna',
-              image:
-                'https://ipfs.io/ipfs/bafkreig7ca34ikjb7dsovmdxqrt3om5eoufroninc7je4gxyncgl4eqs3u',
-              count: 890,
-            },
-            {
-              name: 'Plovdiv',
-              image:
-                'https://ipfs.io/ipfs/bafkreibpxnb7dm65uqczaqwwbxtkrp6j6ayhmwloa7hcwjoati6fvdaofm',
-              count: 720,
-            },
-            {
-              name: 'Burgas',
-              image:
-                'https://ipfs.io/ipfs/bafybeictkyibpglu2nyov65unvnxjrx52oq33wg2rp63uhrcezrt3rvfom',
-              count: 650,
-            },
-          ].map((region) => (
-            <div
-              key={region.name}
-              className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
-            >
-              <img
-                src={region.image}
-                alt={`Real estate properties in ${region.name}, Bulgaria`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="font-bold text-xl">{region.name}</h3>
-                <p className="text-sm text-white/80">
-                  {region.count} {t('common.properties')}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <RegionsCarousel />
 
       {/* Market Insights & Analysis */}
       <section className="py-16 bg-muted/30">
