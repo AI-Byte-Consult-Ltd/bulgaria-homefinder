@@ -57,6 +57,12 @@ export const mockProperties = [
   // ── Maintenance ──────────────────────────────────────────
   maintenanceFee: null,
 
+  // ── Virtual Tour ─────────────────────────────────────────
+  // IDX/MLS INTEGRATION: Map your feed's virtual tour field here:
+  //   virtualTourUrl: idxListing.VirtualTourURLUnbranded ?? null,
+  virtualTourUrl: null,
+  virtualTourType: null,
+
   // ── Descriptions ─────────────────────────────────────────
 
 description: `
