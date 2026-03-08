@@ -431,15 +431,7 @@ const Home = () => {
                       </Link>
                     ) : (
                       <span className="text-muted-foreground text-sm font-semibold">
-                        {lang === 'bg'
-                          ? 'Скоро...'
-                          : lang === 'ru'
-                            ? 'Скоро...'
-                            : lang === 'de'
-                              ? 'Demnächst...'
-                              : lang === 'it'
-                                ? 'In arrivo...'
-                                : 'Coming soon...'}
+                        {t('common.comingSoon')}
                       </span>
                     )}
                   </div>
