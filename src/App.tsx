@@ -33,6 +33,7 @@ import "./i18n/config";
 import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
 import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
 import RegionPage from "./pages/RegionPage";
+import RentalEstimator from "./pages/RentalEstimator";
 
 const queryClient = new QueryClient();
 
@@ -76,6 +77,7 @@ const App = () => (
 
             {/* Regions */}
             <Route path="/regions/:slug" element={<RegionPage />} />
+            <Route path="/tools/rental-estimator" element={<RentalEstimator />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

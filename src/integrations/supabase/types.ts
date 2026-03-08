@@ -251,10 +251,18 @@ export type Database = {
           city: string | null
           created_at: string | null
           description: string | null
+          description_bg: string | null
+          description_de: string | null
+          description_it: string | null
+          description_ru: string | null
           id: string
           images: string[] | null
           is_priority: boolean | null
           location: string
+          location_bg: string | null
+          location_de: string | null
+          location_it: string | null
+          location_ru: string | null
           price: number
           priority_expires_at: string | null
           property_type: string
@@ -262,6 +270,10 @@ export type Database = {
           size_sqm: number | null
           status: string | null
           title: string
+          title_bg: string | null
+          title_de: string | null
+          title_it: string | null
+          title_ru: string | null
           transaction_type: string
           updated_at: string | null
           user_id: string
@@ -277,10 +289,18 @@ export type Database = {
           city?: string | null
           created_at?: string | null
           description?: string | null
+          description_bg?: string | null
+          description_de?: string | null
+          description_it?: string | null
+          description_ru?: string | null
           id?: string
           images?: string[] | null
           is_priority?: boolean | null
           location: string
+          location_bg?: string | null
+          location_de?: string | null
+          location_it?: string | null
+          location_ru?: string | null
           price: number
           priority_expires_at?: string | null
           property_type: string
@@ -288,6 +308,10 @@ export type Database = {
           size_sqm?: number | null
           status?: string | null
           title: string
+          title_bg?: string | null
+          title_de?: string | null
+          title_it?: string | null
+          title_ru?: string | null
           transaction_type: string
           updated_at?: string | null
           user_id: string
@@ -303,10 +327,18 @@ export type Database = {
           city?: string | null
           created_at?: string | null
           description?: string | null
+          description_bg?: string | null
+          description_de?: string | null
+          description_it?: string | null
+          description_ru?: string | null
           id?: string
           images?: string[] | null
           is_priority?: boolean | null
           location?: string
+          location_bg?: string | null
+          location_de?: string | null
+          location_it?: string | null
+          location_ru?: string | null
           price?: number
           priority_expires_at?: string | null
           property_type?: string
@@ -314,6 +346,10 @@ export type Database = {
           size_sqm?: number | null
           status?: string | null
           title?: string
+          title_bg?: string | null
+          title_de?: string | null
+          title_it?: string | null
+          title_ru?: string | null
           transaction_type?: string
           updated_at?: string | null
           user_id?: string
@@ -321,6 +357,54 @@ export type Database = {
           virtual_tour_type?: string | null
           virtual_tour_url?: string | null
           year_built?: number | null
+        }
+        Relationships: []
+      }
+      sell_submissions: {
+        Row: {
+          area_sqm: number | null
+          bedrooms: number | null
+          created_at: string
+          description: string | null
+          email: string
+          id: string
+          images: string[] | null
+          location: string
+          name: string
+          phone: string | null
+          price_expectation: number | null
+          property_type: string
+          status: string
+        }
+        Insert: {
+          area_sqm?: number | null
+          bedrooms?: number | null
+          created_at?: string
+          description?: string | null
+          email: string
+          id?: string
+          images?: string[] | null
+          location: string
+          name: string
+          phone?: string | null
+          price_expectation?: number | null
+          property_type: string
+          status?: string
+        }
+        Update: {
+          area_sqm?: number | null
+          bedrooms?: number | null
+          created_at?: string
+          description?: string | null
+          email?: string
+          id?: string
+          images?: string[] | null
+          location?: string
+          name?: string
+          phone?: string | null
+          price_expectation?: number | null
+          property_type?: string
+          status?: string
         }
         Relationships: []
       }
