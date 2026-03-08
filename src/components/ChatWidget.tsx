@@ -1,12 +1,32 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { MessageCircle, X, Send, Loader2, MapPin, Bed, Maximize, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
 import { cn } from '@/lib/utils';
+import ReactMarkdown from 'react-markdown';
 
-type Msg = { role: 'user' | 'assistant'; content: string };
+type Msg = {
+  role: 'user' | 'assistant';
+  content: string;
+  properties?: PropertyResult[];
+};
+
+interface PropertyResult {
+  id: string;
+  title: string;
+  location: string;
+  price: number;
+  property_type: string;
+  transaction_type: string;
+  bedrooms?: number;
+  size_sqm?: number;
+  images?: string[];
+}
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/nics-ai-chat`;
 
@@ -14,7 +34,50 @@ function generateSessionId() {
   return 'sess_' + Math.random().toString(36).substring(2) + Date.now().toString(36);
 }
 
+// Compact property card for chat results
+const ChatPropertyCard = ({ property }: { property: PropertyResult }) => {
+  const image = property.images?.[0] || '/placeholder.svg';
+  return (
+    <Link
+      to={`/property/${property.id}`}
+      className="flex gap-3 p-2 rounded-lg border border-border bg-card hover:bg-accent/50 transition-colors group"
+    >
+      <img
+        src={image}
+        alt={property.title}
+        className="w-20 h-16 object-cover rounded-md shrink-0"
+        loading="lazy"
+      />
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-medium line-clamp-1 group-hover:text-primary transition-colors">
+          {property.title}
+        </p>
+        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-0.5">
+          <MapPin className="h-3 w-3 shrink-0" />
+          <span className="line-clamp-1">{property.location}</span>
+        </div>
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-sm font-bold text-primary">
+            €{property.price?.toLocaleString()}
+          </span>
+          {property.bedrooms && (
+            <span className="flex items-center gap-0.5 text-xs text-muted-foreground">
+              <Bed className="h-3 w-3" /> {property.bedrooms}
+            </span>
+          )}
+          {property.size_sqm && (
+            <span className="flex items-center gap-0.5 text-xs text-muted-foreground">
+              <Maximize className="h-3 w-3" /> {property.size_sqm}m²
+            </span>
+          )}
+        </div>
+      </div>
+    </Link>
+  );
+};
+
 export const ChatWidget = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState('');
@@ -22,16 +85,13 @@ export const ChatWidget = () => {
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [sessionId] = useState(() => generateSessionId());
   const scrollRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
 
-  // Send greeting when first opened
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       sendInitialGreeting();
@@ -53,57 +113,41 @@ export const ChatWidget = () => {
   };
 
   const saveMessage = async (convId: string, role: string, content: string) => {
-    await supabase.from('chat_messages').insert({
-      conversation_id: convId,
-      role,
-      content,
-    });
+    await supabase.from('chat_messages').insert({ conversation_id: convId, role, content });
   };
 
   const updateConversationData = async (convId: string, content: string, allMessages: Msg[]) => {
     const fullText = allMessages.map(m => m.content).join(' ');
     const updates: Record<string, unknown> = { updated_at: new Date().toISOString() };
-
-    // Extract email
     const emailMatch = fullText.match(/[\w.-]+@[\w.-]+\.\w+/);
     if (emailMatch) updates.user_email = emailMatch[0];
-
-    // Extract phone
     const phoneMatch = fullText.match(/[\+]?[\d\s\-\(\)]{7,}/);
     if (phoneMatch) updates.user_phone = phoneMatch[0].trim();
-
-    // Check for completion
-    if (content.includes('[CONVERSATION_COMPLETE]')) {
-      updates.status = 'completed';
-    }
-
-    // Try to extract service type from messages
+    if (content.includes('[CONVERSATION_COMPLETE]')) updates.status = 'completed';
     const lowerText = fullText.toLowerCase();
-    if (lowerText.includes('real estate') || lowerText.includes('недвижимост') || lowerText.includes('имот')) {
-      updates.service_type = 'real_estate';
-    } else if (lowerText.includes('company') || lowerText.includes('registration') || lowerText.includes('регистрация')) {
-      updates.service_type = 'company_registration';
-    } else if (lowerText.includes('insurance') || lowerText.includes('застрахов')) {
-      updates.service_type = 'insurance';
-    } else if (lowerText.includes('translation') || lowerText.includes('превод') || lowerText.includes('легализация')) {
-      updates.service_type = 'document_translation';
-    }
-
+    if (lowerText.includes('real estate') || lowerText.includes('недвижимост') || lowerText.includes('имот')) updates.service_type = 'real_estate';
+    else if (lowerText.includes('company') || lowerText.includes('registration')) updates.service_type = 'company_registration';
+    else if (lowerText.includes('insurance') || lowerText.includes('застрахов')) updates.service_type = 'insurance';
+    else if (lowerText.includes('translation') || lowerText.includes('превод')) updates.service_type = 'document_translation';
     if (lowerText.includes('buy') || lowerText.includes('купув')) updates.property_action = 'buy';
     else if (lowerText.includes('sell') || lowerText.includes('продав')) updates.property_action = 'sell';
     else if (lowerText.includes('rent') || lowerText.includes('наем')) updates.property_action = 'rent';
-
     await supabase.from('chat_conversations').update(updates).eq('id', convId);
   };
 
-  const streamChat = async (msgs: Msg[], onDelta: (t: string) => void, onDone: () => void) => {
+  const streamChat = async (
+    msgs: Msg[],
+    onDelta: (t: string) => void,
+    onProperties: (props: PropertyResult[]) => void,
+    onDone: () => void,
+  ) => {
     const resp = await fetch(CHAT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
       },
-      body: JSON.stringify({ messages: msgs }),
+      body: JSON.stringify({ messages: msgs.map(m => ({ role: m.role, content: m.content })) }),
     });
 
     if (!resp.ok || !resp.body) {
@@ -132,6 +176,11 @@ export const ChatWidget = () => {
         if (jsonStr === '[DONE]') { streamDone = true; break; }
         try {
           const parsed = JSON.parse(jsonStr);
+          // Check for property data event
+          if (parsed.properties) {
+            onProperties(parsed.properties);
+            continue;
+          }
           const content = parsed.choices?.[0]?.delta?.content as string | undefined;
           if (content) onDelta(content);
         } catch {
@@ -151,6 +200,7 @@ export const ChatWidget = () => {
         if (jsonStr === '[DONE]') continue;
         try {
           const parsed = JSON.parse(jsonStr);
+          if (parsed.properties) { onProperties(parsed.properties); continue; }
           const content = parsed.choices?.[0]?.delta?.content as string | undefined;
           if (content) onDelta(content);
         } catch { /* ignore */ }
@@ -172,7 +222,7 @@ export const ChatWidget = () => {
     };
 
     try {
-      await streamChat([], upsert, () => {
+      await streamChat([], upsert, () => {}, () => {
         setIsLoading(false);
         const clean = assistantSoFar.replace('[CONVERSATION_COMPLETE]', '');
         saveMessage(convId, 'assistant', clean);
@@ -180,7 +230,7 @@ export const ChatWidget = () => {
     } catch (e) {
       console.error(e);
       setIsLoading(false);
-      setMessages([{ role: 'assistant', content: 'Hello! I\'m NICS AI, your real estate assistant. How can I help you today?' }]);
+      setMessages([{ role: 'assistant', content: 'Hello! I\'m NICS AI, your property search assistant. How can I help you find your dream property in Bulgaria?' }]);
     }
   };
 
@@ -201,20 +251,34 @@ export const ChatWidget = () => {
     await saveMessage(convId, 'user', userMsg.content);
 
     let assistantSoFar = '';
+    let foundProperties: PropertyResult[] = [];
+
     const upsert = (chunk: string) => {
       assistantSoFar += chunk;
       const clean = assistantSoFar.replace('[CONVERSATION_COMPLETE]', '');
       setMessages(prev => {
         const last = prev[prev.length - 1];
         if (last?.role === 'assistant') {
-          return prev.map((m, i) => i === prev.length - 1 ? { ...m, content: clean } : m);
+          return prev.map((m, i) => i === prev.length - 1 ? { ...m, content: clean, properties: foundProperties.length > 0 ? foundProperties : m.properties } : m);
         }
-        return [...prev, { role: 'assistant', content: clean }];
+        return [...prev, { role: 'assistant', content: clean, properties: foundProperties.length > 0 ? foundProperties : undefined }];
+      });
+    };
+
+    const onProperties = (props: PropertyResult[]) => {
+      foundProperties = props;
+      // Trigger a re-render with properties attached to assistant message
+      setMessages(prev => {
+        const last = prev[prev.length - 1];
+        if (last?.role === 'assistant') {
+          return prev.map((m, i) => i === prev.length - 1 ? { ...m, properties: props } : m);
+        }
+        return [...prev, { role: 'assistant', content: '', properties: props }];
       });
     };
 
     try {
-      await streamChat(newMessages, upsert, async () => {
+      await streamChat(newMessages, upsert, onProperties, async () => {
         setIsLoading(false);
         const clean = assistantSoFar.replace('[CONVERSATION_COMPLETE]', '');
         await saveMessage(convId!, 'assistant', clean);
@@ -243,30 +307,48 @@ export const ChatWidget = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 h-[500px] max-h-[70vh] bg-background border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
+        <div className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[420px] h-[550px] max-h-[75vh] bg-background border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
           {/* Header */}
           <div className="bg-primary text-primary-foreground p-4 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <MessageCircle className="h-5 w-5" />
+              <Search className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-sm">NICS AI Assistant</h3>
-              <p className="text-xs opacity-80">Online • Real Estate Expert</p>
+              <h3 className="font-semibold text-sm">NICS AI Property Search</h3>
+              <p className="text-xs opacity-80">Ask me anything about properties in Bulgaria</p>
             </div>
           </div>
 
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             {messages.map((msg, i) => (
-              <div key={i} className={cn("flex", msg.role === 'user' ? 'justify-end' : 'justify-start')}>
+              <div key={i} className={cn("flex flex-col", msg.role === 'user' ? 'items-end' : 'items-start')}>
                 <div className={cn(
-                  "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed",
+                  "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed",
                   msg.role === 'user'
                     ? 'bg-primary text-primary-foreground rounded-br-md'
                     : 'bg-muted text-foreground rounded-bl-md'
                 )}>
-                  {msg.content}
+                  {msg.role === 'assistant' ? (
+                    <div className="prose prose-sm max-w-none dark:prose-invert [&>p]:mb-1 [&>ul]:mb-1 [&>ol]:mb-1">
+                      <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    </div>
+                  ) : (
+                    msg.content
+                  )}
                 </div>
+                {/* Property Results */}
+                {msg.properties && msg.properties.length > 0 && (
+                  <div className="w-full max-w-[95%] mt-2 space-y-2">
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground px-1">
+                      <Search className="h-3 w-3" />
+                      <span>{msg.properties.length} properties found</span>
+                    </div>
+                    {msg.properties.map((prop) => (
+                      <ChatPropertyCard key={prop.id} property={prop} />
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
             {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
@@ -285,10 +367,9 @@ export const ChatWidget = () => {
               className="flex gap-2"
             >
               <Input
-                ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Type a message..."
+                placeholder="e.g. House under €40,000 near the sea..."
                 className="flex-1 rounded-full text-sm"
                 disabled={isLoading}
               />
