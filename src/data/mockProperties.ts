@@ -2508,7 +2508,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     locationRu: 'Солнечный Берег, Бургас',
     locationDe: 'Sonnenstrand, Burgas',
     locationIt: 'Sunny Beach, Burgas',
-    images: [],
+    images: ['https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop'],
     type: 'apartment',
     transactionType: 'sale' as const,
     status: 'for-sale',
