@@ -97,8 +97,8 @@ export const regions: Region[] = [
   {
     slug: 'burgas',
     name: { en: 'Burgas', bg: 'Бургас', ru: 'Бургас', de: 'Burgas', it: 'Burgas' },
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?w=1600&h=900&fit=crop',
     propertyCount: 650,
     excerpt: {
       en: 'Gateway to the southern Black Sea coast with beautiful beaches and lakeside parks.',
