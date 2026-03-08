@@ -386,16 +386,7 @@ const Home = () => {
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-bold text-xl">{region.name}</h3>
                 <p className="text-sm text-white/80">
-                  {region.count}{' '}
-                  {lang === 'bg'
-                    ? 'имота'
-                    : lang === 'ru'
-                      ? 'объектов'
-                      : lang === 'de'
-                        ? 'Objekte'
-                        : lang === 'it'
-                          ? 'immobili'
-                          : 'properties'}
+                  {region.count} {t('common.properties')}
                 </p>
               </div>
             </div>
