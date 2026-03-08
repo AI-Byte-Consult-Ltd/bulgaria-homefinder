@@ -816,7 +816,7 @@ const UkrainianBankAccountArticle = () => {
 
     it: {
       back: 'Torna alla home',
-      date: '28 febbraio 2026',
+      date: '7 marzo 2026',
       readTime: 'Tempo di lettura: ~15 minuti',
       title:
         'Come i cittadini ucraini possono aprire un conto bancario per registrare una società in Bulgaria nel 2026',
