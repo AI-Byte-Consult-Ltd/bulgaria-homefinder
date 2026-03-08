@@ -105,6 +105,12 @@ const Dashboard = () => {
               <DashboardProjects />
             </TabsContent>
 
+            {isAdmin && (
+              <TabsContent value="documents">
+                <DashboardDocuments />
+              </TabsContent>
+            )}
+
             <TabsContent value="profile">
               <DashboardProfile />
             </TabsContent>
