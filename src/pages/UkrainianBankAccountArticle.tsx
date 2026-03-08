@@ -1177,8 +1177,8 @@ const UkrainianBankAccountArticle = () => {
           >
             <meta itemProp="headline" content={d.title} />
             <meta itemProp="description" content={d.seoDescription || d.subtitle} />
-            <meta itemProp="datePublished" content="2026-02-28" />
-            <meta itemProp="dateModified" content="2026-02-28" />
+            <meta itemProp="datePublished" content="2026-03-07" />
+            <meta itemProp="dateModified" content="2026-03-07" />
             <meta itemProp="inLanguage" content={lang} />
             <meta itemProp="mainEntityOfPage" content={articleUrl} />
             <meta itemProp="image" content={cover.image_url} />
