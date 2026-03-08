@@ -293,8 +293,8 @@ export const regions: Region[] = [
   {
     slug: 'pamporovo',
     name: { en: 'Pamporovo', bg: 'Пампорово', ru: 'Пампорово', de: 'Pamporovo', it: 'Pamporovo' },
-    image: 'https://images.unsplash.com/photo-1486495939893-f5c13229950a?w=800&h=600&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1486495939893-f5c13229950a?w=1600&h=900&fit=crop',
+    image: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=1600&h=900&fit=crop',
     propertyCount: 220,
     excerpt: {
       en: 'A family-friendly ski resort in the Rhodope Mountains with the sunniest slopes in Bulgaria.',
