@@ -399,15 +399,7 @@ const Home = () => {
         <div className="container">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-2">
-              {lang === 'bg'
-                ? 'Пазарни анализи и тенденции'
-                : lang === 'ru'
-                  ? 'Аналитика рынка недвижимости'
-                  : lang === 'de'
-                    ? 'Marktanalysen & Einblicke'
-                    : lang === 'it'
-                      ? 'Analisi e tendenze di mercato'
-                      : 'Market Insights & Analysis'}
+              {t('common.marketInsights')}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
           </div>
