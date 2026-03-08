@@ -119,11 +119,11 @@ const LABELS: Record<string, Record<string, string>> = {
     it: 'Completa il pagamento di €25 tramite il link. Dopo la conferma del pagamento, il documento verrà inviato alla tua email.',
   },
   payButton: {
-    en: 'Pay €25 via Revolut',
-    ru: 'Оплатить €25 через Revolut',
-    bg: 'Платете €25 чрез Revolut',
-    de: '€25 über Revolut zahlen',
-    it: 'Paga €25 tramite Revolut',
+    en: 'Pay €35 via Revolut',
+    ru: 'Оплатить €35 через Revolut',
+    bg: 'Платете €35 чрез Revolut',
+    de: '€35 über Revolut zahlen',
+    it: 'Paga €35 tramite Revolut',
   },
   emailSentTo: {
     en: 'Document will be sent to:',
