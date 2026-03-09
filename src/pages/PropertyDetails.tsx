@@ -62,23 +62,76 @@ const PropertyDetails = () => {
 
   const pageUrl = `https://estate.aibyteconsult.com/property/${(property as any).id}`;
 
+  const metaDesc = displayDescription
+    ? displayDescription.substring(0, 160)
+    : `${displayTitle} — property in Bulgaria. View details, photos and pricing on BulgariaEstate.`;
+
+  const realEstateLd = {
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateListing',
+    name: displayTitle,
+    description: metaDesc,
+    url: pageUrl,
+    image: images,
+    datePosted: (property as any).createdAt || new Date().toISOString(),
+    ...(property as any).price && {
+      offers: {
+        '@type': 'Offer',
+        price: (property as any).price,
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      },
+    },
+    ...((property as any).location && {
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: (property as any).location,
+        addressCountry: 'BG',
+      },
+    }),
+    ...((property as any).size && {
+      floorSize: {
+        '@type': 'QuantitativeValue',
+        value: (property as any).size,
+        unitCode: 'MTK',
+      },
+    }),
+    numberOfRooms: (property as any).bedrooms || undefined,
+    numberOfBathroomsTotal: (property as any).bathrooms || undefined,
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://estate.aibyteconsult.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Properties', item: 'https://estate.aibyteconsult.com/properties' },
+      { '@type': 'ListItem', position: 3, name: displayTitle, item: pageUrl },
+    ],
+  };
+
   return (
     <>
       <Helmet>
         <title>{`${displayTitle} – BulgariaEstate`}</title>
-        <meta name="description" content={displayDescription || ''} />
+        <meta name="description" content={metaDesc} />
+        <link rel="canonical" href={pageUrl} />
 
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={displayTitle} />
-        <meta property="og:description" content={displayDescription || ''} />
+        <meta property="og:title" content={`${displayTitle} – BulgariaEstate`} />
+        <meta property="og:description" content={metaDesc} />
         <meta property="og:image" content={images[0]} />
         <meta property="og:image:alt" content={displayTitle} />
+        <meta property="og:site_name" content="BulgariaEstate by AI Byte Consult" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={displayTitle} />
-        <meta name="twitter:description" content={displayDescription || ''} />
+        <meta name="twitter:title" content={`${displayTitle} – BulgariaEstate`} />
+        <meta name="twitter:description" content={metaDesc} />
         <meta name="twitter:image" content={images[0]} />
+
+        <script type="application/ld+json">{JSON.stringify(realEstateLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
