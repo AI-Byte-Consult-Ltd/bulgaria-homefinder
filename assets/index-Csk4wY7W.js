@@ -814,7 +814,7 @@ A European gateway asset combining lifestyle positioning with measurable ROI.
 
 ИНВЕСТИЦИОННЫЕ ПОКАЗАТЕЛИ:
 
-• Цена покупки: €120 000  
+• Цена покупки: €122 000
 • Высокий сезон: €100–130/сутки  
 • Консервативная загрузка 90 дней: €10 000–11 000  
 • Межсезонье: €4 000–6 000  
@@ -851,7 +851,7 @@ A European gateway asset combining lifestyle positioning with measurable ROI.
 
 ИНВЕСТИЦИОННИ ПОКАЗАТЕЛИ:
 
-• Цена: €120 000  
+• Цена: €122 000
 • Висок сезон: €100–130/вечер  
 • 90 дни консервативна заетост: €10 000–11 000  
 • Междинни сезони: €4 000–6 000  
@@ -888,7 +888,7 @@ Gelegen im obersten Stock von Mellia Park 10, nur wenige Schritte vom Zentralstr
 
 INVESTITIONSKENNZAHLEN:
 
-• Kaufpreis: €120.000  
+• Kaufpreis: €122.000  
 • Hochsaison: €100–130/Nacht  
 • 90 Tage konservative Auslastung: €10.000–11.000  
 • Nebensaison: €4.000–6.000  
@@ -920,7 +920,7 @@ Situato all’ultimo piano del complesso Mellia Park 10, a pochi passi dalla spi
 
 DATI DI INVESTIMENTO:
 
-• Prezzo: €120.000  
+• Prezzo: €122.000  
 • Alta stagione: €100–130/notte  
 • 90 giorni occupazione conservativa: €10.000–11.000  
 • Media stagione: €4.000–6.000  
@@ -944,9 +944,9 @@ Punti chiave:
 Proiezione a 5 anni con 5% annuo:  
 ~€33.000 rivalutazione + flussi locativi.
 
-Un asset europeo costiero che combina lifestyle e rendimento misurabile.`},{id:"zornitsa-house-75239",title:"Value-Add Investment: Two-Storey Stone House + 1,910 m² Plot | Zornitsa Village",titleRu:"Инвестиционный проект: двухэтажный каменный дом + участок 1 910 м² | с. Зорница",titleBg:"Инвестиционен проект: двуетажна каменна къща + парцел 1 910 м² | с. Зорница",titleDe:"Investment-Projekt: Zweistöckiges Steinhaus + 1.910 m² Grundstück | Dorf Zornitsa",titleIt:"Progetto Investimento: Casa in Pietra + Terreno 1.910 m² | Villaggio Zornitsa",price:19700,location:"Zornitsa, Sredets Municipality, Burgas Region",locationRu:"с. Зорница, общ. Средец, область Бургас",locationBg:"с. Зорница, общ. Средец, обл. Бургас",locationDe:"Dorf Zornitsa, Gemeinde Sredets, Region Burgas",locationIt:"Villaggio Zornitsa, Comune di Sredets, Regione di Burgas",images:["https://ipfs.io/ipfs/bafybeidnyorzlykkbt7qi2ms73ilw4hui4f47temcxakodcg4w4v76ydsy","https://ipfs.io/ipfs/bafkreicbhnevrmpnwkdwccm3v7oqqrfzzhol64rnwbdk44infobygbvqdm","https://ipfs.io/ipfs/bafybeia5n3qyzv36p4vijsy3dgvghwitvovhopbte46lku5qhw46ofzdfa","https://ipfs.io/ipfs/bafkreibq755ehvqw7kgykilprafx2hu3gjmjb6h3j5us5sglkuacvicpk4","https://ipfs.io/ipfs/bafkreigcvkzmtuapsglxfdgsif3kmgnwydzrnf5rqvmgdusex3f7a6mt7i","https://ipfs.io/ipfs/bafkreiblnq3z7apbzedkwu6lvr4br3ibixj2u5larxjysjziw4nk3y2m4a"],type:"house",transactionType:"sale",status:"for-sale",featured:!0,availableUnits:1,area:112,bedrooms:4,bathrooms:2,livingRooms:1,floor:null,totalFloors:2,yearBuilt:1969,actSixteen:null,view:"Village & nature view",terraceArea:null,landArea:1910,parkingSpots:null,maintenanceFee:null,investmentCase:{purchasePrice:19700,renovationEstimateMin:2e4,renovationEstimateMax:25e3,totalInvestmentMin:39700,totalInvestmentMax:44700,comparableMarketValueMin:78e3,potentialUpsideMin:33300,potentialUpsideMax:38300,roiEstimateMin:74,roiEstimateMax:97,useCase:["private-home","guest-house","airbnb","eu-residency-base"],distanceToSea:50,mineralSprings:150,utilities:["electricity","water-mains","well"],construction:"stone-ground-floor-brick-upper",conditionOnPurchase:"full-renovation-required"},description:`Value-add investment opportunity: two-storey detached house (112 m²) on a privately owned 1,910 m² plot in the quiet village of Zornitsa, Burgas Region — 50 km from the Black Sea coast.
+Un asset europeo costiero che combina lifestyle e rendimento misurabile.`},{id:"zornitsa-house-75239",title:"Value-Add Investment: Two-Storey Stone House + 1,910 m² Plot | Zornitsa Village",titleRu:"Инвестиционный проект: двухэтажный каменный дом + участок 1 910 м² | с. Зорница",titleBg:"Инвестиционен проект: двуетажна каменна къща + парцел 1 910 м² | с. Зорница",titleDe:"Investment-Projekt: Zweistöckiges Steinhaus + 1.910 m² Grundstück | Dorf Zornitsa",titleIt:"Progetto Investimento: Casa in Pietra + Terreno 1.910 m² | Villaggio Zornitsa",price:17980,location:"Zornitsa, Sredets Municipality, Burgas Region",locationRu:"с. Зорница, общ. Средец, область Бургас",locationBg:"с. Зорница, общ. Средец, обл. Бургас",locationDe:"Dorf Zornitsa, Gemeinde Sredets, Region Burgas",locationIt:"Villaggio Zornitsa, Comune di Sredets, Regione di Burgas",images:["https://ipfs.io/ipfs/bafybeidnyorzlykkbt7qi2ms73ilw4hui4f47temcxakodcg4w4v76ydsy","https://ipfs.io/ipfs/bafkreicbhnevrmpnwkdwccm3v7oqqrfzzhol64rnwbdk44infobygbvqdm","https://ipfs.io/ipfs/bafybeia5n3qyzv36p4vijsy3dgvghwitvovhopbte46lku5qhw46ofzdfa","https://ipfs.io/ipfs/bafkreibq755ehvqw7kgykilprafx2hu3gjmjb6h3j5us5sglkuacvicpk4","https://ipfs.io/ipfs/bafkreigcvkzmtuapsglxfdgsif3kmgnwydzrnf5rqvmgdusex3f7a6mt7i","https://ipfs.io/ipfs/bafkreiblnq3z7apbzedkwu6lvr4br3ibixj2u5larxjysjziw4nk3y2m4a"],type:"house",transactionType:"sale",status:"for-sale",featured:!0,availableUnits:1,area:112,bedrooms:4,bathrooms:2,livingRooms:1,floor:null,totalFloors:2,yearBuilt:1969,actSixteen:null,view:"Village & nature view",terraceArea:null,landArea:1910,parkingSpots:null,maintenanceFee:null,investmentCase:{purchasePrice:17980,renovationEstimateMin:2e4,renovationEstimateMax:25e3,totalInvestmentMin:39700,totalInvestmentMax:44700,comparableMarketValueMin:78e3,potentialUpsideMin:33300,potentialUpsideMax:38300,roiEstimateMin:74,roiEstimateMax:97,useCase:["private-home","guest-house","airbnb","eu-residency-base"],distanceToSea:50,mineralSprings:150,utilities:["electricity","water-mains","well"],construction:"stone-ground-floor-brick-upper",conditionOnPurchase:"full-renovation-required"},description:`Value-add investment opportunity: two-storey detached house (112 m²) on a privately owned 1,910 m² plot in the quiet village of Zornitsa, Burgas Region — 50 km from the Black Sea coast.
 
-Purchase price: €19,700. Estimated full renovation budget: €20,000–25,000. Total investment: ~€40,000–45,000. Comparable renovated houses in the area start from €78,000 — implying potential upside of €33,000–38,000 (74–97% ROI on total invested capital).
+Purchase price: €17,980. Estimated full renovation budget: €20,000–25,000. Total investment: ~€40,000–45,000. Comparable renovated houses in the area start from €78,000 — implying potential upside of €33,000–38,000 (74–97% ROI on total invested capital).
 
 The house requires full renovation and represents a blank canvas. Ground floor: stone construction. Upper floor: brick. Connected to mains electricity and water; private well on plot. Natural mineral springs 150m away. The plot is large enough for a garden, terrace extension, outbuilding, or parking.
 
@@ -954,7 +954,7 @@ Use cases: primary or secondary private residence, guest house, rural retreat, A
 
 Ideal for investors, renovation specialists, or buyers seeking an EU foothold at the lowest possible entry price.`,descriptionRu:`Инвестиционный проект с добавленной стоимостью: двухэтажный отдельно стоящий дом (112 м²) на частном земельном участке 1 910 м² в тихом селе Зорница, Бургасская область — 50 км от Черноморского побережья.
 
-Цена покупки: €19 700. Расчётный бюджет полной реконструкции: €20 000–25 000. Совокупный объём инвестиций: ~€40 000–45 000. Сопоставимые отремонтированные дома в районе продаются от €78 000 — потенциальный прирост стоимости: €33 000–38 000 (ROI 74–97% на вложенный капитал).
+Цена покупки: €17 980. Расчётный бюджет полной реконструкции: €20 000–25 000. Совокупный объём инвестиций: ~€40 000–45 000. Сопоставимые отремонтированные дома в районе продаются от €78 000 — потенциальный прирост стоимости: €33 000–38 000 (ROI 74–97% на вложенный капитал).
 
 Дом требует полного ремонта — это чистый холст для реализации. Первый этаж: каменная кладка. Второй этаж: кирпич. Подключён к электросети и центральному водоснабжению; на участке имеется собственный колодец. Минеральные источники в 150 м. Участок позволяет разбить сад, обустроить террасу, построить хозблок или организовать парковку.
 
@@ -962,7 +962,7 @@ Ideal for investors, renovation specialists, or buyers seeking an EU foothold at
 
 Подходит для инвесторов, специалистов по реновации или покупателей, которым нужна точка входа в ЕС по минимальной цене.`,descriptionBg:`Инвестиционен проект с добавена стойност: двуетажна самостоятелна къща (112 м²) на частен поземлен имот от 1 910 м² в тихото село Зорница, обл. Бургас — 50 км от Черноморието.
 
-Покупна цена: €19 700. Прогнозен бюджет за пълна реновация: €20 000–25 000. Обща инвестиция: ~€40 000–45 000. Сравними реновирани къщи в района се предлагат от €78 000 — потенциална добавена стойност: €33 000–38 000 (ROI 74–97% върху вложения капитал).
+Покупна цена: €17 980. Прогнозен бюджет за пълна реновация: €20 000–25 000. Обща инвестиция: ~€40 000–45 000. Сравними реновирани къщи в района се предлагат от €78 000 — потенциална добавена стойност: €33 000–38 000 (ROI 74–97% върху вложения капитал).
 
 Имотът изисква цялостна реновация — напълно свободен за концепция. Първи етаж: каменна зидария. Втори етаж: тухлена конструкция. Включена електричество и водоснабдяване; собствен кладенец в двора. Минерални извори на 150 м. Парцелът позволява градина, тераса, стопанска постройка или паркинг.
 
@@ -970,7 +970,7 @@ Ideal for investors, renovation specialists, or buyers seeking an EU foothold at
 
 Идеален за инвеститори, специалисти по реновации или купувачи, търсещи достъп до ЕС на минимална цена.`,descriptionDe:`Wertsteigerungsprojekt: zweistöckiges freistehendes Haus (112 m²) auf einem privaten Grundstück von 1.910 m² im ruhigen Dorf Zornitsa, Region Burgas — 50 km vom Schwarzen Meer entfernt.
 
-Kaufpreis: €19.700. Geschätztes Renovierungsbudget: €20.000–25.000. Gesamtinvestition: ~€40.000–45.000. Vergleichbare renovierte Häuser in der Region beginnen bei €78.000 — potenzieller Wertzuwachs: €33.000–38.000 (ROI 74–97% auf das investierte Kapital).
+Kaufpreis: €17.980. Geschätztes Renovierungsbudget: €20.000–25.000. Gesamtinvestition: ~€40.000–45.000. Vergleichbare renovierte Häuser in der Region beginnen bei €78.000 — potenzieller Wertzuwachs: €33.000–38.000 (ROI 74–97% auf das investierte Kapital).
 
 Das Haus erfordert eine Vollrenovierung. Erdgeschoss: Steinbau. Obergeschoss: Ziegel. Anschluss an Strom und Wasserversorgung; eigener Brunnen auf dem Grundstück. Mineralquellen in 150 m Entfernung. Das Grundstück bietet Platz für Garten, Terrasse, Nebengebäude oder Stellplätze.
 
@@ -978,7 +978,7 @@ Verwendungsmöglichkeiten: Erst- oder Zweitwohnsitz, Gästehaus, Landhaus, Airbn
 
 Ideal für Investoren, Renovierungsspezialisten oder Käufer, die einen EU-Einstieg zum niedrigstmöglichen Preis suchen.`,descriptionIt:`Progetto di investimento a valore aggiunto: casa indipendente su due piani (112 m²) su un terreno privato di 1.910 m² nel tranquillo villaggio di Zornitsa, Regione di Burgas — 50 km dalla costa del Mar Nero.
 
-Prezzo di acquisto: €19.700. Budget stimato per la ristrutturazione completa: €20.000–25.000. Investimento totale: ~€40.000–45.000. Case ristrutturate comparabili nella zona partono da €78.000 — potenziale plusvalore: €33.000–38.000 (ROI 74–97% sul capitale investito).
+Prezzo di acquisto: €17.980. Budget stimato per la ristrutturazione completa: €20.000–25.000. Investimento totale: ~€40.000–45.000. Case ristrutturate comparabili nella zona partono da €78.000 — potenziale plusvalore: €33.000–38.000 (ROI 74–97% sul capitale investito).
 
 La casa richiede una ristrutturazione completa — tela bianca per qualsiasi progetto. Piano terra: costruzione in pietra. Piano superiore: mattoni. Allacciata a elettricità e acqua; pozzo privato nel terreno. Sorgenti minerali a 150 m. Il terreno consente giardino, terrazza, dependance o parcheggio.
 
