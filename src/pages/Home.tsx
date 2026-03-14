@@ -31,6 +31,46 @@ const Home = () => {
     {
   title:
     lang === 'bg'
+      ? 'ВНЖ за цифрови номади в България 2026: пълно ръководство за получаване'
+      : lang === 'ru'
+        ? 'ВНЖ для цифровых кочевников в Болгарии 2026: исчерпывающее руководство по получению'
+        : lang === 'de'
+          ? 'Aufenthaltserlaubnis für digitale Nomaden in Bulgarien 2026: Vollständiger Leitfaden'
+          : lang === 'it'
+            ? 'Permesso di soggiorno per nomadi digitali in Bulgaria 2026: guida completa'
+            : 'Bulgaria Digital Nomad Visa 2026: Complete Guide to Obtaining Residence Permit',
+  excerpt:
+    lang === 'bg'
+      ? 'Правна база, категории кандидати, доход €31 000/год., документи за виза D и ВНЖ, апостил, събиране на семейство, данък 10% и шенгенски достъп — актуализирано март 2026.'
+      : lang === 'ru'
+        ? 'Правовая база, категории заявителей, доход €31 000/год, документы для визы D и ВНЖ, апостиль, воссоединение семьи, налог 10% и шенгенский доступ — обновлено март 2026.'
+        : lang === 'de'
+          ? 'Rechtsgrundlage, Antragskategorien, Einkommen €31.000/Jahr, Dokumente für Visum D und Aufenthaltserlaubnis, Apostille, Familiennachzug, 10% Steuer und Schengen-Zugang — aktualisiert März 2026.'
+          : lang === 'it'
+            ? 'Base giuridica, categorie di richiedenti, reddito €31.000/anno, documenti per visto D e permesso di soggiorno, apostille, ricongiungimento familiare, imposta 10% e accesso Schengen — aggiornato marzo 2026.'
+            : 'Legal basis, applicant categories, €31,000/year income threshold, Visa D and residence permit documents, apostille, family reunification, 10% tax and Schengen access — updated March 2026.',
+  image_url: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80',
+  date:
+    lang === 'bg'
+      ? '14 март 2026'
+      : lang === 'ru'
+        ? '14 марта 2026'
+        : lang === 'de'
+          ? '14. März 2026'
+          : lang === 'it'
+            ? '14 marzo 2026'
+            : 'Mar 14, 2026',
+  author:
+    lang === 'bg'
+      ? 'Александър Лунин'
+      : lang === 'ru'
+        ? 'Александр Лунин'
+        : 'Alexander Lunin',
+  slug: 'bulgaria-digital-nomad-visa-2026',
+},
+{
+  title:
+    lang === 'bg'
       ? 'Осигуровки в България 2026: кой плаща, колко и как се изчисляват — в евро'
       : lang === 'ru'
         ? 'Осигуровки в Болгарии 2026: кто платит, сколько и как рассчитывать — в евро'
