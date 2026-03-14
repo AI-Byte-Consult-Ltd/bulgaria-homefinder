@@ -7,16 +7,19 @@ const LANGUAGE_PREFIXES = ["/bg", "/ru", "/de", "/it", "/en"];
 
 const NotFound = () => {
   const location = useLocation();
-
-  // Redirect /bg/, /ru/, /de/, /it/, /en/ to home
   const cleanPath = location.pathname.replace(/\/+$/, "").toLowerCase();
-  if (LANGUAGE_PREFIXES.includes(cleanPath)) {
-    return <Navigate to="/" replace />;
-  }
+  const isLangRedirect = LANGUAGE_PREFIXES.includes(cleanPath);
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
+    if (!isLangRedirect) {
+      console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    }
+  }, [location.pathname, isLangRedirect]);
+
+  // Redirect /bg/, /ru/, /de/, /it/, /en/ to home
+  if (isLangRedirect) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
