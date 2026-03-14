@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
 
+# Block non-existent language-prefix paths
+Disallow: /bg/
+Disallow: /ru/
+Disallow: /de/
+Disallow: /it/
+Disallow: /en/
+
+# Block auth/dashboard from indexing
+Disallow: /auth
+Disallow: /dashboard
+
 Sitemap: https://estate.aibyteconsult.com/sitemap.xml
