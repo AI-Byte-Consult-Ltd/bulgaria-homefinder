@@ -579,4 +579,33 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- Tools -->
+  <url>
+    <loc>https://estate.aibyteconsult.com/tools/rental-estimator</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://estate.aibyteconsult.com/restoration/rhodope-mountain-house</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://estate.aibyteconsult.com/restoration/koprivshtitsa-heritage-house</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://estate.aibyteconsult.com/restoration/balkan-village-house</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
