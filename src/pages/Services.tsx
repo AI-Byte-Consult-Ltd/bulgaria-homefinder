@@ -604,8 +604,52 @@ const Services = () => {
             }),
             t('pricelist.brokerCommissionInclude2', {
               defaultValue: 'Coordination of the transaction process',
-            }),
+           }),
           ],
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Поиск аренды'
+              : lang === 'bg'
+                ? 'Търсене на наем'
+                : lang === 'de'
+                  ? 'Mietsuche'
+                  : lang === 'it'
+                    ? 'Ricerca affitto'
+                    : 'Rental Search',
+          price:
+            lang === 'ru'
+              ? '50% от месячной арендной платы'
+              : lang === 'bg'
+                ? '50% от месечния наем'
+                : lang === 'de'
+                  ? '50% der Monatsmiete'
+                  : lang === 'it'
+                    ? '50% del canone mensile'
+                    : '50% of monthly rent',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Управление недвижимостью, сдача в аренду'
+              : lang === 'bg'
+                ? 'Управление на имот, отдаване под наем'
+                : lang === 'de'
+                  ? 'Immobilienverwaltung & Vermietung'
+                  : lang === 'it'
+                    ? 'Gestione immobiliare e affitto'
+                    : 'Property Management & Rental',
+          price:
+            lang === 'ru'
+              ? '30% от чистой прибыли'
+              : lang === 'bg'
+                ? '30% от нетната печалба'
+                : lang === 'de'
+                  ? '30% des Nettogewinns'
+                  : lang === 'it'
+                    ? '30% del profitto netto'
+                    : '30% of net profit',
         },
       ],
     },
