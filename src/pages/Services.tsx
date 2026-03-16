@@ -908,6 +908,95 @@ const Services = () => {
       ],
     },
     {
+      icon: Landmark,
+      title:
+        lang === 'ru'
+          ? 'Государственные и административные услуги'
+          : lang === 'bg'
+            ? 'Държавни и административни услуги'
+            : lang === 'de'
+              ? 'Behördliche & administrative Dienste'
+              : lang === 'it'
+                ? 'Servizi governativi e amministrativi'
+                : 'Government & Administrative Services',
+      services: [
+        {
+          name:
+            lang === 'ru'
+              ? 'Получение налогового номера в Болгарии и ПИК на НАП'
+              : lang === 'bg'
+                ? 'Получаване на данъчен номер в България и ПИК на НАП'
+                : lang === 'de'
+                  ? 'Steuernummer in Bulgarien & PIN des Finanzamts (NAP)'
+                  : lang === 'it'
+                    ? 'Ottenimento codice fiscale in Bulgaria e PIN NAP'
+                    : 'Bulgarian Tax Number & NAP PIN Acquisition',
+          price:
+            lang === 'ru'
+              ? '€30 / чел.'
+              : lang === 'bg'
+                ? '€30 / човек'
+                : lang === 'de'
+                  ? '€30 / Person'
+                  : lang === 'it'
+                    ? '€30 / persona'
+                    : '€30 / person',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Справка — контактное лицо фирмы для банка (для открытия набирательного или расчётного счёта)'
+              : lang === 'bg'
+                ? 'Удостоверение — контактно лице на фирмата за банка (за откриване на набирателна или разплащателна сметка)'
+                : lang === 'de'
+                  ? 'Bescheinigung — Kontaktperson der Firma für die Bank (zur Eröffnung eines Kapital- oder Girokontos)'
+                  : lang === 'it'
+                    ? 'Certificato — persona di contatto della società per la banca (per apertura conto vincolato o corrente)'
+                    : 'Company Contact Person Certificate for Bank (for opening capital or current account)',
+          price: '€75',
+        },
+      ],
+    },
+    {
+      icon: Palette,
+      title:
+        lang === 'ru'
+          ? 'Дизайн и архитектура'
+          : lang === 'bg'
+            ? 'Дизайн и архитектура'
+            : lang === 'de'
+              ? 'Design & Architektur'
+              : lang === 'it'
+                ? 'Design e architettura'
+                : 'Design & Architecture',
+      services: [
+        {
+          name:
+            lang === 'ru'
+              ? 'Дизайн-эскиз проекта вашей недвижимости (интерьер)'
+              : lang === 'bg'
+                ? 'Дизайн-скица на проекта за вашия имот (интериор)'
+                : lang === 'de'
+                  ? 'Design-Skizzenprojekt Ihrer Immobilie (Inneneinrichtung)'
+                  : lang === 'it'
+                    ? 'Progetto di design del vostro immobile (interni)'
+                    : 'Interior Design Sketch Project for Your Property',
+          price: '€5–15 / m²',
+          includes: [
+            lang === 'ru'
+              ? 'Цена зависит от сложности проекта и площади'
+              : lang === 'bg'
+                ? 'Цената зависи от сложността на проекта и площта'
+                : lang === 'de'
+                  ? 'Preis abhängig von Projektkomplexität und Fläche'
+                  : lang === 'it'
+                    ? 'Prezzo in base alla complessità del progetto e alla superficie'
+                    : 'Price depends on project complexity and area',
+          ],
+        },
+      ],
+    },
+    {
       icon: Plus,
       title: t('pricelist.section6Title', { defaultValue: 'Additional Services' }),
       services: [
@@ -924,6 +1013,19 @@ const Services = () => {
         {
           name: t('pricelist.docLegalization', { defaultValue: 'Document Legalization' }),
           price: '€75',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Услуги переводчика'
+              : lang === 'bg'
+                ? 'Услуги на преводач'
+                : lang === 'de'
+                  ? 'Dolmetscherdienste'
+                  : lang === 'it'
+                    ? 'Servizi di interprete'
+                    : 'Interpreter Services',
+          price: '€45 / 30 min',
         },
         {
           name: t('pricelist.additionalCorpDocs', {
