@@ -20,6 +20,11 @@ import {
   Bot,
   Sparkles,
   Link as LinkIcon,
+  Landmark,
+  Palette,
+  Award,
+  Languages,
+  Search,
 } from 'lucide-react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
