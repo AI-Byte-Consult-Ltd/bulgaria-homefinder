@@ -500,6 +500,52 @@ const Services = () => {
                     : 'Legal Consultation',
           price: '€55 / 30 min',
         },
+        {
+          name:
+            lang === 'ru'
+              ? 'Сопровождение по болгарским инстанциям'
+              : lang === 'bg'
+                ? 'Придружаване по български институции'
+                : lang === 'de'
+                  ? 'Begleitung zu bulgarischen Behörden'
+                  : lang === 'it'
+                    ? 'Accompagnamento presso le istituzioni bulgare'
+                    : 'Accompaniment to Bulgarian Government Offices',
+          price: '€50 / hr',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Подача на грант от Европейского Союза'
+              : lang === 'bg'
+                ? 'Кандидатстване за грант от Европейския съюз'
+                : lang === 'de'
+                  ? 'Beantragung von EU-Fördermitteln'
+                  : lang === 'it'
+                    ? "Domanda di sovvenzione dell'Unione Europea"
+                    : 'EU Grant Application',
+          price:
+            lang === 'ru'
+              ? '3,6–10% от суммы гранта'
+              : lang === 'bg'
+                ? '3,6–10% от сумата на гранта'
+                : lang === 'de'
+                  ? '3,6–10% der Fördersumme'
+                  : lang === 'it'
+                    ? '3,6–10% dell\'importo del finanziamento'
+                    : '3.6–10% of grant amount',
+          includes: [
+            lang === 'ru'
+              ? 'В зависимости от сложности проекта'
+              : lang === 'bg'
+                ? 'В зависимост от сложността на проекта'
+                : lang === 'de'
+                  ? 'Abhängig von der Projektkomplexität'
+                  : lang === 'it'
+                    ? 'In base alla complessità del progetto'
+                    : 'Depending on project complexity',
+          ],
+        },
       ],
     },
     {
