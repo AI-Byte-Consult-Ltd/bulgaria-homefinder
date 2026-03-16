@@ -1089,6 +1089,13 @@ const Services = () => {
       'AI automation',
       'Telegram auto-posting setup',
       'Translation and legalization',
+      'Tax number acquisition in Bulgaria',
+      'EU grant application',
+      'Interior design',
+      'Interpreter services',
+      'Property management',
+      'Rental search',
+      'Government office accompaniment',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
