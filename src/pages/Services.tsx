@@ -20,6 +20,11 @@ import {
   Bot,
   Sparkles,
   Link as LinkIcon,
+  Landmark,
+  Palette,
+  Award,
+  Languages,
+  Search,
 } from 'lucide-react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
@@ -495,6 +500,52 @@ const Services = () => {
                     : 'Legal Consultation',
           price: '€55 / 30 min',
         },
+        {
+          name:
+            lang === 'ru'
+              ? 'Сопровождение по болгарским инстанциям'
+              : lang === 'bg'
+                ? 'Придружаване по български институции'
+                : lang === 'de'
+                  ? 'Begleitung zu bulgarischen Behörden'
+                  : lang === 'it'
+                    ? 'Accompagnamento presso le istituzioni bulgare'
+                    : 'Accompaniment to Bulgarian Government Offices',
+          price: '€50 / hr',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Подача на грант от Европейского Союза'
+              : lang === 'bg'
+                ? 'Кандидатстване за грант от Европейския съюз'
+                : lang === 'de'
+                  ? 'Beantragung von EU-Fördermitteln'
+                  : lang === 'it'
+                    ? "Domanda di sovvenzione dell'Unione Europea"
+                    : 'EU Grant Application',
+          price:
+            lang === 'ru'
+              ? '3,6–10% от суммы гранта'
+              : lang === 'bg'
+                ? '3,6–10% от сумата на гранта'
+                : lang === 'de'
+                  ? '3,6–10% der Fördersumme'
+                  : lang === 'it'
+                    ? '3,6–10% dell\'importo del finanziamento'
+                    : '3.6–10% of grant amount',
+          includes: [
+            lang === 'ru'
+              ? 'В зависимости от сложности проекта'
+              : lang === 'bg'
+                ? 'В зависимост от сложността на проекта'
+                : lang === 'de'
+                  ? 'Abhängig von der Projektkomplexität'
+                  : lang === 'it'
+                    ? 'In base alla complessità del progetto'
+                    : 'Depending on project complexity',
+          ],
+        },
       ],
     },
     {
@@ -553,8 +604,52 @@ const Services = () => {
             }),
             t('pricelist.brokerCommissionInclude2', {
               defaultValue: 'Coordination of the transaction process',
-            }),
+           }),
           ],
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Поиск аренды'
+              : lang === 'bg'
+                ? 'Търсене на наем'
+                : lang === 'de'
+                  ? 'Mietsuche'
+                  : lang === 'it'
+                    ? 'Ricerca affitto'
+                    : 'Rental Search',
+          price:
+            lang === 'ru'
+              ? '50% от месячной арендной платы'
+              : lang === 'bg'
+                ? '50% от месечния наем'
+                : lang === 'de'
+                  ? '50% der Monatsmiete'
+                  : lang === 'it'
+                    ? '50% del canone mensile'
+                    : '50% of monthly rent',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Управление недвижимостью, сдача в аренду'
+              : lang === 'bg'
+                ? 'Управление на имот, отдаване под наем'
+                : lang === 'de'
+                  ? 'Immobilienverwaltung & Vermietung'
+                  : lang === 'it'
+                    ? 'Gestione immobiliare e affitto'
+                    : 'Property Management & Rental',
+          price:
+            lang === 'ru'
+              ? '30% от чистой прибыли'
+              : lang === 'bg'
+                ? '30% от нетната печалба'
+                : lang === 'de'
+                  ? '30% des Nettogewinns'
+                  : lang === 'it'
+                    ? '30% del profitto netto'
+                    : '30% of net profit',
         },
       ],
     },
@@ -813,6 +908,95 @@ const Services = () => {
       ],
     },
     {
+      icon: Landmark,
+      title:
+        lang === 'ru'
+          ? 'Государственные и административные услуги'
+          : lang === 'bg'
+            ? 'Държавни и административни услуги'
+            : lang === 'de'
+              ? 'Behördliche & administrative Dienste'
+              : lang === 'it'
+                ? 'Servizi governativi e amministrativi'
+                : 'Government & Administrative Services',
+      services: [
+        {
+          name:
+            lang === 'ru'
+              ? 'Получение налогового номера в Болгарии и ПИК на НАП'
+              : lang === 'bg'
+                ? 'Получаване на данъчен номер в България и ПИК на НАП'
+                : lang === 'de'
+                  ? 'Steuernummer in Bulgarien & PIN des Finanzamts (NAP)'
+                  : lang === 'it'
+                    ? 'Ottenimento codice fiscale in Bulgaria e PIN NAP'
+                    : 'Bulgarian Tax Number & NAP PIN Acquisition',
+          price:
+            lang === 'ru'
+              ? '€30 / чел.'
+              : lang === 'bg'
+                ? '€30 / човек'
+                : lang === 'de'
+                  ? '€30 / Person'
+                  : lang === 'it'
+                    ? '€30 / persona'
+                    : '€30 / person',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Справка — контактное лицо фирмы для банка (для открытия набирательного или расчётного счёта)'
+              : lang === 'bg'
+                ? 'Удостоверение — контактно лице на фирмата за банка (за откриване на набирателна или разплащателна сметка)'
+                : lang === 'de'
+                  ? 'Bescheinigung — Kontaktperson der Firma für die Bank (zur Eröffnung eines Kapital- oder Girokontos)'
+                  : lang === 'it'
+                    ? 'Certificato — persona di contatto della società per la banca (per apertura conto vincolato o corrente)'
+                    : 'Company Contact Person Certificate for Bank (for opening capital or current account)',
+          price: '€75',
+        },
+      ],
+    },
+    {
+      icon: Palette,
+      title:
+        lang === 'ru'
+          ? 'Дизайн и архитектура'
+          : lang === 'bg'
+            ? 'Дизайн и архитектура'
+            : lang === 'de'
+              ? 'Design & Architektur'
+              : lang === 'it'
+                ? 'Design e architettura'
+                : 'Design & Architecture',
+      services: [
+        {
+          name:
+            lang === 'ru'
+              ? 'Дизайн-эскиз проекта вашей недвижимости (интерьер)'
+              : lang === 'bg'
+                ? 'Дизайн-скица на проекта за вашия имот (интериор)'
+                : lang === 'de'
+                  ? 'Design-Skizzenprojekt Ihrer Immobilie (Inneneinrichtung)'
+                  : lang === 'it'
+                    ? 'Progetto di design del vostro immobile (interni)'
+                    : 'Interior Design Sketch Project for Your Property',
+          price: '€5–15 / m²',
+          includes: [
+            lang === 'ru'
+              ? 'Цена зависит от сложности проекта и площади'
+              : lang === 'bg'
+                ? 'Цената зависи от сложността на проекта и площта'
+                : lang === 'de'
+                  ? 'Preis abhängig von Projektkomplexität und Fläche'
+                  : lang === 'it'
+                    ? 'Prezzo in base alla complessità del progetto e alla superficie'
+                    : 'Price depends on project complexity and area',
+          ],
+        },
+      ],
+    },
+    {
       icon: Plus,
       title: t('pricelist.section6Title', { defaultValue: 'Additional Services' }),
       services: [
@@ -829,6 +1013,19 @@ const Services = () => {
         {
           name: t('pricelist.docLegalization', { defaultValue: 'Document Legalization' }),
           price: '€75',
+        },
+        {
+          name:
+            lang === 'ru'
+              ? 'Услуги переводчика'
+              : lang === 'bg'
+                ? 'Услуги на преводач'
+                : lang === 'de'
+                  ? 'Dolmetscherdienste'
+                  : lang === 'it'
+                    ? 'Servizi di interprete'
+                    : 'Interpreter Services',
+          price: '€45 / 30 min',
         },
         {
           name: t('pricelist.additionalCorpDocs', {
@@ -892,6 +1089,13 @@ const Services = () => {
       'AI automation',
       'Telegram auto-posting setup',
       'Translation and legalization',
+      'Tax number acquisition in Bulgaria',
+      'EU grant application',
+      'Interior design',
+      'Interpreter services',
+      'Property management',
+      'Rental search',
+      'Government office accompaniment',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
