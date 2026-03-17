@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./hooks/useAuth";
+import { HelmetProvider } from "react-helmet-async";
 
 import Home from "./pages/Home";
 import Properties from "./pages/Properties";
@@ -28,7 +29,6 @@ import "./i18n/config";
 import RegionPage from "./pages/RegionPage";
 import RentalEstimator from "./pages/RentalEstimator";
 
-
 // Articles
 import BulgariaDigitalNomadVisaArticle from "./pages/BulgariaDigitalNomadVisaArticle";
 import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
@@ -38,115 +38,122 @@ import BulgariaCheaperThanEUArticle from "./pages/BulgariaCheaperThanEUArticle";
 import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
 import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
 import BulgariaPropertyTaxesArticle from "./pages/BulgariaPropertyTaxesArticle";
-
+import BulgariaOwnershipCostsArticle from "./pages/BulgariaOwnershipCostsArticle";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
 
-        <BrowserRouter>
-          <Routes>
+          <BrowserRouter>
+            <Routes>
 
-            <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home />} />
 
-            <Route path="/properties" element={<Properties />} />
-            <Route path="/property/:id" element={<PropertyDetails />} />
+              <Route path="/properties" element={<Properties />} />
+              <Route path="/property/:id" element={<PropertyDetails />} />
 
-            <Route path="/buy" element={<Buy />} />
-            <Route path="/rent" element={<Rent />} />
-            <Route path="/sell" element={<Sell />} />
-            <Route path="/services" element={<Services />} />
+              <Route path="/buy" element={<Buy />} />
+              <Route path="/rent" element={<Rent />} />
+              <Route path="/sell" element={<Sell />} />
+              <Route path="/services" element={<Services />} />
 
-            <Route path="/restoration/:id" element={<RestorationProject />} />
+              <Route path="/restoration/:id" element={<RestorationProject />} />
 
-            {/* Articles */}
+              {/* ── Articles ──────────────────────────────────────── */}
 
-            <Route
-              path="/article/bulgaria-digital-nomad-visa-2026"
-              element={<BulgariaDigitalNomadVisaArticle />}
-            />
+              <Route
+                path="/article/bulgaria-digital-nomad-visa-2026"
+                element={<BulgariaDigitalNomadVisaArticle />}
+              />
 
-            <Route
-              path="/article/bulgaria-social-insurance-2026"
-              element={<BulgariaSocialInsuranceArticle />}
-            />
+              <Route
+                path="/article/bulgaria-social-insurance-2026"
+                element={<BulgariaSocialInsuranceArticle />}
+              />
 
-            <Route
-              path="/article/ukraine-bank-account-bulgaria-2026"
-              element={<UkrainianBankAccountArticle />}
-            />
+              <Route
+                path="/article/ukraine-bank-account-bulgaria-2026"
+                element={<UkrainianBankAccountArticle />}
+              />
 
-            <Route
-              path="/article/buying-mistakes-2026"
-              element={<BuyingMistakesArticle />}
-            />
+              <Route
+                path="/article/buying-mistakes-2026"
+                element={<BuyingMistakesArticle />}
+              />
 
-            <Route
-              path="/article/bulgaria-price-forecasts"
-              element={<BulgariaPriceForecastsArticle />}
-            />
+              <Route
+                path="/article/bulgaria-price-forecasts"
+                element={<BulgariaPriceForecastsArticle />}
+              />
 
-            <Route
-              path="/article/top-5-areas-in-bulgarian-coast-to-buy"
-              element={<Top5CoastalAreasForInvestmentArticle />}
-            />
+              <Route
+                path="/article/top-5-areas-in-bulgarian-coast-to-buy"
+                element={<Top5CoastalAreasForInvestmentArticle />}
+              />
 
-            <Route
-              path="/article/bulgaria-cheaper-than-eu"
-              element={<BulgariaCheaperThanEUArticle />}
-            />
+              <Route
+                path="/article/bulgaria-cheaper-than-eu"
+                element={<BulgariaCheaperThanEUArticle />}
+              />
 
-            <Route
-              path="/article/bulgaria-property-taxes-2026"
-              element={<BulgariaPropertyTaxesArticle />}
-            />
+              <Route
+                path="/article/bulgaria-property-taxes-2026"
+                element={<BulgariaPropertyTaxesArticle />}
+              />
 
-            {/* Regions */}
+              <Route
+                path="/article/bulgaria-property-ownership-costs-2026"
+                element={<BulgariaOwnershipCostsArticle />}
+              />
 
-            <Route
-              path="/regions/:slug"
-              element={<RegionPage />}
-            />
+              {/* ── Regions ───────────────────────────────────────── */}
 
-            {/* Tools */}
+              <Route
+                path="/regions/:slug"
+                element={<RegionPage />}
+              />
 
-            <Route
-              path="/tools/rental-estimator"
-              element={<RentalEstimator />}
-            />
+              {/* ── Tools ─────────────────────────────────────────── */}
 
-            {/* Static pages */}
+              <Route
+                path="/tools/rental-estimator"
+                element={<RentalEstimator />}
+              />
 
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+              {/* ── Static pages ──────────────────────────────────── */}
 
-            {/* Auth */}
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
 
-            <Route path="/auth" element={<Auth />} />
+              {/* ── Auth ──────────────────────────────────────────── */}
 
-            {/* Dashboard */}
+              <Route path="/auth" element={<Auth />} />
 
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/dashboard/add-property" element={<AddProperty />} />
+              {/* ── Dashboard ─────────────────────────────────────── */}
 
-            {/* 404 */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/add-property" element={<AddProperty />} />
 
-            <Route path="*" element={<NotFound />} />
+              {/* ── 404 ───────────────────────────────────────────── */}
 
-          </Routes>
+              <Route path="*" element={<NotFound />} />
 
-          <ChatWidget />
+            </Routes>
 
-        </BrowserRouter>
+            <ChatWidget />
 
-      </TooltipProvider>
-    </AuthProvider>
-  </QueryClientProvider>
+          </BrowserRouter>
+
+        </TooltipProvider>
+      </AuthProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

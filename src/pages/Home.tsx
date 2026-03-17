@@ -31,6 +31,46 @@ const Home = () => {
     {
   title:
     lang === 'bg'
+      ? 'Разходи за поддръжка на имот в България 2026: данъци, такса, комунални'
+      : lang === 'ru'
+        ? 'Стоимость содержания недвижимости в Болгарии 2026: налоги, такса поддержки, ЖКХ'
+        : lang === 'de'
+          ? 'Laufende Kosten für Immobilien in Bulgarien 2026: Steuern, Gebühren, Nebenkosten'
+          : lang === 'fr'
+            ? 'Coûts de détention immobilière en Bulgarie 2026 : taxes, charges, services'
+            : 'Cost of Owning Property in Bulgaria 2026: Taxes, Maintenance & Utilities',
+  excerpt:
+    lang === 'bg'
+      ? 'Пълен анализ за 2026 г.: данък върху имотите, такса поддръжка €4–18/м²/мес, комунални, застраховка и управление на наеми — с примерни изчисления за апартамент на море и самостоятелна къща.'
+      : lang === 'ru'
+        ? 'Полный анализ расходов на 2026 год: налог на имущество, такса поддержки €4–18/м²/мес, коммунальные, страховка и управление арендой — с примерами расчётов для апартамента у моря и частного дома.'
+        : lang === 'de'
+          ? 'Vollständige Kostenanalyse 2026: Grundsteuer, Instandhaltungsgebühren €4–18/m²/Monat, Nebenkosten, Versicherung und Mietverwaltung — mit Berechnungsbeispielen für Küstenwohnung und Haus.'
+          : lang === 'fr'
+            ? 'Analyse complète 2026 : taxe foncière, charges de copropriété €4–18/m²/mois, charges courantes, assurance et gestion locative — avec exemples de calcul pour appartement côtier et maison.'
+            : 'Complete 2026 guide: property tax, resort maintenance fees €4–18/m²/month, utilities, insurance and rental management costs — with worked examples for a coastal apartment and a detached house.',
+  image_url: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+  date:
+    lang === 'bg'
+      ? '17 март 2026'
+      : lang === 'ru'
+        ? '17 марта 2026'
+        : lang === 'de'
+          ? '17. März 2026'
+          : lang === 'fr'
+            ? '17 mars 2026'
+            : 'Mar 17, 2026',
+  author:
+    lang === 'bg'
+      ? 'Александър Лунин'
+      : lang === 'ru'
+        ? 'Александр Лунин'
+        : 'Alexander Lunin',
+  slug: 'bulgaria-property-ownership-costs-2026',
+},
+{
+  title:
+    lang === 'bg'
       ? 'ВНЖ за цифрови номади в България 2026: пълно ръководство за получаване'
       : lang === 'ru'
         ? 'ВНЖ для цифровых кочевников в Болгарии 2026: исчерпывающее руководство по получению'
