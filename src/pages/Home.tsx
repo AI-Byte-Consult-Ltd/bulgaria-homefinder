@@ -31,6 +31,40 @@ const Home = () => {
     {
   title:
     lang === 'bg'
+      ? 'Колко реално струва поддръжката на имот в България през 2026 г.'
+      : lang === 'ru'
+      ? 'Сколько реально стоит содержать недвижимость в Болгарии в 2026 году'
+      : lang === 'de'
+      ? 'Was kostet es wirklich, eine Immobilie in Bulgarien 2026 zu halten'
+      : lang === 'it'
+      ? 'Quanto costa davvero mantenere un immobile in Bulgaria nel 2026'
+      : "True Cost of Owning Property in Bulgaria in 2026: A Journalist's Breakdown",
+  excerpt:
+    lang === 'bg'
+      ? 'Журналистки разбор: такса поддръжка, комунални, данъци — три реални модела с цифри и изводи за инвеститори.'
+      : lang === 'ru'
+      ? 'Журналистский разбор: такса поддержки, коммунальные, налоги — три реальных модели с цифрами и выводами для инвесторов.'
+      : lang === 'de'
+      ? 'Journalistische Analyse: Instandhaltungsgebühr, Nebenkosten, Steuern — drei reale Modelle mit Zahlen für Investoren.'
+      : lang === 'it'
+      ? 'Analisi giornalistica: quota manutenzione, utenze, tasse — tre modelli reali con cifre e conclusioni per investitori.'
+      : "Journalist's breakdown: maintenance fee, utilities, taxes — three real cost models with numbers for investors.",
+  image_url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80&auto=format&fit=crop',
+  date:
+    lang === 'bg'
+      ? '18 март 2026'
+      : lang === 'ru'
+      ? '18 марта 2026'
+      : lang === 'de'
+      ? '18. März 2026'
+      : lang === 'it'
+      ? '18 marzo 2026'
+      : 'Mar 18, 2026',
+  slug: 'bulgaria-real-ownership-costs-2026',
+},
+{
+  title:
+    lang === 'bg'
       ? 'Разходи за поддръжка на имот в България 2026: данъци, такса, комунални'
       : lang === 'ru'
         ? 'Стоимость содержания недвижимости в Болгарии 2026: налоги, такса поддержки, ЖКХ'
@@ -274,32 +308,6 @@ const Home = () => {
     {
       title:
         lang === 'bg'
-          ? 'Топ 5 крайбрежни зони за инвестиция'
-          : lang === 'ru'
-            ? 'Топ-5 прибрежных районов для инвестиций'
-            : lang === 'de'
-              ? 'Top 5 Küstenregionen für Investments'
-              : lang === 'it'
-                ? 'Top 5 zone costiere per investire'
-                : 'Top 5 Coastal Areas for Investment',
-      excerpt:
-        lang === 'bg'
-          ? 'Открийте най-перспективните локации по Черноморието...'
-          : lang === 'ru'
-            ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
-            : lang === 'de'
-              ? 'Entdecken Sie die vielversprechendsten Standorte entlang der Schwarzmeerküste...'
-              : lang === 'it'
-                ? 'Scopri le località più promettenti lungo la costa del Mar Nero...'
-                : 'Discover the most promising locations along the Black Sea coast...',
-      image_url:
-        'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
-      date: 'Jan 10, 2026',
-      slug: 'top-5-areas-in-bulgarian-coast-to-buy',
-    },
-    {
-      title:
-        lang === 'bg'
           ? 'Защо България е още 2 пъти по-евтина от средното в ЕС - и защо тази възможност няма да трае вечно'
           : lang === 'ru'
             ? 'Почему Болгария всё ещё в 2 раза дешевле среднего по ЕС - и почему это окно не будет открыто вечно'
@@ -322,6 +330,32 @@ const Home = () => {
       date: 'Feb 18, 2026',
       slug: 'bulgaria-cheaper-than-eu',
     },
+    {
+      title:
+        lang === 'bg'
+          ? 'Топ 5 крайбрежни зони за инвестиция'
+          : lang === 'ru'
+            ? 'Топ-5 прибрежных районов для инвестиций'
+            : lang === 'de'
+              ? 'Top 5 Küstenregionen für Investments'
+              : lang === 'it'
+                ? 'Top 5 zone costiere per investire'
+                : 'Top 5 Coastal Areas for Investment',
+      excerpt:
+        lang === 'bg'
+          ? 'Открийте най-перспективните локации по Черноморието...'
+          : lang === 'ru'
+            ? 'Откройте для себя самые перспективные локации на побережье Чёрного моря...'
+            : lang === 'de'
+              ? 'Entdecken Sie die vielversprechendsten Standorte entlang der Schwarzmeerküste...'
+              : lang === 'it'
+                ? 'Scopri le località più promettenti lungo la costa del Mar Nero...'
+                : 'Discover the most promising locations along the Black Sea coast...',
+      image_url:
+        'https://images.unsplash.com/photo-1757863842644-87f09cd67010?w=900&q=80&auto=format&fit=crop',
+      date: 'Jan 10, 2026',
+      slug: 'top-5-areas-in-bulgarian-coast-to-buy',
+    }
   ];
 
   /**

@@ -20,12 +20,12 @@ const BulgariaOwnershipCostsArticle = () => {
     : 'en';
 
   const cover = {
-    image_url: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80&auto=format&fit=crop',
-    og_image:  'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&q=80&auto=format&fit=crop',
-    unsplash_author_name: 'Outsite Co',
-    unsplash_author_url: 'https://unsplash.com/@outsite',
-    unsplash_photo_url: 'https://unsplash.com/photos/blue-swimming-pool-near-green-trees-during-daytime-m3hn2Kn5Bns',
-  };
+  image_url:            'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80&auto=format&fit=crop',
+  og_image:             'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&q=80&auto=format&fit=crop',
+  unsplash_author_name: 'Digital Marketing Agency NTWRK',
+  unsplash_author_url:  'https://unsplash.com/@ntwrk_img',
+  unsplash_photo_url:   'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w',
+};
 
   const BASE_URL = 'https://estate.aibyteconsult.com';
   const SLUG     = '/article/bulgaria-property-ownership-costs-2026';

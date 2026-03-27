@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from './LanguageSelector';
-import { Home, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import logo from '@/assets/logo.jpg';
 import {
   Sheet,
   SheetContent,
@@ -27,11 +28,12 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-semibold text-xl tracking-tight">
-          <Home className="h-5 w-5 text-primary" />
-          <span className="text-foreground">
-            Bulgaria<span className="text-primary">Estate</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src={logo}
+            alt="Bulgaria Estate"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

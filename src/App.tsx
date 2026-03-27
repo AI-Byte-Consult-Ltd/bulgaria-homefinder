@@ -29,16 +29,17 @@ import "./i18n/config";
 import RegionPage from "./pages/RegionPage";
 import RentalEstimator from "./pages/RentalEstimator";
 
-// Articles
-import BulgariaDigitalNomadVisaArticle from "./pages/BulgariaDigitalNomadVisaArticle";
-import BuyingMistakesArticle from "./pages/BuyingMistakesArticle";
-import BulgariaPriceForecastsArticle from "./pages/BulgariaPriceForecastsArticle";
+// ── Articles ──────────────────────────────────────────────────────────────────
+import BulgariaDigitalNomadVisaArticle      from "./pages/BulgariaDigitalNomadVisaArticle";
+import BuyingMistakesArticle                from "./pages/BuyingMistakesArticle";
+import BulgariaPriceForecastsArticle        from "./pages/BulgariaPriceForecastsArticle";
 import Top5CoastalAreasForInvestmentArticle from "./pages/Top5CoastalAreasForInvestmentArticle";
-import BulgariaCheaperThanEUArticle from "./pages/BulgariaCheaperThanEUArticle";
-import UkrainianBankAccountArticle from "./pages/UkrainianBankAccountArticle";
-import BulgariaSocialInsuranceArticle from "./pages/BulgariaSocialInsuranceArticle";
-import BulgariaPropertyTaxesArticle from "./pages/BulgariaPropertyTaxesArticle";
-import BulgariaOwnershipCostsArticle from "./pages/BulgariaOwnershipCostsArticle";
+import BulgariaCheaperThanEUArticle         from "./pages/BulgariaCheaperThanEUArticle";
+import UkrainianBankAccountArticle          from "./pages/UkrainianBankAccountArticle";
+import BulgariaSocialInsuranceArticle       from "./pages/BulgariaSocialInsuranceArticle";
+import BulgariaPropertyTaxesArticle         from "./pages/BulgariaPropertyTaxesArticle";
+import BulgariaOwnershipCostsArticle        from "./pages/BulgariaOwnershipCostsArticle";
+import BulgariaRealOwnershipCostsArticle    from "./pages/BulgariaRealOwnershipCostsArticle";
 
 const queryClient = new QueryClient();
 
@@ -55,92 +56,85 @@ const App = () => (
 
               <Route path="/" element={<Home />} />
 
-              <Route path="/properties" element={<Properties />} />
-              <Route path="/property/:id" element={<PropertyDetails />} />
+              <Route path="/properties"      element={<Properties />} />
+              <Route path="/property/:id"    element={<PropertyDetails />} />
 
-              <Route path="/buy" element={<Buy />} />
-              <Route path="/rent" element={<Rent />} />
-              <Route path="/sell" element={<Sell />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/buy"             element={<Buy />} />
+              <Route path="/rent"            element={<Rent />} />
+              <Route path="/sell"            element={<Sell />} />
+              <Route path="/services"        element={<Services />} />
 
               <Route path="/restoration/:id" element={<RestorationProject />} />
 
-              {/* ── Articles ──────────────────────────────────────── */}
+              {/* ── Articles ────────────────────────────────────── */}
 
               <Route
                 path="/article/bulgaria-digital-nomad-visa-2026"
                 element={<BulgariaDigitalNomadVisaArticle />}
               />
-
               <Route
                 path="/article/bulgaria-social-insurance-2026"
                 element={<BulgariaSocialInsuranceArticle />}
               />
-
               <Route
                 path="/article/ukraine-bank-account-bulgaria-2026"
                 element={<UkrainianBankAccountArticle />}
               />
-
               <Route
                 path="/article/buying-mistakes-2026"
                 element={<BuyingMistakesArticle />}
               />
-
               <Route
                 path="/article/bulgaria-price-forecasts"
                 element={<BulgariaPriceForecastsArticle />}
               />
-
               <Route
                 path="/article/top-5-areas-in-bulgarian-coast-to-buy"
                 element={<Top5CoastalAreasForInvestmentArticle />}
               />
-
               <Route
                 path="/article/bulgaria-cheaper-than-eu"
                 element={<BulgariaCheaperThanEUArticle />}
               />
-
               <Route
                 path="/article/bulgaria-property-taxes-2026"
                 element={<BulgariaPropertyTaxesArticle />}
               />
-
               <Route
                 path="/article/bulgaria-property-ownership-costs-2026"
                 element={<BulgariaOwnershipCostsArticle />}
               />
-
-              {/* ── Regions ───────────────────────────────────────── */}
-
               <Route
-                path="/regions/:slug"
-                element={<RegionPage />}
+                path="/article/bulgaria-real-ownership-costs-2026"
+                element={<BulgariaRealOwnershipCostsArticle />}
               />
 
-              {/* ── Tools ─────────────────────────────────────────── */}
+              {/* ── Regions ─────────────────────────────────────── */}
+
+              <Route path="/regions/:slug" element={<RegionPage />} />
+
+              {/* ── Tools ───────────────────────────────────────── */}
 
               <Route
                 path="/tools/rental-estimator"
                 element={<RentalEstimator />}
               />
 
-              {/* ── Static pages ──────────────────────────────────── */}
+              {/* ── Static pages ────────────────────────────────── */}
 
-              <Route path="/about" element={<About />} />
+              <Route path="/about"   element={<About />} />
               <Route path="/contact" element={<Contact />} />
 
-              {/* ── Auth ──────────────────────────────────────────── */}
+              {/* ── Auth ────────────────────────────────────────── */}
 
               <Route path="/auth" element={<Auth />} />
 
-              {/* ── Dashboard ─────────────────────────────────────── */}
+              {/* ── Dashboard ───────────────────────────────────── */}
 
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/dashboard/add-property" element={<AddProperty />} />
+              <Route path="/dashboard"               element={<Dashboard />} />
+              <Route path="/dashboard/add-property"  element={<AddProperty />} />
 
-              {/* ── 404 ───────────────────────────────────────────── */}
+              {/* ── 404 ─────────────────────────────────────────── */}
 
               <Route path="*" element={<NotFound />} />
 
