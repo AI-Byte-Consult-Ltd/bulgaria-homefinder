@@ -4,7 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from './LanguageSelector';
 import { Menu } from 'lucide-react';
-import logo from '@/assets/logo.jpg';
+import logo from '@/assets/logo.png';
 import {
   Sheet,
   SheetContent,
@@ -28,11 +28,12 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
+        
         <Link to="/" className="flex items-center">
           <img
             src={logo}
             alt="Bulgaria Estate"
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </Link>
 
@@ -73,6 +74,7 @@ export const Header = () => {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
+
             <SheetContent side="right">
               <nav className="flex flex-col gap-4 mt-8">
                 {navItems.map((item) => (
@@ -84,6 +86,7 @@ export const Header = () => {
                     {item.label}
                   </Link>
                 ))}
+
                 <div className="pt-4 border-t flex flex-col gap-2">
                   {user ? (
                     <Button asChild size="sm">
