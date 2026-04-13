@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Linkedin, Globe } from "lucide-react";
-import foundersImg from "@/assets/team/founders.png";
+import foundersImg from "@/assets/team/founders-wide.jpg";
 
 const teamMembers = [
   {
