@@ -334,7 +334,7 @@ const PropertyDetails = () => {
                   <Separator />
 
                   <a
-                    href="https://wa.me/491628184658"
+                    href="https://wa.me/359988899109"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -344,7 +344,7 @@ const PropertyDetails = () => {
                   </a>
 
                   <a
-                    href={`https://wa.me/491628184658?text=${encodeURIComponent(
+                    href={`https://wa.me/359988899109?text=${encodeURIComponent(
                       `Hi! I'd like to schedule a visit for the property: "${displayTitle}" (ID: ${(property as any).id}). Please let me know available dates and times.`
                     )}`}
                     target="_blank"

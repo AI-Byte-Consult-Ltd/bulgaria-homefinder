@@ -1297,7 +1297,7 @@ const UkrainianBankAccountArticle = () => {
                         : 'End-to-end company registration support for Ukrainian and international clients: bank selection, document preparation, bank liaison, Commercial Register filing, tax registration, and operating account setup.'}
               </p>
               <a
-                href="https://wa.me/491628184658"
+                href="https://wa.me/359988899109"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-primary hover:underline"

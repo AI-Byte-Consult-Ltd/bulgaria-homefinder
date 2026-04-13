@@ -2241,7 +2241,7 @@ const BulgariaDigitalNomadVisaArticle = () => {
                         : 'Full legal support: document preparation, apostille coordination, certified translations, consulate appointment assistance, Migration Directorate filing and post-arrival compliance.'}
               </p>
               <a
-                href="https://wa.me/491628184658"
+                href="https://wa.me/359988899109"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-primary hover:underline"
