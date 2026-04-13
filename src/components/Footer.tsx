@@ -30,7 +30,7 @@ export const Footer = () => {
             <a href="mailto:info@aibyteconsult.com" className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors" aria-label="Email">
               <Mail className="h-4 w-4 text-primary" />
             </a>
-            <a href="https://wa.me/491628184658" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors" aria-label="WhatsApp">
+            <a href="https://wa.me/359988899109" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors" aria-label="WhatsApp">
               <MessageCircle className="h-4 w-4 text-primary" />
             </a>
             <a href="tel:+359988899109" className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors" aria-label="Phone">
@@ -88,7 +88,7 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://wa.me/491628184658" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+              <a href="https://wa.me/359988899109" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
             </li>

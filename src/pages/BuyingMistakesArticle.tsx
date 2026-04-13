@@ -503,7 +503,7 @@ const BuyingMistakesArticle = () => {
           <div className="mt-8 p-6 bg-primary/10 rounded-xl text-center">
             <p className="font-semibold mb-3">{d.ready}</p>
             <a
-              href="https://wa.me/491628184658"
+              href="https://wa.me/359988899109"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"

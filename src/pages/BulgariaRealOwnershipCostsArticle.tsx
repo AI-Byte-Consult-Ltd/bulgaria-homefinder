@@ -994,7 +994,7 @@ const BulgariaRealOwnershipCostsArticle = () => {
           <div>
             <p className="text-sm font-semibold mb-2">{d.cta_title}</p>
             <p className="text-xs text-muted-foreground mb-3">{d.cta_body}</p>
-            <a href="https://wa.me/491628184658" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/359988899109" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
               <ExternalLink className="w-4 h-4" />{d.cta_button}
             </a>
