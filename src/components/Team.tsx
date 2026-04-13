@@ -29,8 +29,8 @@ const Team = () => {
   const l = ['en', 'bg', 'ru', 'de', 'it'].includes(lang) ? lang : 'en';
 
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="relative overflow-hidden bg-background">
+      <div className="container mx-auto px-4 relative z-10 pt-24 pb-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground">
             {t('common.meetFounders')}
@@ -39,17 +39,18 @@ const Team = () => {
             {t('common.foundersSubtitle')}
           </p>
         </div>
+      </div>
 
-        {/* Founders Photo */}
-        <div className="w-full mb-12 -mx-4 px-0 md:-mx-0">
-          <div className="overflow-hidden shadow-2xl">
-            <img
-              src={foundersImg}
-              alt="Alexander Lunin, NICS AI, and Aleksandr Tochilov — the founding team of AI Byte Consult"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
+      {/* Founders Photo — full width */}
+      <div className="w-full mb-12">
+        <img
+          src={foundersImg}
+          alt="Alexander Lunin, NICS AI, and Aleksandr Tochilov — the founding team of AI Byte Consult"
+          className="w-full h-auto object-cover"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 pb-24">
 
         {/* Three columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
