@@ -41,8 +41,8 @@ const Team = () => {
         </div>
 
         {/* Founders Photo */}
-        <div className="max-w-3xl mx-auto mb-12">
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+        <div className="w-full mb-12 -mx-4 px-0 md:-mx-0">
+          <div className="overflow-hidden shadow-2xl">
             <img
               src={foundersImg}
               alt="Alexander Lunin, NICS AI, and Aleksandr Tochilov — the founding team of AI Byte Consult"
