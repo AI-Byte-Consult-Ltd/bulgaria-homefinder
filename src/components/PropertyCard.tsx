@@ -192,8 +192,8 @@ export const PropertyCard = ({
         {/* SOLD OUT overlay */}
         {status === 'sold-out' && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="relative -rotate-12 border-4 border-destructive bg-destructive/90 text-destructive-foreground px-6 py-2 text-2xl md:text-3xl font-extrabold tracking-widest shadow-2xl uppercase">
+            <div className="absolute inset-0 bg-black/15" />
+            <div className="relative -rotate-12 border-2 border-destructive/60 bg-destructive/40 text-white px-6 py-2 text-2xl md:text-3xl font-extrabold tracking-widest uppercase backdrop-blur-[1px]">
               {lbl(STATUS_LABELS['sold-out'], lang)}
             </div>
           </div>

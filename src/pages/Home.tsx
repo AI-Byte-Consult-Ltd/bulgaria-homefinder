@@ -425,6 +425,30 @@ const Home = () => {
         </PropertyCarousel>
       </section>
 
+      {/* All Properties */}
+      <section className="py-16 container">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">{t('home.allProperties', 'All Properties')}</h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
+          </div>
+          <Link
+            to="/properties"
+            className="text-primary hover:underline text-sm font-semibold"
+          >
+            {t('common.viewAll', 'View All')} →
+          </Link>
+        </div>
+
+        <PropertyCarousel>
+          {mockProperties.map(withCardImage).map((property) => (
+            <PropertyCarouselItem key={property.id}>
+              <PropertyCard {...property} />
+            </PropertyCarouselItem>
+          ))}
+        </PropertyCarousel>
+      </section>
+
       {/* Newest Listings */}
       <section className="py-16 bg-muted/30">
         <div className="container">
