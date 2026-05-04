@@ -20,7 +20,7 @@ export const mockProperties = [
 
   // ── Images ───────────────────────────────────────────────
   images: [
-    'https://ipfs.io/ipfs/bafybeieh5glx4k3aqtgndnubujol7gk6titpjlrdbtnsi6dxzlg4glamkm'
+    'https://gateway.pinata.cloud/ipfs/bafybeieh5glx4k3aqtgndnubujol7gk6titpjlrdbtnsi6dxzlg4glamkm'
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -183,8 +183,8 @@ Ideale come residenza rurale tranquilla o come proprietà accessibile nell'Union
 
   // ── Images ───────────────────────────────────────────────
   images: [
-    'https://ipfs.io/ipfs/bafybeihiqh2hrzw7jf6ivnpuohedtzdwityaw4kxilgxwz22fu6hsvrxeq',
-    'https://ipfs.io/ipfs/bafybeiexlocn3lgtsqpktmdddsjuhwhqynvanpgp7vycetvm57fnyksioi'
+    'https://gateway.pinata.cloud/ipfs/bafybeihiqh2hrzw7jf6ivnpuohedtzdwityaw4kxilgxwz22fu6hsvrxeq',
+    'https://gateway.pinata.cloud/ipfs/bafybeiexlocn3lgtsqpktmdddsjuhwhqynvanpgp7vycetvm57fnyksioi'
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -388,8 +388,8 @@ Dopo la ristrutturazione la proprietà può diventare:
   transactionType: 'sale' as const,
 
   // ── Status & Availability ────────────────────────────────
-  status:         'for-sale',     // for-sale | for-rent | sold-out | coming-soon | reserved
-  featured:       true,
+  status:         'sold-out',     // for-sale | for-rent | sold-out | coming-soon | reserved
+  featured:       false,
   availableUnits: 1,
 
   // ── Core Specs ───────────────────────────────────────────
@@ -752,7 +752,7 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
 
   // ── Titles ──────────────────────────────────────────────
   title:   'Income-Generating Luxury Apartment | Signed Rental Contract €450/mo | Slaveykov, Burgas',
-  titleRu: 'Доходная люкс-квартира | Действующий договор аренды €450/мес | Славейков, Бургас',
+  titleRu: 'Двухкомнатная квартира | Действующий договор аренды €450/мес | Славейков, Бургас',
   titleBg: 'Апартамент с доход | Активен наемен договор €450/мес | Славейков, Бургас',
   titleDe: 'Rendite-Luxuswohnung | Laufender Mietvertrag €450/Monat | Slaveykov, Burgas',
   titleIt: 'Appartamento con Reddito Attivo | Contratto Affitto €450/mese | Slaveykov, Burgas',
@@ -811,19 +811,19 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
   availableUnits: 1,
 
   // ── Core Specs ───────────────────────────────────────────
-  area:        60,   // m²
+  area:        63,   // m²
   bedrooms:    1,
   bathrooms:   1,
   livingRooms: 1,
 
   // ── Floor & Building ─────────────────────────────────────
   floor:       16,
-  totalFloors: null,  // TODO: confirm total floors (not top floor per description)
-  yearBuilt:   null,  // TODO: confirm
+  totalFloors: 18,  // TODO: confirm total floors (not top floor per description)
+  yearBuilt:   1981,  // TODO: confirm
   actSixteen:  true,
 
   // ── View & Outdoor ───────────────────────────────────────
-  view:        null,  // TODO: confirm — 16th floor likely has city / sea view
+  view:        true,  // TODO: confirm — 16th floor likely has city / sea view
   terraceArea: null,  // TODO: confirm balcony/terrace
 
   // ── Land & Parking ───────────────────────────────────────
@@ -831,7 +831,7 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
   parkingSpots: null,   // TODO: confirm
 
   // ── Maintenance ──────────────────────────────────────────
-  maintenanceFee: null, // TODO: confirm — request from seller
+  maintenanceFee: 7, // TODO: confirm — request from seller
 
   // ── Furnishing ───────────────────────────────────────────
   furnished:       true,
