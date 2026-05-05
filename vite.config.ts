@@ -26,9 +26,7 @@ export default defineConfig(({ mode }) => ({
           },
         },
         postProcess(renderedRoute) {
-          // Ensure 404 page returns proper status hint and trailing slashes are normalized
           renderedRoute.route = renderedRoute.route.replace(/\/$/, "") || "/";
-          return renderedRoute;
         },
       }),
   ].filter(Boolean),
