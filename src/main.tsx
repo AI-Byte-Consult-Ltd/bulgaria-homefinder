@@ -18,6 +18,14 @@ if (container?.hasChildNodes()) {
   createRoot(container!).render(app);
 }
 
+// Signal the prerenderer (puppeteer) that the app is ready for snapshot.
+// Wait for two animation frames so React has committed the initial render.
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.dispatchEvent(new Event("render-event"));
+  });
+});
+
 // регистрация сервис‑воркера для PWA (после загрузки страницы)
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
