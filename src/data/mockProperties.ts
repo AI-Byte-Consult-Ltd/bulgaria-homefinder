@@ -1902,7 +1902,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     id: 'lc-alexandrovo-house',
     title: 'New Single-Storey House - Alexandrovo',
     titleBg: 'Нова едноетажна къща - Александрово',
-    price: 250000,
+    price: 260000,
     location: 'Alexandrovo',
     image: 'https://ipfs.io/ipfs/bafkreiawxuc7hvc2m776t2ylavp6flkvzzl7wqkri4aeu3rgw2trfntib4',
     bedrooms: 3,
