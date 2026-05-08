@@ -1876,7 +1876,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: false,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Three-bedroom furnished apartment in a residential building in Saint Vlas. Total area 98.6 m². 2nd floor with sea and city views. Currently not available for sale.',
     descriptionBg: 'Тристаен обзаведен апартамент в жилищна сграда в Свети Влас. Обща площ 98,6 м². 2-ри етаж с изглед към морето и града. В момента не е наличен за продажба.',
   },
