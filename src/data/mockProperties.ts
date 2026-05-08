@@ -2317,6 +2317,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'rent' as const,
     featured: false,
+    status: 'rented' as const,
   },
   {
     id: 'rent-2',
