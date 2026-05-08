@@ -63,7 +63,7 @@ interface PropertyCardProps {
 
   featured?: boolean;
   availableUnits?: number;
-  status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved';
+  status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved' | 'rented';
   yearBuilt?: number;
   actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
 
@@ -90,6 +90,7 @@ const STATUS_LABELS: Record<string, Record<string, string>> = {
   'sold-out':    { en: 'Sold Out',     ru: 'Продано',      bg: 'Продаден',      de: 'Verkauft',       it: 'Venduto'        },
   'coming-soon': { en: 'Coming Soon',  ru: 'Скоро',        bg: 'Очаквайте',     de: 'Demnächst',      it: 'In Arrivo'      },
   'reserved':    { en: 'Reserved',     ru: 'Резервирован', bg: 'Резервиран',    de: 'Reserviert',     it: 'Riservato'      },
+  'rented':      { en: 'Rented Out',   ru: 'Сдано',        bg: 'Отдаден',       de: 'Vermietet',      it: 'Affittato'      },
 };
 
 const UI: Record<string, Record<string, string>> = {
@@ -148,7 +149,7 @@ export const PropertyCard = ({
   const statusBadge = status && STATUS_LABELS[status] ? (
     <Badge
       className={`absolute top-3 right-3 ${
-        status === 'sold-out'
+        status === 'sold-out' || status === 'rented'
           ? 'bg-destructive text-destructive-foreground'
           : status === 'reserved'
             ? 'bg-yellow-500 text-black'
@@ -189,12 +190,12 @@ export const PropertyCard = ({
         {/* Status badge — top right */}
         {statusBadge}
 
-        {/* SOLD OUT overlay */}
-        {status === 'sold-out' && (
+        {/* SOLD OUT / RENTED overlay */}
+        {(status === 'sold-out' || status === 'rented') && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="absolute inset-0 bg-black/15" />
             <div className="relative -rotate-12 border-2 border-destructive/60 bg-destructive/40 text-white px-6 py-2 text-2xl md:text-3xl font-extrabold tracking-widest uppercase backdrop-blur-[1px]">
-              {lbl(STATUS_LABELS['sold-out'], lang)}
+              {lbl(STATUS_LABELS[status], lang)}
             </div>
           </div>
         )}
