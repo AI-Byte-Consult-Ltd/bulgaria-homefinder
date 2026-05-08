@@ -1832,7 +1832,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     id: 'lc-casa-real-2bed',
     title: 'CASA REAL - Luxury 2 Bedroom, Saint Vlas',
     titleBg: 'КАСА РЕАЛ - Луксозен 2 спални, Свети Влас',
-    price: 330000,
+    price: 320000,
     location: 'Saint Vlas',
     image: 'https://ipfs.io/ipfs/bafkreiaxejeqsoytovtxbuxlnmewn75oct2chimn7jgkyvknw2yo7acoly',
     bedrooms: 2,
