@@ -2212,7 +2212,7 @@ descriptionIt: 'Casa con giardino in vendita nel villaggio di Orlintsi, Comune d
     titleRu: 'Студия в комплексе Бора Бора | Равда',
     titleDe: 'Studio in der Anlage Bora Bora | Ravda',
     titleIt: 'Monolocale nel complesso Bora Bora | Ravda',
-    price: 42900,
+    price: 39900,
     location: 'Ravda, Burgas',
     locationBg: 'Равда, Бургас',
     locationRu: 'Равда, Бургас',
