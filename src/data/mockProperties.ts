@@ -1755,7 +1755,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: false,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Furnished one-bedroom apartment in Pomorie Residence. Total area 66.02 m². 4th floor with pool and yard view. Annual tax: €8. Deposit required. Upscale complex in the historical town of Pomorie with excellent rental potential.',
     descriptionBg: 'Обзаведен едностаен апартамент в Поморие Резиденс. Обща площ 66,02 м². 4-ти етаж с изглед към басейн и двор. Годишен данък: 8 €. Необходим депозит. Луксозен комплекс в историческия град Поморие с отличен потенциал за отдаване под наем.',
   },
