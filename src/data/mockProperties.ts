@@ -2218,7 +2218,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     ],
     type: 'house',
 transactionType: 'sale' as const,
-status: 'for-sale',
+status: 'sold-out',
 featured: false,
 availableUnits: 1,
 
