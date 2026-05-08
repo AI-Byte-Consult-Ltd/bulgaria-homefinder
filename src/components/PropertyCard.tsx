@@ -141,10 +141,11 @@ export const PropertyCard = ({
   image, type, transactionType, featured, availableUnits, status,
   area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
   view, maintenanceFee, terraceArea, landArea, parkingSpots,
-  yearBuilt, actSixteen, virtualTourUrl,
+  yearBuilt, actSixteen, virtualTourUrl, internalNote,
 }: PropertyCardProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
+  const viewLabel = formatView(view, lang);
 
   const displayTitle =
     (lang === 'bg' && titleBg) || (lang === 'ru' && titleRu) ||
