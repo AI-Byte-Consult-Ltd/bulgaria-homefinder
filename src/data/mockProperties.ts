@@ -2322,7 +2322,7 @@ descriptionIt: 'Spazioso monolocale completamente arredato nel complesso residen
     titleRu: 'Двухкомнатный апартамент в Elitonia Gardens 3 | Равда',
     titleDe: '2-Zimmer-Wohnung in Elitonia Gardens 3 | Ravda',
     titleIt: 'Appartamento con 2 camera in Elitonia Gardens 3 | Ravda',
-    price: 89000,
+    price: 86000,
     location: 'Ravda, Burgas',
     locationBg: 'Равда, Бургас',
     locationRu: 'Равда, Бургас',
