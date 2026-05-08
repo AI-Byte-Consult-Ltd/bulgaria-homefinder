@@ -113,6 +113,23 @@ const UI: Record<string, Record<string, string>> = {
   built:       { en: 'Built',        ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno'           },
 };
 
+const VIEW_LABELS: Record<string, Record<string, string>> = {
+  city:     { en: 'City view',     ru: 'Вид на город',   bg: 'Изглед към града',    de: 'Stadtblick',      it: 'Vista città'     },
+  forest:   { en: 'Forest view',   ru: 'Вид на лес',     bg: 'Изглед към гората',   de: 'Waldblick',       it: 'Vista bosco'     },
+  mountain: { en: 'Mountain view', ru: 'Вид на горы',    bg: 'Изглед към планина',  de: 'Bergblick',       it: 'Vista montagna'  },
+  pool:     { en: 'Pool view',     ru: 'Вид на бассейн', bg: 'Изглед към басейна',  de: 'Poolblick',       it: 'Vista piscina'   },
+  sea:      { en: 'Sea view',      ru: 'Вид на море',    bg: 'Изглед към морето',   de: 'Meerblick',       it: 'Vista mare'      },
+  ocean:    { en: 'Ocean view',    ru: 'Вид на океан',   bg: 'Изглед към океана',   de: 'Ozeanblick',      it: 'Vista oceano'    },
+  yard:     { en: 'Yard view',     ru: 'Вид во двор',    bg: 'Изглед към двора',    de: 'Hofblick',        it: 'Vista cortile'   },
+};
+
+const formatView = (v: string | undefined, lang: string): string | undefined => {
+  if (!v) return undefined;
+  const key = v.toLowerCase();
+  if (VIEW_LABELS[key]) return lbl(VIEW_LABELS[key], lang);
+  return v;
+};
+
 const lbl = (map: Record<string, string>, lang: string) => map[lang] ?? map['en'];
 
 // ─── Component ──────────────────────────────────────────────────────────────
