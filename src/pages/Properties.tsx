@@ -18,7 +18,7 @@ import {
 import { SlidersHorizontal } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { mockProperties } from '@/data/mockProperties';
-import { propertyMatchesQuery } from '@/data/cityAliases';
+import { propertyMatchesQuery, resolveCanonicalCity, INDEPENDENT_CITIES, cityAliases } from '@/data/cityAliases';
 
 /**
  * Страница вывода найденных объектов недвижимости.
@@ -61,7 +61,20 @@ const Properties = () => {
 
       // Try Supabase first
       let query: any = supabase.from('properties').select('*');
-      if (searchLoc) query = query.ilike('location', `%${searchLoc}%`);
+      if (searchLoc) {
+        const canonical = resolveCanonicalCity(searchLoc);
+        if (canonical && INDEPENDENT_CITIES.has(canonical)) {
+          // Strict: match the city exactly (alone or as the first segment before a comma)
+          const variants = [canonical, ...(cityAliases[canonical] || [])];
+          const orParts = variants.flatMap((v) => [
+            `location.ilike.${v}`,
+            `location.ilike.${v},%`,
+          ]).join(',');
+          query = query.or(orParts);
+        } else {
+          query = query.ilike('location', `%${searchLoc}%`);
+        }
+      }
       if (searchTransaction && searchTransaction !== 'all') query = query.eq('transaction_type', searchTransaction);
       if (searchType && searchType !== 'all') query = query.eq('property_type', searchType);
       if (minPrice) query = query.gte('price', Number(minPrice));
