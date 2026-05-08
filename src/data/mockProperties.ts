@@ -1704,7 +1704,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: false,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'One-bedroom apartment in a new residential building in Pomorie. Completion: Summer 2026. Total area 55.79 m² (living 49.71 m²). 5th floor with lake view. Without furniture. Annual tax: €150. Excellent opportunity for early buyers in a brand new development.',
     descriptionBg: 'Едностаен апартамент в нова жилищна сграда в Поморие. Завършване: лято 2026. Обща площ 55,79 м² (жилищна 49,71 м²). 5-ти етаж с изглед към езерото. Без обзавеждане. Годишен данък: 150 €. Отлична възможност за ранни купувачи в чисто ново строителство.',
   },
