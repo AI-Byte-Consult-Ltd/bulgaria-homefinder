@@ -224,7 +224,7 @@ export const PropertyCard = ({
         {(status === 'sold-out' || status === 'rented') && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="absolute inset-0 bg-black/15" />
-            <div className="relative -rotate-12 border-2 border-destructive/60 bg-destructive/40 text-white px-6 py-2 text-2xl md:text-3xl font-extrabold tracking-widest uppercase backdrop-blur-[1px]">
+            <div className="relative -rotate-12 border-2 border-destructive/60 bg-destructive/40 text-white px-6 py-2 text-2xl md:text-3xl font-extrabold tracking-widest uppercase backdrop-blur-[1px] min-w-[14rem] text-center">
               {lbl(STATUS_LABELS[status], lang)}
             </div>
           </div>
