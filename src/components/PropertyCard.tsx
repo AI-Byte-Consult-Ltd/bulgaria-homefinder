@@ -55,7 +55,7 @@ interface PropertyCardProps {
   livingRooms?: number;
   floor?: number;
   totalFloors?: number;
-  view?: string;          // e.g. "Sea view", "Garden view"
+  view?: string;          // free text OR one of: city|forest|mountain|pool|sea|ocean|yard
   maintenanceFee?: number;// EUR/m²/year
   terraceArea?: number;   // m²
   landArea?: number;      // m² (for houses, farms, land plots)
@@ -66,6 +66,9 @@ interface PropertyCardProps {
   status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved' | 'rented';
   yearBuilt?: number;
   actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
+
+  // Internal admin-only note (set in code): 'ABC' | 'LC' | 'IR'
+  internalNote?: 'ABC' | 'LC' | 'IR';
 
   // Virtual Tour
   virtualTourUrl?: string | null;
@@ -110,6 +113,23 @@ const UI: Record<string, Record<string, string>> = {
   built:       { en: 'Built',        ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno'           },
 };
 
+const VIEW_LABELS: Record<string, Record<string, string>> = {
+  city:     { en: 'City view',     ru: 'Вид на город',   bg: 'Изглед към града',    de: 'Stadtblick',      it: 'Vista città'     },
+  forest:   { en: 'Forest view',   ru: 'Вид на лес',     bg: 'Изглед към гората',   de: 'Waldblick',       it: 'Vista bosco'     },
+  mountain: { en: 'Mountain view', ru: 'Вид на горы',    bg: 'Изглед към планина',  de: 'Bergblick',       it: 'Vista montagna'  },
+  pool:     { en: 'Pool view',     ru: 'Вид на бассейн', bg: 'Изглед към басейна',  de: 'Poolblick',       it: 'Vista piscina'   },
+  sea:      { en: 'Sea view',      ru: 'Вид на море',    bg: 'Изглед към морето',   de: 'Meerblick',       it: 'Vista mare'      },
+  ocean:    { en: 'Ocean view',    ru: 'Вид на океан',   bg: 'Изглед към океана',   de: 'Ozeanblick',      it: 'Vista oceano'    },
+  yard:     { en: 'Yard view',     ru: 'Вид во двор',    bg: 'Изглед към двора',    de: 'Hofblick',        it: 'Vista cortile'   },
+};
+
+const formatView = (v: string | undefined, lang: string): string | undefined => {
+  if (!v) return undefined;
+  const key = v.toLowerCase();
+  if (VIEW_LABELS[key]) return lbl(VIEW_LABELS[key], lang);
+  return v;
+};
+
 const lbl = (map: Record<string, string>, lang: string) => map[lang] ?? map['en'];
 
 // ─── Component ──────────────────────────────────────────────────────────────
@@ -121,10 +141,11 @@ export const PropertyCard = ({
   image, type, transactionType, featured, availableUnits, status,
   area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
   view, maintenanceFee, terraceArea, landArea, parkingSpots,
-  yearBuilt, actSixteen, virtualTourUrl,
+  yearBuilt, actSixteen, virtualTourUrl, internalNote,
 }: PropertyCardProps) => {
   const { i18n } = useTranslation();
   const lang = (i18n.language || 'en').split('-')[0];
+  const viewLabel = formatView(view, lang);
 
   const displayTitle =
     (lang === 'bg' && titleBg) || (lang === 'ru' && titleRu) ||
@@ -186,6 +207,13 @@ export const PropertyCard = ({
         <span className="absolute top-3 left-3 bg-black/60 text-white text-xs font-medium px-2 py-1 rounded-full backdrop-blur-sm">
           {typeLabel}
         </span>
+
+        {/* Internal note (admin/code-only: ABC | LC | IR) */}
+        {internalNote && (
+          <span className="absolute top-12 left-3 bg-primary text-primary-foreground text-[10px] font-bold tracking-wider px-2 py-0.5 rounded shadow">
+            {internalNote}
+          </span>
+        )}
 
         {/* Status badge — top right */}
         {statusBadge}
@@ -293,10 +321,10 @@ export const PropertyCard = ({
             </span>
           )}
 
-          {view && (
+          {viewLabel && (
             <span className="flex items-center gap-1">
               <Eye className="h-3 w-3" />
-              {view}
+              {viewLabel}
             </span>
           )}
 
