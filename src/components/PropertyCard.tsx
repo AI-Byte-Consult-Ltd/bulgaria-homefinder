@@ -124,8 +124,10 @@ const VIEW_LABELS: Record<string, Record<string, string>> = {
 };
 
 const formatView = (v: string | undefined, lang: string): string | undefined => {
-  if (!v) return undefined;
-  const key = v.toLowerCase();
+  if (v == null) return undefined;
+  const s = typeof v === 'string' ? v : String(v);
+  if (!s) return undefined;
+  const key = s.toLowerCase();
   if (VIEW_LABELS[key]) return lbl(VIEW_LABELS[key], lang);
   return v;
 };
