@@ -2266,7 +2266,7 @@ descriptionIt: 'Spazioso monolocale completamente arredato nel complesso residen
     titleRu: 'Студия в комплексе Бора Бора | Равда (Юнит 2)',
     titleDe: 'Studio in der Anlage Bora Bora | Ravda (Einheit 2)',
     titleIt: 'Monolocale nel complesso Bora Bora | Ravda (Unità 2)',
-    price: 42900,
+    price: 39900,
     location: 'Ravda, Burgas',
     locationBg: 'Равда, Бургас',
     locationRu: 'Равда, Бургас',
