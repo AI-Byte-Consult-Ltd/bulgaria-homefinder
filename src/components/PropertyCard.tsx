@@ -314,10 +314,10 @@ export const PropertyCard = ({
             </span>
           )}
 
-          {view && (
+          {viewLabel && (
             <span className="flex items-center gap-1">
               <Eye className="h-3 w-3" />
-              {view}
+              {viewLabel}
             </span>
           )}
 
