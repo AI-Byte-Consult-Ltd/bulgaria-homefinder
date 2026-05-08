@@ -2141,6 +2141,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     area: 200,
     type: 'commercial',
     transactionType: 'rent' as const,
+    status: 'rented' as const,
     featured: false,
   },
   // ═══════════════════════════════════════════════════════════
