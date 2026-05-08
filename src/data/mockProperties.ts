@@ -1773,7 +1773,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: true,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Furnished two-bedroom apartment in Nessebar View complex, Kosharitsa. Total area 76 m². 2nd floor with breathtaking sea, pool and mountain views. Annual tax: €760. Ideal holiday home or rental investment near Sunny Beach.',
     descriptionBg: 'Обзаведен двустаен апартамент в комплекс Несебър Вю, Кошарица. Обща площ 76 м². 2-ри етаж с невероятен изглед към морето, басейна и планината. Годишен данък: 760 €. Идеален за ваканционен дом или инвестиция под наем близо до Слънчев бряг.',
   },
