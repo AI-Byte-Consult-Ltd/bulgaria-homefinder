@@ -1807,7 +1807,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: false,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Two-bedroom apartment in a residential building in Pomorie. Total area 93.04 m². 6th floor with sea and city views. Without furniture. Currently not available for sale.',
     descriptionBg: 'Двустаен апартамент в жилищна сграда в Поморие. Обща площ 93,04 м². 6-ти етаж с изглед към морето и града. Без обзавеждане. В момента не е наличен за продажба.',
   },
