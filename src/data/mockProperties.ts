@@ -2293,7 +2293,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     titleBg: 'Паркомясто - комплекс ЕЛИТ 4, Слънчев бряг',
     price: 19500,
     location: 'Sunny Beach',
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80',
     bedrooms: 0,
     bathrooms: 0,
     area: 0,
