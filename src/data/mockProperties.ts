@@ -1790,7 +1790,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: false,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Furnished two-bedroom apartment in Holiday Fort Club, Sunny Beach. Total area 89.82 m² (living 78.21 m²). 1st floor with complex and pool view. Annual tax: €13.50. Well-maintained resort complex with excellent facilities.',
     descriptionBg: 'Обзаведен двустаен апартамент в Холидей Форт Клуб, Слънчев бряг. Обща площ 89,82 м² (жилищна 78,21 м²). 1-ви етаж с изглед към комплекса и басейна. Годишен данък: 13,50 €. Добре поддържан курортен комплекс с отлични удобства.',
   },
