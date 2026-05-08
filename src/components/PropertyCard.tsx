@@ -55,7 +55,7 @@ interface PropertyCardProps {
   livingRooms?: number;
   floor?: number;
   totalFloors?: number;
-  view?: string;          // e.g. "Sea view", "Garden view"
+  view?: string;          // free text OR one of: city|forest|mountain|pool|sea|ocean|yard
   maintenanceFee?: number;// EUR/m²/year
   terraceArea?: number;   // m²
   landArea?: number;      // m² (for houses, farms, land plots)
@@ -66,6 +66,9 @@ interface PropertyCardProps {
   status?: 'for-sale' | 'for-rent' | 'sold-out' | 'coming-soon' | 'reserved' | 'rented';
   yearBuilt?: number;
   actSixteen?: boolean;   // Bulgarian Act 16 — legally commissioned
+
+  // Internal admin-only note (set in code): 'ABC' | 'LC' | 'IR'
+  internalNote?: 'ABC' | 'LC' | 'IR';
 
   // Virtual Tour
   virtualTourUrl?: string | null;
