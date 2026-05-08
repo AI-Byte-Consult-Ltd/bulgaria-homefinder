@@ -18,7 +18,7 @@ import {
 import { SlidersHorizontal } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { mockProperties } from '@/data/mockProperties';
-import { propertyMatchesQuery } from '@/data/cityAliases';
+import { propertyMatchesQuery, resolveCanonicalCity, INDEPENDENT_CITIES, cityAliases } from '@/data/cityAliases';
 
 /**
  * Страница вывода найденных объектов недвижимости.
