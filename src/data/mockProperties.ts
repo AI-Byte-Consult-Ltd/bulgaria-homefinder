@@ -3102,7 +3102,7 @@ descriptionIt: 'Accogliente bilocale nel complesso Elitonia Gardens 3 a Ravda, a
     images: ['https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=600&fit=crop'],
     type: 'apartment',
     transactionType: 'sale' as const,
-    status: 'for-sale',
+    status: 'sold',
     featured: false,
     availableUnits: 1,
     area: 40,
