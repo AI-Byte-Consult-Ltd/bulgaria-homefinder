@@ -1660,7 +1660,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     id: 'lc-gerber4-studio',
     title: 'GERBER 4 - Studio Apartment',
     titleBg: 'ГЕРБЕР 4 - Студио',
-    price: 54900,
+    price: 49900,
     location: 'Sunny Beach',
     image: 'https://ipfs.io/ipfs/bafybeicbgz37e5t6sf2laqy5we2otc6siwp7fe2ts5hc3cr5cv3aaacmri',
     bedrooms: 0,
