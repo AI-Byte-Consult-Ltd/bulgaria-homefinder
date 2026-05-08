@@ -1738,7 +1738,7 @@ Nuova costruzione di qualità con ottime dotazioni. Più unità disponibili — 
     type: 'apartment',
     transactionType: 'sale' as const,
     featured: true,
-    status: 'for-sale',
+    status: 'sold-out',
     description: 'Furnished one-bedroom apartment in PANORAMA BAY 1 complex, Saint Vlas. Total area 75.19 m² (living 56.07 m², common parts 19.12 m²). Ground floor with pool and yard view. Annual tax: €10. Beautiful complex with pool in the prestigious resort of Saint Vlas.',
     descriptionBg: 'Обзаведен едностаен апартамент в комплекс ПАНОРАМА БЕЙ 1, Свети Влас. Обща площ 75,19 м² (жилищна 56,07 м², общи части 19,12 м²). Партерен етаж с изглед към басейн и двор. Годишен данък: 10 €. Красив комплекс с басейн в престижния курорт Свети Влас.',
   },
