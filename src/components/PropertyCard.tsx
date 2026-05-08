@@ -208,6 +208,13 @@ export const PropertyCard = ({
           {typeLabel}
         </span>
 
+        {/* Internal note (admin/code-only: ABC | LC | IR) */}
+        {internalNote && (
+          <span className="absolute top-12 left-3 bg-primary text-primary-foreground text-[10px] font-bold tracking-wider px-2 py-0.5 rounded shadow">
+            {internalNote}
+          </span>
+        )}
+
         {/* Status badge — top right */}
         {statusBadge}
 
