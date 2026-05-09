@@ -3606,7 +3606,7 @@ descriptionIt: 'Monolocale (45 m²) al 4° piano nella Magnolia Residence 7, Sun
     titleRu: "Однокомнатная квартира в Villa Astoria 2 | Элените",
     titleDe: "1-Zimmer-Wohnung in Villa Astoria 2 | Elenite",
     titleIt: "Appartamento 1 camera in Villa Astoria 2 | Elenite",
-    price: 56750,
+    price: 59750,
     location: 'Elenite, Burgas',
     locationBg: 'Елените, Бургас',
     locationRu: 'Элените, Бургас',
