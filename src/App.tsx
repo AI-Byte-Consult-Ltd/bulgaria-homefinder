@@ -23,6 +23,7 @@ import NotFound from "./pages/NotFound";
 import AddProperty from "./pages/AddProperty";
 
 import { ChatWidget } from "./components/ChatWidget";
+import { ReferralCapture } from "./components/ReferralCapture";
 
 import "./i18n/config";
 
