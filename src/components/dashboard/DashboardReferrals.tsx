@@ -81,14 +81,16 @@ export const DashboardReferrals = () => {
   }, [user]);
 
   const stats = useMemo(() => {
-    const counts = {
+    const counts: Record<string, number> = {
       click: 0, signup: 0, visit_requested: 0, contact: 0, deal_closed: 0,
-    } as Record<string, number>;
+    };
     events.forEach(e => { counts[e.event_type] = (counts[e.event_type] || 0) + 1; });
     const earned = rewards.filter(r => r.status === 'paid').reduce((s, r) => s + Number(r.amount_eur), 0);
     const pending = rewards.filter(r => r.status === 'pending' || r.status === 'approved').reduce((s, r) => s + Number(r.amount_eur), 0);
-    return { ...counts, earned, pending };
+    return { counts, earned, pending };
   }, [events, rewards]);
+
+  const closedDeals = stats.counts.deal_closed || 0;
 
   const tier: ReferralTier = tierFromClosedDeals(stats.deal_closed || 0);
   const tierInfo = REFERRAL_TIERS[tier];
