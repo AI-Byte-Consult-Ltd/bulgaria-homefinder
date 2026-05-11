@@ -62,7 +62,7 @@ export async function captureReferralFromUrl(propertyId?: string) {
   const sessionId = getOrCreateSessionId();
 
   // Insert click event (deduped server-side via unique index)
-  await supabase.from('referral_events').insert({
+  await supabase.from('referral_events').insert([{
     referrer_user_id: profile.id,
     referrer_code: ref,
     property_id: propertyId ?? null,
@@ -72,7 +72,7 @@ export async function captureReferralFromUrl(propertyId?: string) {
       url: window.location.pathname + window.location.search,
       referrer: document.referrer || null,
     },
-  });
+  }]);
 }
 
 /**
@@ -87,7 +87,7 @@ export async function trackReferralEvent(
   const referrerUserId = getStoredReferrerUserId();
   if (!code || !referrerUserId) return;
 
-  await supabase.from('referral_events').insert({
+  await supabase.from('referral_events').insert([{
     referrer_user_id: referrerUserId,
     referrer_code: code,
     referred_user_id: opts.referredUserId ?? null,
@@ -95,7 +95,7 @@ export async function trackReferralEvent(
     event_type: eventType,
     session_id: getOrCreateSessionId(),
     metadata: opts.metadata ?? {},
-  });
+  }]);
 }
 
 export function buildReferralLink(code: string, propertyId?: string): string {
