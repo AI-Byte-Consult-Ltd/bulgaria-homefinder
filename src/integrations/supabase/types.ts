@@ -217,7 +217,11 @@ export type Database = {
           email: string
           full_name: string | null
           id: string
+          payout_details: Json | null
+          payout_method: string | null
           phone: string | null
+          referral_code: string | null
+          referred_by: string | null
           updated_at: string | null
         }
         Insert: {
@@ -226,7 +230,11 @@ export type Database = {
           email: string
           full_name?: string | null
           id: string
+          payout_details?: Json | null
+          payout_method?: string | null
           phone?: string | null
+          referral_code?: string | null
+          referred_by?: string | null
           updated_at?: string | null
         }
         Update: {
@@ -235,7 +243,11 @@ export type Database = {
           email?: string
           full_name?: string | null
           id?: string
+          payout_details?: Json | null
+          payout_method?: string | null
           phone?: string | null
+          referral_code?: string | null
+          referred_by?: string | null
           updated_at?: string | null
         }
         Relationships: []
@@ -402,6 +414,101 @@ export type Database = {
         }
         Relationships: []
       }
+      referral_events: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          metadata: Json | null
+          property_id: string | null
+          referred_user_id: string | null
+          referrer_code: string
+          referrer_user_id: string
+          session_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          property_id?: string | null
+          referred_user_id?: string | null
+          referrer_code: string
+          referrer_user_id: string
+          session_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          property_id?: string | null
+          referred_user_id?: string | null
+          referrer_code?: string
+          referrer_user_id?: string
+          session_id?: string | null
+        }
+        Relationships: []
+      }
+      referral_rewards: {
+        Row: {
+          amount_eur: number
+          approved_at: string | null
+          approved_by: string | null
+          created_at: string
+          event_id: string | null
+          id: string
+          notes: string | null
+          paid_at: string | null
+          payout_reference: string | null
+          property_id: string | null
+          referrer_user_id: string
+          reward_type: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          amount_eur: number
+          approved_at?: string | null
+          approved_by?: string | null
+          created_at?: string
+          event_id?: string | null
+          id?: string
+          notes?: string | null
+          paid_at?: string | null
+          payout_reference?: string | null
+          property_id?: string | null
+          referrer_user_id: string
+          reward_type: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          amount_eur?: number
+          approved_at?: string | null
+          approved_by?: string | null
+          created_at?: string
+          event_id?: string | null
+          id?: string
+          notes?: string | null
+          paid_at?: string | null
+          payout_reference?: string | null
+          property_id?: string | null
+          referrer_user_id?: string
+          reward_type?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_rewards_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "referral_events"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       sell_submissions: {
         Row: {
           area_sqm: number | null
@@ -473,6 +580,8 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      generate_referral_code: { Args: never; Returns: string }
+      get_referral_tier: { Args: { _user_id: string }; Returns: string }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

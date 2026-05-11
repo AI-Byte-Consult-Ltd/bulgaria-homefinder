@@ -7,11 +7,12 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Home, Plus, Settings, FileText, FileCog } from 'lucide-react';
+import { Home, Plus, Settings, FileText, FileCog, Trophy } from 'lucide-react';
 import { DashboardProperties } from '@/components/dashboard/DashboardProperties';
 import { DashboardProfile } from '@/components/dashboard/DashboardProfile';
 import { DashboardProjects } from '@/components/dashboard/DashboardProjects';
 import { DashboardDocuments } from '@/components/dashboard/DashboardDocuments';
+import { DashboardReferrals } from '@/components/dashboard/DashboardReferrals';
 import { toast } from 'sonner';
 
 const Dashboard = () => {
@@ -69,7 +70,7 @@ const Dashboard = () => {
           </div>
 
           <Tabs defaultValue="properties" className="space-y-6">
-            <TabsList className={`grid w-full lg:w-auto ${isAdmin ? 'grid-cols-4' : 'grid-cols-3'}`}>
+            <TabsList className={`grid w-full lg:w-auto ${isAdmin ? 'grid-cols-5' : 'grid-cols-4'}`}>
               <TabsTrigger value="properties" className="flex items-center gap-2">
                 <Home className="h-4 w-4" />
                 {t('dashboard.properties')}
@@ -77,6 +78,10 @@ const Dashboard = () => {
               <TabsTrigger value="projects" className="flex items-center gap-2">
                 <FileText className="h-4 w-4" />
                 {t('dashboard.projects')}
+              </TabsTrigger>
+              <TabsTrigger value="referrals" className="flex items-center gap-2">
+                <Trophy className="h-4 w-4" />
+                {t('referrals.tab', 'Рефералы')}
               </TabsTrigger>
               {isAdmin && (
                 <TabsTrigger value="documents" className="flex items-center gap-2">
@@ -99,6 +104,10 @@ const Dashboard = () => {
                 </Button>
               </div>
               <DashboardProperties />
+            </TabsContent>
+
+            <TabsContent value="referrals">
+              <DashboardReferrals />
             </TabsContent>
 
             <TabsContent value="projects">

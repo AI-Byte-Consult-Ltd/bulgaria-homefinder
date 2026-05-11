@@ -39,12 +39,22 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const signUp = async (email: string, password: string, fullName: string) => {
+    // Capture referral code from cookie/localStorage if present
+    let referredBy: string | null = null;
+    try {
+      const m = typeof document !== 'undefined'
+        ? document.cookie.match(/(^|; )nics_ref=([^;]+)/)
+        : null;
+      referredBy = m ? decodeURIComponent(m[2]) : (typeof localStorage !== 'undefined' ? localStorage.getItem('nics_ref') : null);
+    } catch { /* noop */ }
+
     const { error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         data: {
           full_name: fullName,
+          ...(referredBy ? { referred_by: referredBy } : {}),
         },
         emailRedirectTo: `${window.location.origin}/`,
       },
