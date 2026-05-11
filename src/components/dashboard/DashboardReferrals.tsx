@@ -92,10 +92,10 @@ export const DashboardReferrals = () => {
 
   const closedDeals = stats.counts.deal_closed || 0;
 
-  const tier: ReferralTier = tierFromClosedDeals(stats.deal_closed || 0);
+  const tier: ReferralTier = tierFromClosedDeals(stats.counts.deal_closed || 0);
   const tierInfo = REFERRAL_TIERS[tier];
   const nextTier: ReferralTier | null = tier === 'bronze' ? 'silver' : tier === 'silver' ? 'gold' : null;
-  const progress = nextTier ? ((stats.deal_closed || 0) / REFERRAL_TIERS[nextTier].minDeals) * 100 : 100;
+  const progress = nextTier ? ((stats.counts.deal_closed || 0) / REFERRAL_TIERS[nextTier].minDeals) * 100 : 100;
 
   const generalLink = profile?.referral_code ? buildReferralLink(profile.referral_code) : '';
 
@@ -180,7 +180,7 @@ export const DashboardReferrals = () => {
                   {t('referrals.progressTo', 'До уровня')} {REFERRAL_TIERS[nextTier].label}
                 </span>
                 <span className="font-medium">
-                  {stats.deal_closed || 0} / {REFERRAL_TIERS[nextTier].minDeals} {t('referrals.deals', 'сделок')}
+                  {stats.counts.deal_closed || 0} / {REFERRAL_TIERS[nextTier].minDeals} {t('referrals.deals', 'сделок')}
                 </span>
               </div>
               <Progress value={Math.min(progress, 100)} />
@@ -191,10 +191,10 @@ export const DashboardReferrals = () => {
 
       {/* Stats */}
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-5">
-        <StatCard icon={<MousePointerClick className="h-4 w-4" />} label={t('referrals.clicks', 'Клики')} value={stats.click || 0} />
-        <StatCard icon={<Users className="h-4 w-4" />} label={t('referrals.signups', 'Регистрации')} value={stats.signup || 0} />
-        <StatCard icon={<TrendingUp className="h-4 w-4" />} label={t('referrals.visits', 'Визиты')} value={stats.visit_requested || 0} />
-        <StatCard icon={<Trophy className="h-4 w-4" />} label={t('referrals.closed', 'Сделки')} value={stats.deal_closed || 0} />
+        <StatCard icon={<MousePointerClick className="h-4 w-4" />} label={t('referrals.clicks', 'Клики')} value={stats.counts.click || 0} />
+        <StatCard icon={<Users className="h-4 w-4" />} label={t('referrals.signups', 'Регистрации')} value={stats.counts.signup || 0} />
+        <StatCard icon={<TrendingUp className="h-4 w-4" />} label={t('referrals.visits', 'Визиты')} value={stats.counts.visit_requested || 0} />
+        <StatCard icon={<Trophy className="h-4 w-4" />} label={t('referrals.closed', 'Сделки')} value={stats.counts.deal_closed || 0} />
         <StatCard icon={<Wallet className="h-4 w-4" />} label={t('referrals.earned', 'Заработано')} value={`€${stats.earned.toLocaleString()}`} hint={`€${stats.pending.toLocaleString()} ${t('referrals.pending', 'в ожидании')}`} />
       </div>
 

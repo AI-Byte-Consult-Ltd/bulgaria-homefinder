@@ -94,7 +94,7 @@ export async function trackReferralEvent(
     property_id: opts.propertyId ?? null,
     event_type: eventType,
     session_id: getOrCreateSessionId(),
-    metadata: opts.metadata ?? {},
+    metadata: (opts.metadata ?? {}) as any,
   }]);
 }
 
