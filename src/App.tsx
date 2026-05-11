@@ -53,6 +53,7 @@ const App = () => (
           <Sonner />
 
           <BrowserRouter>
+            <ReferralCapture />
             <Routes>
 
               <Route path="/" element={<Home />} />
