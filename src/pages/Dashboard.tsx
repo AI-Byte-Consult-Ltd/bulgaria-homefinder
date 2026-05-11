@@ -106,6 +106,10 @@ const Dashboard = () => {
               <DashboardProperties />
             </TabsContent>
 
+            <TabsContent value="referrals">
+              <DashboardReferrals />
+            </TabsContent>
+
             <TabsContent value="projects">
               <DashboardProjects />
             </TabsContent>
