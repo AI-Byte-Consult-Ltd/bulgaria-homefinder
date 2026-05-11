@@ -90,7 +90,6 @@ export const DashboardReferrals = () => {
     return { counts, earned, pending };
   }, [events, rewards]);
 
-  const closedDeals = stats.counts.deal_closed || 0;
 
   const tier: ReferralTier = tierFromClosedDeals(stats.counts.deal_closed || 0);
   const tierInfo = REFERRAL_TIERS[tier];
