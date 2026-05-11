@@ -7,11 +7,12 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Home, Plus, Settings, FileText, FileCog } from 'lucide-react';
+import { Home, Plus, Settings, FileText, FileCog, Trophy } from 'lucide-react';
 import { DashboardProperties } from '@/components/dashboard/DashboardProperties';
 import { DashboardProfile } from '@/components/dashboard/DashboardProfile';
 import { DashboardProjects } from '@/components/dashboard/DashboardProjects';
 import { DashboardDocuments } from '@/components/dashboard/DashboardDocuments';
+import { DashboardReferrals } from '@/components/dashboard/DashboardReferrals';
 import { toast } from 'sonner';
 
 const Dashboard = () => {
