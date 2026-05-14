@@ -4442,8 +4442,11 @@ descriptionIt: 'Monolocale (45 m²) al 4° piano nella Magnolia Residence 7, Sun
     locationRu: 'Солнечный Берег, Бургас',
     locationDe: 'Sonnenstrand, Burgas',
     locationIt: 'Sunny Beach, Burgas',
-    image: '/placeholder.svg',
-    images: ['/placeholder.svg'],
+    image: 'https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/emilia-romana-4178%2F1.jpg',
+    images: [
+      'https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/emilia-romana-4178%2F1.jpg',
+      'https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/emilia-romana-4178%2F2.jpg',
+    ],
     type: 'apartment',
     transactionType: 'sale' as const,
     status: 'for-sale',
