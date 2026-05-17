@@ -4336,7 +4336,7 @@ descriptionIt: 'Monolocale (45 m²) al 4° piano nella Magnolia Residence 7, Sun
     titleRu: "Однокомнатная квартира в Elite 1 | Солнечный Берег",
     titleDe: "1-Zimmer-Wohnung in Elite 1 | Sonnenstrand",
     titleIt: "Appartamento 1 camera in Elite 1 | Sunny Beach",
-    price: 74160,
+    price: 77160,
     location: 'Sunny Beach, Burgas',
     locationBg: 'Слънчев бряг, Бургас',
     locationRu: 'Солнечный Берег, Бургас',
