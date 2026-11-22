@@ -775,6 +775,8 @@ Oglądanie po umówieniu. Dokumenty własności i szkic działki przesyłamy na 
 
   // ── Images (IPFS) ────────────────────────────────────────
   images: [
+    '/assets/properties/slaveykov/slaveykov-3d-1.jpg',
+    '/assets/properties/slaveykov/slaveykov-3d-plan.jpg',
     'https://ipfs.io/ipfs/bafybeihhbiio3wwn7nv2nuuh5p3duut4pbnoyn6eqtliuksn5ztyapmgky',
     'https://ipfs.io/ipfs/bafkreihsb3mxv6ap4sn6jnmllwocd37cmjyydwudtw2rhcjncqik7x2lja',
     'https://ipfs.io/ipfs/bafkreidmkv7eqmppkh2fsmt3s74ovpfk4zneztxomqrbce3smulrzf4eja',
@@ -807,8 +809,6 @@ Oglądanie po umówieniu. Dokumenty własności i szkic działki przesyłamy na 
     'https://ipfs.io/ipfs/bafkreieytezkhooq2e6e5qgdo5sdfkfugm752bx4ao7gb5hlevuk4rymii',
     'https://ipfs.io/ipfs/bafkreicfwnvzud6jyji226t7oljtflrinvzlcqh4g6mdk5vubtpfqe7ggu',
     'https://ipfs.io/ipfs/bafkreicvah22gltry3e6xc7tj2zfvnpa22pscya5ewnajidcn4iu2yvnnq',
-    '/assets/properties/slaveykov/slaveykov-3d-plan.jpg',
-    '/assets/properties/slaveykov/slaveykov-3d-1.jpg',
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -830,7 +830,7 @@ Oglądanie po umówieniu. Dokumenty własności i szkic działki przesyłamy na 
   floor:       16,
   totalFloors: 18,
   yearBuilt:   1985,
-  actSixteen:  true,
+  actSixteen:  null,
 
   // ── View & Outdoor ───────────────────────────────────────
   view:        null,

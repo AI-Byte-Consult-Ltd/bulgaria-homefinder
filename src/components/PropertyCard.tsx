@@ -197,6 +197,13 @@ export const PropertyCard = (props: PropertyCardProps) => {
           src={image}
           alt={`${displayTitle} — ${displayLocation}`}
           loading="lazy"
+          onError={(e) => {
+            const el = e.currentTarget;
+            if (!el.dataset.fallback) {
+              el.dataset.fallback = '1';
+              el.src = '/placeholder.svg';
+            }
+          }}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
 

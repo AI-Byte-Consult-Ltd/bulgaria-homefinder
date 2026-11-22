@@ -100,6 +100,7 @@ const PropertyDetails = () => {
   const { id } = useParams();
   const { i18n } = useTranslation();
   const [copied, setCopied] = useState(false);
+  const [broken, setBroken] = useState<string[]>([]);
 
   const lang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const tx = (key: string) => pick(TXT[key], lang);
@@ -111,12 +112,15 @@ const PropertyDetails = () => {
   const displayDescription = localized(property, 'description', lang);
   const displayLocation = localized(property, 'location', lang);
 
-  const images: string[] =
+  const allImages: string[] =
     property.images && property.images.length > 0
       ? property.images
       : property.image
       ? [property.image]
       : ['/placeholder.svg'];
+  // Photos that fail to load (dead external host) are dropped from the gallery.
+  const shown = allImages.filter((src) => !broken.includes(src));
+  const images: string[] = shown.length > 0 ? shown : ['/placeholder.svg'];
 
   const pageUrl = `${SITE}/property/${property.id}`;
   const langUrl = (l: string) => `${pageUrl}?lng=${l}`;
@@ -159,7 +163,7 @@ const PropertyDetails = () => {
     name: displayTitle,
     description: metaDesc,
     url: pageUrl,
-    image: images.map(absUrl),
+    image: allImages.map(absUrl),
     inLanguage: lang,
     ...(hasPrice && {
       offers: {
@@ -205,14 +209,14 @@ const PropertyDetails = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={`${displayTitle} – BulgariaEstate`} />
         <meta property="og:description" content={metaDesc} />
-        <meta property="og:image" content={absUrl(images[0])} />
+        <meta property="og:image" content={absUrl(allImages[0])} />
         <meta property="og:image:alt" content={displayTitle} />
         <meta property="og:site_name" content="BulgariaEstate by AI Byte Consult" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${displayTitle} – BulgariaEstate`} />
         <meta name="twitter:description" content={metaDesc} />
-        <meta name="twitter:image" content={absUrl(images[0])} />
+        <meta name="twitter:image" content={absUrl(allImages[0])} />
 
         <script type="application/ld+json">{JSON.stringify(realEstateLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
@@ -227,12 +231,13 @@ const PropertyDetails = () => {
             <Carousel className="w-full" opts={{ loop: images.length > 1 }}>
               <CarouselContent>
                 {images.map((image: string, index: number) => (
-                  <CarouselItem key={index}>
+                  <CarouselItem key={image}>
                     <div className="aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden bg-muted">
                       <img
                         src={image}
                         alt={`${displayTitle} — ${tx('photo')} ${index + 1}/${images.length}`}
                         className="w-full h-full object-contain"
+                        onError={() => setBroken((prev) => (prev.includes(image) ? prev : [...prev, image]))}
                         loading={index === 0 ? 'eager' : 'lazy'}
                       />
                     </div>
