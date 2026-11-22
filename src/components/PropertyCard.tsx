@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { RichText } from '@/components/RichText';
 import { VirtualTourBadge } from '@/components/VirtualTour';
 import { hasVirtualTour } from '@/lib/virtualTour';
+import { localized, normalizeLang, formatEur } from '@/lib/localize';
 import {
   Heart, MapPin, Bed, Bath, Maximize, Building,
   Eye, Layers, Wrench, Trees, Car, Sofa, Landmark,
@@ -26,6 +27,7 @@ interface PropertyCardProps {
   titleRu?: string;
   titleDe?: string;
   titleIt?: string;
+  titlePl?: string;
 
   // Location
   location: string;
@@ -33,6 +35,7 @@ interface PropertyCardProps {
   locationRu?: string;
   locationDe?: string;
   locationIt?: string;
+  locationPl?: string;
 
   // Description (optional preview in card)
   description?: string;
@@ -40,6 +43,7 @@ interface PropertyCardProps {
   descriptionRu?: string;
   descriptionDe?: string;
   descriptionIt?: string;
+  descriptionPl?: string;
 
   price: number;
   image: string;
@@ -48,8 +52,8 @@ interface PropertyCardProps {
 
   // Core specs
   area: number;
-  bedrooms?: number;
-  bathrooms?: number;
+  bedrooms?: number | null;
+  bathrooms?: number | null;
 
   // Extended specs (all optional — show only when present)
   livingRooms?: number;
@@ -77,50 +81,51 @@ interface PropertyCardProps {
 // ─── i18n label maps ────────────────────────────────────────────────────────
 
 const TYPE_LABELS: Record<PropertyType, Record<string, string>> = {
-  apartment:  { en: 'Apartment',   ru: 'Квартира',       bg: 'Апартамент',    de: 'Wohnung',       it: 'Appartamento'  },
-  house:      { en: 'House',       ru: 'Дом',            bg: 'Къща',          de: 'Haus',           it: 'Casa'          },
-  land:       { en: 'Land',        ru: 'Земля',          bg: 'Земя',          de: 'Grundstück',     it: 'Terreno'       },
-  block:      { en: 'Apt. Block',  ru: 'Жил. комплекс',  bg: 'Жил. сграда',   de: 'Wohnblock',      it: 'Condominio'    },
-  farm:       { en: 'Farm',        ru: 'Ферма',          bg: 'Ферма',         de: 'Bauernhof',      it: 'Fattoria'      },
-  commercial: { en: 'Commercial',  ru: 'Коммерческая',   bg: 'Търговски',     de: 'Gewerbe',        it: 'Commerciale'   },
-  garage:     { en: 'Garage',      ru: 'Гараж',          bg: 'Гараж',         de: 'Garage',         it: 'Garage'        },
-  industrial: { en: 'Industrial',  ru: 'Промышленная',   bg: 'Промишлен',     de: 'Industrie',      it: 'Industriale'   },
-  office:     { en: 'Office',      ru: 'Офис',           bg: 'Офис',          de: 'Büro',           it: 'Ufficio'       },
-  other:      { en: 'Other',       ru: 'Другое',         bg: 'Друго',         de: 'Sonstiges',      it: 'Altro'         },
+  apartment:  { en: 'Apartment',   ru: 'Квартира',       bg: 'Апартамент',    de: 'Wohnung',       it: 'Appartamento', pl: 'Mieszkanie' },
+  house:      { en: 'House',       ru: 'Дом',            bg: 'Къща',          de: 'Haus',           it: 'Casa', pl: 'Dom' },
+  land:       { en: 'Land',        ru: 'Земля',          bg: 'Земя',          de: 'Grundstück',     it: 'Terreno', pl: 'Działka' },
+  block:      { en: 'Apt. Block',  ru: 'Жил. комплекс',  bg: 'Жил. сграда',   de: 'Wohnblock',      it: 'Condominio', pl: 'Budynek mieszk.' },
+  farm:       { en: 'Farm',        ru: 'Ферма',          bg: 'Ферма',         de: 'Bauernhof',      it: 'Fattoria', pl: 'Gospodarstwo' },
+  commercial: { en: 'Commercial',  ru: 'Коммерческая',   bg: 'Търговски',     de: 'Gewerbe',        it: 'Commerciale', pl: 'Komercyjne' },
+  garage:     { en: 'Garage',      ru: 'Гараж',          bg: 'Гараж',         de: 'Garage',         it: 'Garage', pl: 'Garaż' },
+  industrial: { en: 'Industrial',  ru: 'Промышленная',   bg: 'Промишлен',     de: 'Industrie',      it: 'Industriale', pl: 'Przemysłowe' },
+  office:     { en: 'Office',      ru: 'Офис',           bg: 'Офис',          de: 'Büro',           it: 'Ufficio', pl: 'Biuro' },
+  other:      { en: 'Other',       ru: 'Другое',         bg: 'Друго',         de: 'Sonstiges',      it: 'Altro', pl: 'Inne' },
 };
 
 const STATUS_LABELS: Record<string, Record<string, string>> = {
-  'sold-out':    { en: 'Sold Out',     ru: 'Продано',      bg: 'Продаден',      de: 'Verkauft',       it: 'Venduto'        },
-  'coming-soon': { en: 'Coming Soon',  ru: 'Скоро',        bg: 'Очаквайте',     de: 'Demnächst',      it: 'In Arrivo'      },
-  'reserved':    { en: 'Reserved',     ru: 'Резервирован', bg: 'Резервиран',    de: 'Reserviert',     it: 'Riservato'      },
-  'rented':      { en: 'Rented Out',   ru: 'Сдано',        bg: 'Отдаден',       de: 'Vermietet',      it: 'Affittato'      },
+  'sold-out':    { en: 'Sold Out',     ru: 'Продано',      bg: 'Продаден',      de: 'Verkauft',       it: 'Venduto', pl: 'Sprzedane' },
+  'coming-soon': { en: 'Coming Soon',  ru: 'Скоро',        bg: 'Очаквайте',     de: 'Demnächst',      it: 'In Arrivo', pl: 'Wkrótce' },
+  'reserved':    { en: 'Reserved',     ru: 'Резервирован', bg: 'Резервиран',    de: 'Reserviert',     it: 'Riservato', pl: 'Rezerwacja' },
+  'rented':      { en: 'Rented Out',   ru: 'Сдано',        bg: 'Отдаден',       de: 'Vermietet',      it: 'Affittato', pl: 'Wynajęte' },
 };
 
 const UI: Record<string, Record<string, string>> = {
-  forSale:     { en: 'For Sale',     ru: 'Продажа',      bg: 'Продажба',      de: 'Kaufen',         it: 'Vendita'        },
-  forRent:     { en: 'For Rent',     ru: 'Аренда',       bg: 'Наем',          de: 'Miete',          it: 'Affitto'        },
-  units:       { en: 'units',        ru: 'объектов',     bg: 'имота',         de: 'Einheiten',      it: 'unità'          },
-  floor:       { en: 'Floor',        ru: 'Этаж',         bg: 'Етаж',          de: 'Etage',          it: 'Piano'          },
-  maintenance: { en: 'Maint.',       ru: 'Такса',        bg: 'Такса',         de: 'Nebenk.',        it: 'Manutenzione'   },
-  terrace:     { en: 'Terrace',      ru: 'Терраса',      bg: 'Тераса',        de: 'Terrasse',       it: 'Terrazza'       },
-  land:        { en: 'Land',         ru: 'Участок',      bg: 'Земя',          de: 'Grundstück',     it: 'Terreno'        },
-  parking:     { en: 'Parking',      ru: 'Паркинг',      bg: 'Паркинг',       de: 'Parkplatz',      it: 'Parcheggio'     },
-  act16:       { en: 'Act 16 ✓',     ru: 'Акт 16 ✓',     bg: 'Акт 16 ✓',      de: 'Act 16 ✓',       it: 'Act 16 ✓'       },
-  viewDetails: { en: 'View Details', ru: 'Подробнее',    bg: 'Детайли',       de: 'Details',        it: 'Dettagli'       },
-  tba:         { en: 'TBA',          ru: 'Уточняется',   bg: 'При запитване', de: 'Auf Anfrage',    it: 'Su richiesta'   },
-  perMonth:    { en: '/mo',          ru: '/мес',         bg: '/мес',          de: '/Mo.',           it: '/mese'          },
-  eurSqmYear:  { en: 'EUR/m²/yr',    ru: 'EUR/м²/год',   bg: 'EUR/м²/год',    de: 'EUR/m²/Jahr',    it: 'EUR/m²/anno'    },
-  built:       { en: 'Built',        ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno'           },
+  featured:    { en: 'Featured', ru: 'Рекомендуем', bg: 'Препоръчано', de: 'Empfohlen', it: 'In evidenza', pl: 'Polecane' },
+  forSale:     { en: 'For Sale',     ru: 'Продажа',      bg: 'Продажба',      de: 'Zu verkaufen',         it: 'Vendita', pl: 'Sprzedaż' },
+  forRent:     { en: 'For Rent',     ru: 'Аренда',       bg: 'Наем',          de: 'Zu vermieten',         it: 'Affitto', pl: 'Wynajem' },
+  units:       { en: 'units',        ru: 'объектов',     bg: 'имота',         de: 'Einheiten',      it: 'unità', pl: 'lokali' },
+  floor:       { en: 'Floor',        ru: 'Этаж',         bg: 'Етаж',          de: 'Etage',          it: 'Piano', pl: 'Piętro' },
+  maintenance: { en: 'Maint.',       ru: 'Такса',        bg: 'Такса',         de: 'Nebenk.',        it: 'Manutenzione', pl: 'Opłaty' },
+  terrace:     { en: 'Terrace',      ru: 'Терраса',      bg: 'Тераса',        de: 'Terrasse',       it: 'Terrazza', pl: 'Taras' },
+  land:        { en: 'Land',         ru: 'Участок',      bg: 'Земя',          de: 'Grundstück',     it: 'Terreno', pl: 'Działka' },
+  parking:     { en: 'Parking',      ru: 'Паркинг',      bg: 'Паркинг',       de: 'Parkplatz',      it: 'Parcheggio', pl: 'Parking' },
+  act16:       { en: 'Act 16 ✓',     ru: 'Акт 16 ✓',     bg: 'Акт 16 ✓',      de: 'Akt 16 ✓',       it: 'Atto 16 ✓', pl: 'Akt 16 ✓' },
+  viewDetails: { en: 'View Details', ru: 'Подробнее',    bg: 'Детайли',       de: 'Details',        it: 'Dettagli', pl: 'Szczegóły' },
+  tba:         { en: 'TBA',          ru: 'Уточняется',   bg: 'При запитване', de: 'Auf Anfrage',    it: 'Su richiesta', pl: 'Na zapytanie' },
+  perMonth:    { en: '/mo',          ru: '/мес',         bg: '/мес',          de: '/Mo.',           it: '/mese', pl: '/mies.' },
+  eurSqmYear:  { en: 'EUR/m²/yr',    ru: 'EUR/м²/год',   bg: 'EUR/м²/год',    de: 'EUR/m²/Jahr',    it: 'EUR/m²/anno', pl: 'EUR/m²/rok' },
+  built:       { en: 'Built',        ru: 'Построен',     bg: 'Построена',     de: 'Baujahr',        it: 'Anno', pl: 'Rok budowy' },
 };
 
 const VIEW_LABELS: Record<string, Record<string, string>> = {
-  city:     { en: 'City view',     ru: 'Вид на город',   bg: 'Изглед към града',    de: 'Stadtblick',      it: 'Vista città'     },
-  forest:   { en: 'Forest view',   ru: 'Вид на лес',     bg: 'Изглед към гората',   de: 'Waldblick',       it: 'Vista bosco'     },
-  mountain: { en: 'Mountain view', ru: 'Вид на горы',    bg: 'Изглед към планина',  de: 'Bergblick',       it: 'Vista montagna'  },
-  pool:     { en: 'Pool view',     ru: 'Вид на бассейн', bg: 'Изглед към басейна',  de: 'Poolblick',       it: 'Vista piscina'   },
-  sea:      { en: 'Sea view',      ru: 'Вид на море',    bg: 'Изглед към морето',   de: 'Meerblick',       it: 'Vista mare'      },
-  ocean:    { en: 'Ocean view',    ru: 'Вид на океан',   bg: 'Изглед към океана',   de: 'Ozeanblick',      it: 'Vista oceano'    },
-  yard:     { en: 'Yard view',     ru: 'Вид во двор',    bg: 'Изглед към двора',    de: 'Hofblick',        it: 'Vista cortile'   },
+  city:     { en: 'City view',     ru: 'Вид на город',   bg: 'Изглед към града',    de: 'Stadtblick',      it: 'Vista città', pl: 'Widok na miasto' },
+  forest:   { en: 'Forest view',   ru: 'Вид на лес',     bg: 'Изглед към гората',   de: 'Waldblick',       it: 'Vista bosco', pl: 'Widok na las' },
+  mountain: { en: 'Mountain view', ru: 'Вид на горы',    bg: 'Изглед към планина',  de: 'Bergblick',       it: 'Vista montagna', pl: 'Widok na góry' },
+  pool:     { en: 'Pool view',     ru: 'Вид на бассейн', bg: 'Изглед към басейна',  de: 'Poolblick',       it: 'Vista piscina', pl: 'Widok na basen' },
+  sea:      { en: 'Sea view',      ru: 'Вид на море',    bg: 'Изглед към морето',   de: 'Meerblick',       it: 'Vista mare', pl: 'Widok na morze' },
+  ocean:    { en: 'Ocean view',    ru: 'Вид на океан',   bg: 'Изглед към океана',   de: 'Ozeanblick',      it: 'Vista oceano', pl: 'Widok na ocean' },
+  yard:     { en: 'Yard view',     ru: 'Вид во двор',    bg: 'Изглед към двора',    de: 'Hofblick',        it: 'Vista cortile', pl: 'Widok na podwórze' },
 };
 
 const formatView = (v: string | undefined, lang: string): string | undefined => {
@@ -136,37 +141,27 @@ const lbl = (map: Record<string, string>, lang: string) => map[lang] ?? map['en'
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
-export const PropertyCard = ({
-  id, title, titleBg, titleRu, titleDe, titleIt,
-  price, location, locationBg, locationRu, locationDe, locationIt,
-  description, descriptionBg, descriptionRu, descriptionDe, descriptionIt,
-  image, type, transactionType, featured, availableUnits, status,
-  area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
-  view, maintenanceFee, terraceArea, landArea, parkingSpots,
-  yearBuilt, actSixteen, virtualTourUrl, internalNote,
-}: PropertyCardProps) => {
+export const PropertyCard = (props: PropertyCardProps) => {
+  const {
+    id, price, image, type, transactionType, featured, availableUnits, status,
+    area, bedrooms, bathrooms, livingRooms, floor, totalFloors,
+    view, maintenanceFee, terraceArea, landArea, parkingSpots,
+    yearBuilt, actSixteen, virtualTourUrl, internalNote,
+  } = props;
   const { i18n } = useTranslation();
-  const lang = (i18n.language || 'en').split('-')[0];
+  const lang = normalizeLang(i18n.resolvedLanguage || i18n.language);
   const viewLabel = formatView(view, lang);
 
-  const displayTitle =
-    (lang === 'bg' && titleBg) || (lang === 'ru' && titleRu) ||
-    (lang === 'de' && titleDe) || (lang === 'it' && titleIt) || title;
-
-  const displayLocation =
-    (lang === 'bg' && locationBg) || (lang === 'ru' && locationRu) ||
-    (lang === 'de' && locationDe) || (lang === 'it' && locationIt) || location;
-
-  const displayDescription =
-    (lang === 'bg' && descriptionBg) || (lang === 'ru' && descriptionRu) ||
-    (lang === 'de' && descriptionDe) || (lang === 'it' && descriptionIt) || description;
+  const displayTitle = localized(props, 'title', lang);
+  const displayLocation = localized(props, 'location', lang);
+  const displayDescription = localized(props, 'description', lang);
 
   const typeLabel = lbl(TYPE_LABELS[type] ?? TYPE_LABELS.other, lang);
   const saleLabel = lbl(transactionType === 'sale' ? UI.forSale : UI.forRent, lang);
 
   const formatPrice = () => {
     if (price === 0 || status === 'coming-soon') return lbl(UI.tba, lang);
-    return `€${price.toLocaleString()}`;
+    return formatEur(price, lang);
   };
 
   const statusBadge = status && STATUS_LABELS[status] ? (
@@ -200,7 +195,7 @@ export const PropertyCard = ({
       <div className="relative aspect-[4/3] overflow-hidden shrink-0">
         <img
           src={image}
-          alt={`${displayTitle} — ${typeLabel} ${saleLabel} in ${displayLocation}`}
+          alt={`${displayTitle} — ${displayLocation}`}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
@@ -249,7 +244,7 @@ export const PropertyCard = ({
 
           {featured && (
             <Badge className="bg-accent text-accent-foreground text-xs">
-              Featured
+              {lbl(UI.featured, lang)}
             </Badge>
           )}
 
@@ -259,7 +254,7 @@ export const PropertyCard = ({
             </Badge>
           )}
 
-           {availableUnits !== undefined && availableUnits > 0 && (
+           {availableUnits !== undefined && availableUnits > 1 && (
              <Badge variant="secondary" className="bg-background/90 text-xs text-black">
                <Building className="h-3 w-3 mr-1" />
                {availableUnits} {lbl(UI.units, lang)}

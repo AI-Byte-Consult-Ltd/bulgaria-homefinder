@@ -65,7 +65,7 @@ export const propertyTypeAliases: Record<string, string[]> = {
   ],
   apartment: [
     'apartment', 'апартамент', 'квартира', 'апартаменти',
-    'appartamento', 'wohnung', 'flat',
+    'appartamento', 'wohnung', 'flat', 'mieszkanie', 'квартиру', 'апартаменты',
     'one bedroom', 'one-bedroom', '1 bedroom', '1-bedroom',
     'однокомнатная', 'одна спальня', 'едностаен',
     'two bedroom', 'two-bedroom', '2 bedroom', '2-bedroom',
@@ -74,16 +74,16 @@ export const propertyTypeAliases: Record<string, string[]> = {
     'тристаен', 'трехкомнатная', 'три спальни',
   ],
   house: [
-    'house', 'къща', 'дом', 'haus', 'casa',
+    'house', 'къща', 'дом', 'haus', 'casa', 'dom', 'домик', 'къщи',
   ],
   villa: [
-    'villa', 'вила', 'вилла', 'villa',
+    'villa', 'вила', 'вилла', 'willa',
   ],
   land: [
-    'land', 'земя', 'земля', 'grundstück', 'terreno', 'парцел', 'участок',
+    'land', 'земя', 'земля', 'grundstück', 'terreno', 'парцел', 'участок', 'działka', 'plot',
   ],
   commercial: [
-    'commercial', 'търговски', 'коммерческая', 'gewerbe', 'commerciale',
+    'commercial', 'търговски', 'коммерческая', 'gewerbe', 'commerciale', 'komercyjne',
   ],
 };
 
@@ -144,84 +144,81 @@ export function findMatchingCities(query: string): string[] {
 }
 
 /**
- * Check if a property matches a free-text search query across all multilingual fields.
+ * Resolve a single search word to a property type ("дом" → house), if it is one.
  */
-export function propertyMatchesQuery(
-  property: {
-    title: string;
-    titleBg?: string;
-    location: string;
-    locationBg?: string;
-    locationRu?: string;
-    locationDe?: string;
-    locationIt?: string;
-    description?: string;
-    descriptionBg?: string;
-    type?: string;
-  },
-  query: string
-): boolean {
-  const q = query.toLowerCase().trim();
+export function resolvePropertyType(term: string): string | null {
+  const t = term.toLowerCase().trim();
+  if (t.length < 3) return null;
+  for (const [type, aliases] of Object.entries(propertyTypeAliases)) {
+    if (type === 'studio') continue; // studios are listed as apartments
+    if (type === t || aliases.some((a) => !a.includes(' ') && a.toLowerCase() === t)) return type;
+  }
+  return null;
+}
+
+const LANG_SUFFIXES = ['', 'Bg', 'Ru', 'De', 'It', 'Pl'];
+
+/** Lower-case and strip Latin diacritics so "nesebăr" matches "nesebar". */
+const fold = (v: string) =>
+  v.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').normalize('NFC');
+
+/**
+ * Check if a property matches a free-text search query across all multilingual fields.
+ * Every word of the query has to match: as text in any language version of the
+ * title, location or description, as a city/district alias, or as a property type.
+ */
+export function propertyMatchesQuery(property: any, query: string): boolean {
+  const q = fold(query).trim();
   if (!q) return true;
+
+  const locations = LANG_SUFFIXES
+    .map((sfx) => property[`location${sfx}`])
+    .filter(Boolean)
+    .map((l: string) => fold(l));
 
   // Strict mode: if the entire query exactly resolves to an independent city,
   // only return properties whose primary location is that exact city.
   const canonical = resolveCanonicalCity(q);
   if (canonical && INDEPENDENT_CITIES.has(canonical)) {
-    const locations = [
-      property.location,
-      property.locationBg,
-      property.locationRu,
-      property.locationDe,
-      property.locationIt,
-    ].filter(Boolean) as string[];
     return locations.some((loc) => locationMatchesCanonicalCity(loc, canonical));
   }
 
-  // Split query into individual terms for multi-word matching
-  const terms = q.split(/\s+/).filter(Boolean);
+  const searchableText = fold(
+    LANG_SUFFIXES.flatMap((sfx) => [
+      property[`title${sfx}`],
+      property[`location${sfx}`],
+      property[`description${sfx}`],
+    ])
+      .filter(Boolean)
+      .join(' ') + ` ${property.id || ''}`
+  );
 
-  // Direct text search across all fields
-  const searchableText = [
-    property.title,
-    property.titleBg || '',
-    property.location,
-    property.description || '',
-    property.descriptionBg || '',
-  ]
-    .join(' ')
-    .toLowerCase();
-
-  // Check if ALL terms match (AND logic for multi-word queries)
-  const allTermsMatch = terms.every((term) => searchableText.includes(term));
-  if (allTermsMatch) return true;
-
-  // Check city aliases: does the query refer to a city that appears in location?
-  const matchingCities = findMatchingCities(q);
-  const locationLower = property.location.toLowerCase();
-  if (matchingCities.some((city) => {
-    // For independent cities, require primary-city match (strict)
-    if (INDEPENDENT_CITIES.has(city)) {
-      return locationMatchesCanonicalCity(property.location, city);
-    }
-    return locationLower.includes(city);
-  })) return true;
-
-  // Check if individual terms match city aliases
-  for (const term of terms) {
-    const cityMatches = findMatchingCities(term);
-    const matched = cityMatches.some((city) => {
+  const locationText = locations.join(' | ');
+  const cityMatches = (needle: string) =>
+    needle.length >= 3 &&
+    findMatchingCities(needle).some((city) => {
       if (INDEPENDENT_CITIES.has(city)) {
-        return locationMatchesCanonicalCity(property.location, city);
+        return locations.some((loc) => locationMatchesCanonicalCity(loc, city));
       }
-      return locationLower.includes(city);
+      return (
+        locationText.includes(city) ||
+        (cityAliases[city] || []).some((a) => locationText.includes(a.toLowerCase()))
+      );
     });
-    if (matched) {
-      const otherTerms = terms.filter((t) => t !== term);
-      if (otherTerms.length === 0) return true;
-      if (otherTerms.every((t) => searchableText.includes(t))) return true;
-    }
-  }
 
-  return false;
+  // A place name typed on its own, including multi-word ones ("свети влас")
+  if (canonical) return cityMatches(q);
+
+  const terms = q.split(/[\s,;]+/).filter(Boolean);
+  return terms.every((term) => {
+    // A property-type word ("house", "дом", "wohnung") filters by type
+    const type = resolvePropertyType(term);
+    if (type) return property.type === type;
+    // A city name inside a longer query is matched as strictly as on its own
+    const city = resolveCanonicalCity(term);
+    if (city && INDEPENDENT_CITIES.has(city)) {
+      return locations.some((loc) => locationMatchesCanonicalCity(loc, city));
+    }
+    return searchableText.includes(term) || cityMatches(term);
+  });
 }

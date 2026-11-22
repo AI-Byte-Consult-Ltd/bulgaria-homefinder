@@ -49,6 +49,9 @@ export const SearchBar = () => {
             className="h-12"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleSearch();
+            }}
           />
         </div>
 

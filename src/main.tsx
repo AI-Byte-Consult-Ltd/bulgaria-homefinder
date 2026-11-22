@@ -1,4 +1,4 @@
-import { createRoot, hydrateRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
@@ -11,12 +11,10 @@ const app = (
   </HelmetProvider>
 );
 
-// Проверяем, есть ли уже готовый HTML в контейнере (созданный пререндером)
-if (container?.hasChildNodes()) {
-  hydrateRoot(container, app);
-} else {
-  createRoot(container!).render(app);
-}
+// Пререндеренный HTML нужен поисковикам и превью ссылок. В браузере приложение
+// рендерится заново: пререндер всегда английский, а посетитель может открыть
+// страницу на другом языке (?lng=de), и гидратация в таком случае ломалась.
+createRoot(container!).render(app);
 
 // Signal the prerenderer (puppeteer) that the app is ready for snapshot.
 // Wait for two animation frames so React has committed the initial render.
