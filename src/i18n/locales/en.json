@@ -10,7 +10,7 @@
     "bathrooms": "Bathrooms",
     "area": "Area",
     "viewDetails": "View Details",
-    "contactAgent": "Contact Agent",
+    "contactAgent": "Contact us",
     "favorite": "Add to Favorites",
     "share": "Share",
     "applyFilters": "Apply Filters",
@@ -33,11 +33,12 @@
     "marketInsights": "Market Insights & Analysis",
     "propertyTours": "Property Tours & Videos",
     "meetFounders": "Meet the Founders",
-    "foundersSubtitle": "The visionaries behind AI Byte Consult Ltd.",
+    "foundersSubtitle": "The people behind AI Byte Consult Ltd.",
     "whatClientsSay": "What Our Clients Say",
     "viewAll": "View All",
     "any": "Any",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "description": "Description"
   },
   "nav": {
     "home": "Home",
@@ -53,7 +54,7 @@
   },
   "hero": {
     "title": "Find Your Dream Property in Bulgaria",
-    "subtitle": "Discover thousands of houses, apartments, villas, and land for sale or rent",
+    "subtitle": "Thousands of houses, apartments, villas and plots for sale or rent",
     "searchPlaceholder": "Enter location, city, or address..."
   },
   "propertyTypes": {
@@ -72,7 +73,9 @@
   "home": {
     "featured": "Featured Properties",
     "newest": "Newest Listings",
-    "popularRegions": "Popular Regions"
+    "popularRegions": "Popular Regions",
+    "heroTitle": "Buy, Sell & Rent Property in Bulgaria",
+    "allProperties": "All Properties"
   },
   "pricelist": {
     "badge": "Transparent Pricing",
@@ -226,7 +229,8 @@
     "thankYouText": "We have received your property details. Our team will review your submission and contact you within 24 hours with a preliminary listing draft and next steps.",
     "submitAnother": "Submit Another Property",
     "submitSuccess": "Your property submission has been received!",
-    "submitError": "Failed to submit. Please try again."
+    "submitError": "Failed to submit. Please try again.",
+    "pageTitle": "Sell Your Property in Bulgaria"
   },
   "estimator": {
     "pageTitle": "Rental Income Estimator — Bulgaria Property",
@@ -260,7 +264,7 @@
     "missionText": "To make property search and transactions as simple and transparent as possible, while providing exceptional service to all our users.",
     "whyChooseUs": "Why Choose Us",
     "reason1": "Largest property database in Bulgaria",
-    "reason2": "Multilingual platform (5 languages)",
+    "reason2": "Multilingual platform (6 languages)",
     "reason3": "Verified listings and agents",
     "reason4": "Advanced search and map features",
     "established": "Established 2011",
@@ -352,6 +356,65 @@
     "progress": "Progress Update",
     "photo": "Photo Update",
     "payment": "Payment",
-    "milestone": "Milestone"
+    "milestone": "Milestone",
+    "save": "Save"
+  },
+  "buy": {
+    "title": "Buy Property in Bulgaria"
+  },
+  "rent": {
+    "title": "Rent Property in Bulgaria"
+  },
+  "properties": {
+    "title": "Properties in Bulgaria: Search Results"
+  },
+  "property": {
+    "title": "Title",
+    "yearBuilt": "Year built",
+    "photos": "Photos",
+    "addPhoto": "Add photo",
+    "fileTooLarge": "The file is too large",
+    "imagesUploaded": "Photos uploaded",
+    "maxImagesReached": "Maximum number of photos reached",
+    "uploadFailed": "Upload failed. Please try again.",
+    "saveSuccess": "Property saved",
+    "saveFailed": "Could not save the property. Please try again."
+  },
+  "referrals": {
+    "tab": "Referrals",
+    "title": "Referral programme",
+    "subtitle": "Invite buyers and earn a share of the agency's commission",
+    "yourCode": "Your code",
+    "invitationLink": "Invitation link",
+    "copy": "Copy",
+    "copied": "Copied",
+    "noCode": "Your referral code has not been created yet. Please reload the page.",
+    "clicks": "Clicks",
+    "visits": "Visits",
+    "signups": "Sign-ups",
+    "closed": "Deals",
+    "deals": "deals",
+    "earned": "Earned",
+    "pending": "pending",
+    "progressTo": "To reach level",
+    "rewardsHint": "paid after the notary deed is signed",
+    "noRewards": "No rewards yet",
+    "tabRewards": "Rewards",
+    "tabPayout": "Payouts",
+    "tabProperties": "Properties",
+    "date": "Date",
+    "type": "Type",
+    "amount": "Amount",
+    "status": "Status",
+    "payoutDesc": "Enter the details for receiving your reward",
+    "payoutMethod": "Method",
+    "bank": "Bank transfer",
+    "crypto": "Cryptocurrency (USDT TRC-20)",
+    "cryptoAddress": "Wallet address",
+    "accountHolder": "Account holder",
+    "savePayout": "Save",
+    "payoutSaved": "Payout details saved",
+    "shareProperties": "Share properties",
+    "sharePropertiesDesc": "Every link carries your code, so all clicks and deals are credited to you automatically."
   }
 }

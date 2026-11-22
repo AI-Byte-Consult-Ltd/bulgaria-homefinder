@@ -4,18 +4,18 @@
     "filter": "Filtro",
     "results": "Risultati",
     "price": "Prezzo",
-    "location": "Posizione",
-    "propertyType": "Tipo di proprietà",
+    "location": "Località",
+    "propertyType": "Tipo di immobile",
     "bedrooms": "Camere da letto",
     "bathrooms": "Bagni",
-    "area": "Area",
+    "area": "Superficie",
     "viewDetails": "Vedi dettagli",
-    "contactAgent": "Contatta agente",
+    "contactAgent": "Contattaci",
     "favorite": "Aggiungi ai preferiti",
     "share": "Condividi",
     "applyFilters": "Applica filtri",
     "noResults": "Nessun immobile trovato",
-    "transaction": "Transazione",
+    "transaction": "Tipo di contratto",
     "locationPlaceholder": "Inserisci città, regione o indirizzo...",
     "properties": "immobili",
     "allProperties": "Tutti gli immobili",
@@ -33,36 +33,37 @@
     "marketInsights": "Analisi e tendenze di mercato",
     "propertyTours": "Tour immobiliari e video",
     "meetFounders": "Incontra i fondatori",
-    "foundersSubtitle": "I visionari dietro AI Byte Consult Ltd.",
+    "foundersSubtitle": "Le persone che hanno creato AI Byte Consult Ltd.",
     "whatClientsSay": "Cosa dicono i nostri clienti",
     "viewAll": "Vedi tutti",
     "any": "Qualsiasi",
-    "loading": "Caricamento..."
+    "loading": "Caricamento...",
+    "description": "Descrizione"
   },
   "nav": {
     "home": "Home",
-    "buy": "Comprare",
-    "rent": "Affittare",
-    "sell": "Vendere",
+    "buy": "Compra",
+    "rent": "Affitta",
+    "sell": "Vendi",
     "services": "Servizi",
     "about": "Chi siamo",
     "contact": "Contatti",
     "signIn": "Accedi",
     "signUp": "Registrati",
-    "dashboard": "Dashboard"
+    "dashboard": "Area personale"
   },
   "hero": {
-    "title": "Trova la proprietà dei tuoi sogni in Bulgaria",
-    "subtitle": "Scopri migliaia di case, appartamenti, ville e terreni in vendita o in affitto",
-    "searchPlaceholder": "Inserisci posizione, città o indirizzo..."
+    "title": "Trova la casa dei tuoi sogni in Bulgaria",
+    "subtitle": "Migliaia di case, appartamenti, ville e terreni in vendita o in affitto",
+    "searchPlaceholder": "Inserisci località, città o indirizzo..."
   },
   "propertyTypes": {
-    "all": "Tutti i tipi",
+    "all": "Tutte le tipologie",
     "house": "Casa",
     "apartment": "Appartamento",
     "villa": "Villa",
     "land": "Terreno",
-    "commercial": "Commerciale"
+    "commercial": "Immobile commerciale"
   },
   "transaction": {
     "all": "Tutti",
@@ -70,9 +71,11 @@
     "forRent": "In affitto"
   },
   "home": {
-    "featured": "Proprietà in evidenza",
+    "featured": "Immobili in evidenza",
     "newest": "Nuovi annunci",
-    "popularRegions": "Regioni popolari"
+    "popularRegions": "Regioni popolari",
+    "heroTitle": "Comprare, vendere e affittare casa in Bulgaria",
+    "allProperties": "Tutti gli immobili"
   },
   "pricelist": {
     "badge": "Prezzi trasparenti",
@@ -226,7 +229,8 @@
     "thankYouText": "Abbiamo ricevuto i dati della tua proprietà. Il nostro team esaminerà la richiesta e ti contatterà entro 24 ore.",
     "submitAnother": "Invia un'altra proprietà",
     "submitSuccess": "La tua richiesta è stata ricevuta!",
-    "submitError": "Errore nell'invio. Riprova."
+    "submitError": "Errore nell'invio. Riprova.",
+    "pageTitle": "Vendere casa in Bulgaria"
   },
   "estimator": {
     "pageTitle": "Calcolatore di reddito da affitto — Immobili in Bulgaria",
@@ -260,7 +264,7 @@
     "missionText": "Rendere la ricerca e le transazioni immobiliari il più semplici e trasparenti possibile.",
     "whyChooseUs": "Perché sceglierci",
     "reason1": "Il più grande database immobiliare in Bulgaria",
-    "reason2": "Piattaforma multilingue (5 lingue)",
+    "reason2": "Piattaforma multilingue (6 lingue)",
     "reason3": "Annunci e agenti verificati",
     "reason4": "Ricerca avanzata e funzioni mappa",
     "established": "Fondata nel 2011",
@@ -352,6 +356,65 @@
     "progress": "Aggiornamento progressi",
     "photo": "Foto",
     "payment": "Pagamento",
-    "milestone": "Traguardo"
+    "milestone": "Traguardo",
+    "save": "Salva"
+  },
+  "buy": {
+    "title": "Comprare casa in Bulgaria"
+  },
+  "rent": {
+    "title": "Affittare casa in Bulgaria"
+  },
+  "properties": {
+    "title": "Immobili in Bulgaria: risultati della ricerca"
+  },
+  "property": {
+    "title": "Titolo",
+    "yearBuilt": "Anno di costruzione",
+    "photos": "Foto",
+    "addPhoto": "Aggiungi foto",
+    "fileTooLarge": "Il file è troppo grande",
+    "imagesUploaded": "Foto caricate",
+    "maxImagesReached": "Numero massimo di foto raggiunto",
+    "uploadFailed": "Caricamento non riuscito. Riprova.",
+    "saveSuccess": "Immobile salvato",
+    "saveFailed": "Impossibile salvare l'immobile. Riprova."
+  },
+  "referrals": {
+    "tab": "Referral",
+    "title": "Programma referral",
+    "subtitle": "Invita acquirenti e ricevi una quota della provvigione dell'agenzia",
+    "yourCode": "Il tuo codice",
+    "invitationLink": "Link di invito",
+    "copy": "Copia",
+    "copied": "Copiato",
+    "noCode": "Il codice referral non è ancora stato creato. Ricarica la pagina.",
+    "clicks": "Clic",
+    "visits": "Visite",
+    "signups": "Registrazioni",
+    "closed": "Vendite concluse",
+    "deals": "vendite",
+    "earned": "Guadagnato",
+    "pending": "in attesa",
+    "progressTo": "Al livello",
+    "rewardsHint": "pagamento dopo il rogito notarile",
+    "noRewards": "Nessun compenso per ora",
+    "tabRewards": "Compensi",
+    "tabPayout": "Pagamenti",
+    "tabProperties": "Immobili",
+    "date": "Data",
+    "type": "Tipo",
+    "amount": "Importo",
+    "status": "Stato",
+    "payoutDesc": "Inserisci i dati per ricevere il compenso",
+    "payoutMethod": "Metodo",
+    "bank": "Bonifico bancario",
+    "crypto": "Criptovaluta (USDT TRC-20)",
+    "cryptoAddress": "Indirizzo del wallet",
+    "accountHolder": "Intestatario del conto",
+    "savePayout": "Salva",
+    "payoutSaved": "Dati di pagamento salvati",
+    "shareProperties": "Condividi gli immobili",
+    "sharePropertiesDesc": "Ogni link contiene il tuo codice, quindi tutti i clic e le vendite ti vengono attribuiti automaticamente."
   }
 }

@@ -4,18 +4,18 @@
     "filter": "Filter",
     "results": "Ergebnisse",
     "price": "Preis",
-    "location": "Standort",
-    "propertyType": "Immobilientyp",
+    "location": "Lage",
+    "propertyType": "Objektart",
     "bedrooms": "Schlafzimmer",
-    "bathrooms": "Badezimmer",
+    "bathrooms": "Bäder",
     "area": "Fläche",
     "viewDetails": "Details anzeigen",
-    "contactAgent": "Makler kontaktieren",
+    "contactAgent": "Kontakt aufnehmen",
     "favorite": "Zu Favoriten hinzufügen",
     "share": "Teilen",
     "applyFilters": "Filter anwenden",
     "noResults": "Keine Immobilien gefunden",
-    "transaction": "Transaktion",
+    "transaction": "Kauf oder Miete",
     "locationPlaceholder": "Stadt, Region oder Adresse eingeben...",
     "properties": "Objekte",
     "allProperties": "Alle Immobilien",
@@ -31,13 +31,14 @@
     "readMore": "Mehr lesen →",
     "comingSoon": "Demnächst...",
     "marketInsights": "Marktanalysen & Einblicke",
-    "propertyTours": "Immobilien-Touren & Videos",
+    "propertyTours": "Immobilienvideos und Rundgänge",
     "meetFounders": "Lernen Sie die Gründer kennen",
-    "foundersSubtitle": "Die Visionäre hinter AI Byte Consult Ltd.",
+    "foundersSubtitle": "Die Menschen hinter AI Byte Consult Ltd.",
     "whatClientsSay": "Was unsere Kunden sagen",
     "viewAll": "Alle anzeigen",
-    "any": "Beliebig",
-    "loading": "Laden..."
+    "any": "Egal",
+    "loading": "Laden...",
+    "description": "Beschreibung"
   },
   "nav": {
     "home": "Startseite",
@@ -49,20 +50,20 @@
     "contact": "Kontakt",
     "signIn": "Anmelden",
     "signUp": "Registrieren",
-    "dashboard": "Dashboard"
+    "dashboard": "Mein Bereich"
   },
   "hero": {
     "title": "Finden Sie Ihre Traumimmobilie in Bulgarien",
-    "subtitle": "Entdecken Sie Tausende von Häusern, Wohnungen, Villen und Grundstücken zum Verkauf oder zur Miete",
-    "searchPlaceholder": "Standort, Stadt oder Adresse eingeben..."
+    "subtitle": "Tausende Häuser, Wohnungen, Villen und Grundstücke zum Kauf oder zur Miete",
+    "searchPlaceholder": "Ort, Stadt oder Adresse eingeben..."
   },
   "propertyTypes": {
-    "all": "Alle Typen",
+    "all": "Alle Objektarten",
     "house": "Haus",
     "apartment": "Wohnung",
     "villa": "Villa",
     "land": "Grundstück",
-    "commercial": "Gewerbe"
+    "commercial": "Gewerbeimmobilie"
   },
   "transaction": {
     "all": "Alle",
@@ -72,7 +73,9 @@
   "home": {
     "featured": "Empfohlene Immobilien",
     "newest": "Neueste Angebote",
-    "popularRegions": "Beliebte Regionen"
+    "popularRegions": "Beliebte Regionen",
+    "heroTitle": "Immobilien in Bulgarien kaufen, verkaufen und mieten",
+    "allProperties": "Alle Immobilien"
   },
   "pricelist": {
     "badge": "Transparente Preise",
@@ -226,7 +229,8 @@
     "thankYouText": "Wir haben Ihre Immobiliendaten erhalten. Unser Team wird sich innerhalb von 24 Stunden mit einem vorläufigen Inserat bei Ihnen melden.",
     "submitAnother": "Weitere Immobilie einreichen",
     "submitSuccess": "Ihre Immobilienanfrage wurde empfangen!",
-    "submitError": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    "submitError": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
+    "pageTitle": "Ihre Immobilie in Bulgarien verkaufen"
   },
   "estimator": {
     "pageTitle": "Mieteinnahmen-Rechner — Immobilien in Bulgarien",
@@ -260,7 +264,7 @@
     "missionText": "Immobiliensuche und -transaktionen so einfach und transparent wie möglich zu gestalten.",
     "whyChooseUs": "Warum uns wählen",
     "reason1": "Größte Immobiliendatenbank in Bulgarien",
-    "reason2": "Mehrsprachige Plattform (5 Sprachen)",
+    "reason2": "Mehrsprachige Plattform (6 Sprachen)",
     "reason3": "Verifizierte Angebote und Makler",
     "reason4": "Erweiterte Such- und Kartenfunktionen",
     "established": "Gegründet 2011",
@@ -352,6 +356,65 @@
     "progress": "Fortschritts-Update",
     "photo": "Foto",
     "payment": "Zahlung",
-    "milestone": "Meilenstein"
+    "milestone": "Meilenstein",
+    "save": "Speichern"
+  },
+  "buy": {
+    "title": "Immobilien in Bulgarien kaufen"
+  },
+  "rent": {
+    "title": "Immobilien in Bulgarien mieten"
+  },
+  "properties": {
+    "title": "Immobilien in Bulgarien: Suchergebnisse"
+  },
+  "property": {
+    "title": "Titel",
+    "yearBuilt": "Baujahr",
+    "photos": "Fotos",
+    "addPhoto": "Foto hinzufügen",
+    "fileTooLarge": "Die Datei ist zu groß",
+    "imagesUploaded": "Fotos hochgeladen",
+    "maxImagesReached": "Maximale Anzahl an Fotos erreicht",
+    "uploadFailed": "Hochladen fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "saveSuccess": "Immobilie gespeichert",
+    "saveFailed": "Die Immobilie konnte nicht gespeichert werden. Bitte versuchen Sie es erneut."
+  },
+  "referrals": {
+    "tab": "Empfehlungen",
+    "title": "Empfehlungsprogramm",
+    "subtitle": "Laden Sie Käufer ein und erhalten Sie einen Anteil an der Provision der Agentur",
+    "yourCode": "Ihr Code",
+    "invitationLink": "Einladungslink",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "noCode": "Ihr Empfehlungscode wurde noch nicht erstellt. Bitte laden Sie die Seite neu.",
+    "clicks": "Klicks",
+    "visits": "Besuche",
+    "signups": "Registrierungen",
+    "closed": "Abschlüsse",
+    "deals": "Abschlüsse",
+    "earned": "Verdient",
+    "pending": "ausstehend",
+    "progressTo": "Bis Stufe",
+    "rewardsHint": "Auszahlung nach dem Notartermin",
+    "noRewards": "Noch keine Prämien",
+    "tabRewards": "Prämien",
+    "tabPayout": "Auszahlungen",
+    "tabProperties": "Immobilien",
+    "date": "Datum",
+    "type": "Art",
+    "amount": "Betrag",
+    "status": "Status",
+    "payoutDesc": "Geben Sie die Daten für die Auszahlung Ihrer Prämie an",
+    "payoutMethod": "Auszahlungsart",
+    "bank": "Banküberweisung",
+    "crypto": "Kryptowährung (USDT TRC-20)",
+    "cryptoAddress": "Wallet-Adresse",
+    "accountHolder": "Kontoinhaber",
+    "savePayout": "Speichern",
+    "payoutSaved": "Auszahlungsdaten gespeichert",
+    "shareProperties": "Immobilien teilen",
+    "sharePropertiesDesc": "Jeder Link enthält Ihren Code, sodass alle Klicks und Abschlüsse automatisch Ihnen gutgeschrieben werden."
   }
 }
