@@ -70,49 +70,78 @@
   },
   {
     "id": "zornitsa-house-75239",
-    "title": "Value-Add Investment: Two-Storey Stone House + 1,910 m² Plot | Zornitsa Village",
-    "titleBg": "Инвестиционен проект: двуетажна каменна къща + парцел 1 910 м² | с. Зорница",
-    "titleRu": "Инвестиционный проект: двухэтажный каменный дом + участок 1 910 м² | с. Зорница",
-    "titleDe": "Investment-Projekt: Zweistöckiges Steinhaus + 1.910 m² Grundstück | Dorf Zornitsa",
-    "titleIt": "Progetto Investimento: Casa in Pietra + Terreno 1.910 m² | Villaggio Zornitsa",
+    "title": "Two-Storey House 112 m² with a 1,910 m² Plot | Zornitsa Village, Burgas Region",
+    "titleBg": "Двуетажна къща 112 м² с парцел 1 910 м² | с. Зорница, област Бургас",
+    "titleRu": "Двухэтажный дом 112 м² с участком 1 910 м² | с. Зорница, Бургасская область",
+    "titleDe": "Zweistöckiges Haus 112 m² mit 1.910 m² Grundstück | Dorf Zornitsa, Region Burgas",
+    "titleIt": "Casa su due piani di 112 m² con terreno di 1.910 m² | Zornitsa, regione di Burgas",
+    "titlePl": "Dom piętrowy 112 m² z działką 1 910 m² | wieś Zornitsa, obwód Burgas",
     "location": "Zornitsa, Sredets Municipality, Burgas Region",
     "locationBg": "с. Зорница, общ. Средец, обл. Бургас",
-    "locationRu": "с. Зорница, общ. Средец, область Бургас",
+    "locationRu": "с. Зорница, община Средец, Бургасская область",
     "locationDe": "Dorf Zornitsa, Gemeinde Sredets, Region Burgas",
-    "locationIt": "Villaggio Zornitsa, Comune di Sredets, Regione di Burgas",
-    "price": 19700,
+    "locationIt": "Zornitsa, comune di Sredets, regione di Burgas",
+    "locationPl": "wieś Zornitsa, gmina Sredets, obwód Burgas",
+    "price": 26900,
     "type": "house",
     "transactionType": "sale",
     "status": "for-sale",
-    "bedrooms": 4,
-    "bathrooms": 2,
+    "bedrooms": null,
+    "bathrooms": null,
     "area": 112,
     "landArea": 1910,
-    "view": "Village & nature view",
-    "image": "https://ipfs.io/ipfs/bafybeidnyorzlykkbt7qi2ms73ilw4hui4f47temcxakodcg4w4v76ydsy"
+    "view": null,
+    "image": "https://estate.aibyteconsult.com/assets/properties/zornitsa/zornitsa-01.jpg"
   },
   {
     "id": "burgas-slaveykov-50-lux",
-    "title": "Income-Generating Luxury Apartment | Signed Rental Contract €450/mo | Slaveykov, Burgas",
-    "titleBg": "Апартамент с доход | Активен наемен договор €450/мес | Славейков, Бургас",
-    "titleRu": "Двухкомнатная квартира | Действующий договор аренды €450/мес | Славейков, Бургас",
-    "titleDe": "Rendite-Luxuswohnung | Laufender Mietvertrag €450/Monat | Slaveykov, Burgas",
-    "titleIt": "Appartamento con Reddito Attivo | Contratto Affitto €450/mese | Slaveykov, Burgas",
+    "title": "Renovated One-Bedroom Apartment on the 16th Floor, Let at €450/month | Slaveykov, Burgas",
+    "titleBg": "Ремонтиран двустаен апартамент на 16 етаж, отдаден под наем за 450 € на месец | Славейков, Бургас",
+    "titleRu": "Двухкомнатная квартира с ремонтом на 16 этаже, сдана за 450 € в месяц | Славейков, Бургас",
+    "titleDe": "Renovierte Zweizimmerwohnung im 16. Stock, vermietet für 450 € im Monat | Slaveykov, Burgas",
+    "titleIt": "Bilocale ristrutturato al 16° piano, affittato a 450 € al mese | Slaveykov, Burgas",
+    "titlePl": "Mieszkanie dwupokojowe po remoncie na 16 piętrze, wynajęte za 450 € miesięcznie | Slaveykov, Burgas",
     "location": "Burgas, Slaveykov District",
-    "locationBg": "Бургас, кв. Славейков",
-    "locationRu": "Бургас, квартал Славейков",
+    "locationBg": "Бургас, ж.к. Славейков",
+    "locationRu": "Бургас, ж.к. Славейков",
     "locationDe": "Burgas, Stadtviertel Slaveykov",
-    "locationIt": "Burgas, Quartiere Slaveykov",
-    "price": 140000,
+    "locationIt": "Burgas, quartiere Slaveykov",
+    "locationPl": "Burgas, osiedle Slaveykov",
+    "price": 134680,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
     "bedrooms": 1,
     "bathrooms": 1,
-    "area": 63,
+    "area": 52.66,
     "landArea": null,
-    "view": true,
+    "view": null,
     "image": "https://ipfs.io/ipfs/bafybeihhbiio3wwn7nv2nuuh5p3duut4pbnoyn6eqtliuksn5ztyapmgky"
+  },
+  {
+    "id": "burgas-bizzare-a06",
+    "title": "One-Bedroom Apartment 69.98 m² in the New Bizzare Building near Metro | Burgas",
+    "titleBg": "Двустаен апартамент 69,98 м² в нова сграда Bizzare до Метро | Бургас",
+    "titleRu": "Двухкомнатная квартира 69,98 м² в новостройке Bizzare у Метро | Бургас",
+    "titleDe": "Zweizimmerwohnung 69,98 m² im Neubau Bizzare beim Metro-Markt | Burgas",
+    "titleIt": "Bilocale di 69,98 m² nel nuovo edificio Bizzare vicino a Metro | Burgas",
+    "titlePl": "Mieszkanie dwupokojowe 69,98 m² w nowym budynku Bizzare przy Metro | Burgas",
+    "location": "Burgas, near Metro and Slaveykov District",
+    "locationBg": "Бургас, до Метро и ж.к. Славейков",
+    "locationRu": "Бургас, у Метро и ж.к. Славейков",
+    "locationDe": "Burgas, beim Metro-Markt und Viertel Slaveykov",
+    "locationIt": "Burgas, vicino a Metro e al quartiere Slaveykov",
+    "locationPl": "Burgas, przy Metro i osiedlu Slaveykov",
+    "price": 116032,
+    "type": "apartment",
+    "transactionType": "sale",
+    "status": "for-sale",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 69.98,
+    "landArea": null,
+    "view": null,
+    "image": "https://estate.aibyteconsult.com/assets/properties/bizzare/bizzare-02.jpg"
   },
   {
     "id": "skarabey-madika",
@@ -141,7 +170,12 @@
     "id": "skarabey-tortuga-a",
     "title": "SKARABEY TORTUGA - Entrance A, Horizont",
     "titleBg": "Жилищна сграда \"SKARABEY TORTUGA\"-вход А, кв.Хоризонт",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Horizont District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 95000,
     "type": "apartment",
     "transactionType": "sale",
@@ -151,13 +185,18 @@
     "area": 80,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeigzvzizfmbr6tkveurkvdtqx5tljwtqpa2d45xwbhy4rbgkb65zmq"
   },
   {
     "id": "skarabey-zornitsa-3",
     "title": "SKARABEY ZORNITSA 3 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ ЗОРНИЦА 3\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Zornitsa District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 78000,
     "type": "apartment",
     "transactionType": "sale",
@@ -167,13 +206,18 @@
     "area": 70,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreihjomg3ourvto2j55mrermgvqewfl3a5ejzl2r2mkbupqlqijxy2e"
   },
   {
     "id": "skarabey-pomorie",
     "title": "SKARABEY POMORIE - Seaside Living",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ ПОМОРИЕ\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Pomorie, City Center",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 92000,
     "type": "apartment",
     "transactionType": "sale",
@@ -183,13 +227,18 @@
     "area": 72,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeidhzjb37mwujajwkjg2eh6illndpwpxy3turzphu5xnikgw2lqhvq"
   },
   {
     "id": "skarabey-tortuga-2",
     "title": "SKARABEY TORTUGA 2 - Coming Soon",
     "titleBg": "Жилищна сграда \"SKARABEY TORTUGA 2\" ОЧАКВАЙТЕ СКОРО!",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 0,
     "type": "apartment",
     "transactionType": "sale",
@@ -199,13 +248,18 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeif74fte3ipu7pw6ln6ycuo6gzwxfc5g4cqe7wtvs44izocbf4vpe4"
   },
   {
     "id": "skarabey-tortuga-b",
     "title": "SKARABEY TORTUGA - Entrance B, Horizont",
     "titleBg": "Жилищна сграда \"SKARABEY TORTUGA\"-вход Б, кв.Хоризонт",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Horizont District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 92000,
     "type": "apartment",
     "transactionType": "sale",
@@ -215,13 +269,18 @@
     "area": 78,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeigzfcid7sc5pg3s2lsgfbxfqntab3gfhasyurb3y2xvfwcd7te76e"
   },
   {
     "id": "skarabey-25",
     "title": "SKARABEY 25 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 25\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 88000,
     "type": "apartment",
     "transactionType": "sale",
@@ -231,13 +290,18 @@
     "area": 75,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeicgyfk3cdd53aqvi57iuqh46hxrbk5qozmkdcj5voz3y252yd4eiy"
   },
   {
     "id": "skarabey-24",
     "title": "SKARABEY 24 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 24\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 86000,
     "type": "apartment",
     "transactionType": "sale",
@@ -247,13 +311,18 @@
     "area": 74,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeietyhxo7nage64qqkrb73mqixjmr6u2ppsu6z4n6xcmuvtjnlvs3i"
   },
   {
     "id": "skarabey-puzzle",
     "title": "SKARABEY PUZZLE - Sarafovo",
     "titleBg": "Жилищна сграда \"SKARABEY PUZZLE\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Sarafovo District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 115000,
     "type": "apartment",
     "transactionType": "sale",
@@ -263,13 +332,18 @@
     "area": 85,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeifzwng4hrogcud2cdq57ss4fat2b7yxpwpajou5st6pbbejdoi3s4"
   },
   {
     "id": "skarabey-zornitsa-1",
     "title": "SKARABEY ZORNITSA 1",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ ЗОРНИЦА 1\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Zornitsa District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 75000,
     "type": "apartment",
     "transactionType": "sale",
@@ -279,13 +353,18 @@
     "area": 68,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeiec7zdee7gwtqcmz3z2wjxxnyssdwepx2ecloqlzxwvtvu25oufea"
   },
   {
     "id": "city-scape",
     "title": "CITY SCAPE - Bratya Miladinovi",
     "titleBg": "Жилищна сграда \"CITY SCAPE\" - ж.к.Братя Миладинови",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Bratya Miladinovi District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 98000,
     "type": "apartment",
     "transactionType": "sale",
@@ -295,13 +374,18 @@
     "area": 82,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeiedmpzaemhgqb7utgi66inppzurssydhkfwrjy63sclg2oye4uoze"
   },
   {
     "id": "villa-kraymorie",
     "title": "VILLA KRAYMORIE",
     "titleBg": "Жилищна сграда \"VILLA KRAYMORIE\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Kraymorie",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 125000,
     "type": "villa",
     "transactionType": "sale",
@@ -311,13 +395,18 @@
     "area": 110,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeifxfucecoyqm5nmj2viuto337roqlwld6h5kgqyqpx2q3thddtuhq"
   },
   {
     "id": "skarabey-21",
     "title": "SKARABEY 21 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 21\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 82000,
     "type": "apartment",
     "transactionType": "sale",
@@ -327,13 +416,18 @@
     "area": 72,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeigw5dl4zbunynk3q2ylzy6jinx4s5ve5gagv43kjqzhe23subicum"
   },
   {
     "id": "skarabey-zornitsa-2",
     "title": "SKARABEY ZORNITSA 2",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ ЗОРНИЦА 2\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Zornitsa District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 76000,
     "type": "apartment",
     "transactionType": "sale",
@@ -343,13 +437,18 @@
     "area": 70,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeighbxouwqzmz62jgocut7kclg6u54f3thi4tz4xaqwnqsoosf7boy"
   },
   {
     "id": "skarabey-26",
     "title": "SKARABEY 26 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 26\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 89000,
     "type": "apartment",
     "transactionType": "sale",
@@ -359,13 +458,18 @@
     "area": 76,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeihatlbpnu2a4v3ejymidmpclf47d43s3blwlqz6fqy4x6u4zjn4ga"
   },
   {
     "id": "skarabey-27",
     "title": "SKARABEY 27 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 27\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 91000,
     "type": "apartment",
     "transactionType": "sale",
@@ -375,13 +479,18 @@
     "area": 78,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeigbxfm43757gy3efp5xnat2yn54xwmdbzw7lyx43fsrnepbztch3m"
   },
   {
     "id": "skarabey-18",
     "title": "SKARABEY 18 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 18\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 79000,
     "type": "apartment",
     "transactionType": "sale",
@@ -391,13 +500,18 @@
     "area": 68,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeihjefoub2msv4467ilxfn5asymvo3ixnmaxo6i6zxi2cvmvkqfvui"
   },
   {
     "id": "skarabey-17",
     "title": "SKARABEY 17 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 17\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 77000,
     "type": "apartment",
     "transactionType": "sale",
@@ -407,13 +521,18 @@
     "area": 66,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeieuzpstkr2vjui6iskm2psek7btipfflfiavg7dq4wxwnjuvrlrz4"
   },
   {
     "id": "sarafovo-houses",
     "title": "Single-Family Houses - Sarafovo, Lahana",
     "titleBg": "Еднофамилни къщи - кв.Сарафово, местност Лахана",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Sarafovo, Lahana",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 185000,
     "type": "house",
     "transactionType": "sale",
@@ -423,13 +542,18 @@
     "area": 180,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeig6dylcrgzavrpco4wkgsbzxyd4jcdskbifyi4dfzld25g3ucybuy"
   },
   {
     "id": "skarabey-evolution-1",
     "title": "SKARABEY EVOLUTION - Building 1",
     "titleBg": "Жилищен комплекс \"SKARABEY EVOLUTION\" - Сграда 1",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 105000,
     "type": "apartment",
     "transactionType": "sale",
@@ -439,13 +563,18 @@
     "area": 85,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeiaxbbsdfdovatbmotxvefszpvy2hjos43wqmt62kzmreneq6nsb5a"
   },
   {
     "id": "skarabey-evolution-2",
     "title": "SKARABEY EVOLUTION - Building 2",
     "titleBg": "Жилищен комплекс \"SKARABEY EVOLUTION\" - Сграда 2",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 108000,
     "type": "apartment",
     "transactionType": "sale",
@@ -455,13 +584,18 @@
     "area": 87,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeiensano2tqqjzxwjksgcmpxkueyq66rsepnahgqbpirdnkhb52faq"
   },
   {
     "id": "skarabey-23",
     "title": "SKARABEY 23 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 23\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 84000,
     "type": "apartment",
     "transactionType": "sale",
@@ -471,13 +605,18 @@
     "area": 73,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeihxsd4xwgve2hobccf2sllkl3yxli4b7vp3edsqik6bncs33m54s4"
   },
   {
     "id": "skarabey-22",
     "title": "SKARABEY 22 - Seaside Living",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 22\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Seaside",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 95000,
     "type": "apartment",
     "transactionType": "sale",
@@ -487,13 +626,18 @@
     "area": 80,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreidivengwuyogonht5zb7yrbdktqyf4ihh55qpr7h5yjzofgomxotq"
   },
   {
     "id": "skarabey-20",
     "title": "SKARABEY 20 - Residential Building",
     "titleBg": "Жилищна сграда \"СКАРАБЕЙ 20\"",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 81000,
     "type": "apartment",
     "transactionType": "sale",
@@ -503,13 +647,18 @@
     "area": 71,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeiamzknyuodtqblc76gvv6nzfkcau3axvvkkwhq26ayvqtybctp5wu"
   },
   {
     "id": "unihome-elysium",
     "title": "ELYSIUM - Premium Residential & Commercial Complex",
     "titleBg": "ЕЛИЗИУМ - Висок клас жилищен и търговски комплекс",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Main Boulevard",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 0,
     "type": "apartment",
     "transactionType": "sale",
@@ -519,13 +668,18 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/570/elysium-burgas1.png"
   },
   {
     "id": "unihome-horizon2",
     "title": "HORIZON 2 - Residential Building",
     "titleBg": "ХОРИЗОНТ 2 - Жилищна сграда",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Horizont/Izgrev District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 80000,
     "type": "apartment",
     "transactionType": "sale",
@@ -535,13 +689,18 @@
     "area": 67,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/591/horizon2-1.jpg"
   },
   {
     "id": "unihome-horizont",
     "title": "Complex HORIZONT - Burgas",
     "titleBg": "КОМПЛЕКС ХОРИЗОНТ - Бургас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Horizont/Izgrev District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 72000,
     "type": "apartment",
     "transactionType": "sale",
@@ -551,13 +710,18 @@
     "area": 65,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/561/1.jpg"
   },
   {
     "id": "unihome-greenpark2",
     "title": "GREEN PARK 2 - Slaveykov District",
     "titleBg": "GREEN PARK 2 - к-с Славейков",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Slaveykov District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 150000,
     "type": "apartment",
     "transactionType": "sale",
@@ -567,13 +731,18 @@
     "area": 80,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/590/green-park-burgasakt16.png"
   },
   {
     "id": "unihome-greenpark",
     "title": "GREEN PARK - Slaveykov",
     "titleBg": "GREEN PARK - Славейков",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Slaveykov District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 17000,
     "type": "apartment",
     "transactionType": "sale",
@@ -583,13 +752,18 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/559/gp.jpg"
   },
   {
     "id": "unihome-evea",
     "title": "EVEA RESIDENCE - Izgrev District",
     "titleBg": "ЕВЕА РЕЗИДЕНС - к-с Изгрев",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Izgrev District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 15000,
     "type": "apartment",
     "transactionType": "sale",
@@ -599,13 +773,18 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/525/evea.jpg"
   },
   {
     "id": "unihome-sarafovo",
     "title": "Residential Building - Sarafovo Center",
     "titleBg": "Жилищна сграда - кв. Сарафово Център",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Sarafovo District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 39000,
     "type": "apartment",
     "transactionType": "sale",
@@ -615,13 +794,18 @@
     "area": 46,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/411/1-copy.jpg"
   },
   {
     "id": "unihome-kraimorie",
     "title": "Stylish Residential Building - Kraimorie",
     "titleBg": "Стилна жилищна сграда - кв. Крайморие",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas, Kraimorie District",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 45700,
     "type": "apartment",
     "transactionType": "sale",
@@ -631,13 +815,18 @@
     "area": 61,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://www.unihome.bg/medias/properties_for_sale/big/409/33.jpg"
   },
   {
     "id": "lc-perla-studio",
     "title": "PERLA Complex - Studio Apartment",
     "titleBg": "Комплекс ПЕРЛА - Студио",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 53900,
     "type": "studio",
     "transactionType": "sale",
@@ -647,14 +836,19 @@
     "area": 39,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeig5vhwuic7vatjugtdfx2i7miixwlo6562vqiviugzcn5yshjemwm"
   },
   {
     "id": "lc-gerber4-studio",
     "title": "GERBER 4 - Studio Apartment",
     "titleBg": "ГЕРБЕР 4 - Студио",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
-    "price": 54900,
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
+    "price": 49900,
     "type": "studio",
     "transactionType": "sale",
     "status": "for-sale",
@@ -663,13 +857,18 @@
     "area": 29,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeicbgz37e5t6sf2laqy5we2otc6siwp7fe2ts5hc3cr5cv3aaacmri"
   },
   {
     "id": "lc-amadeus11-studio",
     "title": "AMADEUS 11 - Large Studio with Pool View",
     "titleBg": "АМАДЕУС 11 - Голямо студио с изглед към басейна",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 83900,
     "type": "studio",
     "transactionType": "sale",
@@ -679,45 +878,60 @@
     "area": 72,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeihrdvkvht5iz52rhkx6h7tj4j5qlmmyc5oakztoagx76hqqcdomwy"
   },
   {
     "id": "lc-pomorie-1bed-30b",
     "title": "New Residential Building - 1 Bed, Pomorie",
     "titleBg": "Жилое здание (сдача лето 2026) - 1 спалня, Поморие",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Pomorie",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 83900,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 1,
     "bathrooms": 1,
     "area": 56,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreib5khc66rcmwgdv3bveipbngajcd547nv7y2cbtvmczg5tv4hxvhe"
   },
   {
     "id": "lc-pomorie-1bed-26b",
     "title": "New Residential Building - 1 Bed Spacious, Pomorie",
     "titleBg": "Жилое здание (сдача лето 2026) - 1 спалня, просторен, Поморие",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Pomorie",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 91500,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 1,
     "bathrooms": 1,
     "area": 61,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreigw4y76v663khvjdq5adzylej3mo2qnv3ip2kfz4lraiqheniwwom"
   },
   {
     "id": "lc-panorama-bay-1bed",
     "title": "PANORAMA BAY 1 - 1 Bedroom, Saint Vlas",
     "titleBg": "ПАНОРАМА БЕЙ 1 - 1 спалня, Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 100000,
     "type": "apartment",
     "transactionType": "sale",
@@ -727,13 +941,18 @@
     "area": 75,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeifwbtttn4h7rebemcyktrpvh7q7c6pvqnk667eoungmqevz4jtpb4"
   },
   {
     "id": "lc-pomorie-residence-1bed",
     "title": "Pomorie Residence - 1 Bedroom",
     "titleBg": "Поморие Резиденс - 1 спалня",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Pomorie",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 110000,
     "type": "apartment",
     "transactionType": "sale",
@@ -743,13 +962,18 @@
     "area": 66,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreidz4frmmqejotybf7jgbkykecu4mmvegevtr3u6gxuqtvhi4xbnem"
   },
   {
     "id": "lc-nessebar-view-2bed",
     "title": "Nessebar View - 2 Bedroom, Kosharitsa",
     "titleBg": "Несебър Вю - 2 спални, Кошарица",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Kosharitsa",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 72900,
     "type": "apartment",
     "transactionType": "sale",
@@ -759,62 +983,82 @@
     "area": 76,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafybeifpultidxftcwvf3qdibxi2w5u5dix26rrvju2avttree6jgtsefa"
   },
   {
     "id": "lc-holiday-fort-2bed",
     "title": "Holiday Fort Club - 2 Bedroom, Sunny Beach",
     "titleBg": "Холидей Форт Клуб - 2 спални, Слънчев бряг",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 81900,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 2,
     "bathrooms": 1,
     "area": 90,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreiezk6x4mpnjocxmgrhetgh7kv3ahqcvfb32cr4ehy65cvchg3kqvq"
   },
   {
     "id": "lc-pomorie-2bed-stopsale",
     "title": "Residential Building - 2 Bed, Pomorie",
     "titleBg": "Жилищна сграда - 2 спални, Поморие",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Pomorie",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 116500,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 2,
     "bathrooms": 1,
     "area": 93,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreihwcx623espjlaboxii2cb6izewrk4ibl73jw2jgap4y6oytlokwu"
   },
   {
     "id": "lc-panorama-bay-2bed",
     "title": "PANORAMA BAY 1 - 2 Bedroom, Saint Vlas",
     "titleBg": "ПАНОРАМА БЕЙ 1 - 2 спални, Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 100000,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 2,
     "bathrooms": 1,
     "area": 75,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreifx2vktbgfpnssbixbendkq6lshrtie4pbsjvifg5qb4sspckjdxy"
   },
   {
     "id": "lc-casa-real-2bed",
     "title": "CASA REAL - Luxury 2 Bedroom, Saint Vlas",
     "titleBg": "КАСА РЕАЛ - Луксозен 2 спални, Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
-    "price": 330000,
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
+    "price": 320000,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -823,13 +1067,18 @@
     "area": 149,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreiaxejeqsoytovtxbuxlnmewn75oct2chimn7jgkyvknw2yo7acoly"
   },
   {
     "id": "lc-orhideya-penthouse",
     "title": "ORHIDEYA - Luxury Penthouse 255 m², Saint Vlas",
     "titleBg": "ОРХИДЕЯ - Луксозен пентхаус 255 м², Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 335900,
     "type": "penthouse",
     "transactionType": "sale",
@@ -839,29 +1088,39 @@
     "area": 255,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreiflieov6medhr4hxu2qngwhv2coxda5grpauqyil66fwqiaxic7hy"
   },
   {
     "id": "lc-saintvlas-3bed-stopsale",
     "title": "Residential Building - 3 Bed, Saint Vlas",
     "titleBg": "Жилищна сграда - 3 спални, Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 137000,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 3,
     "bathrooms": 2,
     "area": 99,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreiekankdy6eeecnwlcqde2zccyfhzkwi4bll6vni6h4cd4p34ducem"
   },
   {
     "id": "lc-goritsa-land-house",
     "title": "Land Plot + Old House - Goritsa Village",
     "titleBg": "ПАРЦЕЛ + Стара къща - с. Горица",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Goritsa",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 35900,
     "type": "house",
     "transactionType": "sale",
@@ -871,14 +1130,19 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreieiqbepoaumd7yb6d6hdkehy5lnhrlwfkiz26nbpojh23y7aebcia"
   },
   {
     "id": "lc-alexandrovo-house",
     "title": "New Single-Storey House - Alexandrovo",
     "titleBg": "Нова едноетажна къща - Александрово",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Alexandrovo",
-    "price": 250000,
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
+    "price": 260000,
     "type": "house",
     "transactionType": "sale",
     "status": "for-sale",
@@ -887,13 +1151,18 @@
     "area": 265,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreiawxuc7hvc2m776t2ylavp6flkvzzl7wqkri4aeu3rgw2trfntib4"
   },
   {
     "id": "lc-kosharitsa-house-pool",
     "title": "Private House with Pool & Garage - Kosharitsa",
     "titleBg": "Частна КЪЩА с басейн и гараж - Кошарица",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Kosharitsa",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 575000,
     "type": "house",
     "transactionType": "sale",
@@ -903,13 +1172,18 @@
     "area": 239,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://ipfs.io/ipfs/bafkreia65swzwnaudf4ofbg2bpbwq3ywwvjdruz6setyltkodcmcjmivne"
   },
   {
     "id": "lc-astoria3-studio",
     "title": "ASTORIA 3 - Studio with Sea & Amphitheater View",
     "titleBg": "АСТОРИЯ 3 - Студио с изглед към морето и амфитеатъра",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Elenite",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 27900,
     "type": "studio",
     "transactionType": "sale",
@@ -919,13 +1193,18 @@
     "area": 31,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/astoria3-studio-1938/img_01.jpg"
   },
   {
     "id": "lc-afrodite2-studio",
     "title": "AFRODITE 2 - Studio with Pool View",
     "titleBg": "АФРОДИТА 2 - Студио с изглед към басейна",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 51900,
     "type": "studio",
     "transactionType": "sale",
@@ -935,13 +1214,18 @@
     "area": 35,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/afrodite2-studio-1982/img_01.jpg"
   },
   {
     "id": "lc-vip-vision-1bed",
     "title": "VIP VISION - 1 Bedroom Maisonette with Pool & Yard View",
     "titleBg": "VIP VISION - Мезонет с 1 спалня, изглед към басейн и двор",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 81900,
     "type": "apartment",
     "transactionType": "sale",
@@ -951,13 +1235,18 @@
     "area": 60,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/vip-vision-1bed-2023/img_01.jpg"
   },
   {
     "id": "lc-harmony-palace-1bed",
     "title": "HARMONY PALACE - 1 Bedroom with Pool View",
     "titleBg": "ХАРМОНИ ПАЛАС - 1 спалня с изглед към басейна",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 99900,
     "type": "apartment",
     "transactionType": "sale",
@@ -967,13 +1256,18 @@
     "area": 54,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/harmony-palace-1bed-2067/img_01.jpg"
   },
   {
     "id": "lc-jadore-secret-gardens-1bed",
     "title": "J'ADORE SECRET GARDENS - 1 Bedroom with Pool View",
     "titleBg": "ЖАДОР СИКРЕТ ГАРДЪНС - 1 спалня с изглед към басейна",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 105900,
     "type": "apartment",
     "transactionType": "sale",
@@ -983,13 +1277,18 @@
     "area": 62,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/jadore-secret-gardens-1bed-2102/img_01.jpg"
   },
   {
     "id": "lc-aphrodite-gardens-1bed",
     "title": "APHRODITE GARDENS - 1 Bedroom with Garden View",
     "titleBg": "АФРОДИТА ГАРДЪНС - 1 спалня с изглед към градината",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 119900,
     "type": "apartment",
     "transactionType": "sale",
@@ -999,13 +1298,18 @@
     "area": 40,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/aphrodite-gardens-1bed-2145/img_01.jpg"
   },
   {
     "id": "lc-malka-vodenica-2bed",
     "title": "MALKA VODENICA - 2 Bedroom with Sea & Yard View",
     "titleBg": "МАЛКА ВОДЕНИЦА - 2 спални с изглед към морето и двора",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 155000,
     "type": "apartment",
     "transactionType": "sale",
@@ -1015,13 +1319,18 @@
     "area": 80,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://lh3.googleusercontent.com/d/1xq3m2TnitQNKGgBZDHuGcpUELPPmZrcd=w2000"
   },
   {
     "id": "lc-cherno-more-3bed-maisonette",
     "title": "Maisonette with No Maintenance Fee - 3 Bedroom",
     "titleBg": "Мезонет без такса поддръжка - 3 спални",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Nessebar, Cherno More",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 280000,
     "type": "apartment",
     "transactionType": "sale",
@@ -1031,13 +1340,18 @@
     "area": 186,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "id": "lc-admiral-parking",
     "title": "Parking Space - ADMIRAL Complex, Saint Vlas",
     "titleBg": "Паркомясто - комплекс АДМИРАЛ, Свети Влас",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Saint Vlas",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 22000,
     "type": "commercial",
     "transactionType": "sale",
@@ -1047,13 +1361,18 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "id": "lc-elit4-parking",
     "title": "Parking Space - ELIT 4 Complex, Sunny Beach",
     "titleBg": "Паркомясто - комплекс ЕЛИТ 4, Слънчев бряг",
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 19500,
     "type": "commercial",
     "transactionType": "sale",
@@ -1063,40 +1382,60 @@
     "area": 0,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "id": "rent-1",
     "title": "Modern Apartment in City Center",
+    "titleBg": null,
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sofia Center",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 1200,
     "type": "apartment",
     "transactionType": "rent",
+    "status": "rented",
     "bedrooms": 2,
     "bathrooms": 1,
     "area": 85,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
   },
   {
     "id": "rent-2",
     "title": "Beachfront Apartment",
+    "titleBg": null,
+    "titleRu": null,
+    "titleDe": null,
     "location": "Sunny Beach",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 2500,
     "type": "apartment",
     "transactionType": "rent",
+    "status": "rented",
     "bedrooms": 2,
     "bathrooms": 2,
     "area": 95,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
   },
   {
     "id": "rent-3",
     "title": "Commercial Space Downtown",
+    "titleBg": null,
+    "titleRu": null,
+    "titleDe": null,
     "location": "Burgas Center",
+    "locationBg": null,
+    "locationRu": null,
+    "locationDe": null,
     "price": 3500,
     "type": "commercial",
     "transactionType": "rent",
@@ -1106,7 +1445,7 @@
     "area": 200,
     "landArea": null,
     "view": null,
-    "image": null
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
   },
   {
     "id": "orlintsi-house-1825",
@@ -1123,7 +1462,7 @@
     "price": 14500,
     "type": "house",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 3,
     "bathrooms": 1,
     "area": 65,
@@ -1143,7 +1482,7 @@
     "locationRu": "Равда, Бургас",
     "locationDe": "Ravda, Burgas",
     "locationIt": "Ravda, Burgas",
-    "price": 42900,
+    "price": 39900,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -1161,12 +1500,12 @@
     "titleRu": "Студия в комплексе Бора Бора | Равда (Юнит 2)",
     "titleDe": "Studio in der Anlage Bora Bora | Ravda (Einheit 2)",
     "titleIt": "Monolocale nel complesso Bora Bora | Ravda (Unità 2)",
-    "location": "Ravda, Burgas",
-    "locationBg": "Равда, Бургас",
-    "locationRu": "Равда, Бургас",
-    "locationDe": "Ravda, Burgas",
-    "locationIt": "Ravda, Burgas",
-    "price": 42900,
+    "location": "Ravda",
+    "locationBg": "Равда",
+    "locationRu": "Равда",
+    "locationDe": "Ravda",
+    "locationIt": "Ravda",
+    "price": 39900,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -1184,12 +1523,12 @@
     "titleRu": "Двухкомнатный апартамент в Elitonia Gardens 3 | Равда",
     "titleDe": "2-Zimmer-Wohnung in Elitonia Gardens 3 | Ravda",
     "titleIt": "Appartamento con 2 camera in Elitonia Gardens 3 | Ravda",
-    "location": "Ravda, Burgas",
-    "locationBg": "Равда, Бургас",
-    "locationRu": "Равда, Бургас",
-    "locationDe": "Ravda, Burgas",
-    "locationIt": "Ravda, Burgas",
-    "price": 89000,
+    "location": "Ravda",
+    "locationBg": "Равда",
+    "locationRu": "Равда",
+    "locationDe": "Ravda",
+    "locationIt": "Ravda",
+    "price": 86000,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -1221,7 +1560,7 @@
     "area": 78,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=600&fit=crop"
+    "image": "https://lh3.googleusercontent.com/d/1K8QJ9t2ku73GHqjthrPfn2xaDqvAFJjE=w2000"
   },
   {
     "id": "ravda-costa-calma-2197",
@@ -1244,7 +1583,7 @@
     "area": null,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/ravda-costa-calma-2491/img_01.jpg"
   },
   {
     "id": "sunny-beach-hotel-floor-2148",
@@ -1267,7 +1606,7 @@
     "area": 230,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/hotel-floor-black-sea-2148/1.jpg"
   },
   {
     "id": "sveti-vlas-simeon-3431",
@@ -1290,7 +1629,7 @@
     "area": 100,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop"
+    "image": "https://lh3.googleusercontent.com/d/1dgfSHIbShkFCki51xLzX_vQ1krF3sXOb=w2000"
   },
   {
     "id": "burgas-dolno-ezerovo-3564",
@@ -1307,7 +1646,7 @@
     "price": 60000,
     "type": "land",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": null,
     "bathrooms": null,
     "area": 1213,
@@ -1322,11 +1661,11 @@
     "titleRu": "Однокомнатная квартира в центре Созополя",
     "titleDe": "1-Zimmer-Wohnung im Zentrum von Sozopol",
     "titleIt": "Appartamento con 1 camera nel centro di Sozopol",
-    "location": "Sozopol, Burgas",
-    "locationBg": "Созопол, Бургас",
-    "locationRu": "Созопол, Бургас",
-    "locationDe": "Sozopol, Burgas",
-    "locationIt": "Sozopol, Burgas",
+    "location": "Sozopol",
+    "locationBg": "Созопол",
+    "locationRu": "Созопол",
+    "locationDe": "Sozopol",
+    "locationIt": "Sozopol",
     "price": 125000,
     "type": "apartment",
     "transactionType": "sale",
@@ -1336,7 +1675,7 @@
     "area": 68,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/sozopol-center-1196/img_01.jpg"
   },
   {
     "id": "sozopol-residential-3568",
@@ -1345,11 +1684,11 @@
     "titleRu": "Однокомнатная квартира в жилом доме | Созопол",
     "titleDe": "1-Zimmer-Wohnung in Wohngebäude | Sozopol",
     "titleIt": "Appartamento con 1 camera in edificio residenziale | Sozopol",
-    "location": "Sozopol, Burgas",
-    "locationBg": "Созопол, Бургас",
-    "locationRu": "Созопол, Бургас",
-    "locationDe": "Sozopol, Burgas",
-    "locationIt": "Sozopol, Burgas",
+    "location": "Sozopol",
+    "locationBg": "Созопол",
+    "locationRu": "Созопол",
+    "locationDe": "Sozopol",
+    "locationIt": "Sozopol",
     "price": 155000,
     "type": "apartment",
     "transactionType": "sale",
@@ -1359,7 +1698,7 @@
     "area": 70,
     "landArea": null,
     "view": null,
-    "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800&h=600&fit=crop"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/sozopol-residential-3568/img_01.jpg"
   },
   {
     "id": "burgas-consulate-3572",
@@ -1422,7 +1761,7 @@
     "price": 50000,
     "type": "apartment",
     "transactionType": "sale",
-    "status": "for-sale",
+    "status": "sold-out",
     "bedrooms": 1,
     "bathrooms": 1,
     "area": 40,
@@ -1454,29 +1793,6 @@
     "image": "https://ipfs.io/ipfs/bafkreicbbftt34uci6jzznvu2msfyamftejfjjz6ffiois7sl4li3lllwm"
   },
   {
-    "id": "ravda-bora-bora-3963",
-    "title": "Studio in Бора Бора | Ravda",
-    "titleBg": "Студио в Бора Бора | Равда",
-    "titleRu": "Студия в Бора Бора | Равда",
-    "titleDe": "Studio in Бора Бора | Rawda",
-    "titleIt": "Monolocale in Бора Бора | Ravda",
-    "location": "Ravda, Burgas",
-    "locationBg": "Равда, Бургас",
-    "locationRu": "Равда, Бургас",
-    "locationDe": "Rawda, Burgas",
-    "locationIt": "Ravda, Burgas",
-    "price": 39900,
-    "type": "studio",
-    "transactionType": "sale",
-    "status": "for-sale",
-    "bedrooms": 0,
-    "bathrooms": 1,
-    "area": 42,
-    "landArea": null,
-    "view": null,
-    "image": "/placeholder.svg"
-  },
-  {
     "id": "sunny-beach-sunny-day-6-ap-24-3378",
     "title": "1-Bedroom Apartment in Sunny Day 6, ap. 24 | Sunny Beach",
     "titleBg": "Едностаен апартамент в Sunny Day 6, ap. 24 | Слънчев бряг",
@@ -1497,7 +1813,7 @@
     "area": 62,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "id": "tsarevo-regina-mare-3782",
@@ -1520,7 +1836,7 @@
     "area": 72,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/regina-mare-1bed-tsarevo/1.jpg"
   },
   {
     "id": "saint-vlas-rusalka-3783",
@@ -1543,7 +1859,7 @@
     "area": 105,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1nzOukfXXyDpaNy_uNBveWL0KyZaR-qs3=w2000"
   },
   {
     "id": "kosharitsa-kosharitsa-3784",
@@ -1566,7 +1882,7 @@
     "area": 150,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/house-kosharitsa-3784/1.jpg"
   },
   {
     "id": "kosharitsa-kosharitsa-3785",
@@ -1589,7 +1905,7 @@
     "area": 500,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/land-kosharitsa-3785/1.jpg"
   },
   {
     "id": "sunny-beach-orchid-fort-garden-3786",
@@ -1612,7 +1928,7 @@
     "area": 36,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/orchid-fort-garden-studio/1.jpg"
   },
   {
     "id": "sozopol-green-life-3627",
@@ -1635,7 +1951,7 @@
     "area": 40,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/green-life-sozopol-studio/1.jpg"
   },
   {
     "id": "sunny-beach-amadeus-19-3787",
@@ -1658,7 +1974,7 @@
     "area": 32,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/amadeus-19-studio/1.jpg"
   },
   {
     "id": "elenite-villa-astoria-2-3794",
@@ -1672,7 +1988,7 @@
     "locationRu": "Элените, Бургас",
     "locationDe": "Elenite, Burgas",
     "locationIt": "Elenite, Burgas",
-    "price": 56750,
+    "price": 59750,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -1681,7 +1997,7 @@
     "area": 58,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/villa-astoria-2-elenite/1.jpg"
   },
   {
     "id": "sunny-beach-zhilishtna-sgrada-3910",
@@ -1704,7 +2020,7 @@
     "area": 89,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/zhsg-sunny-beach-3910/1.jpg"
   },
   {
     "id": "saint-vlas-anna-marina-3933",
@@ -1727,7 +2043,7 @@
     "area": 58,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1HlO4CYRBxWjTZVpXt7qy2c3qqBC9dcxU=w2000"
   },
   {
     "id": "saint-vlas-panorama-dreams-3934",
@@ -1750,7 +2066,7 @@
     "area": 46,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1QuT71tavB1o_6Tp_xH1f7eH3ZkNn7UPD=w2000"
   },
   {
     "id": "saint-vlas-aqua-dreams-3935",
@@ -1773,15 +2089,15 @@
     "area": 52,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1SVeLrYLpHzJY4vntmxcK2w0D-8ddwe5O=w2000"
   },
   {
     "id": "saint-vlas-zhilishtna-sgrada-3936",
-    "title": "1-Bedroom Apartment in Жилищна сграда | Saint Vlas",
+    "title": "1-Bedroom Apartment in Residential Building | Saint Vlas",
     "titleBg": "Едностаен апартамент в Жилищна сграда | Свети Влас",
-    "titleRu": "Однокомнатная квартира в Жилищна сграда | Святой Влас",
-    "titleDe": "1-Zimmer-Wohnung in Жилищна сграда | Sveti Vlas",
-    "titleIt": "Appartamento 1 camera in Жилищна сграда | San Vlas",
+    "titleRu": "Однокомнатная квартира в жилом доме | Святой Влас",
+    "titleDe": "1-Zimmer-Wohnung in Wohngebäude | Sveti Vlas",
+    "titleIt": "Appartamento 1 camera in Edificio Residenziale | San Vlas",
     "location": "Saint Vlas, Burgas",
     "locationBg": "Свети Влас, Бургас",
     "locationRu": "Святой Влас, Бургас",
@@ -1796,7 +2112,7 @@
     "area": 62,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1EdBGtr07PWF-BEbFrpn8Y_of6G0uX0vO=w2000"
   },
   {
     "id": "sunny-beach-venera-anastasia-palace-apartments-3937",
@@ -1819,7 +2135,7 @@
     "area": 105,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/venera-anastasia-2br/1.jpg"
   },
   {
     "id": "sunny-beach-diamond-sky-3967",
@@ -1842,7 +2158,7 @@
     "area": 60,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/diamond-sky-sunny-beach/1.jpg"
   },
   {
     "id": "sunny-beach-gerber-residence-3-3968",
@@ -1865,7 +2181,7 @@
     "area": 40,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/gerber-residence-3/1.jpg"
   },
   {
     "id": "saint-vlas-marina-fort-noks-3969",
@@ -1888,7 +2204,7 @@
     "area": 93,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1z4GgluLf-QfESwgFH9Ua270AiQxR9_5D=w2000"
   },
   {
     "id": "sunny-beach-veliki-preslav-3991",
@@ -1911,7 +2227,7 @@
     "area": 72,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/veliki-preslav-1br/1.jpg"
   },
   {
     "id": "sunny-beach-veliki-preslav-3992",
@@ -1934,7 +2250,7 @@
     "area": 45,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/veliki-preslav-studio/1.jpg"
   },
   {
     "id": "sunny-beach-zhilishtna-sgrada-3993",
@@ -1957,7 +2273,7 @@
     "area": 57,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/zhilishtna-sgrada-3993/1.jpg"
   },
   {
     "id": "sunny-beach-elite-1-4000",
@@ -1971,7 +2287,7 @@
     "locationRu": "Солнечный Берег, Бургас",
     "locationDe": "Sonnenstrand, Burgas",
     "locationIt": "Sunny Beach, Burgas",
-    "price": 74160,
+    "price": 77160,
     "type": "apartment",
     "transactionType": "sale",
     "status": "for-sale",
@@ -1980,15 +2296,15 @@
     "area": 63,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/elite-1-4000/1.jpg"
   },
   {
     "id": "saint-vlas-sveti-vlas-verh-rusalki-4177",
-    "title": "2-Bedroom Apartment in Свети Влас, верх Русалки | Saint Vlas",
-    "titleBg": "Двустаен апартамент в Свети Влас, верх Русалки | Свети Влас",
-    "titleRu": "Двухкомнатная квартира в Свети Влас, верх Русалки | Святой Влас",
-    "titleDe": "2-Zimmer-Wohnung in Свети Влас, верх Русалки | Sveti Vlas",
-    "titleIt": "Appartamento 2 camere in Свети Влас, верх Русалки | San Vlas",
+    "title": "2-Bedroom Apartment in Upper Rusalka | Saint Vlas",
+    "titleBg": "Двустаен апартамент във Върха на Русалка | Свети Влас",
+    "titleRu": "Двухкомнатная квартира в Верхней Русалке | Святой Влас",
+    "titleDe": "2-Zimmer-Wohnung in Ober-Rusalka | Sveti Vlas",
+    "titleIt": "Appartamento 2 camere a Rusalka Alta | San Vlas",
     "location": "Saint Vlas, Burgas",
     "locationBg": "Свети Влас, Бургас",
     "locationRu": "Святой Влас, Бургас",
@@ -2003,7 +2319,7 @@
     "area": 121,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://lh3.googleusercontent.com/d/1QNFMyJH6E7tXGdtEKBJZvEtHNWQvOW8D=w2000"
   },
   {
     "id": "sunny-beach-emilia-romana-avenue-4178",
@@ -2026,7 +2342,7 @@
     "area": 63,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/emilia-romana-4178%2F1.jpg"
   },
   {
     "id": "sunny-beach-domenico-4179",
@@ -2049,6 +2365,29 @@
     "area": 58,
     "landArea": null,
     "view": null,
-    "image": "/placeholder.svg"
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/domenico-1bed%2F1.jpg"
+  },
+  {
+    "id": "burgas-consulate-1bdr",
+    "title": "1-Bedroom Apartment near Turkish Consulate | Burgas",
+    "titleBg": "Двустаен апартамент до Турското консулство | Бургас",
+    "titleRu": "Двухкомнатная квартира у Турецкого консульства | Бургас",
+    "titleDe": "2-Zimmer-Wohnung nahe dem Türkischen Konsulat | Burgas",
+    "titleIt": "Bilocale vicino al Consolato Turco | Burgas",
+    "location": "Burgas",
+    "locationBg": "Бургас",
+    "locationRu": "Бургас",
+    "locationDe": "Burgas",
+    "locationIt": "Burgas",
+    "price": 70000,
+    "type": "apartment",
+    "transactionType": "sale",
+    "status": "for-sale",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 34,
+    "landArea": null,
+    "view": null,
+    "image": "https://rvyjddttrvkqcasdtuqt.supabase.co/storage/v1/object/public/property-images/burgas-consulate-1bdr/img_01.jpg"
   }
 ]

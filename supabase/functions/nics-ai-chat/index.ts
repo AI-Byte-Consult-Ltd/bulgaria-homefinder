@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SITE_URL = "https://bulgaria-homefinder.lovable.app";
+const SITE_URL = "https://estate.aibyteconsult.com";
 
 // Load full property catalog (bundled with the edge function)
 type CatalogItem = {
@@ -42,7 +42,7 @@ You have access to the COMPLETE catalog of ${CATALOG.length} properties currentl
 
 Conversation guidelines:
 - Be conversational and friendly. Keep responses concise (2-3 sentences per point).
-- ALWAYS respond in the SAME LANGUAGE the user writes in (English, Bulgarian, Russian, German, Italian).
+- ALWAYS respond in the SAME LANGUAGE the user writes in (English, Bulgarian, Russian, German, Italian, Polish).
 - When a user asks about a specific property, region, price range, type, or feature — call the search_properties tool immediately with whatever filters apply. Leave fields empty to browse all listings.
 - For EVERY property you mention in your reply, include a direct clickable link in markdown format: [Property Title](${SITE_URL}/property/PROPERTY_ID). The PROPERTY_ID is the "id" returned by the tool. Never invent IDs.
 - If the user asks "show me all properties" or similar, call search_properties with no filters and present a short list of links (the frontend also renders cards automatically).
