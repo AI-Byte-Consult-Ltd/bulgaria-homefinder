@@ -30,8 +30,8 @@ const Team = () => {
 
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="container mx-auto px-4 relative z-10 pt-24 pb-8">
-        <div className="text-center mb-16 space-y-4">
+      <div className="container mx-auto px-4 relative z-10 pt-16 pb-8">
+        <div className="text-center mb-8 space-y-4">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground">
             {t('common.meetFounders')}
           </h2>
@@ -41,13 +41,16 @@ const Team = () => {
         </div>
       </div>
 
-      {/* Founders Photo — full width */}
-      <div className="w-full mb-12">
-        <img
-          src={foundersImg}
-          alt="Alexander Lunin, NICS AI, and Aleksandr Tochilov — the founding team of AI Byte Consult"
-          className="w-full h-auto object-cover"
-        />
+      {/* Founders Photo — contained, same width as the cards below */}
+      <div className="container mx-auto px-4 mb-12">
+        <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border/50 shadow-lg">
+          <img
+            src={foundersImg}
+            alt="Alexander Lunin, NICS AI, and Aleksandr Tochilov — the founding team of AI Byte Consult"
+            loading="lazy"
+            className="block w-full h-auto object-cover"
+          />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 pb-24">
