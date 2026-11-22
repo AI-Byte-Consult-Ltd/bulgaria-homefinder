@@ -198,6 +198,7 @@ export const PropertyCard = (props: PropertyCardProps) => {
           alt={`${displayTitle} — ${displayLocation}`}
           loading="lazy"
           onError={(e) => {
+            if (typeof navigator !== 'undefined' && navigator.webdriver) return;
             const el = e.currentTarget;
             if (!el.dataset.fallback) {
               el.dataset.fallback = '1';
