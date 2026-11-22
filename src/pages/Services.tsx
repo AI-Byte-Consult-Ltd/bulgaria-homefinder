@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import React from 'react';
-import { DocumentGenerator } from '@/components/DocumentGenerator';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
@@ -1642,9 +1641,6 @@ const Services = () => {
               ))}
             </div>
           </section>
-
-          {/* AI Document Generator */}
-          <DocumentGenerator />
 
           {/* CTA */}
           <section className="py-16 bg-muted/30">
