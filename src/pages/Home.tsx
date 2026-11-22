@@ -6,7 +6,6 @@ import { Footer } from '@/components/Footer';
 import { SearchBar } from '@/components/SearchBar';
 import { PropertyCard } from '@/components/PropertyCard';
 import { RestorationShowcase } from '@/components/RestorationShowcase';
-import { DocumentGenerator } from '@/components/DocumentGenerator';
 import Team from '@/components/Team';
 import { Testimonials } from '@/components/Testimonials';
 import { PropertyCarousel, PropertyCarouselItem } from '@/components/PropertyCarousel';
@@ -474,9 +473,6 @@ const Home = () => {
           </PropertyCarousel>
         </div>
       </section>
-
-      {/* AI Document Generator */}
-      <DocumentGenerator />
 
       {/* Restoration Showcase */}
       <RestorationShowcase />
