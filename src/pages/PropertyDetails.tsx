@@ -237,7 +237,11 @@ const PropertyDetails = () => {
                         src={image}
                         alt={`${displayTitle} — ${tx('photo')} ${index + 1}/${images.length}`}
                         className="w-full h-full object-contain"
-                        onError={() => setBroken((prev) => (prev.includes(image) ? prev : [...prev, image]))}
+                        onError={() => {
+                          // The prerender browser cannot load images; keep the static page complete.
+                          if (typeof navigator !== 'undefined' && navigator.webdriver) return;
+                          setBroken((prev) => (prev.includes(image) ? prev : [...prev, image]));
+                        }}
                         loading={index === 0 ? 'eager' : 'lazy'}
                       />
                     </div>
