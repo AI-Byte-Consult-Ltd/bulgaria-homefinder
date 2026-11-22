@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, type KeyboardEvent } from 'react';
 import { PageSEO } from '@/components/PageSEO';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -16,20 +16,17 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { SlidersHorizontal } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 import { mockProperties } from '@/data/mockProperties';
-import { propertyMatchesQuery, resolveCanonicalCity, INDEPENDENT_CITIES, cityAliases } from '@/data/cityAliases';
+import { propertyMatchesQuery } from '@/data/cityAliases';
 
 /**
  * Страница вывода найденных объектов недвижимости.
- * Считывает параметры из URL (?location=..., type=..., transaction=...)
- * и делает запрос к таблице 'properties' в Supabase.
+ * Считывает параметры из URL (?location=..., type=..., transaction=..., min, max, beds, baths)
+ * и фильтрует каталог объектов.
  */
 const Properties = () => {
   const { t } = useTranslation();
   const [showFilters, setShowFilters] = useState(true);
-  const [properties, setProperties] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -43,84 +40,62 @@ const Properties = () => {
   const [bedrooms, setBedrooms] = useState('any');
   const [bathrooms, setBathrooms] = useState('any');
 
-  // При изменении строки запроса или фильтров загружаем список объектов
+  // Фильтры из URL (?location=..., type=..., transaction=...) → поля формы
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
+    setLocFilter(searchParams.get('location') ?? '');
+    const tr = searchParams.get('transaction');
+    setTransactionFilter(tr === 'sale' || tr === 'rent' ? tr : 'all');
+    setTypeFilter(searchParams.get('type') ?? 'all');
+    setMinPrice(searchParams.get('min') ?? '');
+    setMaxPrice(searchParams.get('max') ?? '');
+    setBedrooms(searchParams.get('beds') ?? 'any');
+    setBathrooms(searchParams.get('baths') ?? 'any');
+  }, [location.search]);
+
+  // Список объектов считается только из URL, поэтому результат всегда
+  // совпадает со ссылкой и не «прыгает» во время ввода.
+  const properties = useMemo(() => {
+    const searchParams = new URLSearchParams(location.search);
     const searchLoc = searchParams.get('location') ?? '';
-    const searchTransaction =
-      (searchParams.get('transaction') as 'sale' | 'rent' | 'all') ?? 'all';
+    const searchTransaction = searchParams.get('transaction') ?? 'all';
     const searchType = searchParams.get('type') ?? 'all';
+    const min = Number(searchParams.get('min')) || 0;
+    const max = Number(searchParams.get('max')) || 0;
+    const beds = Number(searchParams.get('beds')) || 0;
+    const baths = Number(searchParams.get('baths')) || 0;
 
-    // Обновляем поля фильтра, чтобы UI соответствовал URL
-    setLocFilter(searchLoc);
-    setTransactionFilter(searchTransaction);
-    setTypeFilter(searchType);
+    return (mockProperties as any[]).filter((p) => {
+      if (searchLoc && !propertyMatchesQuery(p, searchLoc)) return false;
+      if (searchTransaction !== 'all' && p.transactionType !== searchTransaction) return false;
+      if (searchType !== 'all' && p.type !== searchType) return false;
+      if (min && !(p.price >= min)) return false;
+      if (max && !(p.price > 0 && p.price <= max)) return false;
+      if (beds && (p.bedrooms ?? 0) < beds) return false;
+      if (baths && (p.bathrooms ?? 0) < baths) return false;
+      return true;
+    });
+  }, [location.search]);
+  const loading = false;
 
-    const fetchProperties = async () => {
-      setLoading(true);
-
-      // Try Supabase first
-      let query: any = supabase.from('properties').select('*');
-      if (searchLoc) {
-        const canonical = resolveCanonicalCity(searchLoc);
-        if (canonical && INDEPENDENT_CITIES.has(canonical)) {
-          // Strict: match the city exactly (alone or as the first segment before a comma)
-          const variants = [canonical, ...(cityAliases[canonical] || [])];
-          const orParts = variants.flatMap((v) => [
-            `location.ilike.${v}`,
-            `location.ilike.${v},%`,
-          ]).join(',');
-          query = query.or(orParts);
-        } else {
-          query = query.ilike('location', `%${searchLoc}%`);
-        }
-      }
-      if (searchTransaction && searchTransaction !== 'all') query = query.eq('transaction_type', searchTransaction);
-      if (searchType && searchType !== 'all') query = query.eq('property_type', searchType);
-      if (minPrice) query = query.gte('price', Number(minPrice));
-      if (maxPrice) query = query.lte('price', Number(maxPrice));
-      if (bedrooms !== 'any') query = query.gte('bedrooms', Number(bedrooms));
-      if (bathrooms !== 'any') query = query.gte('bathrooms', Number(bathrooms));
-
-      const { data, error } = await query;
-
-      if (!error && data && data.length > 0) {
-        setProperties(data);
-      } else {
-        // Fallback to mock data with client-side filtering
-        let filtered = [...mockProperties];
-        if (searchLoc) {
-          filtered = filtered.filter((p) => propertyMatchesQuery(p, searchLoc));
-        }
-        if (searchTransaction && searchTransaction !== 'all') {
-          filtered = filtered.filter((p) => p.transactionType === searchTransaction);
-        }
-        if (searchType && searchType !== 'all') {
-          filtered = filtered.filter((p) => p.type === searchType);
-        }
-        if (minPrice) filtered = filtered.filter((p) => p.price >= Number(minPrice));
-        if (maxPrice) filtered = filtered.filter((p) => p.price <= Number(maxPrice));
-        if (bedrooms !== 'any') filtered = filtered.filter((p) => (p.bedrooms ?? 0) >= Number(bedrooms));
-        if (bathrooms !== 'any') filtered = filtered.filter((p) => (p.bathrooms ?? 0) >= Number(bathrooms));
-        setProperties(filtered);
-      }
-      setLoading(false);
-    };
-
-    fetchProperties();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.search, minPrice, maxPrice, bedrooms, bathrooms]);
-
-  // При нажатии на кнопку «Apply filters» обновляем URL для location/transaction/type.
-  // Остальные фильтры остаются только в локальном состоянии.
+  // Кнопка «Применить» (и Enter в полях) записывает все фильтры в URL.
   const handleApplyFilters = () => {
     const params = new URLSearchParams();
-    if (locFilter) params.set('location', locFilter.trim());
+    if (locFilter.trim()) params.set('location', locFilter.trim());
     if (transactionFilter && transactionFilter !== 'all')
       params.set('transaction', transactionFilter);
     if (typeFilter && typeFilter !== 'all') params.set('type', typeFilter);
+    if (Number(minPrice) > 0) params.set('min', String(Number(minPrice)));
+    if (Number(maxPrice) > 0) params.set('max', String(Number(maxPrice)));
+    if (bedrooms !== 'any') params.set('beds', bedrooms);
+    if (bathrooms !== 'any') params.set('baths', bathrooms);
     const queryString = params.toString();
     navigate(`/properties${queryString ? `?${queryString}` : ''}`, { replace: true });
+  };
+
+  const handleReset = () => navigate('/properties', { replace: true });
+  const onEnter = (e: KeyboardEvent) => {
+    if (e.key === 'Enter') handleApplyFilters();
   };
 
   return (
@@ -141,7 +116,7 @@ const Properties = () => {
             <p className="text-muted-foreground">
               {loading
                 ? t('common.loading')
-                : `${properties.length} ${t('common.results')?.toLowerCase() || 'results'}`}
+                : `${t('common.results')}: ${properties.length}`}
             </p>
           </div>
 
@@ -170,6 +145,7 @@ const Properties = () => {
                     placeholder={t('common.locationPlaceholder') || 'Enter location, city or region...'}
                     value={locFilter}
                     onChange={(e) => setLocFilter(e.target.value)}
+                    onKeyDown={onEnter}
                   />
                 </div>
 
@@ -215,12 +191,16 @@ const Properties = () => {
                       placeholder="Min"
                       value={minPrice}
                       onChange={(e) => setMinPrice(e.target.value)}
+                      onKeyDown={onEnter}
+                      min={0}
                     />
                     <Input
                       type="number"
                       placeholder="Max"
                       value={maxPrice}
                       onChange={(e) => setMaxPrice(e.target.value)}
+                      onKeyDown={onEnter}
+                      min={0}
                     />
                   </div>
                 </div>
@@ -259,6 +239,11 @@ const Properties = () => {
                 <Button className="w-full" onClick={handleApplyFilters}>
                   {t('common.applyFilters') || 'Apply Filters'}
                 </Button>
+                {location.search && (
+                  <Button variant="ghost" className="w-full" onClick={handleReset}>
+                    {t('common.allProperties')}
+                  </Button>
+                )}
               </div>
             </aside>
           )}
@@ -282,16 +267,19 @@ const Properties = () => {
                     titleRu={property.title_ru || property.titleRu}
                     titleDe={property.title_de || property.titleDe}
                     titleIt={property.title_it || property.titleIt}
+                    titlePl={property.title_pl || property.titlePl}
                     location={property.location}
                     locationBg={property.location_bg || property.locationBg}
                     locationRu={property.location_ru || property.locationRu}
                     locationDe={property.location_de || property.locationDe}
                     locationIt={property.location_it || property.locationIt}
+                    locationPl={property.location_pl || property.locationPl}
                     description={property.description}
                     descriptionBg={property.description_bg || property.descriptionBg}
                     descriptionRu={property.description_ru || property.descriptionRu}
                     descriptionDe={property.description_de || property.descriptionDe}
                     descriptionIt={property.description_it || property.descriptionIt}
+                    descriptionPl={property.description_pl || property.descriptionPl}
                     price={property.price}
                     image={
                       property.images && property.images.length > 0

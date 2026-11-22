@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 // Language prefixes that don't have separate routes — redirect to home
-const LANGUAGE_PREFIXES = ["/bg", "/ru", "/de", "/it", "/en"];
+const LANGUAGE_PREFIXES = ["/bg", "/ru", "/de", "/it", "/en", "/pl"];
 
 const NotFound = () => {
   const location = useLocation();

@@ -609,35 +609,42 @@ Proiezione a 5 anni con 5% annuo:
 
 Un asset europeo costiero che combina lifestyle e rendimento misurabile.`,
 },
-  // FEATURED PROPERTY - Zornitsa House
+  // ── ZORNITSA — house with a large regulated plot ─────────────────────────────
   {
   id: 'zornitsa-house-75239',
 
   // ── Titles ──────────────────────────────────────────────
-  title:   'Value-Add Investment: Two-Storey Stone House + 1,910 m² Plot | Zornitsa Village',
-  titleRu: 'Инвестиционный проект: двухэтажный каменный дом + участок 1 910 м² | с. Зорница',
-  titleBg: 'Инвестиционен проект: двуетажна каменна къща + парцел 1 910 м² | с. Зорница',
-  titleDe: 'Investment-Projekt: Zweistöckiges Steinhaus + 1.910 m² Grundstück | Dorf Zornitsa',
-  titleIt: 'Progetto Investimento: Casa in Pietra + Terreno 1.910 m² | Villaggio Zornitsa',
+  title:   'Two-Storey House 112 m² with a 1,910 m² Plot | Zornitsa Village, Burgas Region',
+  titleRu: 'Двухэтажный дом 112 м² с участком 1 910 м² | с. Зорница, Бургасская область',
+  titleBg: 'Двуетажна къща 112 м² с парцел 1 910 м² | с. Зорница, област Бургас',
+  titleDe: 'Zweistöckiges Haus 112 m² mit 1.910 m² Grundstück | Dorf Zornitsa, Region Burgas',
+  titleIt: 'Casa su due piani di 112 m² con terreno di 1.910 m² | Zornitsa, regione di Burgas',
+  titlePl: 'Dom piętrowy 112 m² z działką 1 910 m² | wieś Zornitsa, obwód Burgas',
 
   // ── Price & Location ─────────────────────────────────────
-  price:    19700,
+  price:    26900,
   location:   'Zornitsa, Sredets Municipality, Burgas Region',
-  locationRu: 'с. Зорница, общ. Средец, область Бургас',
+  locationRu: 'с. Зорница, община Средец, Бургасская область',
   locationBg: 'с. Зорница, общ. Средец, обл. Бургас',
   locationDe: 'Dorf Zornitsa, Gemeinde Sredets, Region Burgas',
-  locationIt: 'Villaggio Zornitsa, Comune di Sredets, Regione di Burgas',
+  locationIt: 'Zornitsa, comune di Sredets, regione di Burgas',
+  locationPl: 'wieś Zornitsa, gmina Sredets, obwód Burgas',
 
   // ── Images ───────────────────────────────────────────────
   images: [
-    'https://ipfs.io/ipfs/bafybeidnyorzlykkbt7qi2ms73ilw4hui4f47temcxakodcg4w4v76ydsy',
-    'https://ipfs.io/ipfs/bafkreicbhnevrmpnwkdwccm3v7oqqrfzzhol64rnwbdk44infobygbvqdm',
-    'https://ipfs.io/ipfs/bafybeia5n3qyzv36p4vijsy3dgvghwitvovhopbte46lku5qhw46ofzdfa',
-    'https://ipfs.io/ipfs/bafkreibq755ehvqw7kgykilprafx2hu3gjmjb6h3j5us5sglkuacvicpk4',
-    'https://ipfs.io/ipfs/bafkreigcvkzmtuapsglxfdgsif3kmgnwydzrnf5rqvmgdusex3f7a6mt7i',
-    'https://ipfs.io/ipfs/bafkreiblnq3z7apbzedkwu6lvr4br3ibixj2u5larxjysjziw4nk3y2m4a'
-
-    // TODO: add more photos of exterior, interior, plot, well, surroundings
+    '/assets/properties/zornitsa/zornitsa-01.jpg',
+    '/assets/properties/zornitsa/zornitsa-02.jpg',
+    '/assets/properties/zornitsa/zornitsa-03.jpg',
+    '/assets/properties/zornitsa/zornitsa-04.jpg',
+    '/assets/properties/zornitsa/zornitsa-05.jpg',
+    '/assets/properties/zornitsa/zornitsa-06.jpg',
+    '/assets/properties/zornitsa/zornitsa-07.jpg',
+    '/assets/properties/zornitsa/zornitsa-08.jpg',
+    '/assets/properties/zornitsa/zornitsa-09.jpg',
+    '/assets/properties/zornitsa/zornitsa-10.jpg',
+    '/assets/properties/zornitsa/zornitsa-11.jpg',
+    '/assets/properties/zornitsa/zornitsa-12.jpg',
+    '/assets/properties/zornitsa/zornitsa-13.jpg',
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -650,120 +657,121 @@ Un asset europeo costiero che combina lifestyle e rendimento misurabile.`,
   availableUnits: 1,
 
   // ── Core Specs ───────────────────────────────────────────
-  area:        112,   // m² — total house area (two floors)
-  bedrooms:    4,
-  bathrooms:   2,
-  livingRooms: 1,     // TODO: confirm room count layout
+  area:        112,   // m², two floors
+  bedrooms:    null,
+  bathrooms:   null,
+  livingRooms: null,
 
   // ── Floor & Building ─────────────────────────────────────
-  floor:       null,  // N/A — detached house
+  floor:       null,
   totalFloors: 2,
-  yearBuilt:   1969,
-  actSixteen:  null,  // TODO: confirm — older rural properties often require verification
+  yearBuilt:   null,
+  actSixteen:  null,
 
   // ── View & Outdoor ───────────────────────────────────────
-  view:        'Village & nature view',
-  terraceArea: null,  // TODO: confirm — likely has yard/porch area
+  view:        null,
+  terraceArea: null,
 
   // ── Land ─────────────────────────────────────────────────
-  landArea:    1910,  // m² — privately owned, fully fenced plot
+  landArea:    1910,  // m², regulated plot (UPI)
 
-  // ── Parking ──────────────────────────────────────────────
-  parkingSpots: null, // TODO: confirm — large plot likely allows 2+ cars
-
-  // ── Maintenance ──────────────────────────────────────────
-  maintenanceFee: null, // N/A — standalone rural house, no complex fees
-
-  // ── Investment Case ──────────────────────────────────────
-  investmentCase: {
-    purchasePrice:          17980,   // EUR — acquisition cost
-    renovationEstimateMin:  20000,   // EUR
-    renovationEstimateMax:  25000,   // EUR
-    totalInvestmentMin:     39700,   // EUR
-    totalInvestmentMax:     44700,   // EUR
-    comparableMarketValueMin: 78000, // EUR — renovated comparable houses in area
-    potentialUpsideMin:     33300,   // EUR vs total investment max
-    potentialUpsideMax:     38300,   // EUR vs total investment min
-    roiEstimateMin:         74,      // % — (78k - 44.7k) / 44.7k
-    roiEstimateMax:         97,      // % — (78k - 39.7k) / 39.7k
-    useCase: ['private-home', 'guest-house', 'airbnb', 'eu-residency-base'],
-    distanceToSea:          50,      // km
-    mineralSprings:         150,     // m — natural mineral springs nearby
-    utilities:              ['electricity', 'water-mains', 'well'],
-    construction:           'stone-ground-floor-brick-upper',
-    conditionOnPurchase:    'full-renovation-required',
-  },
+  parkingSpots:   null,
+  maintenanceFee: null,
 
   // ── Descriptions ─────────────────────────────────────────
-  description: `Value-add investment opportunity: two-storey detached house (112 m²) on a privately owned 1,910 m² plot in the quiet village of Zornitsa, Burgas Region — 50 km from the Black Sea coast.
+  description: `Two-storey house of 112 m² on its own 1,910 m² plot in the village of Zornitsa, Sredets municipality, Burgas region. The house needs a full reconstruction, and the price reflects that.
 
-Purchase price: €17,980. Estimated full renovation budget: €20,000–25,000. Total investment: ~€40,000–45,000. Comparable renovated houses in the area start from €78,000 — implying potential upside of €33,000–38,000 (74–97% ROI on total invested capital).
+- House: 112 m² on two floors
+- Plot: 1,910 m², regulated building land inside the village boundaries
+- Garden with mature fruit trees
+- About 50 minutes by car to Burgas and the Black Sea coast
+- A quiet village with open views over the hills
 
-The house requires full renovation and represents a blank canvas. Ground floor: stone construction. Upper floor: brick. Connected to mains electricity and water; private well on plot. Natural mineral springs 150m away. The plot is large enough for a garden, terrace extension, outbuilding, or parking.
+The plot is the main asset here: it is large, regulated and leaves room for a garden, an extension, outbuildings and parking. The property suits a buyer who wants to rebuild a country house to their own design, or a holiday base near the sea on a small budget.
 
-Use cases: primary or secondary private residence, guest house, rural retreat, Airbnb / short-term rental operation, or a base for EU residency via Bulgarian property ownership. Bulgaria has been an EU member since 2007 — property ownership grants legal grounds for residency applications.
+Viewings by arrangement. Ownership documents and the plot sketch are available on request. Drone video is available too.`,
 
-Ideal for investors, renovation specialists, or buyers seeking an EU foothold at the lowest possible entry price.`,
+  descriptionRu: `Двухэтажный дом 112 м² на собственном участке 1 910 м² в селе Зорница, община Средец, Бургасская область. Дом требует полной реконструкции, и цена это учитывает.
 
-  descriptionRu: `Инвестиционный проект с добавленной стоимостью: двухэтажный отдельно стоящий дом (112 м²) на частном земельном участке 1 910 м² в тихом селе Зорница, Бургасская область — 50 км от Черноморского побережья.
+- Дом: 112 м², два этажа
+- Участок: 1 910 м², в регуляции, в черте села
+- Сад со взрослыми фруктовыми деревьями
+- Около 50 минут на машине до Бургаса и моря
+- Тихое село, открытые виды на холмы
 
-Цена покупки: €17 980. Расчётный бюджет полной реконструкции: €20 000–25 000. Совокупный объём инвестиций: ~€40 000–45 000. Сопоставимые отремонтированные дома в районе продаются от €78 000 — потенциальный прирост стоимости: €33 000–38 000 (ROI 74–97% на вложенный капитал).
+Главная ценность здесь участок: большой, в регуляции, хватит места для сада, пристройки, хозяйственных построек и парковки. Объект подойдёт тем, кто хочет перестроить загородный дом под себя или получить недорогую базу для отдыха недалеко от моря.
 
-Дом требует полного ремонта — это чистый холст для реализации. Первый этаж: каменная кладка. Второй этаж: кирпич. Подключён к электросети и центральному водоснабжению; на участке имеется собственный колодец. Минеральные источники в 150 м. Участок позволяет разбить сад, обустроить террасу, построить хозблок или организовать парковку.
+Просмотр по договорённости. Документы на собственность и схему участка пришлём по запросу. Есть видео с дрона.`,
 
-Варианты использования: основное или второе жильё, гостевой дом, сельский ретрит, работа по модели Airbnb / краткосрочная аренда, а также база для получения вида на жительство в ЕС через владение недвижимостью в Болгарии. Болгария является членом ЕС с 2007 года — право собственности на недвижимость является законным основанием для оформления вида на жительство.
+  descriptionBg: `Двуетажна къща 112 м² със собствен парцел 1 910 м² в село Зорница, община Средец, област Бургас. Къщата е за цялостна реконструкция и цената е съобразена с това.
 
-Подходит для инвесторов, специалистов по реновации или покупателей, которым нужна точка входа в ЕС по минимальной цене.`,
+- Къща: 112 м² на два етажа
+- Парцел: 1 910 м², в регулация, в рамките на селото
+- Двор с плододаващи овощни дървета
+- Около 50 минути с кола до Бургас и морето
+- Тихо село с открита гледка към хълмовете
 
-  descriptionBg: `Инвестиционен проект с добавена стойност: двуетажна самостоятелна къща (112 м²) на частен поземлен имот от 1 910 м² в тихото село Зорница, обл. Бургас — 50 км от Черноморието.
+Най-ценното тук е парцелът: голям, в регулация, с място за градина, пристройка, стопански постройки и паркиране. Имотът е подходящ за купувач, който иска да преустрои селска къща по свой вкус, или за достъпна база за почивка близо до морето.
 
-Покупна цена: €17 980. Прогнозен бюджет за пълна реновация: €20 000–25 000. Обща инвестиция: ~€40 000–45 000. Сравними реновирани къщи в района се предлагат от €78 000 — потенциална добавена стойност: €33 000–38 000 (ROI 74–97% върху вложения капитал).
+Огледи по уговорка. Документите за собственост и скицата на парцела изпращаме при запитване. Има и видео от дрон.`,
 
-Имотът изисква цялостна реновация — напълно свободен за концепция. Първи етаж: каменна зидария. Втори етаж: тухлена конструкция. Включена електричество и водоснабдяване; собствен кладенец в двора. Минерални извори на 150 м. Парцелът позволява градина, тераса, стопанска постройка или паркинг.
+  descriptionDe: `Zweistöckiges Haus mit 112 m² auf einem eigenen Grundstück von 1.910 m² im Dorf Zornitsa, Gemeinde Sredets, Region Burgas. Das Haus muss vollständig saniert werden, der Preis berücksichtigt das.
 
-Приложения: основно или ваканционно жилище, гостилница, селски retreat, Airbnb / краткосрочен наем или база за получаване на разрешение за пребиваване в ЕС. България е член на ЕС от 2007 г. — притежаването на имот е законово основание за кандидатстване за пребиваване.
+- Haus: 112 m² auf zwei Etagen
+- Grundstück: 1.910 m², Bauland innerhalb der Ortsgrenzen
+- Garten mit alten Obstbäumen
+- Etwa 50 Minuten mit dem Auto nach Burgas und ans Schwarze Meer
+- Ruhiges Dorf mit freiem Blick über die Hügel
 
-Идеален за инвеститори, специалисти по реновации или купувачи, търсещи достъп до ЕС на минимална цена.`,
+Der eigentliche Wert liegt im Grundstück: Es ist groß, als Bauland ausgewiesen und bietet Platz für Garten, Anbau, Nebengebäude und Stellplätze. Das Objekt eignet sich für Käufer, die ein Landhaus nach eigenen Vorstellungen neu aufbauen möchten, oder als günstiger Feriensitz in Meeresnähe.
 
-  descriptionDe: `Wertsteigerungsprojekt: zweistöckiges freistehendes Haus (112 m²) auf einem privaten Grundstück von 1.910 m² im ruhigen Dorf Zornitsa, Region Burgas — 50 km vom Schwarzen Meer entfernt.
+Besichtigung nach Vereinbarung. Eigentumsunterlagen und den Lageplan senden wir auf Anfrage zu. Ein Drohnenvideo ist ebenfalls vorhanden.`,
 
-Kaufpreis: €17.980. Geschätztes Renovierungsbudget: €20.000–25.000. Gesamtinvestition: ~€40.000–45.000. Vergleichbare renovierte Häuser in der Region beginnen bei €78.000 — potenzieller Wertzuwachs: €33.000–38.000 (ROI 74–97% auf das investierte Kapital).
+  descriptionIt: `Casa su due piani di 112 m² con terreno di proprietà di 1.910 m² nel villaggio di Zornitsa, comune di Sredets, regione di Burgas. La casa va ristrutturata completamente e il prezzo ne tiene conto.
 
-Das Haus erfordert eine Vollrenovierung. Erdgeschoss: Steinbau. Obergeschoss: Ziegel. Anschluss an Strom und Wasserversorgung; eigener Brunnen auf dem Grundstück. Mineralquellen in 150 m Entfernung. Das Grundstück bietet Platz für Garten, Terrasse, Nebengebäude oder Stellplätze.
+- Casa: 112 m² su due piani
+- Terreno: 1.910 m², edificabile, all'interno del centro abitato
+- Giardino con alberi da frutto adulti
+- Circa 50 minuti in auto da Burgas e dal Mar Nero
+- Villaggio tranquillo con vista aperta sulle colline
 
-Verwendungsmöglichkeiten: Erst- oder Zweitwohnsitz, Gästehaus, Landhaus, Airbnb / Kurzzeitvermietung oder Basis für einen EU-Aufenthaltstitel durch bulgarischen Immobilienbesitz. Bulgarien ist seit 2007 EU-Mitglied — Immobilieneigentum bildet eine rechtliche Grundlage für Aufenthaltsanträge.
+Il vero valore è il terreno: grande, edificabile, con spazio per giardino, ampliamento, annessi e posti auto. L'immobile è adatto a chi vuole ricostruire una casa di campagna secondo il proprio progetto, oppure avere una base per le vacanze vicino al mare con un budget contenuto.
 
-Ideal für Investoren, Renovierungsspezialisten oder Käufer, die einen EU-Einstieg zum niedrigstmöglichen Preis suchen.`,
+Visite su appuntamento. I documenti di proprietà e la planimetria del terreno sono disponibili su richiesta. È disponibile anche un video ripreso con il drone.`,
 
-  descriptionIt: `Progetto di investimento a valore aggiunto: casa indipendente su due piani (112 m²) su un terreno privato di 1.910 m² nel tranquillo villaggio di Zornitsa, Regione di Burgas — 50 km dalla costa del Mar Nero.
+  descriptionPl: `Dom piętrowy o powierzchni 112 m² na własnej działce 1 910 m² we wsi Zornitsa, gmina Sredets, obwód Burgas. Dom wymaga remontu generalnego i cena to uwzględnia.
 
-Prezzo di acquisto: €17.980. Budget stimato per la ristrutturazione completa: €20.000–25.000. Investimento totale: ~€40.000–45.000. Case ristrutturate comparabili nella zona partono da €78.000 — potenziale plusvalore: €33.000–38.000 (ROI 74–97% sul capitale investito).
+- Dom: 112 m², dwie kondygnacje
+- Działka: 1 910 m², budowlana, w granicach wsi
+- Ogród ze starymi drzewami owocowymi
+- Około 50 minut samochodem do Burgas i wybrzeża Morza Czarnego
+- Spokojna wieś z otwartym widokiem na wzgórza
 
-La casa richiede una ristrutturazione completa — tela bianca per qualsiasi progetto. Piano terra: costruzione in pietra. Piano superiore: mattoni. Allacciata a elettricità e acqua; pozzo privato nel terreno. Sorgenti minerali a 150 m. Il terreno consente giardino, terrazza, dependance o parcheggio.
+Największą wartością jest działka: duża, budowlana, z miejscem na ogród, rozbudowę, budynki gospodarcze i parking. Nieruchomość jest odpowiednia dla kupującego, który chce odbudować wiejski dom według własnego projektu, albo jako niedroga baza wypoczynkowa niedaleko morza.
 
-Utilizzi: residenza principale o secondaria, casa per gli ospiti, agriturismo, Airbnb / affitto breve, o base per la residenza UE tramite proprietà immobiliare bulgara. La Bulgaria è membro UE dal 2007 — la proprietà immobiliare costituisce base legale per le domande di residenza.
-
-Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano un accesso all'UE al prezzo minimo possibile.`,
+Oglądanie po umówieniu. Dokumenty własności i szkic działki przesyłamy na życzenie. Dostępny jest też film z drona.`,
 },
-  // FEATURED PROPERTY - Burgas, Slaveykov 50 - Luxury Apartment
-// ── INVESTMENT APARTMENT — Burgas Slaveykov, active rental income ────────────
+
+  // ── SLAVEYKOV — renovated one-bedroom apartment, let ─────────────────────────
 {
   id: 'burgas-slaveykov-50-lux',
 
   // ── Titles ──────────────────────────────────────────────
-  title:   'Income-Generating Luxury Apartment | Signed Rental Contract €450/mo | Slaveykov, Burgas',
-  titleRu: 'Двухкомнатная квартира | Действующий договор аренды €450/мес | Славейков, Бургас',
-  titleBg: 'Апартамент с доход | Активен наемен договор €450/мес | Славейков, Бургас',
-  titleDe: 'Rendite-Luxuswohnung | Laufender Mietvertrag €450/Monat | Slaveykov, Burgas',
-  titleIt: 'Appartamento con Reddito Attivo | Contratto Affitto €450/mese | Slaveykov, Burgas',
+  title:   'Renovated One-Bedroom Apartment on the 16th Floor, Let at €450/month | Slaveykov, Burgas',
+  titleRu: 'Двухкомнатная квартира с ремонтом на 16 этаже, сдана за 450 € в месяц | Славейков, Бургас',
+  titleBg: 'Ремонтиран двустаен апартамент на 16 етаж, отдаден под наем за 450 € на месец | Славейков, Бургас',
+  titleDe: 'Renovierte Zweizimmerwohnung im 16. Stock, vermietet für 450 € im Monat | Slaveykov, Burgas',
+  titleIt: 'Bilocale ristrutturato al 16° piano, affittato a 450 € al mese | Slaveykov, Burgas',
+  titlePl: 'Mieszkanie dwupokojowe po remoncie na 16 piętrze, wynajęte za 450 € miesięcznie | Slaveykov, Burgas',
 
   // ── Price & Location ─────────────────────────────────────
-  price:    140000,
+  price:    134680,
   location:   'Burgas, Slaveykov District',
-  locationRu: 'Бургас, квартал Славейков',
-  locationBg: 'Бургас, кв. Славейков',
+  locationRu: 'Бургас, ж.к. Славейков',
+  locationBg: 'Бургас, ж.к. Славейков',
   locationDe: 'Burgas, Stadtviertel Slaveykov',
-  locationIt: 'Burgas, Quartiere Slaveykov',
+  locationIt: 'Burgas, quartiere Slaveykov',
+  locationPl: 'Burgas, osiedle Slaveykov',
 
   // ── Images (IPFS) ────────────────────────────────────────
   images: [
@@ -799,6 +807,8 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
     'https://ipfs.io/ipfs/bafkreieytezkhooq2e6e5qgdo5sdfkfugm752bx4ao7gb5hlevuk4rymii',
     'https://ipfs.io/ipfs/bafkreicfwnvzud6jyji226t7oljtflrinvzlcqh4g6mdk5vubtpfqe7ggu',
     'https://ipfs.io/ipfs/bafkreicvah22gltry3e6xc7tj2zfvnpa22pscya5ewnajidcn4iu2yvnnq',
+    '/assets/properties/slaveykov/slaveykov-3d-plan.jpg',
+    '/assets/properties/slaveykov/slaveykov-3d-1.jpg',
   ],
 
   // ── Type & Transaction ───────────────────────────────────
@@ -811,142 +821,273 @@ Ideale per investitori, specialisti di ristrutturazione o acquirenti che cercano
   availableUnits: 1,
 
   // ── Core Specs ───────────────────────────────────────────
-  area:        63,   // m²
+  area:        52.66,   // m², the apartment itself by title deed
   bedrooms:    1,
   bathrooms:   1,
   livingRooms: 1,
 
   // ── Floor & Building ─────────────────────────────────────
   floor:       16,
-  totalFloors: 18,  // TODO: confirm total floors (not top floor per description)
-  yearBuilt:   1981,  // TODO: confirm
+  totalFloors: 18,
+  yearBuilt:   1985,
   actSixteen:  true,
 
   // ── View & Outdoor ───────────────────────────────────────
-  view:        true,  // TODO: confirm — 16th floor likely has city / sea view
-  terraceArea: null,  // TODO: confirm balcony/terrace
+  view:        null,
+  terraceArea: null,
 
-  // ── Land & Parking ───────────────────────────────────────
-  landArea:     null,   // N/A — apartment
-  parkingSpots: null,   // TODO: confirm
-
-  // ── Maintenance ──────────────────────────────────────────
-  maintenanceFee: 7, // TODO: confirm — request from seller
+  landArea:       null,
+  parkingSpots:   null,
+  maintenanceFee: null,
 
   // ── Furnishing ───────────────────────────────────────────
   furnished:       true,
-  furnishingLevel: 'luxury', // luxury | full | partial | unfurnished
-
-  // ── Investment Case ──────────────────────────────────────
-  investmentCase: {
-    // Income
-    monthlyRent:         450,    // EUR/month — signed contract
-    annualRentalIncome:  5400,   // EUR/year (450 × 12)
-    rentalContractStatus: 'signed-active', // signed-active | verbal | none
-
-    // Acquisition costs (Bulgaria standard)
-    purchasePrice:       140000,
-    acquisitionCosts:    7000,   // ~5% — transfer tax ~3% + notary + registration
-    totalCashIn:         147000, // purchase + acquisition costs
-
-    // Gross yield on purchase price
-    grossYieldOnPrice:   3.86,   // % = 5400 / 140000 × 100
-
-    // Gross yield on total cash invested (incl. acquisition costs)
-    grossYieldOnTotal:   3.67,   // % = 5400 / 147000 × 100
-
-    // Net yield estimate (deduct ~15% for tax, minor maintenance, vacancy buffer)
-    estimatedNetYield:   3.10,   // % conservative estimate
-
-    // Payback
-    paybackYearsGross:   25.9,   // years = 140000 / 5400
-    paybackYearsOnTotal: 27.2,   // years = 147000 / 5400
-
-    // Monthly cash flow (before tax)
-    monthlyCashFlowGross: 450,   // EUR
-
-    // Capital appreciation context (NSI Q3 2025: Burgas +6.2% single quarter)
-    marketAppreciationNote: 'Burgas recorded +6.2% in Q2 2025 alone (NSI). At 5% annual appreciation, asset reaches ~€178,500 in 5 years.',
-
-    // 5-year total return scenario (conservative)
-    fiveYearRentalIncome:    27000,  // EUR = 5400 × 5
-    fiveYearAppreciation:    38500,  // EUR = 140000 × (1.05^5 - 1), ~27.6%
-    fiveYearTotalReturn:     65500,  // EUR combined
-    fiveYearROI:             44.6,   // % = 65500 / 147000 × 100
-
-    useCase: ['passive-income', 'long-term-rental', 'capital-appreciation', 'eu-residency-base'],
-  },
+  furnishingLevel: 'full',
 
   // ── Descriptions ─────────────────────────────────────────
-  description: `Turnkey income-generating investment: luxury 1-bedroom apartment on the 16th floor in Slaveykov district, Burgas — sold with an active signed rental contract at €450/month.
+  description: `One-bedroom apartment (two rooms) on the 16th floor of an 18-storey building in the Slaveykov district of Burgas. It is renovated, furnished and currently let at €450 per month, so it earns rent from the day of purchase.
 
-INVESTMENT NUMBERS:
-- Purchase price: €140,000
-- Monthly rental income: €450 (signed contract — income starts Day 1)
-- Annual rental income: €5,400
-- Gross yield: 3.86% on purchase price
-- 5-year scenario: €27,000 rental income + ~€38,500 capital appreciation = ~€65,500 total return on €147,000 invested (~44.6% ROI over 5 years)
-- Burgas market: +6.2% in a single quarter (NSI Q2 2025) — one of the fastest-growing EU coastal cities
+- Apartment: 52.66 m² by title deed (living room, bedroom, kitchenette, bathroom with WC, hallway)
+- Attic storage room: 7.06 m² on the top floor
+- Total area by title deed, including the share of common parts: 72.66 m²
+- 16th floor of 18, open view over the city and the lake
+- Renovated and furnished, with appliances
+- Tenant in place: €450 per month, €5,400 per year
+- Building completed in 1985
+- About 500 m from Arena Burgas, with shops, schools and public transport close by
 
-The apartment: 60 m², fully furnished with premium furniture and high-end appliances. Modern designer interior, functional layout. Floor 16 — panoramic views. No renovation needed. No management overhead — tenant in place.
+The documents are in order and ready for the sale. The owner is looking for a quick sale.
 
-Buy it today, receive rent from Day 1. Ideal for passive income investors, EU residency applicants, or buyers seeking a premium Burgas city asset.`,
+Viewings by arrangement. The floor plan and the documents are available on request.`,
 
-  descriptionRu: `Готовая доходная инвестиция: люкс однокомнатная квартира на 16-м этаже в квартале Славейков, Бургас — продаётся с действующим подписанным договором аренды на €450 в месяц.
+  descriptionRu: `Двухкомнатная квартира (одна спальня) на 16 этаже 18-этажного дома в ж.к. Славейков, Бургас. С ремонтом и мебелью, сейчас сдана за 450 € в месяц, то есть приносит доход с первого дня после покупки.
 
-ИНВЕСТИЦИОННЫЕ ПОКАЗАТЕЛИ:
-- Цена покупки: €140 000
-- Ежемесячный арендный доход: €450 (подписанный договор — доход с первого дня)
-- Годовой арендный доход: €5 400
-- Валовая доходность: 3,86% от цены покупки
-- Сценарий на 5 лет: €27 000 аренды + ~€38 500 прироста стоимости = ~€65 500 совокупная доходность на €147 000 вложенных (~44,6% ROI за 5 лет)
-- Рынок Бургаса: +6,2% за один квартал (NSI, Q2 2025) — один из самых быстрорастущих прибрежных городов ЕС
+- Квартира: 52,66 м² по нотариальному акту (гостиная, спальня, кухонный бокс, санузел, прихожая)
+- Чердачное помещение: 7,06 м² на последнем этаже
+- Общая площадь по акту вместе с долей общих частей: 72,66 м²
+- 16 этаж из 18, открытый вид на город и озеро
+- Ремонт, мебель и техника
+- Арендатор уже есть: 450 € в месяц, 5 400 € в год
+- Дом 1985 года постройки
+- Около 500 м до Арены Бургас, рядом магазины, школы и остановки
 
-Квартира: 60 м², полностью меблирована мебелью и техникой премиум-класса. Современный дизайнерский интерьер, продуманная планировка. 16-й этаж — панорамные виды. Ремонт не требуется. Управление не нужно — арендатор уже есть.
+Документы в порядке и готовы к сделке. Собственник настроен на быструю продажу.
 
-Покупаете сегодня — получаете арендный доход с первого дня. Идеально для пассивных инвесторов, желающих получить вид на жительство в ЕС или премиальный актив в Бургасе.`,
+Просмотр по договорённости. Планировку и документы пришлём по запросу.`,
 
-  descriptionBg: `Готова доходна инвестиция: луксозен едностаен апартамент на 16-и етаж в кв. Славейков, Бургас — продава се с активен подписан наемен договор на €450/месец.
+  descriptionBg: `Двустаен апартамент на 16 етаж в 18-етажен блок в ж.к. Славейков, Бургас. Ремонтиран и обзаведен, в момента е отдаден под наем за 450 € на месец, тоест носи доход от първия ден след покупката.
 
-ИНВЕСТИЦИОННИ ПОКАЗАТЕЛИ:
-- Покупна цена: €140 000
-- Месечен наемен приход: €450 (подписан договор — доход от първия ден)
-- Годишен наемен приход: €5 400
-- Брутна доходност: 3,86% от покупната цена
-- Сценарий за 5 години: €27 000 наем + ~€38 500 ценово поскъпване = ~€65 500 обща доходност на €147 000 вложени (~44,6% ROI за 5 години)
-- Пазар Бургас: +6,2% за едно тримесечие (НСИ, Q2 2025) — един от най-бързо растящите крайбрежни градове в ЕС
+- Апартамент: 52,66 м² по нотариален акт (дневна, спалня, кухненски бокс, баня с тоалетна, антре)
+- Таванско помещение: 7,06 м² на последния етаж
+- Обща площ по акт заедно с идеалните части: 72,66 м²
+- 16 етаж от 18, открита гледка към града и езерото
+- Ремонтиран, с мебели и уреди
+- Има наемател: 450 € на месец, 5 400 € годишно
+- Сграда от 1985 г.
+- На около 500 м от Арена Бургас, наблизо има магазини, училища и спирки
 
-Апартаментът: 60 м², напълно обзаведен с висококласни мебели и уреди. Модерен дизайнерски интериор, функционално разпределение. 16-и етаж — панорамна гледка. Не се изисква ремонт. Без управленски усилия — наемателят е на място.
+Документите са изрядни и готови за сделка. Собственикът търси бърза продажба.
 
-Купувате днес — получавате наем от първия ден. Идеален за пасивни инвеститори, кандидати за пребиваване в ЕС или купувачи, търсещи премиален актив в Бургас.`,
+Огледи по уговорка. Разпределение и документи изпращаме при запитване.`,
 
-  descriptionDe: `Schlüsselfertige Renditeanlage: Luxuriöse 1-Zimmer-Wohnung im 16. Stock im Stadtviertel Slaveykov, Burgas — verkauft mit aktivem unterzeichnetem Mietvertrag über €450/Monat.
+  descriptionDe: `Zweizimmerwohnung (ein Schlafzimmer) im 16. Stock eines 18-stöckigen Hauses im Viertel Slaveykov in Burgas. Die Wohnung ist renoviert, möbliert und derzeit für 450 € im Monat vermietet. Sie bringt also vom ersten Tag an Mieteinnahmen.
 
-INVESTITIONSKENNZAHLEN:
-- Kaufpreis: €140.000
-- Monatliche Mieteinnahme: €450 (unterzeichneter Vertrag — Einnahmen ab Tag 1)
-- Jährliche Mieteinnahme: €5.400
-- Bruttorendite: 3,86% auf den Kaufpreis
-- 5-Jahres-Szenario: €27.000 Mieteinnahmen + ~€38.500 Wertsteigerung = ~€65.500 Gesamtrendite auf €147.000 investiertes Kapital (~44,6% ROI in 5 Jahren)
-- Markt Burgas: +6,2% in einem einzigen Quartal (NSI, Q2 2025) — eine der am schnellsten wachsenden Küstenstädte der EU
+- Wohnung: 52,66 m² laut Eigentumsurkunde (Wohnzimmer, Schlafzimmer, Kochnische, Bad mit WC, Flur)
+- Dachbodenraum: 7,06 m² im obersten Geschoss
+- Gesamtfläche laut Urkunde einschließlich Anteil an den Gemeinschaftsflächen: 72,66 m²
+- 16. von 18 Etagen, freier Blick über die Stadt und den See
+- Renoviert, mit Möbeln und Geräten
+- Mieter vorhanden: 450 € im Monat, 5.400 € im Jahr
+- Baujahr 1985
+- Rund 500 m zur Arena Burgas, Geschäfte, Schulen und Haltestellen in der Nähe
 
-Die Wohnung: 60 m², vollständig mit Premiummöbeln und hochwertigen Geräten ausgestattet. Modernes Designer-Interieur, funktionale Raumaufteilung. 16. Etage — Panoramablick. Keine Renovierung erforderlich. Kein Verwaltungsaufwand — Mieter ist bereits vorhanden.
+Die Unterlagen sind vollständig und verkaufsbereit. Der Eigentümer möchte zügig verkaufen.
 
-Kaufen Sie heute — erhalten Sie Mieteinnahmen ab dem ersten Tag. Ideal für Passiveinkommensinvestoren, EU-Aufenthaltsbewerber oder Käufer, die ein Premium-Asset in Burgas suchen.`,
+Besichtigung nach Vereinbarung. Grundriss und Unterlagen senden wir auf Anfrage zu.`,
 
-  descriptionIt: `Investimento chiavi in mano con reddito attivo: appartamento di lusso con 1 camera da letto al 16° piano nel quartiere Slaveykov, Burgas — venduto con contratto d'affitto firmato e attivo a €450/mese.
+  descriptionIt: `Bilocale (una camera da letto) al 16° piano di un edificio di 18 piani nel quartiere Slaveykov di Burgas. È ristrutturato, arredato e attualmente affittato a 450 € al mese, quindi rende dal primo giorno dopo l'acquisto.
 
-DATI DELL'INVESTIMENTO:
-- Prezzo di acquisto: €140.000
-- Reddito mensile da locazione: €450 (contratto firmato — reddito dal giorno 1)
-- Reddito annuale da locazione: €5.400
-- Rendimento lordo: 3,86% sul prezzo di acquisto
-- Scenario a 5 anni: €27.000 di affitti + ~€38.500 di rivalutazione = ~€65.500 rendimento totale su €147.000 investiti (~44,6% ROI in 5 anni)
-- Mercato di Burgas: +6,2% in un solo trimestre (NSI, Q2 2025) — una delle città costiere UE in più rapida crescita
+- Appartamento: 52,66 m² da atto notarile (soggiorno, camera, angolo cottura, bagno con WC, ingresso)
+- Locale in soffitta: 7,06 m² all'ultimo piano
+- Superficie totale da atto, con la quota delle parti comuni: 72,66 m²
+- 16° piano su 18, vista aperta sulla città e sul lago
+- Ristrutturato, con mobili ed elettrodomestici
+- Inquilino già presente: 450 € al mese, 5.400 € all'anno
+- Edificio del 1985
+- A circa 500 m dall'Arena Burgas, con negozi, scuole e fermate nelle vicinanze
 
-L'appartamento: 60 m², completamente arredato con mobili ed elettrodomestici premium. Interior design moderno, planimetria funzionale. 16° piano — viste panoramiche. Nessuna ristrutturazione necessaria. Nessuna gestione — l'inquilino è già presente.
+I documenti sono in regola e pronti per la vendita. Il proprietario desidera vendere in tempi brevi.
 
-Acquistate oggi — ricevete l'affitto dal primo giorno. Ideale per investitori a reddito passivo, richiedenti residenza UE o acquirenti che cercano un asset premium a Burgas.`,
+Visite su appuntamento. Planimetria e documenti disponibili su richiesta.`,
+
+  descriptionPl: `Mieszkanie dwupokojowe (jedna sypialnia) na 16 piętrze 18-piętrowego budynku na osiedlu Slaveykov w Burgas. Po remoncie, umeblowane i obecnie wynajęte za 450 € miesięcznie, więc przynosi dochód od pierwszego dnia po zakupie.
+
+- Mieszkanie: 52,66 m² według aktu notarialnego (salon, sypialnia, aneks kuchenny, łazienka z WC, przedpokój)
+- Pomieszczenie na strychu: 7,06 m² na ostatnim piętrze
+- Łączna powierzchnia według aktu z udziałem w częściach wspólnych: 72,66 m²
+- 16 piętro z 18, otwarty widok na miasto i jezioro
+- Po remoncie, z meblami i sprzętem AGD
+- Najemca na miejscu: 450 € miesięcznie, 5 400 € rocznie
+- Budynek z 1985 roku
+- Około 500 m od Areny Burgas, w pobliżu sklepy, szkoły i przystanki
+
+Dokumenty są w porządku i gotowe do transakcji. Właścicielowi zależy na szybkiej sprzedaży.
+
+Oglądanie po umówieniu. Rzut mieszkania i dokumenty przesyłamy na życzenie.`,
+},
+
+  // ── BIZZARE A06 — new build near Metro, Burgas ───────────────────────────────
+{
+  id: 'burgas-bizzare-a06',
+
+  // ── Titles ──────────────────────────────────────────────
+  title:   'One-Bedroom Apartment 69.98 m² in the New Bizzare Building near Metro | Burgas',
+  titleRu: 'Двухкомнатная квартира 69,98 м² в новостройке Bizzare у Метро | Бургас',
+  titleBg: 'Двустаен апартамент 69,98 м² в нова сграда Bizzare до Метро | Бургас',
+  titleDe: 'Zweizimmerwohnung 69,98 m² im Neubau Bizzare beim Metro-Markt | Burgas',
+  titleIt: 'Bilocale di 69,98 m² nel nuovo edificio Bizzare vicino a Metro | Burgas',
+  titlePl: 'Mieszkanie dwupokojowe 69,98 m² w nowym budynku Bizzare przy Metro | Burgas',
+
+  // ── Price & Location ─────────────────────────────────────
+  price:    116032,
+  location:   'Burgas, near Metro and Slaveykov District',
+  locationRu: 'Бургас, у Метро и ж.к. Славейков',
+  locationBg: 'Бургас, до Метро и ж.к. Славейков',
+  locationDe: 'Burgas, beim Metro-Markt und Viertel Slaveykov',
+  locationIt: 'Burgas, vicino a Metro e al quartiere Slaveykov',
+  locationPl: 'Burgas, przy Metro i osiedlu Slaveykov',
+
+  // ── Images ───────────────────────────────────────────────
+  images: [
+    '/assets/properties/bizzare/bizzare-02.jpg',
+    '/assets/properties/bizzare/bizzare-01.jpg',
+    '/assets/properties/bizzare/bizzare-03.jpg',
+    '/assets/properties/bizzare/bizzare-05.jpg',
+    '/assets/properties/bizzare/bizzare-04.jpg',
+    '/assets/properties/bizzare/bizzare-plan-a06.jpg',
+  ],
+
+  // ── Type & Transaction ───────────────────────────────────
+  type:            'apartment',
+  transactionType: 'sale' as const,
+
+  // ── Status & Availability ────────────────────────────────
+  status:         'for-sale',
+  featured:       true,
+  availableUnits: 1,
+
+  // ── Core Specs ───────────────────────────────────────────
+  area:        69.98,   // m², including the share of common parts (net 60.51)
+  bedrooms:    1,
+  bathrooms:   1,
+  livingRooms: 1,
+
+  // ── Floor & Building ─────────────────────────────────────
+  floor:       2,
+  totalFloors: null,
+  yearBuilt:   null,
+  actSixteen:  null,   // Act 14 issued Aug 2026, Act 16 expected H2 2028
+
+  view:        null,
+  terraceArea: null,
+
+  landArea:       null,
+  parkingSpots:   null,
+  maintenanceFee: null,
+
+  furnished:       false,
+  furnishingLevel: 'unfurnished',
+
+  // ── Descriptions ─────────────────────────────────────────
+  description: `One-bedroom apartment (two rooms) in the new Bizzare residential building in Burgas, next to the Metro store and the Slaveykov district. The building is under construction: Act 14 (completed shell) was issued in August 2026 and Act 16 (permission to use) is expected in the second half of 2028.
+
+- Apartment A06, 2nd floor
+- 69.98 m² including the share of common parts, 60.51 m² net
+- Living room with kitchenette: 24.67 m²
+- Bedroom: 13.05 m²
+- Bathroom with WC: 3.60 m²
+- Storage room: 1.56 m²
+- Balcony
+- Shared roof terrace with a lounge area for residents
+
+The apartment is bought by taking over the preliminary contract with the developer. We send the floor plan and the payment details on request.
+
+The seller is looking for a quick sale. The pictures show the developer's renders of the building and the floor plan of the apartment.`,
+
+  descriptionRu: `Двухкомнатная квартира (одна спальня) в новом жилом доме Bizzare в Бургасе, рядом с магазином Метро и ж.к. Славейков. Дом строится: Акт 14 (готовая коробка здания) получен в августе 2026 года, Акт 16 (ввод в эксплуатацию) ожидается во второй половине 2028 года.
+
+- Квартира A06, 2 этаж
+- 69,98 м² с долей общих частей, чистая площадь 60,51 м²
+- Гостиная с кухонным боксом: 24,67 м²
+- Спальня: 13,05 м²
+- Санузел: 3,60 м²
+- Кладовая: 1,56 м²
+- Балкон
+- Общая терраса на крыше с зоной отдыха для жильцов
+
+Покупка оформляется через переуступку предварительного договора с застройщиком. Планировку и детали по платежам пришлём по запросу.
+
+Продавец настроен на быструю сделку. На изображениях визуализации дома от застройщика и планировка квартиры.`,
+
+  descriptionBg: `Двустаен апартамент в новата жилищна сграда Bizzare в Бургас, до магазин Метро и ж.к. Славейков. Сградата е в строеж: Акт 14 (груб строеж) е издаден през август 2026 г., а Акт 16 (разрешение за ползване) се очаква през втората половина на 2028 г.
+
+- Апартамент A06, 2 етаж
+- 69,98 м² с идеалните части, чиста площ 60,51 м²
+- Дневна с кухненски бокс: 24,67 м²
+- Спалня: 13,05 м²
+- Баня с тоалетна: 3,60 м²
+- Склад: 1,56 м²
+- Тераса
+- Обща покривна тераса със зона за отдих за живущите
+
+Покупката става чрез прехвърляне на предварителния договор със строителя. Разпределение и подробности по плащанията изпращаме при запитване.
+
+Продавачът търси бърза сделка. Изображенията са визуализации на сградата от строителя и разпределението на апартамента.`,
+
+  descriptionDe: `Zweizimmerwohnung (ein Schlafzimmer) im neuen Wohnhaus Bizzare in Burgas, direkt beim Metro-Markt und beim Viertel Slaveykov. Das Gebäude ist im Bau: Akt 14 (Rohbau fertiggestellt) wurde im August 2026 ausgestellt, Akt 16 (Nutzungsgenehmigung) wird in der zweiten Jahreshälfte 2028 erwartet.
+
+- Wohnung A06, 2. Stock
+- 69,98 m² einschließlich Anteil an den Gemeinschaftsflächen, 60,51 m² Wohnfläche
+- Wohnzimmer mit Kochnische: 24,67 m²
+- Schlafzimmer: 13,05 m²
+- Bad mit WC: 3,60 m²
+- Abstellraum: 1,56 m²
+- Balkon
+- Gemeinsame Dachterrasse mit Lounge-Bereich für die Bewohner
+
+Der Kauf erfolgt durch Übernahme des Vorvertrags mit dem Bauträger. Grundriss und Zahlungsdetails senden wir auf Anfrage zu.
+
+Der Verkäufer möchte zügig verkaufen. Die Bilder zeigen Visualisierungen des Bauträgers und den Grundriss der Wohnung.`,
+
+  descriptionIt: `Bilocale (una camera da letto) nel nuovo edificio residenziale Bizzare a Burgas, accanto al punto vendita Metro e al quartiere Slaveykov. L'edificio è in costruzione: l'Atto 14 (struttura al grezzo completata) è stato rilasciato nell'agosto 2026 e l'Atto 16 (agibilità) è previsto per la seconda metà del 2028.
+
+- Appartamento A06, 2° piano
+- 69,98 m² con la quota delle parti comuni, 60,51 m² netti
+- Soggiorno con angolo cottura: 24,67 m²
+- Camera da letto: 13,05 m²
+- Bagno con WC: 3,60 m²
+- Ripostiglio: 1,56 m²
+- Balcone
+- Terrazza condominiale sul tetto con area relax per i residenti
+
+L'acquisto avviene tramite cessione del contratto preliminare con il costruttore. Planimetria e dettagli sui pagamenti disponibili su richiesta.
+
+Il venditore desidera vendere in tempi brevi. Le immagini mostrano i rendering del costruttore e la planimetria dell'appartamento.`,
+
+  descriptionPl: `Mieszkanie dwupokojowe (jedna sypialnia) w nowym budynku mieszkalnym Bizzare w Burgas, obok sklepu Metro i osiedla Slaveykov. Budynek jest w budowie: Akt 14 (stan surowy) został wydany w sierpniu 2026 roku, a Akt 16 (pozwolenie na użytkowanie) przewidywany jest w drugiej połowie 2028 roku.
+
+- Mieszkanie A06, 2 piętro
+- 69,98 m² z udziałem w częściach wspólnych, 60,51 m² powierzchni netto
+- Salon z aneksem kuchennym: 24,67 m²
+- Sypialnia: 13,05 m²
+- Łazienka z WC: 3,60 m²
+- Schowek: 1,56 m²
+- Balkon
+- Wspólny taras na dachu ze strefą wypoczynku dla mieszkańców
+
+Zakup odbywa się przez cesję umowy przedwstępnej z deweloperem. Rzut mieszkania i szczegóły płatności przesyłamy na życzenie.
+
+Sprzedającemu zależy na szybkiej transakcji. Zdjęcia przedstawiają wizualizacje dewelopera oraz rzut mieszkania.`,
 },
 
 // ── SKARABEY MADIKA — New Development Block ─────────────────────────────────

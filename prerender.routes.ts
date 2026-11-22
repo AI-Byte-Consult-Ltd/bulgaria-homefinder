@@ -48,4 +48,5 @@ export const prerenderRoutes: string[] = [
   "/property/mellia-park-10-ravda-77544",
   "/property/zornitsa-house-75239",
   "/property/burgas-slaveykov-50-lux",
+  "/property/burgas-bizzare-a06",
 ];
