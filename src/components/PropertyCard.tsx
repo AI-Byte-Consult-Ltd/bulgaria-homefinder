@@ -192,7 +192,7 @@ export const PropertyCard = (props: PropertyCardProps) => {
   return (
     <Card className="group overflow-hidden hover:shadow-[var(--card-shadow-hover)] transition-all duration-300 flex flex-col">
       {/* ── Image ── */}
-      <div className="relative aspect-[4/3] overflow-hidden shrink-0">
+      <Link to={`/property/${id}`} aria-label={displayTitle} className="block relative aspect-[4/3] overflow-hidden shrink-0">
         <img
           src={image}
           alt={`${displayTitle} — ${displayLocation}`}
@@ -239,6 +239,7 @@ export const PropertyCard = (props: PropertyCardProps) => {
             size="icon"
             variant="secondary"
             className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity h-8 w-8"
+            onClick={(e) => e.preventDefault()}
           >
             <Heart className="h-4 w-4" />
           </Button>
@@ -273,14 +274,16 @@ export const PropertyCard = (props: PropertyCardProps) => {
             <VirtualTourBadge />
           )}
         </div>
-      </div>
+      </Link>
 
       {/* ── Content ── */}
       <CardContent className="p-4 space-y-3 flex flex-col flex-1">
         {/* Title + Price */}
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-semibold text-base leading-snug line-clamp-2 flex-1">
-            {displayTitle}
+            <Link to={`/property/${id}`} className="hover:text-primary transition-colors">
+              {displayTitle}
+            </Link>
           </h3>
           <div className="text-right shrink-0">
             <p className="font-bold text-primary text-lg leading-tight">
